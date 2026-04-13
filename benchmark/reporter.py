@@ -63,7 +63,7 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
         ["Accuracy",                       f"{o['accuracy']:.4f}"],
         ["Macro-F1 (3-class)",             f"{o['macro_f1']:.4f}"],
         ["Binary Conflict F1",             f"{o['binary_conflict_f1']:.4f}"],
-        ["Explanation ROUGE-L",            f"{o['explanation_rouge_l']:.4f}"],
+        ["Explanation BERTScore-F1",       f"{o.get('explanation_bert_f1') or 0:.4f}"],
         ["— Conflict F1",                  f"{o['per_class_f1'].get('conflict', 0):.4f}"],
         ["— Consistent F1",                f"{o['per_class_f1'].get('consistent', 0):.4f}"],
         ["— Ambiguous F1",                 f"{o['per_class_f1'].get('ambiguous', 0):.4f}"],
@@ -75,7 +75,7 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
     lines.append("## By Difficulty Level\n")
     level_rows = _level_table_rows(results.by_level)
     lines.append(tabulate(level_rows,
-                          headers=["Level", "Accuracy", "Macro-F1", "Conflict-F1", "ROUGE-L", "N"],
+                          headers=["Level", "Accuracy", "Macro-F1", "Conflict-F1", "BERTScore-F1", "N"],
                           tablefmt="github"))
     lines.append("")
 
@@ -83,7 +83,7 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
     lines.append("## By Domain\n")
     domain_rows = _dict_to_table_rows(results.by_domain)
     lines.append(tabulate(domain_rows,
-                          headers=["Domain", "Accuracy", "Macro-F1", "Conflict-F1", "ROUGE-L", "N"],
+                          headers=["Domain", "Accuracy", "Macro-F1", "Conflict-F1", "BERTScore-F1", "N"],
                           tablefmt="github"))
     lines.append("")
 
@@ -91,7 +91,7 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
     lines.append("## By Difficulty Bucket\n")
     diff_rows = _dict_to_table_rows(results.by_difficulty)
     lines.append(tabulate(diff_rows,
-                          headers=["Difficulty", "Accuracy", "Macro-F1", "Conflict-F1", "ROUGE-L", "N"],
+                          headers=["Difficulty", "Accuracy", "Macro-F1", "Conflict-F1", "BERTScore-F1", "N"],
                           tablefmt="github"))
     lines.append("")
 
@@ -125,7 +125,7 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
 
 LEADERBOARD_HEADER = [
     "model", "run_id", "n_items",
-    "lw_f1", "accuracy", "macro_f1", "binary_conflict_f1", "explanation_rouge_l",
+    "lw_f1", "accuracy", "macro_f1", "binary_conflict_f1", "expl_bert_f1",
     "level_0_f1", "level_1_f1", "level_2_f1", "level_3_f1", "level_4_f1", "level_5_f1",
     "philosophy_f1", "software_f1", "law_f1", "science_f1", "content_f1", "teams_f1",
 ]
@@ -147,7 +147,7 @@ def write_leaderboard(results: EvaluationResults, path: str) -> None:
         "accuracy":            o["accuracy"],
         "macro_f1":            o["macro_f1"],
         "binary_conflict_f1":  o["binary_conflict_f1"],
-        "explanation_rouge_l": o["explanation_rouge_l"],
+        "expl_bert_f1":        o.get("explanation_bert_f1", ""),
         **{f"level_{l}_f1": bl.get(l, {}).get("per_class_f1", {}).get("conflict", "") for l in range(6)},
         **{f"{d}_f1": bd.get(d, {}).get("macro_f1", "")
            for d in ["philosophy", "software", "law", "science", "content", "teams"]},
@@ -177,7 +177,7 @@ def print_console(results: EvaluationResults) -> None:
         ["Accuracy",           f"{o['accuracy']:.4f}"],
         ["Macro-F1",           f"{o['macro_f1']:.4f}"],
         ["Binary Conflict F1", f"{o['binary_conflict_f1']:.4f}"],
-        ["Explanation ROUGE-L",f"{o['explanation_rouge_l']:.4f}"],
+        ["Explanation BERTScore-F1", f"{o.get('explanation_bert_f1') or 0:.4f}"],
     ]
     print(tabulate(overall_rows, headers=["Metric", "Score"], tablefmt="simple"))
 
@@ -185,13 +185,13 @@ def print_console(results: EvaluationResults) -> None:
         print("\nBy difficulty level:")
         level_rows = _level_table_rows(results.by_level)
         print(tabulate(level_rows,
-                       headers=["Level", "Accuracy", "Macro-F1", "Conflict-F1", "ROUGE-L", "N"],
+                       headers=["Level", "Accuracy", "Macro-F1", "Conflict-F1", "BERTScore-F1", "N"],
                        tablefmt="simple"))
 
     print("\nBy domain:")
     domain_rows = _dict_to_table_rows(results.by_domain)
     print(tabulate(domain_rows,
-                   headers=["Domain", "Accuracy", "Macro-F1", "Conflict-F1", "ROUGE-L", "N"],
+                   headers=["Domain", "Accuracy", "Macro-F1", "Conflict-F1", "BERTScore-F1", "N"],
                    tablefmt="simple"))
     print()
 
@@ -212,7 +212,7 @@ def _level_table_rows(by_level: dict[int, dict[str, Any]]) -> list[list]:
             f"{m.get('accuracy', 0):.4f}",
             f"{m.get('macro_f1', 0):.4f}",
             f"{m.get('per_class_f1', {}).get('conflict', 0):.4f}",
-            f"{m.get('explanation_rouge_l', 0):.4f}",
+            f"{m.get('explanation_bert_f1') or 0:.4f}",
             m.get("n_items", 0),
         ])
     return rows
@@ -226,7 +226,7 @@ def _dict_to_table_rows(by_group: dict[str, dict[str, Any]]) -> list[list]:
             f"{m.get('accuracy', 0):.4f}",
             f"{m.get('macro_f1', 0):.4f}",
             f"{m.get('per_class_f1', {}).get('conflict', 0):.4f}",
-            f"{m.get('explanation_rouge_l', 0):.4f}",
+            f"{m.get('explanation_bert_f1') or 0:.4f}",
             m.get("n_items", 0),
         ])
     return rows

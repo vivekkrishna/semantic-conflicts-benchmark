@@ -2,9 +2,9 @@
 
 Flow:
     Evaluator.run()
-      ├── Load JSONL files from data/<domain>/v1.jsonl
+      ├── Load JSON files from data/<domain>/v1.json
       ├── For each item: build prompt → adapter.predict() → score
-      ├── Compute: accuracy, macro-F1, LW-F1, ROUGE-L
+      ├── Compute: accuracy, macro-F1, LW-F1, BERTScore
       └── Return EvaluationResults
 """
 
@@ -79,7 +79,7 @@ class Evaluator:
                 print(
                     f"  [{tick}] {item['id']:<30} {lvl_s:<4} "
                     f"label={result['label']:<12} pred={result['prediction']:<12} "
-                    f"rouge={result['explanation_rouge_l']:.3f}"
+                    f"bert={result['explanation_bert_f1'] or 0:.3f}"
                 )
 
         # Compute per-level metrics and LW-F1
@@ -89,7 +89,7 @@ class Evaluator:
         overall = compute_metrics(
             [r["label"] for r in results],
             [r["prediction"] for r in results],
-            [r["explanation_rouge_l"] for r in results],
+            [r.get("explanation_bert_f1") for r in results],
         )
         overall["lw_f1"] = lw_f1
 
@@ -131,11 +131,10 @@ class Evaluator:
         correct       = label == prediction
         conflict_level = item.get("conflict_level")  # int or None
 
-        rouge = 0.0
+        bert_f1 = None
         if should_score_explanation(item):
-            # Score against the full reasoning_chain joined as reference text
             reference = _build_reference_text(item)
-            rouge = score_explanation(response.explanation, reference)
+            bert_f1   = score_explanation(response.explanation, reference)
 
         return {
             "id":                  item["id"],
@@ -147,7 +146,7 @@ class Evaluator:
             "label":               label,
             "prediction":          prediction,
             "correct":             correct,
-            "explanation_rouge_l": rouge,
+            "explanation_bert_f1": bert_f1,
             "model_explanation":   response.explanation,
             "raw_response":        response.raw_response,
         }

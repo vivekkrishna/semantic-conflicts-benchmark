@@ -1,12 +1,12 @@
 """Metric computation for verdict classification and explanation scoring.
 
 Primary score: Level-Weighted F1 (LW-F1)
-    LW-F1 = Σ ((level + 1) × macro_F1_at_level) / Σ (level + 1)
+    LW-F1 = Σ ((level + 1) × conflict_F1_at_level) / Σ (level + 1)
     Weight surface (L0) = 1, deep (L5) = 6.
-    A model that only detects surface conflicts scores ~0.14; perfect = 1.0.
+    A model that only detects surface conflicts scores ~0.05; perfect = 1.0.
 """
 
-from typing import Any
+from typing import Any, Optional
 
 from sklearn.metrics import accuracy_score, f1_score
 
@@ -22,17 +22,19 @@ CONFLICT_LEVELS = list(range(6))   # 0 … 5
 def compute_metrics(
     labels: list[str],
     predictions: list[str],
-    rouge_scores: list[float],
+    bert_scores: list[Optional[float]],
 ) -> dict[str, Any]:
     """Compute all benchmark metrics from flat lists.
 
     Args:
-        labels:       Ground-truth verdict strings.
-        predictions:  Model-predicted verdict strings.
-        rouge_scores: ROUGE-L scores per item; 0.0 for items without reference.
+        labels:      Ground-truth verdict strings.
+        predictions: Model-predicted verdict strings.
+        bert_scores: BERTScore F1 per item; None for items without a reference
+                     (consistent items) or where the model gave no explanation.
 
     Returns:
-        Dict with accuracy, macro_f1, binary_conflict_f1, per_class_f1, explanation_rouge_l.
+        Dict with accuracy, macro_f1, binary_conflict_f1, per_class_f1,
+        explanation_bert_f1, n_items, n_explained.
     """
     accuracy = round(accuracy_score(labels, predictions), 4)
 
@@ -54,15 +56,15 @@ def compute_metrics(
                  pos_label="non-consistent", average="binary", zero_division=0), 4
     )
 
-    scored = [s for s in rouge_scores if s > 0.0]
-    rouge_avg = round(sum(scored) / len(scored), 4) if scored else 0.0
+    scored = [s for s in bert_scores if s is not None and s > 0.0]
+    bert_avg = round(sum(scored) / len(scored), 4) if scored else None
 
     return {
         "accuracy":            accuracy,
         "macro_f1":            macro_f1,
         "binary_conflict_f1":  binary_f1,
         "per_class_f1":        per_class_f1,
-        "explanation_rouge_l": rouge_avg,
+        "explanation_bert_f1": bert_avg,
         "n_items":             len(labels),
         "n_explained":         len(scored),
     }
@@ -72,8 +74,8 @@ def compute_metrics_for_subset(items: list[dict[str, Any]]) -> dict[str, Any]:
     """Convenience wrapper — compute metrics from a list of result-item dicts."""
     labels      = [r["label"] for r in items]
     predictions = [r["prediction"] for r in items]
-    rouge       = [r.get("explanation_rouge_l", 0.0) for r in items]
-    return compute_metrics(labels, predictions, rouge)
+    bert        = [r.get("explanation_bert_f1") for r in items]
+    return compute_metrics(labels, predictions, bert)
 
 
 # ---------------------------------------------------------------------------

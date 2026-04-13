@@ -1,4 +1,4 @@
-"""Tests for benchmark/metrics.py — accuracy, macro-F1, LW-F1, ROUGE-L."""
+"""Tests for benchmark/metrics.py — accuracy, macro-F1, LW-F1, BERTScore."""
 
 import pytest
 
@@ -18,8 +18,8 @@ class TestComputeMetrics:
     def test_perfect_predictions(self):
         labels = ["conflict", "consistent", "ambiguous"]
         preds  = ["conflict", "consistent", "ambiguous"]
-        rouge  = [0.8, 0.0, 0.6]
-        m = compute_metrics(labels, preds, rouge)
+        bert   = [0.8, None, 0.6]
+        m = compute_metrics(labels, preds, bert)
         assert m["accuracy"]  == 1.0
         assert m["macro_f1"]  == 1.0
         assert m["n_items"]   == 3
@@ -27,32 +27,32 @@ class TestComputeMetrics:
     def test_all_wrong(self):
         labels = ["conflict", "conflict", "conflict"]
         preds  = ["consistent", "consistent", "consistent"]
-        rouge  = [0.0, 0.0, 0.0]
-        m = compute_metrics(labels, preds, rouge)
+        bert   = [None, None, None]
+        m = compute_metrics(labels, preds, bert)
         assert m["accuracy"] == 0.0
         assert m["macro_f1"] == pytest.approx(0.0, abs=1e-3)
 
-    def test_rouge_avg_excludes_zeros(self):
+    def test_bert_avg_excludes_none_and_zeros(self):
         labels = ["conflict", "conflict", "consistent"]
         preds  = ["conflict", "conflict", "consistent"]
-        rouge  = [0.5, 0.9, 0.0]   # 0.0 = not scored (consistent)
-        m = compute_metrics(labels, preds, rouge)
+        bert   = [0.5, 0.9, None]   # None = not scored (consistent)
+        m = compute_metrics(labels, preds, bert)
         # Average of [0.5, 0.9] = 0.7
-        assert m["explanation_rouge_l"] == pytest.approx(0.7, abs=1e-3)
+        assert m["explanation_bert_f1"] == pytest.approx(0.7, abs=1e-3)
         assert m["n_explained"] == 2
 
-    def test_rouge_all_zeros(self):
+    def test_bert_all_none_returns_none(self):
         labels = ["consistent"] * 3
         preds  = ["consistent"] * 3
-        rouge  = [0.0, 0.0, 0.0]
-        m = compute_metrics(labels, preds, rouge)
-        assert m["explanation_rouge_l"] == 0.0
+        bert   = [None, None, None]
+        m = compute_metrics(labels, preds, bert)
+        assert m["explanation_bert_f1"] is None
 
     def test_binary_conflict_f1(self):
         labels = ["conflict", "consistent", "ambiguous"]
         preds  = ["conflict", "consistent", "consistent"]
-        rouge  = [0.0, 0.0, 0.0]
-        m = compute_metrics(labels, preds, rouge)
+        bert   = [None, None, None]
+        m = compute_metrics(labels, preds, bert)
         # non-consistent (conflict+ambiguous) vs consistent
         # label: non-c, c, non-c; pred: non-c, c, c
         # TP=1 (conflict), FP=0, FN=1 (ambiguous missed)
@@ -61,8 +61,8 @@ class TestComputeMetrics:
     def test_per_class_f1_present(self):
         labels = ["conflict", "consistent", "ambiguous"]
         preds  = ["conflict", "consistent", "ambiguous"]
-        rouge  = [0.0, 0.0, 0.0]
-        m = compute_metrics(labels, preds, rouge)
+        bert   = [None, None, None]
+        m = compute_metrics(labels, preds, bert)
         assert set(m["per_class_f1"].keys()) == {"conflict", "consistent", "ambiguous"}
         for v in m["per_class_f1"].values():
             assert v == pytest.approx(1.0, abs=1e-3)
@@ -73,12 +73,12 @@ class TestComputeMetrics:
 # ---------------------------------------------------------------------------
 
 class TestComputeLevelMetrics:
-    def _make_result(self, label, pred, level, rouge=0.0):
+    def _make_result(self, label, pred, level, bert=None):
         return {
             "label":               label,
             "prediction":          pred,
             "conflict_level":      level,
-            "explanation_rouge_l": rouge,
+            "explanation_bert_f1": bert,
         }
 
     def test_groups_by_level(self):
@@ -186,14 +186,14 @@ class TestLevelWeightedF1:
 class TestComputeMetricsForSubset:
     def test_wrapper_matches_direct_call(self):
         items = [
-            {"label": "conflict",   "prediction": "conflict",   "explanation_rouge_l": 0.7},
-            {"label": "consistent", "prediction": "consistent", "explanation_rouge_l": 0.0},
+            {"label": "conflict",   "prediction": "conflict",   "explanation_bert_f1": 0.7},
+            {"label": "consistent", "prediction": "consistent", "explanation_bert_f1": None},
         ]
         result = compute_metrics_for_subset(items)
         direct = compute_metrics(
             ["conflict", "consistent"],
             ["conflict", "consistent"],
-            [0.7, 0.0],
+            [0.7, None],
         )
         assert result["accuracy"]  == direct["accuracy"]
         assert result["macro_f1"]  == direct["macro_f1"]

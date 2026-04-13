@@ -12,10 +12,10 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 
 ### Overall scores
 
-| Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl ROUGE-L |
-|-------|--------:|--------:|---------:|----------------:|-------------:|
+| Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl BERTScore-F1 |
+|-------|--------:|--------:|---------:|----------------:|------------------:|
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
-| claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.2307 |
+| claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.8136 |
 
 **Metric definitions**
 
@@ -25,33 +25,33 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | **Accuracy** | `correct / N` across all 180 items | Interpretable to non-specialists; shows overall verdict quality at a glance. | Gross correctness. Can be gamed by a model that memorises the 60 % conflict base rate, so must be read alongside Macro-F1. |
 | **Macro-F1** | `(F1_conflict + F1_consistent + F1_ambiguous) / 3` where each `F1_c = 2PR/(P+R)`, `P = TP/(TP+FP)`, `R = TP/(TP+FN)` | Unweighted average penalises models that collapse predictions to one class. A model that always says "conflict" scores 0.333 regardless of accuracy, exposing the single-class failure mode. | Class balance. Low Macro-F1 with high Accuracy = the model ignores consistent or ambiguous labels entirely. |
 | **Bin-Conflict-F1** | Binary F1 with positive = `{conflict, ambiguous}`, negative = `{consistent}`; `F1 = 2PR/(P+R)` | Measures the practically important ability to flag items that need human review (anything not clearly consistent) without requiring the model to distinguish conflict from ambiguous. | Over- vs. under-flagging. High Bin-F1 + low Macro-F1 = model detects risk but can't distinguish ambiguous from outright conflict. |
-| **Expl ROUGE-L** | `ROUGE-L F1` of model explanation vs. ground-truth `reasoning_chain`, averaged over conflict and ambiguous items only | Checks whether the model traces the correct logical path, not just gets the label right. ROUGE-L captures longest common subsequence overlap, rewarding step order as well as vocabulary. | Explanation faithfulness. A model can predict "conflict" for the wrong reason; low ROUGE-L exposes this. Not computed for consistent items (no reference chain). |
+| **Expl BERTScore-F1** | BERTScore F1 (distilbert-base-uncased) of model explanation vs. ground-truth `reasoning_chain`, averaged over conflict and ambiguous items only | Checks whether the model traces the correct logical path, not just gets the label right. BERTScore uses contextual embeddings to capture semantic similarity and paraphrasing that token-overlap metrics miss. | Explanation faithfulness. A model can predict "conflict" for the wrong reason; low BERTScore exposes this. Not computed for consistent items (no reference chain). |
 
 ### By difficulty level — claude-haiku-4-5
 
 _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous items (90 total). This measures whether the model can identify level-L conflicts **without** over-predicting on non-conflict items._
 
-| Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
-|-------|------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
-| L0 | Surface | 0.7778 | 0.6929 | 0.7391 | 0.2058 | 90 |
-| L1 | Immediate | 0.7556 | 0.6642 | 0.6818 | 0.2288 | 90 |
-| L2 | Two-hop | 0.7667 | 0.6779 | 0.7111 | 0.2351 | 90 |
-| L3 | Three-hop | 0.7667 | 0.6779 | 0.7111 | 0.2152 | 90 |
-| L4 | Four-hop | 0.7444 | 0.6510 | 0.6512 | 0.2275 | 90 |
-| L5 | Deep | 0.7444 | 0.6510 | 0.6512 | 0.2170 | 90 |
+| Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | BERTScore-F1 _(opt: 1.0)_ | N |
+|-------|------|---------------------:|---------------------:|-------------------------:|--------------------------:|--:|
+| L0 | Surface | 0.7778 | 0.6929 | 0.7391 | 0.8004 | 90 |
+| L1 | Immediate | 0.7556 | 0.6642 | 0.6818 | 0.8087 | 90 |
+| L2 | Two-hop | 0.7667 | 0.6779 | 0.7111 | 0.8116 | 90 |
+| L3 | Three-hop | 0.7667 | 0.6779 | 0.7111 | 0.8093 | 90 |
+| L4 | Four-hop | 0.7444 | 0.6510 | 0.6512 | 0.8116 | 90 |
+| L5 | Deep | 0.7444 | 0.6510 | 0.6512 | 0.8107 | 90 |
 
 > Conflict-F1 declines from 0.739 at L0 (surface contradictions) to 0.651 at L4–L5 (four/five-hop chains), confirming that haiku does degrade on deeper reasoning. The remaining 35 errors are genuine misclassifications, not parser artifacts — earlier scores were corrupted by a bug where "CONFLICT" appearing in an explanation body was picked up instead of the first-line verdict.
 
 ### By domain — claude-haiku-4-5
 
-| Domain | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
-|--------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
-| philosophy | 0.8000 | 0.6827 | 0.8649 | 0.2143 | 30 |
-| software | 0.8000 | 0.5926 | 0.8889 | 0.2517 | 30 |
-| law | 0.6000 | 0.5480 | 0.6667 | 0.2315 | 30 |
-| science | 0.8000 | 0.6814 | 0.8824 | 0.2394 | 30 |
-| content | 0.9333 | 0.8875 | 0.9714 | — | 30 |
-| teams | 0.9000 | 0.7744 | 0.9231 | — | 30 |
+| Domain | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | BERTScore-F1 _(opt: 1.0)_ | N |
+|--------|---------------------:|---------------------:|-------------------------:|--------------------------:|--:|
+| philosophy | 0.8000 | 0.6827 | 0.8649 | 0.8113 | 30 |
+| software | 0.8000 | 0.5926 | 0.8889 | 0.8202 | 30 |
+| law | 0.6000 | 0.5480 | 0.6667 | 0.8135 | 30 |
+| science | 0.8000 | 0.6814 | 0.8824 | 0.8188 | 30 |
+| content | 0.9333 | 0.8875 | 0.9714 | 0.8052 | 30 |
+| teams | 0.9000 | 0.7744 | 0.9231 | 0.8137 | 30 |
 
 ---
 
@@ -181,7 +181,7 @@ The model reads two passages and classifies the relationship as:
 
 ### Task 2: Explanation Quality
 
-For conflict and ambiguous predictions, the model's explanation is scored against the ground-truth `reasoning_chain` using **ROUGE-L F1**. This measures whether the model traces the correct logical path, not just gets the label right.
+For conflict and ambiguous predictions, the model's explanation is scored against the ground-truth `reasoning_chain` using **BERTScore F1** (distilbert-base-uncased). This measures whether the model traces the correct logical path using semantic similarity rather than token overlap, capturing paraphrasing and synonymy that surface metrics miss.
 
 ---
 
@@ -254,7 +254,7 @@ python -m pytest tests/ -v
 
 ## Leaderboard Columns
 
-`model, run_id, n_items, lw_f1, accuracy, macro_f1, binary_conflict_f1, explanation_rouge_l, level_0_f1, level_1_f1, level_2_f1, level_3_f1, level_4_f1, level_5_f1, philosophy_f1, software_f1, law_f1, science_f1, content_f1, teams_f1`
+`model, run_id, n_items, lw_f1, accuracy, macro_f1, binary_conflict_f1, expl_bert_f1, level_0_f1, level_1_f1, level_2_f1, level_3_f1, level_4_f1, level_5_f1, philosophy_f1, software_f1, law_f1, science_f1, content_f1, teams_f1`
 
 ---
 

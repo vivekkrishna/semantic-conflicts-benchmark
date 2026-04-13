@@ -1,2 +1,2 @@
-model,run_id,n_items,lw_f1,accuracy,macro_f1,binary_conflict_f1,explanation_rouge_l,level_0_f1,level_1_f1,level_2_f1,level_3_f1,level_4_f1,level_5_f1,philosophy_f1,software_f1,law_f1,science_f1,content_f1,teams_f1
-anthropic/claude-haiku-4-5-20251001,20260413T015546Z,180,0.6783,0.8056,0.6893,0.9531,0.2307,0.7391,0.6818,0.7111,0.7111,0.6512,0.6512,0.6827,0.5926,0.548,0.6814,0.8875,0.7744
+model,run_id,n_items,lw_f1,accuracy,macro_f1,binary_conflict_f1,expl_bert_f1,level_0_f1,level_1_f1,level_2_f1,level_3_f1,level_4_f1,level_5_f1,philosophy_f1,software_f1,law_f1,science_f1,content_f1,teams_f1
+anthropic/claude-haiku-4-5-20251001,20260413T015546Z,180,0.6783,0.8056,0.6893,0.9531,0.8136,0.7391,0.6818,0.7111,0.7111,0.6512,0.6512,0.6827,0.5926,0.548,0.6814,0.8875,0.7744
