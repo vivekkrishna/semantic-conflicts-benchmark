@@ -15,10 +15,10 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl ROUGE-L |
 |-------|--------:|--------:|---------:|----------------:|-------------:|
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
-| claude-haiku-4-5 | 0.3333 | 0.6333 | 0.3290 | 0.8590 | 0.2331 |
+| claude-haiku-4-5 | 0.3564 | 0.6333 | 0.3290 | 0.8590 | 0.2331 |
 
 > **Metric definitions:**
-> - **LW-F1** — primary score; weights harder levels more (L0 weight = 1×, L5 = 6×). A model that predicts "conflict" for every item scores exactly **0.3333** — this is the naive all-conflict baseline.
+> - **LW-F1** — primary score; weights harder levels more (L0 weight = 1×, L5 = 6×). Each level's evaluation set is the 18 conflict items at that depth **plus all 72 consistent/ambiguous items** — so precision is measured alongside recall. A model that predicts "conflict" for every item scores exactly **0.3333**; a perfect model scores **1.0000**.
 > - **Accuracy** — fraction of items with the correct verdict (conflict / consistent / ambiguous).
 > - **Macro-F1** — unweighted average F1 across all three verdict classes; penalises models that ignore consistent or ambiguous items.
 > - **Bin-Conflict-F1** — binary F1 treating conflict+ambiguous as positive and consistent as negative.
@@ -26,16 +26,18 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 
 ### By difficulty level — claude-haiku-4-5
 
+_Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous items (90 total). This measures whether the model can identify level-L conflicts **without** over-predicting on non-conflict items._
+
 | Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
 |-------|------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
-| L0 | Surface | 1.0000 | 0.3333 | 1.0000 | 0.2175 | 18 |
-| L1 | Immediate | 1.0000 | 0.3333 | 1.0000 | 0.2470 | 18 |
-| L2 | Two-hop | 1.0000 | 0.3333 | 1.0000 | 0.2564 | 18 |
-| L3 | Three-hop | 1.0000 | 0.3333 | 1.0000 | 0.2267 | 18 |
-| L4 | Four-hop | 1.0000 | 0.3333 | 1.0000 | 0.2422 | 18 |
-| L5 | Deep | 1.0000 | 0.3333 | 1.0000 | 0.2311 | 18 |
+| L0 | Surface | 0.2667 | 0.1915 | 0.3564 | 0.2103 | 90 |
+| L1 | Immediate | 0.2667 | 0.1915 | 0.3564 | 0.2280 | 90 |
+| L2 | Two-hop | 0.2667 | 0.1915 | 0.3564 | 0.2336 | 90 |
+| L3 | Three-hop | 0.2667 | 0.1915 | 0.3564 | 0.2158 | 90 |
+| L4 | Four-hop | 0.2667 | 0.1915 | 0.3564 | 0.2251 | 90 |
+| L5 | Deep | 0.2667 | 0.1915 | 0.3564 | 0.2184 | 90 |
 
-> Haiku achieves perfect recall on conflict items at every depth but classifies nearly all consistent and ambiguous items as "conflict" — collapsing the task to a binary detector. Macro-F1 = 0.333 at every level is the signature of a single-class predictor.
+> Haiku's per-level numbers are identical across all depths — the signature of a model that never actually reasons about conflict difficulty; it predicts "conflict" for nearly everything regardless of level. Conflict-F1 = 0.356 < 1.0 (vs the old misleading 1.000) because precision is now penalised: 65 of 90 items per level are consistent/ambiguous that haiku incorrectly labels "conflict". A model with genuine multi-hop reasoning would show Conflict-F1 declining from L0 to L5.
 
 ### By domain — claude-haiku-4-5
 
@@ -138,10 +140,12 @@ Every conflict item is tagged with a `conflict_level` (0–5) representing the *
 ### Level-Weighted F1 (LW-F1) — primary score
 
 ```
-LW-F1 = Σ ((level + 1) × F1_at_level) / Σ (level + 1)
+LW-F1 = Σ ((level + 1) × conflict_F1_at_level) / Σ (level + 1)
 ```
 
-Weights: L0=1, L1=2, L2=3, L3=4, L4=5, L5=6. A model that correctly handles only surface conflicts scores ~0.05; a perfect model scores 1.0. This prevents high-accuracy models from hiding shallow reasoning.
+where `conflict_F1_at_level` is the conflict-class F1 computed on the **level-L conflict items plus all consistent/ambiguous items** (90 items per level). Including non-conflict items at every level means precision is penalised — a model that blindly labels everything "conflict" gets low precision and therefore low F1.
+
+Weights: L0=1, L1=2, L2=3, L3=4, L4=5, L5=6. A model that only detects surface conflicts scores ~0.048; a perfect model scores 1.0; a naive always-predict-conflict baseline scores 0.333. This prevents high-accuracy models from hiding shallow reasoning.
 
 ---
 

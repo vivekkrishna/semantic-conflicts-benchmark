@@ -83,15 +83,21 @@ def compute_metrics_for_subset(items: list[dict[str, Any]]) -> dict[str, Any]:
 def compute_level_metrics(results: list[dict[str, Any]]) -> dict[int, dict[str, Any]]:
     """Compute metrics at each conflict level (0–5).
 
-    Only items with a non-null `conflict_level` are included.
-    Items that are consistent/ambiguous (conflict_level == None) are excluded
-    so we isolate the model's ability to detect conflicts at each depth.
+    Each level's evaluation set = level-L conflict items + ALL consistent/ambiguous items.
+    Including non-conflict items in every level is essential so that precision is measured:
+    a model that blindly predicts "conflict" is penalised for false positives on the
+    consistent/ambiguous items, and conflict-class F1 correctly ranges 0→1.
+
+    A purely correct model (no false positives, no false negatives) scores conflict F1 = 1.0
+    at every level and therefore LW-F1 = 1.0.  A model that always predicts "conflict" scores
+    conflict F1 = 18/(18+72) precision × 1.0 recall ≈ 0.333 at each level → LW-F1 = 0.333.
     """
+    non_conflict = [r for r in results if r.get("conflict_level") is None]
     by_level: dict[int, dict[str, Any]] = {}
     for level in CONFLICT_LEVELS:
-        level_items = [r for r in results if r.get("conflict_level") == level]
-        if level_items:
-            by_level[level] = compute_metrics_for_subset(level_items)
+        level_conflict = [r for r in results if r.get("conflict_level") == level]
+        if level_conflict:
+            by_level[level] = compute_metrics_for_subset(level_conflict + non_conflict)
     return by_level
 
 
@@ -99,10 +105,15 @@ def level_weighted_f1(by_level: dict[int, dict[str, Any]]) -> float:
     """Primary benchmark score: higher difficulty levels get more weight.
 
     Weight for level N = N + 1 (surface L0 = 1, deep L5 = 6).
+    Uses per-level conflict-class F1 (not macro-F1) so that the score ranges 0→1:
+    a perfect model scores 1.0; a blind always-conflict predictor scores ~0.333.
     Returns 0.0 if no level data is available.
     """
     if not by_level:
         return 0.0
     total_weight = sum(l + 1 for l in by_level)
-    weighted_sum = sum((l + 1) * m["macro_f1"] for l, m in by_level.items())
+    weighted_sum = sum(
+        (l + 1) * m.get("per_class_f1", {}).get("conflict", 0.0)
+        for l, m in by_level.items()
+    )
     return round(weighted_sum / total_weight, 4)

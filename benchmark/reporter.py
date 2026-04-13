@@ -148,7 +148,7 @@ def write_leaderboard(results: EvaluationResults, path: str) -> None:
         "macro_f1":            o["macro_f1"],
         "binary_conflict_f1":  o["binary_conflict_f1"],
         "explanation_rouge_l": o["explanation_rouge_l"],
-        **{f"level_{l}_f1": bl.get(l, {}).get("macro_f1", "") for l in range(6)},
+        **{f"level_{l}_f1": bl.get(l, {}).get("per_class_f1", {}).get("conflict", "") for l in range(6)},
         **{f"{d}_f1": bd.get(d, {}).get("macro_f1", "")
            for d in ["philosophy", "software", "law", "science", "content", "teams"]},
     }
