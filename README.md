@@ -15,7 +15,7 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl ROUGE-L |
 |-------|--------:|--------:|---------:|----------------:|-------------:|
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
-| claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.2334 |
+| claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.2307 |
 
 **Metric definitions**
 
