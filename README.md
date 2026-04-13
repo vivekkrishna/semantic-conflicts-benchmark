@@ -14,14 +14,20 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 
 | Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl ROUGE-L |
 |-------|--------:|--------:|---------:|----------------:|-------------:|
+| **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
 | claude-haiku-4-5 | 0.3333 | 0.6333 | 0.3290 | 0.8590 | 0.2331 |
 
-> **LW-F1** (Level-Weighted F1) is the primary score. It weights performance at harder difficulty levels more heavily (L5 weight = 6×, L0 weight = 1×). A model that predicts "conflict" for every item scores exactly 0.3333 regardless of level — this is the naive baseline.
+> **Metric definitions:**
+> - **LW-F1** — primary score; weights harder levels more (L0 weight = 1×, L5 = 6×). A model that predicts "conflict" for every item scores exactly **0.3333** — this is the naive all-conflict baseline.
+> - **Accuracy** — fraction of items with the correct verdict (conflict / consistent / ambiguous).
+> - **Macro-F1** — unweighted average F1 across all three verdict classes; penalises models that ignore consistent or ambiguous items.
+> - **Bin-Conflict-F1** — binary F1 treating conflict+ambiguous as positive and consistent as negative.
+> - **Expl ROUGE-L** — ROUGE-L F1 of the model's explanation against the ground-truth reasoning chain (conflict and ambiguous items only).
 
 ### By difficulty level — claude-haiku-4-5
 
-| Level | Name | Accuracy | Macro-F1 | Conflict-F1 | ROUGE-L | N |
-|-------|------|--------:|---------:|------------:|--------:|--:|
+| Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
+|-------|------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
 | L0 | Surface | 1.0000 | 0.3333 | 1.0000 | 0.2175 | 18 |
 | L1 | Immediate | 1.0000 | 0.3333 | 1.0000 | 0.2470 | 18 |
 | L2 | Two-hop | 1.0000 | 0.3333 | 1.0000 | 0.2564 | 18 |
@@ -33,8 +39,8 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 
 ### By domain — claude-haiku-4-5
 
-| Domain | Accuracy | Macro-F1 | Conflict-F1 | ROUGE-L | N |
-|--------|--------:|---------:|------------:|--------:|--:|
+| Domain | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
+|--------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
 | philosophy | 0.6667 | 0.3942 | 0.7826 | 0.2143 | 30 |
 | software | 0.6333 | 0.3294 | 0.7660 | 0.2489 | 30 |
 | law | 0.6000 | 0.2500 | 0.7500 | 0.2315 | 30 |
