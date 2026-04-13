@@ -15,6 +15,7 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl BERTScore-F1 |
 |-------|--------:|--------:|---------:|----------------:|------------------:|
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
+| claude-sonnet-4-6 | **0.7319** | **0.8111** | **0.7211** | **0.9380** | **0.8223** |
 | claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.8136 |
 
 **Metric definitions**
@@ -27,12 +28,27 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | **Bin-Conflict-F1** | Binary F1 with positive = `{conflict, ambiguous}`, negative = `{consistent}`; `F1 = 2PR/(P+R)` | Measures the practically important ability to flag items that need human review (anything not clearly consistent) without requiring the model to distinguish conflict from ambiguous. | Over- vs. under-flagging. High Bin-F1 + low Macro-F1 = model detects risk but can't distinguish ambiguous from outright conflict. |
 | **Expl BERTScore-F1** | BERTScore F1 (distilbert-base-uncased) of model explanation vs. ground-truth `reasoning_chain`, averaged over conflict and ambiguous items only | Checks whether the model traces the correct logical path, not just gets the label right. BERTScore uses contextual embeddings to capture semantic similarity and paraphrasing that token-overlap metrics miss. | Explanation faithfulness. A model can predict "conflict" for the wrong reason; low BERTScore exposes this. Not computed for consistent items (no reference chain). |
 
-### By difficulty level — claude-haiku-4-5
+### By difficulty level
 
 _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous items (90 total). This measures whether the model can identify level-L conflicts **without** over-predicting on non-conflict items._
 
-| Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | BERTScore-F1 _(opt: 1.0)_ | N |
-|-------|------|---------------------:|---------------------:|-------------------------:|--------------------------:|--:|
+#### claude-sonnet-4-6
+
+| Level | Name | Accuracy | Macro-F1 | Conflict-F1 | BERTScore-F1 | N |
+|-------|------|--------:|---------:|------------:|-------------:|--:|
+| L0 | Surface | 0.7889 | 0.7474 | 0.8095 | 0.8164 | 90 |
+| L1 | Immediate | 0.7889 | 0.7457 | 0.8095 | 0.8225 | 90 |
+| L2 | Two-hop | 0.7778 | 0.7315 | 0.7805 | 0.8232 | 90 |
+| L3 | Three-hop | 0.7889 | 0.7474 | 0.8095 | 0.8219 | 90 |
+| L4 | Four-hop | 0.7222 | 0.6562 | 0.6111 | 0.8215 | 90 |
+| L5 | Deep | 0.7556 | 0.7035 | 0.7179 | 0.8258 | 90 |
+
+> Sonnet degrades sharply at L4 (0.611) but partially recovers at L5 (0.718), suggesting it handles some five-hop chains better than four-hop ones — likely due to L5 items having more explicit intermediate statements.
+
+#### claude-haiku-4-5
+
+| Level | Name | Accuracy | Macro-F1 | Conflict-F1 | BERTScore-F1 | N |
+|-------|------|--------:|---------:|------------:|-------------:|--:|
 | L0 | Surface | 0.7778 | 0.6929 | 0.7391 | 0.8004 | 90 |
 | L1 | Immediate | 0.7556 | 0.6642 | 0.6818 | 0.8087 | 90 |
 | L2 | Two-hop | 0.7667 | 0.6779 | 0.7111 | 0.8116 | 90 |
@@ -40,12 +56,25 @@ _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous item
 | L4 | Four-hop | 0.7444 | 0.6510 | 0.6512 | 0.8116 | 90 |
 | L5 | Deep | 0.7444 | 0.6510 | 0.6512 | 0.8107 | 90 |
 
-> Conflict-F1 declines from 0.739 at L0 (surface contradictions) to 0.651 at L4–L5 (four/five-hop chains), confirming that haiku does degrade on deeper reasoning. The remaining 35 errors are genuine misclassifications, not parser artifacts — earlier scores were corrupted by a bug where "CONFLICT" appearing in an explanation body was picked up instead of the first-line verdict.
+> Haiku shows a consistent monotonic decline from L0 (0.739) through L4–L5 (0.651), confirming steady degradation with reasoning depth.
 
-### By domain — claude-haiku-4-5
+### By domain
 
-| Domain | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | BERTScore-F1 _(opt: 1.0)_ | N |
-|--------|---------------------:|---------------------:|-------------------------:|--------------------------:|--:|
+#### claude-sonnet-4-6
+
+| Domain | Accuracy | Macro-F1 | Conflict-F1 | BERTScore-F1 | N |
+|--------|--------:|---------:|------------:|-------------:|--:|
+| philosophy | 0.8000 | 0.7606 | 0.8485 | 0.8235 | 30 |
+| software | 0.8667 | 0.8159 | 0.9143 | 0.8229 | 30 |
+| law | 0.6667 | 0.5858 | 0.7333 | 0.8286 | 30 |
+| science | 0.8000 | 0.6814 | 0.8824 | 0.8175 | 30 |
+| content | 0.8333 | 0.6707 | 0.9730 | 0.8166 | 30 |
+| teams | 0.9000 | 0.8174 | 0.9474 | 0.8239 | 30 |
+
+#### claude-haiku-4-5
+
+| Domain | Accuracy | Macro-F1 | Conflict-F1 | BERTScore-F1 | N |
+|--------|--------:|---------:|------------:|-------------:|--:|
 | philosophy | 0.8000 | 0.6827 | 0.8649 | 0.8113 | 30 |
 | software | 0.8000 | 0.5926 | 0.8889 | 0.8202 | 30 |
 | law | 0.6000 | 0.5480 | 0.6667 | 0.8135 | 30 |
