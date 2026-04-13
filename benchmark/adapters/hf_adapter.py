@@ -5,10 +5,9 @@ Usage:
     python -m benchmark.run --adapter hf --model mistralai/Mistral-7B-Instruct-v0.2
 """
 
-import re
 from typing import Optional
 
-from benchmark.adapters.base import ModelAdapter, AdapterResponse
+from benchmark.adapters.base import ModelAdapter, AdapterResponse, parse_verdict_response
 
 
 class HuggingFaceAdapter(ModelAdapter):
@@ -39,21 +38,4 @@ class HuggingFaceAdapter(ModelAdapter):
         # Strip the input prompt from the output (some pipelines echo it back)
         if raw.startswith(full_prompt):
             raw = raw[len(full_prompt):].strip()
-        return _parse_response(raw)
-
-
-def _parse_response(raw: str) -> AdapterResponse:
-    upper = raw.upper()
-    verdict = "consistent"
-    for v in ("CONFLICT", "AMBIGUOUS", "CONSISTENT"):
-        if v in upper:
-            verdict = v.lower()
-            break
-
-    explanation: Optional[str] = None
-    if verdict in ("conflict", "ambiguous"):
-        lines = raw.strip().splitlines()
-        body_lines = [l for l in lines if not re.match(r"^\s*(CONFLICT|CONSISTENT|AMBIGUOUS)\s*$", l, re.I)]
-        explanation = "\n".join(body_lines).strip() or raw.strip()
-
-    return AdapterResponse(verdict=verdict, explanation=explanation, raw_response=raw)
+        return parse_verdict_response(raw)

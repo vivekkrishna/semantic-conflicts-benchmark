@@ -18,12 +18,49 @@ Then run:
     python -m benchmark.run --adapter-class my_module.MyAdapter
 """
 
+import re
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import Optional
 
 
 VALID_VERDICTS = {"conflict", "consistent", "ambiguous"}
+
+
+def parse_verdict_response(raw: str) -> "AdapterResponse":
+    """Parse a model's raw text into an AdapterResponse.
+
+    The system prompt instructs models to put the verdict word on the first line.
+    We therefore check only the first line first, then fall back to a full-text
+    scan. This prevents "CONFLICT" mentioned in an explanation body from
+    overriding a "CONSISTENT" or "AMBIGUOUS" verdict stated on line 1.
+    """
+    lines = raw.strip().splitlines()
+    first_line = lines[0].upper() if lines else ""
+
+    verdict = "consistent"  # safe default
+    # Primary: first-line only
+    for v in ("CONFLICT", "AMBIGUOUS", "CONSISTENT"):
+        if v in first_line:
+            verdict = v.lower()
+            break
+    else:
+        # Fallback: scan full text (handles models that bury the keyword)
+        upper = raw.upper()
+        for v in ("CONFLICT", "AMBIGUOUS", "CONSISTENT"):
+            if v in upper:
+                verdict = v.lower()
+                break
+
+    explanation: Optional[str] = None
+    if verdict in ("conflict", "ambiguous"):
+        body_lines = [
+            l for l in lines
+            if not re.match(r"^\s*(CONFLICT|CONSISTENT|AMBIGUOUS)\s*$", l, re.I)
+        ]
+        explanation = "\n".join(body_lines).strip() or raw.strip()
+
+    return AdapterResponse(verdict=verdict, explanation=explanation, raw_response=raw)
 
 
 @dataclass

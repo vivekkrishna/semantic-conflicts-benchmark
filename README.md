@@ -15,7 +15,7 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | Model | LW-F1 ↑ | Accuracy | Macro-F1 | Bin-Conflict-F1 | Expl ROUGE-L |
 |-------|--------:|--------:|---------:|----------------:|-------------:|
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
-| claude-haiku-4-5 | 0.3564 | 0.6333 | 0.3290 | 0.8590 | 0.2331 |
+| claude-haiku-4-5 | 0.6783 | 0.8056 | 0.6893 | 0.9531 | 0.2334 |
 
 **Metric definitions**
 
@@ -33,25 +33,25 @@ _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous item
 
 | Level | Name | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
 |-------|------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
-| L0 | Surface | 0.2667 | 0.1915 | 0.3564 | 0.2103 | 90 |
-| L1 | Immediate | 0.2667 | 0.1915 | 0.3564 | 0.2280 | 90 |
-| L2 | Two-hop | 0.2667 | 0.1915 | 0.3564 | 0.2336 | 90 |
-| L3 | Three-hop | 0.2667 | 0.1915 | 0.3564 | 0.2158 | 90 |
-| L4 | Four-hop | 0.2667 | 0.1915 | 0.3564 | 0.2251 | 90 |
-| L5 | Deep | 0.2667 | 0.1915 | 0.3564 | 0.2184 | 90 |
+| L0 | Surface | 0.7778 | 0.6929 | 0.7391 | 0.2058 | 90 |
+| L1 | Immediate | 0.7556 | 0.6642 | 0.6818 | 0.2288 | 90 |
+| L2 | Two-hop | 0.7667 | 0.6779 | 0.7111 | 0.2351 | 90 |
+| L3 | Three-hop | 0.7667 | 0.6779 | 0.7111 | 0.2152 | 90 |
+| L4 | Four-hop | 0.7444 | 0.6510 | 0.6512 | 0.2275 | 90 |
+| L5 | Deep | 0.7444 | 0.6510 | 0.6512 | 0.2170 | 90 |
 
-> Haiku's per-level numbers are identical across all depths — the signature of a model that never actually reasons about conflict difficulty; it predicts "conflict" for nearly everything regardless of level. Conflict-F1 = 0.356 < 1.0 (vs the old misleading 1.000) because precision is now penalised: 65 of 90 items per level are consistent/ambiguous that haiku incorrectly labels "conflict". A model with genuine multi-hop reasoning would show Conflict-F1 declining from L0 to L5.
+> Conflict-F1 declines from 0.739 at L0 (surface contradictions) to 0.651 at L4–L5 (four/five-hop chains), confirming that haiku does degrade on deeper reasoning. The remaining 35 errors are genuine misclassifications, not parser artifacts — earlier scores were corrupted by a bug where "CONFLICT" appearing in an explanation body was picked up instead of the first-line verdict.
 
 ### By domain — claude-haiku-4-5
 
 | Domain | Accuracy _(opt: 1.0)_ | Macro-F1 _(opt: 1.0)_ | Conflict-F1 _(opt: 1.0)_ | ROUGE-L _(opt: 1.0)_ | N |
 |--------|---------------------:|---------------------:|-------------------------:|---------------------:|--:|
-| philosophy | 0.6667 | 0.3942 | 0.7826 | 0.2143 | 30 |
-| software | 0.6333 | 0.3294 | 0.7660 | 0.2489 | 30 |
-| law | 0.6000 | 0.2500 | 0.7500 | 0.2315 | 30 |
-| science | 0.6333 | 0.3294 | 0.7660 | 0.2383 | 30 |
-| content | 0.6667 | 0.3879 | 0.8000 | — | 30 |
-| teams | 0.6000 | 0.2500 | 0.7500 | — | 30 |
+| philosophy | 0.8000 | 0.6827 | 0.8649 | 0.2143 | 30 |
+| software | 0.8000 | 0.5926 | 0.8889 | 0.2517 | 30 |
+| law | 0.6000 | 0.5480 | 0.6667 | 0.2315 | 30 |
+| science | 0.8000 | 0.6814 | 0.8824 | 0.2394 | 30 |
+| content | 0.9333 | 0.8875 | 0.9714 | — | 30 |
+| teams | 0.9000 | 0.7744 | 0.9231 | — | 30 |
 
 ---
 

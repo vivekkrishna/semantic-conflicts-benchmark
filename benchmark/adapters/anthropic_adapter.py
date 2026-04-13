@@ -5,10 +5,9 @@ Usage:
     python -m benchmark.run --adapter anthropic --model claude-haiku-4-5-20251001
 """
 
-import re
 from typing import Optional
 
-from benchmark.adapters.base import ModelAdapter, AdapterResponse
+from benchmark.adapters.base import ModelAdapter, AdapterResponse, parse_verdict_response
 
 
 class AnthropicAdapter(ModelAdapter):
@@ -38,21 +37,4 @@ class AnthropicAdapter(ModelAdapter):
             messages=[{"role": "user", "content": prompt}],
         )
         raw = message.content[0].text if message.content else ""
-        return _parse_response(raw)
-
-
-def _parse_response(raw: str) -> AdapterResponse:
-    upper = raw.upper()
-    verdict = "consistent"
-    for v in ("CONFLICT", "AMBIGUOUS", "CONSISTENT"):
-        if v in upper:
-            verdict = v.lower()
-            break
-
-    explanation: Optional[str] = None
-    if verdict in ("conflict", "ambiguous"):
-        lines = raw.strip().splitlines()
-        body_lines = [l for l in lines if not re.match(r"^\s*(CONFLICT|CONSISTENT|AMBIGUOUS)\s*$", l, re.I)]
-        explanation = "\n".join(body_lines).strip() or raw.strip()
-
-    return AdapterResponse(verdict=verdict, explanation=explanation, raw_response=raw)
+        return parse_verdict_response(raw)

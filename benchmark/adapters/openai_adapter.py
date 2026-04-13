@@ -5,10 +5,9 @@ Usage:
     python -m benchmark.run --adapter openai --model gpt-4o
 """
 
-import re
 from typing import Optional
 
-from benchmark.adapters.base import ModelAdapter, AdapterResponse, VALID_VERDICTS
+from benchmark.adapters.base import ModelAdapter, AdapterResponse, VALID_VERDICTS, parse_verdict_response
 
 
 class OpenAIAdapter(ModelAdapter):
@@ -42,22 +41,4 @@ class OpenAIAdapter(ModelAdapter):
             ],
         )
         raw = response.choices[0].message.content or ""
-        return _parse_response(raw)
-
-
-def _parse_response(raw: str) -> AdapterResponse:
-    """Extract verdict and explanation from the model's raw text output."""
-    upper = raw.upper()
-    verdict = "consistent"
-    for v in ("CONFLICT", "AMBIGUOUS", "CONSISTENT"):
-        if v in upper:
-            verdict = v.lower()
-            break
-
-    explanation: Optional[str] = None
-    if verdict in ("conflict", "ambiguous"):
-        lines = raw.strip().splitlines()
-        body_lines = [l for l in lines if not re.match(r"^\s*(CONFLICT|CONSISTENT|AMBIGUOUS)\s*$", l, re.I)]
-        explanation = "\n".join(body_lines).strip() or raw.strip()
-
-    return AdapterResponse(verdict=verdict, explanation=explanation, raw_response=raw)
+        return parse_verdict_response(raw)
