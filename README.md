@@ -17,12 +17,15 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 | **Optimal** | **1.0000** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
 | claude-haiku-4-5 | 0.3564 | 0.6333 | 0.3290 | 0.8590 | 0.2331 |
 
-> **Metric definitions:**
-> - **LW-F1** — primary score; weights harder levels more (L0 weight = 1×, L5 = 6×). Each level's evaluation set is the 18 conflict items at that depth **plus all 72 consistent/ambiguous items** — so precision is measured alongside recall. A model that predicts "conflict" for every item scores exactly **0.3333**; a perfect model scores **1.0000**.
-> - **Accuracy** — fraction of items with the correct verdict (conflict / consistent / ambiguous).
-> - **Macro-F1** — unweighted average F1 across all three verdict classes; penalises models that ignore consistent or ambiguous items.
-> - **Bin-Conflict-F1** — binary F1 treating conflict+ambiguous as positive and consistent as negative.
-> - **Expl ROUGE-L** — ROUGE-L F1 of the model's explanation against the ground-truth reasoning chain (conflict and ambiguous items only).
+**Metric definitions**
+
+| Metric | Formula | Why chosen | What it diagnoses |
+|--------|---------|-----------|-------------------|
+| **LW-F1** _(primary)_ | `Σ((L+1) × conflict_F1_L) / Σ(L+1)` where `conflict_F1_L` is the conflict-class F1 computed on 18 level-L conflict items **+ all 72 consistent/ambiguous items**; weights L0=1× … L5=6× | Deeper conflicts require genuine multi-hop reasoning and should count more than surface pattern-matching. Including non-conflict items forces precision to be measured alongside recall, so a model can't score high by predicting "conflict" for everything. | Whether the model actually reasons at depth. Flat scores across levels = single-class predictor. Perfect model = 1.000; always-predict-conflict baseline = 0.333. |
+| **Accuracy** | `correct / N` across all 180 items | Interpretable to non-specialists; shows overall verdict quality at a glance. | Gross correctness. Can be gamed by a model that memorises the 60 % conflict base rate, so must be read alongside Macro-F1. |
+| **Macro-F1** | `(F1_conflict + F1_consistent + F1_ambiguous) / 3` where each `F1_c = 2PR/(P+R)`, `P = TP/(TP+FP)`, `R = TP/(TP+FN)` | Unweighted average penalises models that collapse predictions to one class. A model that always says "conflict" scores 0.333 regardless of accuracy, exposing the single-class failure mode. | Class balance. Low Macro-F1 with high Accuracy = the model ignores consistent or ambiguous labels entirely. |
+| **Bin-Conflict-F1** | Binary F1 with positive = `{conflict, ambiguous}`, negative = `{consistent}`; `F1 = 2PR/(P+R)` | Measures the practically important ability to flag items that need human review (anything not clearly consistent) without requiring the model to distinguish conflict from ambiguous. | Over- vs. under-flagging. High Bin-F1 + low Macro-F1 = model detects risk but can't distinguish ambiguous from outright conflict. |
+| **Expl ROUGE-L** | `ROUGE-L F1` of model explanation vs. ground-truth `reasoning_chain`, averaged over conflict and ambiguous items only | Checks whether the model traces the correct logical path, not just gets the label right. ROUGE-L captures longest common subsequence overlap, rewarding step order as well as vocabulary. | Explanation faithfulness. A model can predict "conflict" for the wrong reason; low ROUGE-L exposes this. Not computed for consistent items (no reference chain). |
 
 ### By difficulty level — claude-haiku-4-5
 
