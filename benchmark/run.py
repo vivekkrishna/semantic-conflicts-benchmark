@@ -62,10 +62,10 @@ def _load_adapter(args: argparse.Namespace):
     return cls(**kwargs)
 
 
-def _default_output_path(model_name: str) -> str:
-    ts   = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+def _default_run_dir(run_id: str, model_name: str) -> Path:
+    """results/<run_id>_<safe_model_name>/"""
     safe = model_name.replace("/", "_").replace(":", "-")
-    return f"results/{safe}_{ts}.json"
+    return Path("results") / f"{run_id}_{safe}"
 
 
 def main() -> None:
@@ -91,9 +91,10 @@ def main() -> None:
                         metavar="DOMAIN",
                         help=f"Domains to evaluate. Choices: {DOMAINS} (default: all).")
     parser.add_argument("--data-dir",   default="data/",   help="Path to data directory (default: data/).")
-    parser.add_argument("--output",     default=None,      help="Path for JSON results file.")
+    parser.add_argument("--output-dir", default=None,
+                        help="Directory for this run's outputs (default: results/<run_id>_<model>/).")
     parser.add_argument("--leaderboard",default="results/leaderboard.csv",
-                        help="Path for leaderboard CSV (appended to).")
+                        help="Path for leaderboard CSV (appended to, default: results/leaderboard.csv).")
     parser.add_argument("--no-markdown",action="store_true",
                         help="Skip writing the Markdown report.")
     parser.add_argument("--verbose",    action="store_true",
@@ -120,9 +121,10 @@ def main() -> None:
     )
     results = evaluator.run()
 
-    # Determine output paths
-    json_path = args.output or _default_output_path(adapter.name)
-    md_path   = json_path.replace(".json", ".md")
+    # Determine per-run output directory
+    run_dir = Path(args.output_dir) if args.output_dir else _default_run_dir(results.run_id, adapter.name)
+    json_path = str(run_dir / "results.json")
+    md_path   = str(run_dir / "report.md")
 
     # Write all outputs
     print_console(results)

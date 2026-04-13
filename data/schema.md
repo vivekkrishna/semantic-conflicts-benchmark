@@ -1,6 +1,6 @@
 # Dataset Schema
 
-Every item in `data/<domain>/v1.jsonl` is a single-line JSON object conforming to this schema.
+Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file contains all 30 items for that domain as a pretty-printed JSON array for easy reading and contribution.
 
 ---
 

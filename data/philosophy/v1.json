@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "philosophy_L0_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Murder is always morally wrong, regardless of the consequences. The moral law forbids using a person merely as a means to an end.",
+          "source": "Immanuel Kant, Groundwork of the Metaphysics of Morals, 1785"
+        },
+        {
+          "id": "B",
+          "text": "If killing one innocent person would save five others, then killing that person is the morally correct action. Morality requires maximising total welfare.",
+          "source": "Classic Utilitarian position, Jeremy Bentham"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "CONFLICT — Passage A states murder is always wrong regardless of consequences. Passage B states killing is morally required when it saves more lives. These directly contradict at the surface level."
+      ],
+      "explanation": "Kant asserts an unconditional prohibition on killing; Utilitarianism asserts killing can be obligatory when aggregate welfare is maximised. The conflict is stated explicitly — no inference is needed.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Murder is always morally wrong, regardless of the consequences"
+        },
+        {
+          "passage_id": "B",
+          "span": "killing that person is the morally correct action"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L0_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Only the philosopher-king, trained in reason and knowledge of the Good, is fit to rule the city. Democracy gives power to the ignorant.",
+          "source": "Plato, The Republic, ~380 BCE"
+        },
+        {
+          "id": "B",
+          "text": "The only legitimate source of political authority is the consent of the governed. No government has the right to rule without the people's agreement.",
+          "source": "John Locke, Second Treatise of Government, 1689"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "CONFLICT — Passage A explicitly restricts legitimate rule to philosopher-kings, dismissing ordinary people. Passage B explicitly grounds all legitimate authority in the consent of the governed. These positions directly contradict."
+      ],
+      "explanation": "Plato holds that the best rulers are the philosophically trained elite; Locke holds that legitimacy comes only from popular consent. The conflict is surface-level and requires no inference.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Only the philosopher-king...is fit to rule"
+        },
+        {
+          "passage_id": "B",
+          "span": "only legitimate source of political authority is the consent of the governed"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L0_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "In the state of nature, without government, life is solitary, poor, nasty, brutish, and short. Human beings are fundamentally selfish and competitive.",
+          "source": "Thomas Hobbes, Leviathan, 1651"
+        },
+        {
+          "id": "B",
+          "text": "Man is born free, but is everywhere in chains. In the natural state, humans are naturally good; it is society and civilisation that corrupt them.",
+          "source": "Jean-Jacques Rousseau, The Social Contract, 1762"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "CONFLICT — Hobbes states humans are naturally selfish and the state of nature is war. Rousseau states humans are naturally good and society is the corruptor. These directly contradict each other at the surface level."
+      ],
+      "explanation": "Hobbes and Rousseau make opposite claims about human nature in the pre-social state — Hobbes says it is brutal, Rousseau says it is good. No inference is required to detect the conflict.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "life is solitary, poor, nasty, brutish, and short"
+        },
+        {
+          "passage_id": "B",
+          "span": "Man is born free...humans are naturally good"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L1_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "I think, therefore I am. The existence of the thinking self is the one certainty that cannot be doubted. Consciousness is the foundation of all knowledge.",
+          "source": "René Descartes, Discourse on the Method, 1637"
+        },
+        {
+          "id": "B",
+          "text": "Existence exists — and the act of grasping this statement is an act of consciousness. Consciousness is not a creator of reality but a faculty that perceives it. Existence is primary; consciousness is not.",
+          "source": "Ayn Rand, Introduction to Objectivist Epistemology, 1967"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — From A: 'Consciousness is the foundation of all knowledge' → consciousness is epistemically prior to everything, including knowledge of external existence.",
+        "CONFLICT — Passage B explicitly states 'Existence is primary; consciousness is not.' This directly contradicts the inference from Step 1 that consciousness is primary/foundational."
+      ],
+      "explanation": "Descartes makes consciousness the one indubitable starting point — the cogito is prior to any claim about external existence. Rand explicitly reverses this: existence is primary, consciousness merely perceives it. One inference step from Descartes' premise collides with Rand's explicit claim.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Consciousness is the foundation of all knowledge"
+        },
+        {
+          "passage_id": "B",
+          "span": "Existence is primary; consciousness is not"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L1_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "There are no moral facts; there are only moral interpretations. What we call morality is a perspective, a construction — there is no truth in ethics beyond the will to power.",
+          "source": "Friedrich Nietzsche, The Will to Power, 1901"
+        },
+        {
+          "id": "B",
+          "text": "The moral law is universally and necessarily binding on all rational beings. There exists a categorical imperative that holds regardless of individual desire or circumstance.",
+          "source": "Immanuel Kant, Critique of Practical Reason, 1788"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — From A: 'There are no moral facts' → there is no universally binding moral obligation — all moral claims are perspectival.",
+        "CONFLICT — Passage B asserts a categorical imperative that is 'universally and necessarily binding.' This directly contradicts the Step 1 inference that no universal moral obligation exists."
+      ],
+      "explanation": "Nietzsche denies the existence of moral facts, implying no universal obligations. Kant asserts a universal, necessary moral law. The conflict emerges in one step from Nietzsche's premise.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "There are no moral facts"
+        },
+        {
+          "passage_id": "B",
+          "span": "universally and necessarily binding on all rational beings"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L1_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "No factual statement about how things are can logically entail a prescriptive statement about how things ought to be. There is an unbridgeable gap between 'is' and 'ought'.",
+          "source": "David Hume, A Treatise of Human Nature, 1739"
+        },
+        {
+          "id": "B",
+          "text": "Man's nature as a rational, living being is the standard of value. From the fact that reason is man's means of survival, it follows that rational self-interest is the objective moral standard.",
+          "source": "Ayn Rand, The Virtue of Selfishness, 1964"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — From A: No fact can entail a moral obligation → any argument from a fact about human nature to a moral standard is logically invalid.",
+        "CONFLICT — Passage B derives 'rational self-interest is the objective moral standard' directly from a fact about human nature ('reason is man's means of survival'). This derivation is exactly the is-ought inference Hume declares impossible."
+      ],
+      "explanation": "Hume says you cannot derive 'ought' from 'is.' Rand does exactly that — she derives a moral standard from a biological/psychological fact about human nature. One inference from Hume's principle collapses Rand's entire ethical foundation.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "unbridgeable gap between 'is' and 'ought'"
+        },
+        {
+          "passage_id": "B",
+          "span": "From the fact that reason is man's means of survival, it follows that rational self-interest is the objective moral standard"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L2_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "History is the progressive self-realisation of Absolute Spirit. Each epoch negates and preserves the previous one in a dialectical movement toward the full realisation of freedom. Progress is teleological — history has a final purpose.",
+          "source": "G.W.F. Hegel, Phenomenology of Spirit, 1807"
+        },
+        {
+          "id": "B",
+          "text": "The eternal recurrence of the same is the greatest weight. Every moment of existence will recur infinitely. There is no final state, no redemption, no end of history — only the eternal cycle.",
+          "source": "Friedrich Nietzsche, The Gay Science, 1882"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — From A: 'Progress is teleological' → history is moving toward a determinate final state (full realisation of freedom).",
+        "Step 2 — From Step 1: If history has a final, determinate endpoint → history is a linear, non-repeating progression — the same moment cannot recur because that would reset progress.",
+        "CONFLICT — Passage B states that every moment recurs infinitely and there is no final state. This directly contradicts Step 2: Nietzsche's eternal recurrence means no final endpoint, no linear progress — only infinite cycles. The two are incompatible."
+      ],
+      "explanation": "Hegel's teleological history implies a unique linear progression toward a final state. Nietzsche's eternal recurrence implies infinite, non-progressive cycles with no final destination. The conflict requires two inferences from Hegel's premise before it becomes explicit.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Progress is teleological — history has a final purpose"
+        },
+        {
+          "passage_id": "B",
+          "span": "no final state...only the eternal cycle"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L2_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Act only according to that maxim whereby you can at the same time will that it should become a universal law. What is morally right must be right for everyone, always.",
+          "source": "Immanuel Kant, Groundwork of the Metaphysics of Morals, 1785"
+        },
+        {
+          "id": "B",
+          "text": "Rational self-interest is the only objective moral standard. The individual's own life and happiness are the ultimate moral value, and these cannot be sacrificed for the collective or for any abstract principle.",
+          "source": "Ayn Rand, The Virtue of Selfishness, 1964"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — From A: 'What is morally right must be right for everyone, always' → any valid moral principle must be universalisable without self-contradiction.",
+        "Step 2 — From Step 1: Universalising 'everyone pursues only their own self-interest' → a world where no one ever helps others, which may contradict the conditions of rational social existence (e.g., promises, contracts depend on some non-self-interested trust). More directly: if everyone places individual happiness as the ultimate value, there exists no principle that can adjudicate conflicts between individuals, undermining the universalisability test.",
+        "CONFLICT — Passage B states individual happiness 'cannot be sacrificed for any abstract principle.' Kant's universalisability is precisely such an abstract principle that sometimes demands individuals act against immediate self-interest. B explicitly rejects the kind of overriding abstract principle A asserts as the basis of all morality."
+      ],
+      "explanation": "Kant's categorical imperative requires individuals to subordinate their maxims to a universal law, even against self-interest. Rand explicitly forbids sacrificing individual happiness to abstract principles. Two inferences from Kant's premise reveal the conflict.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "What is morally right must be right for everyone, always"
+        },
+        {
+          "passage_id": "B",
+          "span": "cannot be sacrificed for the collective or for any abstract principle"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L2_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "It is not the consciousness of men that determines their existence, but their social existence that determines their consciousness. Ideas, philosophy, and culture are superstructures built on economic foundations.",
+          "source": "Karl Marx, A Contribution to the Critique of Political Economy, 1859"
+        },
+        {
+          "id": "B",
+          "text": "The faculty of reason, operating independently of experience, can yield certain and universal knowledge — mathematical truths and the principles of morality are knowable by pure reason alone, prior to any experience.",
+          "source": "Rationalist tradition, Immanuel Kant, Critique of Pure Reason, 1781"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — From A: Social/economic existence determines consciousness → the content of rational thought (including philosophy and moral principles) is shaped by material, class-based conditions. Pure reason is not independent of social existence.",
+        "Step 2 — From Step 1: If rational thought is materially determined → there can be no pure, experience-independent, universally valid rational knowledge — what appears as 'pure reason' is in fact ideology shaped by economic conditions.",
+        "CONFLICT — Passage B asserts that reason operates 'independently of experience' to yield 'certain and universal knowledge.' Step 2 shows this is impossible under Marx's materialism: no rational faculty is independent of material conditions."
+      ],
+      "explanation": "Marx grounds all thought, including philosophical, in material economic conditions, eliminating the possibility of truly independent reason. Kant posits pure reason as the source of universal, non-empirical knowledge. Two inferences from Marx's premise directly undermine Kant's epistemology.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "social existence that determines their consciousness"
+        },
+        {
+          "passage_id": "B",
+          "span": "pure reason alone, prior to any experience"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L3_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Rational self-interest is the objective moral standard that should guide all human actions. There exists an objective morality grounded in the requirements of human survival as rational beings.",
+          "source": "Ayn Rand, The Virtue of Selfishness, 1964"
+        },
+        {
+          "id": "B",
+          "text": "Moral values are human constructions, and individuals must create their own values beyond good and evil. There are no pre-given moral standards — each person must become the author of their own values.",
+          "source": "Friedrich Nietzsche, Beyond Good and Evil, 1886"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — From A: 'There exists an objective morality' → a moral standard holds independently of whether any individual constructs or accepts it. It is true regardless of individual will.",
+        "Step 2 — From Step 1: If moral standards exist independently of individuals → some values are universally correct; they are discovered, not created. Individuals cannot be the authors of all their own values — some are already determined by objective morality.",
+        "Step 3 — From Step 2: If some values are already objectively determined → it is not the case that ALL moral values are human constructions or that each person must create ALL their values from scratch.",
+        "CONFLICT — Step 3 ('not all values are constructions') directly contradicts Passage B ('moral values are human constructions...each person must become the author of their own values')."
+      ],
+      "explanation": "At surface level, one could read A and B as compatible — perhaps one chooses rational self-interest as their constructed value. But A's claim that morality is 'objective' entails that values are discovered, not created, which at three inference steps eliminates the possibility of the total value-construction B demands.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "objective moral standard...objective morality"
+        },
+        {
+          "passage_id": "B",
+          "span": "Moral values are human constructions...each person must become the author of their own values"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L3_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Persons must always be treated as ends in themselves, never merely as means. Each rational being has inherent dignity that may never be violated for any external purpose.",
+          "source": "Immanuel Kant, Groundwork of the Metaphysics of Morals, 1785"
+        },
+        {
+          "id": "B",
+          "text": "The greatest happiness of the greatest number is the measure of right and wrong. When the welfare of the many can only be secured by the suffering of one, justice requires that one to bear the cost.",
+          "source": "Jeremy Bentham, Introduction to the Principles of Morals and Legislation, 1789"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — From A: Each person has inherent dignity that 'may never be violated for any external purpose' → no external outcome, however good, can justify treating a person as a mere instrument.",
+        "Step 2 — From Step 1: 'Never for any external purpose' explicitly includes maximising aggregate happiness — even the welfare of the many cannot justify violating one person's dignity.",
+        "Step 3 — From Step 2: Therefore, there exists at least one scenario (sacrificing one for the many) that is absolutely forbidden regardless of aggregate welfare.",
+        "CONFLICT — Passage B states that 'justice requires' the individual to bear the cost when aggregate welfare demands it. This is precisely the scenario Step 3 declares absolutely forbidden."
+      ],
+      "explanation": "Kant's absolute prohibition on using persons as means prohibits, among other things, sacrificing individuals for aggregate welfare. Bentham's utilitarianism sometimes requires exactly that sacrifice. Three inferences from Kant's principle make the conflict with Bentham explicit.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "never merely as means...may never be violated for any external purpose"
+        },
+        {
+          "passage_id": "B",
+          "span": "justice requires that one to bear the cost"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L3_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Existence precedes essence. There is no pre-given human nature that defines what a person must be. Each person is radically free and fully responsible for inventing their own existence through their choices.",
+          "source": "Jean-Paul Sartre, Existentialism is a Humanism, 1946"
+        },
+        {
+          "id": "B",
+          "text": "The good life for a human being is defined by the full actualisation of the specific capacities and functions that constitute human nature — reason, virtue, and civic participation. Flourishing means realising what one's nature is for.",
+          "source": "Aristotle, Nicomachean Ethics, ~350 BCE"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — From A: 'There is no pre-given human nature' → there is no fixed set of human capacities or functions that define what a person should become.",
+        "Step 2 — From Step 1: If there is no human nature → there is no species-specific form of flourishing. A person cannot 'fail' to actualise their nature because there is no nature to actualise.",
+        "Step 3 — From Step 2: If no form of flourishing is defined by nature → there is no correct or incorrect way to live as a human being — every life-choice is equally valid in principle.",
+        "CONFLICT — Passage B states the good life is defined by 'full actualisation of...human nature' — the very entity Sartre denies exists. Step 3 shows Aristotle's entire teleological ethics presupposes the existence of human nature, which A explicitly negates."
+      ],
+      "explanation": "Sartre denies the existence of human nature on which Aristotle's eudaimonism entirely depends. The conflict is not visible at first (one could think Sartre is just emphasising freedom while Aristotle discusses flourishing), but three inference steps show Sartre's premise destroys the foundation of Aristotle's ethics.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "no pre-given human nature"
+        },
+        {
+          "passage_id": "B",
+          "span": "full actualisation of the specific capacities and functions that constitute human nature"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L4_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "We never directly observe causation — we only observe one event followed by another. The idea that the first event 'produces' or 'necessitates' the second is a habit of the mind, not a feature of external reality. Causation is a psychological projection.",
+          "source": "David Hume, A Treatise of Human Nature, 1739"
+        },
+        {
+          "id": "B",
+          "text": "Causality is a pure category of the understanding — one of the twelve a priori concepts through which the mind structures all possible experience. Without the causal category, experience itself would be impossible. Causation is a feature of experience as such, not merely a habit.",
+          "source": "Immanuel Kant, Critique of Pure Reason, 1781"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — From A: Causation is a psychological habit → it is contingent, variable across individuals, and could in principle be absent in a mind that observed the same sequence.",
+        "Step 2 — From Step 1: If causation is merely a contingent psychological habit → there is no necessity to the causal connection. The mind could, in principle, have not formed this habit and experienced the same events without any causal interpretation.",
+        "Step 3 — From Step 2: If causal interpretation is not necessary → the structure of experience is not necessarily causal. Experience could be acausal in principle.",
+        "Step 4 — From Step 3: If experience could be acausal in principle → causation is not a necessary, universal, a priori condition of experience itself.",
+        "CONFLICT — Passage B states causation is an a priori category without which experience is impossible — making it a necessary, universal condition. Step 4 directly contradicts this: under Hume, causation is unnecessary and merely contingent."
+      ],
+      "explanation": "Hume reduces causation to psychological habit — contingent and non-necessary. Kant makes causation a necessary a priori condition of all possible experience. These positions are incompatible at four inference steps: Hume's contingency directly defeats Kant's necessity claim.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Causation is a psychological projection"
+        },
+        {
+          "passage_id": "B",
+          "span": "pure category of the understanding...experience itself would be impossible"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L4_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Private property rights arise from the act of mixing one's labour with unowned natural resources. Once someone has laboured on land or materials, they acquire a legitimate ownership right that others may not violate.",
+          "source": "John Locke, Second Treatise of Government, 1689"
+        },
+        {
+          "id": "B",
+          "text": "Social and economic inequalities are just only if they maximise the prospects of the least advantaged members of society. Justice requires structuring institutions to benefit the worst-off.",
+          "source": "John Rawls, A Theory of Justice, 1971"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — From A: Labour-mixing creates ownership rights that 'others may not violate' → these rights are negative, side-constraint rights — they cannot be overridden by social utility.",
+        "Step 2 — From Step 1: If property rights are inviolable side constraints → the state may not redistribute property holdings even when redistribution would benefit the worst-off, because redistribution would violate the rights of property holders.",
+        "Step 3 — From Step 2: If redistribution of legitimately acquired property is forbidden → significant, persistent inequalities arising from legitimate initial acquisitions are just and may not be corrected.",
+        "Step 4 — From Step 3: If persistent inequalities from legitimate acquisition are just → there is no Rawlsian 'difference principle' obligation to alter inequalities that happen not to benefit the worst-off.",
+        "CONFLICT — Passage B requires institutions to be structured so that inequalities maximise benefits to the worst-off. Step 4 shows that under Lockean rights, there is no such obligation — inequalities stemming from legitimate property rights are just regardless of their effect on the worst-off."
+      ],
+      "explanation": "Locke grounds inviolable property rights in labour; Rawls grounds justice in benefiting the worst-off. Four inference steps show that Lockean rights preclude the redistributive obligations Rawls requires.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "legitimate ownership right that others may not violate"
+        },
+        {
+          "passage_id": "B",
+          "span": "maximise the prospects of the least advantaged"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L4_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The fundamental drive of all living things is the will to power — not mere self-preservation or reproduction, but the drive to grow, expand, discharge strength, and overcome resistance. Even self-preservation is subordinate to this overarching drive.",
+          "source": "Friedrich Nietzsche, Beyond Good and Evil, 1886"
+        },
+        {
+          "id": "B",
+          "text": "The will to live is the fundamental inner drive of all existence. Every organism strives above all to preserve its own existence and to reproduce. This blind striving is the source of all suffering.",
+          "source": "Arthur Schopenhauer, The World as Will and Representation, 1818"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — From A: The fundamental drive is will to power — growth and self-overcoming — 'even self-preservation is subordinate to this.'",
+        "Step 2 — From Step 1: If self-preservation is subordinate to will to power → there are conditions under which an organism would sacrifice its own survival in order to express or expand its power (e.g., reckless risk for dominance).",
+        "Step 3 — From Step 2: If self-sacrifice for power-expression is possible → the organism's deepest goal is not to persist but to discharge strength. Survival is an instrument, not the final end.",
+        "Step 4 — From Step 3: If survival is merely instrumental → the organism could rationally (by its own inner logic) accept death as the price of greater power-expression. The will-to-live is not the deepest principle.",
+        "CONFLICT — Passage B states the will to live is the fundamental, primary drive and that all organisms 'strive above all to preserve their own existence.' Step 4 shows Nietzsche's will to power makes self-preservation merely instrumental, directly contradicting Schopenhauer's claim that self-preservation is the primary drive."
+      ],
+      "explanation": "Nietzsche built his will-to-power concept explicitly against Schopenhauer's will-to-live, arguing that self-preservation is subordinate to power-expansion. Four inference steps from Nietzsche's premise contradict Schopenhauer's foundational claim.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "even self-preservation is subordinate to this overarching drive"
+        },
+        {
+          "passage_id": "B",
+          "span": "Every organism strives above all to preserve its own existence"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L5_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Whereof one cannot speak, thereof one must be silent. The limits of my language are the limits of my world. What can be said at all can be said clearly, and what we cannot speak about we must pass over in silence.",
+          "source": "Ludwig Wittgenstein, Tractatus Logico-Philosophicus, 1921"
+        },
+        {
+          "id": "B",
+          "text": "Language is the house of Being. Being cannot be fully captured in propositional representation — it must be disclosed through poetry and meditative thinking. The task of thinking is to attend to what is said in the saying, beyond mere assertion.",
+          "source": "Martin Heidegger, Letter on Humanism, 1947"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — From A: 'The limits of my language are the limits of my world' → whatever exists or is meaningful must be expressible in well-formed propositions. There is no meaningful reality beyond what language can clearly represent.",
+        "Step 2 — From Step 1: If all meaningful reality is within the limits of language → any purported 'content' beyond propositional representation is not meaningful — it is strictly nonsense (Unsinn) by Wittgenstein's standard.",
+        "Step 3 — From Step 2: If extra-propositional content is nonsense → there can be no legitimate philosophical activity that attends to what 'exceeds' propositional language. Such activity would be attempting to speak about the unspeakable, which Wittgenstein forbids.",
+        "Step 4 — From Step 3: If attending to the extra-propositional is forbidden → any philosophical method that seeks Being 'beyond assertion' is an illegitimate pseudo-activity that cannot yield knowledge or insight.",
+        "Step 5 — From Step 4: If such methods are illegitimate → the project of meditative, non-assertoric thinking about Being is meaningless, and claiming that language 'houses' something ineffable is empty.",
+        "CONFLICT — Passage B explicitly asserts that Being exceeds propositional representation and that meditative thinking can attend to it — the exact activity Step 5 renders meaningless under Wittgenstein's framework."
+      ],
+      "explanation": "Wittgenstein's picture theory of language limits all meaning to what can be clearly said in propositions; what exceeds this must be passed over in silence. Heidegger claims that Being exceeds propositional representation and that philosophy must attend to it through non-assertoric language. Five inference steps from Wittgenstein's premise show that Heidegger's entire philosophical project is declared meaningless by Wittgenstein's framework.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "Whereof one cannot speak, thereof one must be silent"
+        },
+        {
+          "passage_id": "B",
+          "span": "Being cannot be fully captured in propositional representation"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L5_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "God chose to actualise this world rather than any other possible world because this world is the best of all possible worlds — the most perfect compossible set of existents. Apparent evil is necessary for the greater perfection of the whole.",
+          "source": "Gottfried Wilhelm Leibniz, Theodicy, 1710"
+        },
+        {
+          "id": "B",
+          "text": "Life is essentially suffering. The will to live condemns every conscious being to perpetual want and pain. If non-existence were possible, it would be preferable to existence. The world is the worst possible, not the best.",
+          "source": "Arthur Schopenhauer, The World as Will and Representation, 1818"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — From A: God actualised the best compossible world → the sum total of actual value in this world exceeds that of any alternative possible world.",
+        "Step 2 — From Step 1: If this is the best possible world → any alternative world in which suffering was eliminated would have to be worse overall, since God chose not to actualise it.",
+        "Step 3 — From Step 2: If eliminating suffering would produce a worse world → the existence of suffering is a necessary feature of the best possible world and thus justified.",
+        "Step 4 — From Step 3: If suffering is justified by being part of the best world → conscious beings' suffering is not a net negative; the whole of which it is a part is net positive.",
+        "Step 5 — From Step 4: If suffering is part of a net positive whole → existence is preferable to non-existence — the value of existing in this best world outweighs the suffering.",
+        "CONFLICT — Passage B states that non-existence would be preferable to existence because life is essentially suffering. Step 5 concludes the opposite: under Leibniz, existence in this best-possible world is preferable to non-existence."
+      ],
+      "explanation": "Leibniz holds this is the best possible world, which entails existence is preferable to non-existence. Schopenhauer holds that suffering makes non-existence preferable to existence. Five inference steps from Leibniz's premise directly contradict Schopenhauer's conclusion.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "this world is the best of all possible worlds"
+        },
+        {
+          "passage_id": "B",
+          "span": "If non-existence were possible, it would be preferable to existence"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_L5_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "True knowledge is only of eternal, unchanging Forms. The physical world of particulars is a mere shadow of reality, yielding only opinion, not knowledge. The philosopher ascends from visible particulars to intelligible universals.",
+          "source": "Plato, The Republic, ~380 BCE"
+        },
+        {
+          "id": "B",
+          "text": "Forms do not exist separately from the particulars that instantiate them. There is no separate realm of Forms. Knowledge begins from sensory particulars and ascends through abstraction. Form and matter are always combined in concrete substances.",
+          "source": "Aristotle, Metaphysics, ~350 BCE"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — From A: Forms are eternal, unchanging, and separable from physical particulars → Forms have a mode of being independent of whether any physical object instantiates them.",
+        "Step 2 — From Step 1: If Forms exist independently → there is a domain of purely intelligible reality (the intelligible realm) that exists whether or not any physical world exists. Physical particulars are epistemically secondary — they give only opinion.",
+        "Step 3 — From Step 2: If physical particulars give only opinion → the starting point of genuine knowledge must be the intelligible realm, not sensory observation. Philosophy proceeds from universal to particular.",
+        "Step 4 — From Step 3: If knowledge proceeds from universal Forms to particulars → empirical inquiry (starting from sensory observation) is at best a tool for recollecting Forms, never a source of primary knowledge.",
+        "Step 5 — From Step 4: If empirical starting points cannot yield primary knowledge → a philosophical method grounded in sensory particulars and ascending through abstraction is epistemically inferior and cannot establish the foundations of knowledge.",
+        "CONFLICT — Passage B states that 'knowledge begins from sensory particulars' — the exact method Step 5 renders epistemically insufficient under Plato's theory."
+      ],
+      "explanation": "Plato's Theory of Forms makes knowledge possible only by ascending away from sensory particulars to eternal universals. Aristotle's hylomorphism places Forms only within matter and grounds knowledge in sensory observation. Five inference steps from Plato's premise show that Aristotle's epistemological method is directly incompatible.",
+      "conflicting_spans": [
+        {
+          "passage_id": "A",
+          "span": "True knowledge is only of eternal, unchanging Forms"
+        },
+        {
+          "passage_id": "B",
+          "span": "Knowledge begins from sensory particulars"
+        }
+      ]
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Suffering is the fundamental character of existence. The will to live drives all creatures into perpetual want and dissatisfaction. To reduce suffering, one must quieten the will.",
+          "source": "Arthur Schopenhauer, The World as Will and Representation, 1818"
+        },
+        {
+          "id": "B",
+          "text": "Among the Four Noble Truths, the first is that life is suffering (dukkha). Desire and attachment are the root of suffering. The path to liberation involves extinguishing craving.",
+          "source": "Buddhist philosophy, Pali Canon"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Reason is the highest faculty of the human soul, and the life lived according to reason is the noblest and most excellent life. Intellectual virtue is the highest form of virtue.",
+          "source": "Aristotle, Nicomachean Ethics, ~350 BCE"
+        },
+        {
+          "id": "B",
+          "text": "Man is a rational animal — the distinctive attribute of humanity is the faculty of reason. The good for man must be related to his function, which is the exercise of rational soul activity.",
+          "source": "Ayn Rand, drawing from Aristotle's Nicomachean Ethics concept of function"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Events that are outside our control — the actions of others, our reputations, our bodies — are not in our power. What is in our power is our own judgement, impulse, desire, and aversion.",
+          "source": "Epictetus, Enchiridion, ~135 CE"
+        },
+        {
+          "id": "B",
+          "text": "The Stoic sage distinguishes between what depends on us and what does not. External goods — health, wealth, honour — are indifferent. Virtue is the only genuine good, and it lies entirely within our rational will.",
+          "source": "Stoic philosophy, Marcus Aurelius, Meditations, ~180 CE"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_004",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Both Locke and Rousseau argue that legitimate political authority cannot rest solely on force or tradition. Governments must be justified to those they govern.",
+          "source": "Interpretive summary of social contract tradition"
+        },
+        {
+          "id": "B",
+          "text": "Kant agrees with his empiricist predecessors that political authority requires a rational justification that free rational agents could accept — not mere historical habit or conquest.",
+          "source": "Immanuel Kant, The Metaphysics of Morals, 1797"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_005",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Kierkegaard held that systematic philosophy — Hegel's in particular — was an absurdity as a guide to lived individual existence. The individual cannot be absorbed into the System.",
+          "source": "Søren Kierkegaard, Concluding Unscientific Postscript, 1846"
+        },
+        {
+          "id": "B",
+          "text": "Nietzsche dismissed the Hegelian dialectic as a kind of optimistic mythology. He held that the individual, not abstract Spirit, is the locus of value and creation.",
+          "source": "Friedrich Nietzsche, The Birth of Tragedy, 1872"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_006",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Aristotle taught that the universe has a natural order and that every natural thing moves toward its proper end or function (telos). Ethics is grounded in this natural teleology.",
+          "source": "Aristotle, Physics and Nicomachean Ethics, ~350 BCE"
+        },
+        {
+          "id": "B",
+          "text": "Aquinas accepted Aristotle's natural teleology and integrated it with Christian theology. The natural law is the rational creature's participation in the eternal law — it is discernible through reason examining natural ends.",
+          "source": "Thomas Aquinas, Summa Theologica, 1265–1274"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_007",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Spinoza argued that reality is a single infinite substance — God or Nature — and that human beings are modes of this substance. All things follow from the nature of God with logical necessity.",
+          "source": "Baruch Spinoza, Ethics, 1677"
+        },
+        {
+          "id": "B",
+          "text": "Leibniz held that all truths are in principle derivable by pure reason; the universe is rational through and through, and its structure can in principle be known a priori.",
+          "source": "Gottfried Wilhelm Leibniz, Discourse on Metaphysics, 1686"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_C_008",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The unexamined life is not worth living. Philosophy is the love of wisdom, and its practice is the continual questioning of one's own beliefs and assumptions.",
+          "source": "Socrates, as reported in Plato's Apology, ~399 BCE"
+        },
+        {
+          "id": "B",
+          "text": "Genuine thinking is always a kind of self-examination and questioning. The philosopher begins from the position of not-knowing (aporia) and proceeds through rigorous inquiry.",
+          "source": "Plato, Meno and Theaetetus, ~385 BCE"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_A_001",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Productive achievement is the noblest activity of man and his highest purpose. To create, to build, to achieve — these are the expressions of the human spirit at its finest.",
+          "source": "Ayn Rand, Atlas Shrugged, 1957"
+        },
+        {
+          "id": "B",
+          "text": "The highest human activity is self-overcoming — surpassing one's previous limitations, creating new values, and becoming what one has not yet been. The Übermensch is the embodiment of this drive.",
+          "source": "Friedrich Nietzsche, Thus Spoke Zarathustra, 1883"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — From A: Productive achievement (creating, building) is the highest purpose → value lies in tangible external creation.",
+        "Step 2 — From B: Self-overcoming (becoming) is the highest activity → value lies in internal transformation and value-creation.",
+        "AMBIGUOUS — Under interpretation I1 (Rand means external creative output, Nietzsche means internal becoming), these conflict: external achievement vs. internal transformation are distinct goods. Under interpretation I2 (self-overcoming could include productive achievement as one form of it), they are consistent. The text does not resolve which sense applies."
+      ],
+      "explanation": "Rand and Nietzsche both valorise a form of striving and creation. Whether they conflict depends on whether 'self-overcoming' subsumes productive achievement or competes with it — the passages do not specify.",
+      "ambiguity_reason": "'Productive achievement' and 'self-overcoming' may refer to the same activity under different descriptions, or may be genuinely distinct — the texts do not resolve this."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_A_002",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Justice requires arranging inequalities so that they maximise the position of the worst-off members of society. Institutions must be structured to benefit those who have the least.",
+          "source": "John Rawls, A Theory of Justice, 1971"
+        },
+        {
+          "id": "B",
+          "text": "The greatest happiness of the greatest number is the foundation of morals and legislation. Just institutions are those that maximise aggregate welfare across all members of society.",
+          "source": "Jeremy Bentham, Introduction to the Principles of Morals and Legislation, 1789"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — Under many distributions, maximising aggregate welfare (B) and maximising the worst-off's position (A) will conflict: aggregate maximisation may sacrifice the worst-off when doing so greatly benefits the majority.",
+        "Step 2 — However, under specific empirical conditions (e.g., in a society where gains to the worst-off produce the largest aggregate gains due to diminishing marginal utility), both principles could recommend the same institutional arrangements.",
+        "AMBIGUOUS — The conflict is real under most realistic distributions but disappears under specific empirical assumptions about marginal utility. Whether these passages conflict depends on empirical conditions not stated in the texts."
+      ],
+      "explanation": "Rawls and Bentham propose different distributive principles that often yield different prescriptions, but may coincide under specific conditions. The conflict is probable but not logically necessary from the texts alone.",
+      "ambiguity_reason": "Whether maximising aggregate welfare conflicts with maximising the worst-off's position depends on empirical assumptions about distribution and marginal utility not stated in the passages."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_A_003",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Practical wisdom (phronesis) requires sensitivity to the particular situation. The virtuous person perceives what the situation requires and acts accordingly — there is no algorithm that replaces good judgement.",
+          "source": "Aristotle, Nicomachean Ethics, ~350 BCE"
+        },
+        {
+          "id": "B",
+          "text": "The categorical imperative provides a universal procedure for determining the morality of any action: ask whether the maxim of your action could be universalised. This test applies regardless of situational particulars.",
+          "source": "Immanuel Kant, Groundwork of the Metaphysics of Morals, 1785"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — From A: Good moral judgement requires perceptual sensitivity to particulars that cannot be captured by an algorithm.",
+        "Step 2 — From B: The categorical imperative is a universal algorithm that determines morality independently of particular circumstances.",
+        "Step 3 — Under a strong reading: these conflict — either a universal algorithm suffices (Kant) or it doesn't (Aristotle).",
+        "AMBIGUOUS — Under a reconciling reading, the categorical imperative could operate as a high-level constraint while Aristotelian phronesis handles the particularities of application within those constraints. The passages do not specify whether they are claiming to be complete and exclusive theories or complementary elements of a full account."
+      ],
+      "explanation": "On the surface these conflict — Aristotle denies algorithms, Kant provides one. But they may be describing different levels of moral reasoning (a universal constraint vs. the wisdom of application), in which case they are compatible. The passages do not resolve which scope each author intends.",
+      "ambiguity_reason": "Conflict depends on whether Kant claims his procedure is a complete and sufficient guide to action (conflicting with Aristotle) or a necessary constraint that still requires practical wisdom in application (compatible)."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "philosophy_A_004",
+    "domain": "philosophy",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "To live according to nature means to live according to the rational principle that governs the cosmos. The Stoic sage conforms their will to the rational order of Nature (Logos).",
+          "source": "Stoic philosophy, Zeno of Citium / Marcus Aurelius, ~300 BCE / 180 CE"
+        },
+        {
+          "id": "B",
+          "text": "The Übermensch overcomes himself and the limitations of common nature. One must say yes to life not as given by nature, but as created and transformed by human will. Self-overcoming means surpassing what nature has made you.",
+          "source": "Friedrich Nietzsche, Thus Spoke Zarathustra, 1883"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — Under one reading of 'nature': Stoics mean rational cosmic order (Logos); Nietzsche means biological/common human nature as given. If these refer to different senses of 'nature', the passages may not conflict — one is about aligning with cosmic rationality, the other about overcoming biological limitation.",
+        "Step 2 — Under another reading: if 'nature' in both cases means the given, unchosen order of things, then Stoic acceptance conflicts with Nietzschean overcoming.",
+        "AMBIGUOUS — The conflict is real under the second interpretation but dissolves under the first. The passages use 'nature' in potentially different senses without clarification."
+      ],
+      "explanation": "Whether 'live according to nature' (Stoic) and 'overcome nature' (Nietzsche) conflict depends entirely on whether they use 'nature' in the same sense. The passages do not specify, making the relationship genuinely ambiguous.",
+      "ambiguity_reason": "The word 'nature' may refer to cosmic rational order (Stoic) or biological/common human nature (Nietzsche). If they use it in different senses, the passages are consistent; if the same, they conflict."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  }
+]

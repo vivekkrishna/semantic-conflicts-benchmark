@@ -248,7 +248,7 @@ python -m pytest tests/ -v
 ## Contributing
 
 1. Read [data/schema.md](data/schema.md) for item format and quality rules.
-2. Add items to the appropriate `data/<domain>/v1.jsonl` file (one JSON per line).
+2. Add items to the appropriate `data/<domain>/v1.json` file (one JSON per line).
 3. Run `python -m pytest tests/ -v` to verify everything loads and scores correctly.
 4. Open a pull request with a brief description of the items added.
 

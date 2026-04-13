@@ -28,6 +28,7 @@ from benchmark.tasks.verdict_classification import VerdictClassificationTask
 
 DOMAINS = ["philosophy", "software", "law", "science", "content", "teams"]
 DATA_VERSION = "v1"
+DATA_EXT     = ".json"
 
 
 @dataclass
@@ -112,15 +113,13 @@ class Evaluator:
     def _load_items(self) -> list[dict[str, Any]]:
         items: list[dict[str, Any]] = []
         for domain in self.domains:
-            path = self.data_dir / domain / f"{DATA_VERSION}.jsonl"
+            path = self.data_dir / domain / f"{DATA_VERSION}{DATA_EXT}"
             if not path.exists():
                 print(f"  [warn] dataset not found: {path}", file=sys.stderr)
                 continue
             with path.open(encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        items.append(json.loads(line))
+                domain_items = json.load(f)
+            items.extend(domain_items)
         return items
 
     def _evaluate_item(self, item: dict[str, Any]) -> dict[str, Any]:

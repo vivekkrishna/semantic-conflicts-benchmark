@@ -11,7 +11,7 @@ from benchmark.evaluator import Evaluator, EvaluationResults
 
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
-SAMPLE_JSONL = FIXTURES_DIR / "sample.jsonl"
+SAMPLE_JSON = FIXTURES_DIR / "sample.json"
 
 
 # ---------------------------------------------------------------------------
@@ -26,28 +26,24 @@ def _build_data_dir(tmp_path: Path) -> tuple[Path, dict[str, str]]:
     across the fixture) because the prompt contains full passage text.
     """
     lookup: dict[str, str] = {}
-    if not SAMPLE_JSONL.exists():
-        pytest.skip("sample.jsonl fixture not found")
+    if not SAMPLE_JSON.exists():
+        pytest.skip("sample.json fixture not found")
 
     items_by_domain: dict[str, list[dict]] = {}
-    with SAMPLE_JSONL.open(encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            item = json.loads(line)
-            domain = item["domain"]
-            items_by_domain.setdefault(domain, []).append(item)
-            # Key on the first 40 chars of passage A — unique per item
-            passage_a_prefix = item["input"]["passages"][0]["text"][:40]
-            lookup[passage_a_prefix] = item["label"]["verdict"]
+    with SAMPLE_JSON.open(encoding="utf-8") as f:
+        all_items = json.load(f)
+    for item in all_items:
+        domain = item["domain"]
+        items_by_domain.setdefault(domain, []).append(item)
+        # Key on the first 40 chars of passage A — unique per item
+        passage_a_prefix = item["input"]["passages"][0]["text"][:40]
+        lookup[passage_a_prefix] = item["label"]["verdict"]
 
     for domain, domain_items in items_by_domain.items():
         domain_dir = tmp_path / domain
         domain_dir.mkdir(parents=True, exist_ok=True)
-        with (domain_dir / "v1.jsonl").open("w", encoding="utf-8") as fh:
-            for it in domain_items:
-                fh.write(json.dumps(it) + "\n")
+        with (domain_dir / "v1.json").open("w", encoding="utf-8") as fh:
+            json.dump(domain_items, fh)
 
     return tmp_path, lookup
 

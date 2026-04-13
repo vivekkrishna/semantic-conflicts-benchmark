@@ -1,0 +1,1215 @@
+[
+  {
+    "id": "sci_L0_001",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The human stomach was long believed to be a sterile environment due to its extreme acidity (pH 1.5–3.5), which was considered incompatible with microbial survival. Standard medical teaching through the 1970s held that peptic ulcers were caused by excess gastric acid secretion, stress, and dietary factors, and were treated with antacids and lifestyle modification.",
+          "source": "Sleisenger & Fordtran's Gastrointestinal Disease, 3rd ed. (1978), Chapter 14"
+        },
+        {
+          "id": "B",
+          "text": "The bacterium Helicobacter pylori (formerly Campylobacter pylori) is the causative agent of the majority of peptic ulcers and chronic gastritis. H. pylori colonizes the gastric mucosa in approximately 50% of the world's population. Infection is treatable with a combination of proton pump inhibitors and antibiotics (triple therapy). The discovery, by Barry Marshall and Robin Warren, was awarded the Nobel Prize in Physiology or Medicine in 2005.",
+          "source": "Marshall, B.J. & Warren, J.R. (1984). 'Unidentified curved bacilli in the stomach of patients with gastritis and peptic ulceration.' The Lancet, 323(8390), 1311–1315; Nobel Committee Citation (2005)"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "Step 1 — Passage A explicitly states the stomach is sterile and peptic ulcers are caused by acid, stress, and diet.",
+        "Step 2 — Passage B explicitly states peptic ulcers are caused by H. pylori bacterial infection, and the stomach is not sterile (H. pylori colonizes it in 50% of humans).",
+        "CONFLICT — The two passages directly contradict each other on both the sterility of the stomach and the etiology of peptic ulcers; this is a surface-level, explicitly stated temporal scientific conflict."
+      ],
+      "explanation": "Passage A reflects the pre-1984 consensus that the stomach is sterile and ulcers are acid-driven. Passage B reflects the Nobel Prize-winning discovery that H. pylori bacteria cause most ulcers — a direct contradiction of both claims in Passage A.",
+      "conflicting_spans": [
+        "stomach...sterile environment due to its extreme acidity",
+        "peptic ulcers were caused by excess gastric acid secretion, stress, and dietary factors",
+        "H. pylori is the causative agent of the majority of peptic ulcers and chronic gastritis",
+        "colonizes the gastric mucosa in approximately 50% of the world's population"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L0_002",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The neuron doctrine, as formulated by Santiago Ramón y Cajal and adopted as consensus by the early 20th century, holds that each neuron is an anatomically discrete cell with a complete cell membrane separating it from adjacent neurons. Electrical signals pass between neurons only at synapses and only in one direction — from the axon terminal of the presynaptic neuron to the dendrite of the postsynaptic neuron (Dale's Principle). Electrical coupling between neurons does not occur in the mature vertebrate nervous system.",
+          "source": "Cajal, S.R. (1911). Histologie du système nerveux de l'homme & des vertébrés. Madrid: Moya; Dale, H.H. (1935). Pharmacology and Nerve Endings, Proc. R. Soc. Med."
+        },
+        {
+          "id": "B",
+          "text": "Electrical synapses (gap junctions) are widespread in the adult vertebrate central nervous system. Gap junction channels formed by connexin proteins (primarily Cx36 in neurons) directly couple the cytoplasm of adjacent neurons, allowing bidirectional passage of ionic currents and small molecules. Electrical coupling plays critical roles in synchronizing oscillatory activity in interneuron networks throughout the neocortex, hippocampus, inferior olive, and retina in adult mammals.",
+          "source": "Connors, B.W. & Long, M.A. (2004). 'Electrical synapses in the mammalian brain.' Annual Review of Neuroscience, 27, 393–418."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "Step 1 — Passage A explicitly states electrical coupling between neurons does not occur in the mature vertebrate nervous system.",
+        "Step 2 — Passage B explicitly states electrical synapses are widespread in the adult vertebrate CNS and play critical functional roles.",
+        "CONFLICT — The passages directly and explicitly contradict each other on whether electrical coupling exists in mature vertebrate neurons — a textbook surface-level conflict between early 20th-century neuroscience doctrine and mid-20th/21st-century empirical findings."
+      ],
+      "explanation": "Passage A's categorical denial of adult vertebrate electrical synapses is directly contradicted by Passage B's experimental demonstration of widespread Cx36-based gap junctions in adult mammalian brain structures.",
+      "conflicting_spans": [
+        "Electrical coupling between neurons does not occur in the mature vertebrate nervous system",
+        "Electrical synapses (gap junctions) are widespread in the adult vertebrate central nervous system"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L0_003",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The universe is static and eternal. The cosmological constant (Λ) introduced by Einstein into his field equations serves to balance the gravitational attraction of matter, yielding a universe of constant size and infinite age. Expansion or contraction of the universe is inconsistent with this formulation.",
+          "source": "Einstein, A. (1917). 'Kosmologische Betrachtungen zur allgemeinen Relativitätstheorie.' Sitzungsber. Preuss. Akad. Wiss., 142–152."
+        },
+        {
+          "id": "B",
+          "text": "The universe is expanding. Hubble's law (v = H₀d) demonstrates that galaxies recede from one another at velocities proportional to their separation, with Hubble constant H₀ ≈ 70 km/s/Mpc. This expansion implies the universe originated in a hot, dense state (the Big Bang) approximately 13.8 billion years ago and has been expanding ever since. Einstein later called the cosmological constant his 'greatest blunder.'",
+          "source": "Hubble, E. (1929). 'A Relation between Distance and Radial Velocity among Extra-Galactic Nebulae.' Proc. Nat. Acad. Sci. 15(3): 168–173; Planck Collaboration (2018), A&A 641, A6."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "Step 1 — Passage A explicitly states the universe is static, constant in size, and of infinite age.",
+        "Step 2 — Passage B explicitly states the universe is expanding, originated 13.8 billion years ago in the Big Bang, and that Einstein himself recanted the static universe model.",
+        "CONFLICT — The passages directly and explicitly contradict each other on the fundamental nature of the universe (static vs. expanding, infinite age vs. 13.8 Gyr), a canonical surface-level temporal conflict between Einstein's 1917 model and Hubble's 1929 empirical discovery."
+      ],
+      "explanation": "Einstein's 1917 static universe model is directly and explicitly contradicted by Hubble's 1929 observational finding of galactic recession — a paradigm shift acknowledged even by Einstein.",
+      "conflicting_spans": [
+        "universe is static and eternal",
+        "yields a universe of constant size and infinite age",
+        "Expansion or contraction of the universe is inconsistent with this formulation",
+        "universe is expanding",
+        "originated in a hot, dense state approximately 13.8 billion years ago"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L1_001",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Newtonian mechanics describes the propagation of light as governed by the medium through which it travels. In accordance with the luminiferous aether theory, the velocity of light should vary depending on the observer's motion relative to the aether. An observer moving at velocity v relative to the aether in the direction of light propagation should measure the speed of light as c − v.",
+          "source": "Maxwell, J.C. (1878). 'Ether.' Encyclopædia Britannica, 9th ed., Vol. 8; Michelson, A.A. (1881), pre-null-result era."
+        },
+        {
+          "id": "B",
+          "text": "The Michelson-Morley experiment (1887) measured the speed of light in two perpendicular directions as Earth moved through the putative aether. No fringe shift was detected. The null result has been confirmed to extraordinary precision by modern laser interferometry (Müller et al., 2003, Phys. Rev. Lett. 91:020401), establishing that the speed of light in vacuum is constant at c = 299,792,458 m/s regardless of the motion of the source or observer.",
+          "source": "Michelson, A.A. & Morley, E.W. (1887). 'On the Relative Motion of the Earth and of the Luminiferous Ether.' Am. J. Sci. 34: 333–345; Müller et al. (2003)."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — Passage A predicts that an observer moving at velocity v relative to the aether should measure light speed as c − v (i.e., light speed is frame-dependent). Passage B establishes experimentally that light speed is constant at c regardless of observer motion. Applying Passage A's prediction to Passage B's experimental setup, the Michelson-Morley apparatus (moving with Earth at ~30 km/s relative to any putative aether) should have detected a speed difference of ~30 km/s — but detected none.",
+        "CONFLICT — One inference step — applying the aether theory's velocity-addition prediction to the Earth's known orbital velocity — reveals the theory predicts a measurable fringe shift that the experiment definitively did not find."
+      ],
+      "explanation": "One inference step connects the aether theory's c − v prediction to Earth's orbital velocity (~30 km/s), yielding a predicted but unobserved fringe shift — directly falsifying the aether model.",
+      "conflicting_spans": [
+        "An observer moving at velocity v relative to the aether...should measure the speed of light as c − v",
+        "speed of light in vacuum is constant at c = 299,792,458 m/s regardless of the motion of the source or observer"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L1_002",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Lamarckian inheritance proposes that traits acquired by an organism during its lifetime in response to environmental pressures are heritable by offspring. For example, a giraffe that stretches its neck to reach higher foliage will pass a longer neck to its progeny. Adaptive morphological changes induced by environmental experience are directly incorporated into the germline.",
+          "source": "Lamarck, J.-B. (1809). Philosophie Zoologique. Paris: Dentu."
+        },
+        {
+          "id": "B",
+          "text": "The central dogma of molecular biology (Crick, 1958) states that genetic information flows from DNA to RNA to protein. Somatic cells express proteins in response to environmental stimuli, but these protein-level changes do not alter the nucleotide sequence of germline DNA. The Weismann barrier — the separation of somatic and germline cell lineages — prevents somatic mutations and acquired phenotypic modifications from being transmitted to offspring through conventional heredity.",
+          "source": "Crick, F.H.C. (1958). 'On Protein Synthesis.' Symp. Soc. Exp. Biol. 12: 138–163; Weismann, A. (1892). Das Keimplasma."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — Lamarckian inheritance requires that environmentally acquired somatic changes (e.g., stretched neck musculature) are transmitted to offspring through heritable material. The central dogma and Weismann barrier together establish that somatic cell phenotypic changes do not alter germline DNA sequence, and therefore cannot be transmitted to offspring via genetic inheritance — one inference step connects Lamarckism's required mechanism to the central dogma's prohibition of that mechanism.",
+        "CONFLICT — The Lamarckian mechanism (environmental modification → germline transmission) is ruled out by the central dogma's information flow (DNA → RNA → protein, not reverse) and the Weismann barrier, revealed in a single mechanistic inference."
+      ],
+      "explanation": "One inference step — asking how somatic changes would enter the germline — reveals the direct mechanistic impossibility under the central dogma and Weismann barrier.",
+      "conflicting_spans": [
+        "traits acquired by an organism during its lifetime...are heritable by offspring",
+        "adaptive morphological changes...directly incorporated into the germline",
+        "somatic mutations and acquired phenotypic modifications [cannot be] transmitted to offspring",
+        "protein-level changes do not alter the nucleotide sequence of germline DNA"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L1_003",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Phlogiston theory (Stahl, 1703) holds that combustible materials contain a substance called phlogiston, which is released during burning. When wood burns, phlogiston is released into the air, and the residual ash is dephlogisticated wood. Air can become 'saturated' with phlogiston and will no longer support combustion. The more phlogiston a substance contains, the more readily and completely it burns.",
+          "source": "Stahl, G.E. (1703). Zymotechnia Fundamentalis. Halle."
+        },
+        {
+          "id": "B",
+          "text": "Lavoisier (1777–1783) demonstrated that combustion is a chemical reaction between a fuel and oxygen (O₂). The mass of combustion products equals the mass of reactants (conservation of mass). Metals that burn gain mass — they oxidize — which phlogiston theory predicts incorrectly (if phlogiston were released, the residue should be lighter, not heavier, than the metal). Modern chemistry identifies combustion products (CO₂, H₂O, metal oxides) as compounds formed by reaction with atmospheric oxygen.",
+          "source": "Lavoisier, A.-L. (1783). 'Réflexions sur le phlogistique.' Mémoires de l'Académie Royale des Sciences."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — Phlogiston theory predicts that a burning substance loses phlogiston, so the residue should weigh less than the original material. Applying this to metal combustion (calcination): the calx (metal oxide) should weigh less than the original metal. Lavoisier's experimental finding is that metal calxes weigh more than the original metals — a result that directly falsifies the phlogiston prediction in a single inference step (mass comparison).",
+        "CONFLICT — One inference step — applying phlogiston's mass prediction to metal oxidation — reveals the theory predicts a mass decrease where Lavoisier's experiments consistently measured a mass increase."
+      ],
+      "explanation": "One inference step connecting phlogiston's release mechanism to conservation of mass exposes the theory's falsification: burning metals gain mass (they react with oxygen), whereas phlogiston theory predicts mass loss.",
+      "conflicting_spans": [
+        "when wood burns, phlogiston is released into the air, and the residual ash is dephlogisticated wood",
+        "metals that burn gain mass — they oxidize — which phlogiston theory predicts incorrectly (if phlogiston were released, the residue should be lighter, not heavier, than the metal)"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L2_001",
+    "domain": "science",
+    "category": "temporal",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The steady-state theory of cosmology (Hoyle, Bondi & Gold, 1948) proposes that the universe has no beginning and no end. As the universe expands, new matter is continuously created to maintain a constant average density. The universe is homogeneous and isotropic on large scales and has always appeared the same at all cosmic epochs — the 'perfect cosmological principle.'",
+          "source": "Bondi, H. & Gold, T. (1948). 'The Steady-State Theory of the Expanding Universe.' MNRAS 108: 252–270; Hoyle, F. (1948). MNRAS 108: 372–382."
+        },
+        {
+          "id": "B",
+          "text": "The cosmic microwave background (CMB) is a near-uniform thermal radiation field permeating all of space with a current temperature of 2.725 K, first detected by Penzias and Wilson (1965) and mapped in detail by the COBE, WMAP, and Planck satellites. The CMB's blackbody spectrum and spatial uniformity are explained by the Big Bang model as the cooled relic of a hot, dense early universe approximately 380,000 years after the Big Bang. The CMB temperature scales as T ∝ (1+z) with redshift z.",
+          "source": "Penzias, A.A. & Wilson, R.W. (1965). ApJ 142: 419–421; Planck Collaboration (2018), A&A 641, A1."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — The steady-state theory's perfect cosmological principle requires that the universe has always appeared the same at all epochs — meaning the large-scale properties of the universe at any past cosmic epoch must be identical to those today.",
+        "Step 2 — The CMB temperature scales as T ∝ (1+z), meaning at redshift z = 1000 (early universe) the CMB temperature was ~2725 K, not 2.725 K. A universe that has always looked the same would predict a CMB temperature of 2.725 K at all epochs — but the T ∝ (1+z) scaling directly implies the early universe was vastly hotter and denser, making the universe's appearance radically different at high redshift. This falsifies the 'always the same' requirement of steady-state theory.",
+        "CONFLICT — Two inference steps — applying the perfect cosmological principle to CMB temperature evolution, and then computing the implied early-universe temperature — reveal the steady-state theory predicts an impossibility contradicted by the CMB's observed temperature-redshift relation."
+      ],
+      "explanation": "Two inference steps are needed: first, the steady-state perfect cosmological principle requires epoch-invariant appearance; second, CMB's T ∝ (1+z) scaling proves the early universe was orders-of-magnitude hotter, violating that requirement.",
+      "conflicting_spans": [
+        "universe...has always appeared the same at all cosmic epochs",
+        "perfect cosmological principle",
+        "CMB temperature scales as T ∝ (1+z) with redshift z"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L2_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Neoclassical neuroscience held that adult mammalian brains are incapable of neurogenesis — the production of new neurons. Following development, the brain's complement of neurons is fixed; neuron death is permanent and irreplaceable. This view, dominant from the mid-20th century through the 1980s, supported the general clinical conclusion that adult brain injuries producing neuron loss (stroke, TBI) are necessarily permanent in their neuronal component.",
+          "source": "Rakic, P. (1985). 'Limits of neurogenesis in primates.' Science 227(4690): 1054–1056."
+        },
+        {
+          "id": "B",
+          "text": "Adult neurogenesis occurs in at least two regions of the mammalian brain: the subventricular zone (SVZ) of the lateral ventricles and the subgranular zone (SGZ) of the dentate gyrus in the hippocampus. In rodents, thousands of new neurons are generated daily in these regions. Adult neurogenesis in the human hippocampus has been confirmed by ¹⁴C-dating of neuronal DNA, with an annual turnover rate of ~1.75% of dentate gyrus neurons.",
+          "source": "Eriksson, P.S. et al. (1998). 'Neurogenesis in the adult human hippocampus.' Nature Medicine 4: 1313–1317; Spalding, K.L. et al. (2013). 'Dynamics of hippocampal neurogenesis in adult humans.' Cell 153(6): 1219–1227."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — Passage A asserts that adult mammalian neurons cannot be replaced, meaning any neuronal cell death is permanent. Passage B establishes that adult human hippocampal neurogenesis occurs at ~1.75% annual turnover, meaning new neurons are generated to replace lost ones in the dentate gyrus.",
+        "Step 2 — If new neurons are generated in the adult human hippocampus at measurable rates (1.75%/year), then the claim that adult mammalian brains are 'incapable of neurogenesis' is falsified — specifically because the same mammalian taxon (humans) for which Rakic generalized the claim demonstrates the opposite. The clinical conclusion that adult brain injuries are necessarily permanent in their neuronal component is also falsified for hippocampal injuries.",
+        "CONFLICT — Two inference steps — applying the no-neurogenesis claim to the human hippocampus specifically, and then checking it against the carbon-dated neuronal turnover data — expose the direct contradiction."
+      ],
+      "explanation": "Two inference steps are needed: extrapolating the 'no adult neurogenesis' claim to human hippocampus, and verifying it against ¹⁴C-dated neuronal turnover data showing 1.75% annual replacement.",
+      "conflicting_spans": [
+        "adult mammalian brains are incapable of neurogenesis",
+        "neuron death is permanent and irreplaceable",
+        "adult neurogenesis occurs in...the subgranular zone of the dentate gyrus in the hippocampus",
+        "annual turnover rate of ~1.75% of dentate gyrus neurons"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L2_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The classical view of protein folding (Anfinsen's dogma, 1973) holds that the three-dimensional structure of a protein is uniquely and entirely determined by its amino acid sequence. Under physiological conditions, a polypeptide spontaneously and reproducibly folds into its native functional conformation without the assistance of any other macromolecule. The native state corresponds to the thermodynamic free-energy minimum of the folding landscape.",
+          "source": "Anfinsen, C.B. (1973). 'Principles that Govern the Folding of Protein Chains.' Science 181(4096): 223–230. Nobel Lecture."
+        },
+        {
+          "id": "B",
+          "text": "Molecular chaperones (e.g., Hsp70, Hsp60/GroEL-GroES, Hsp90) are required for the correct folding of a significant fraction of cellular proteins in vivo. Chaperones prevent aggregation of nascent polypeptides as they emerge from the ribosome, actively facilitate folding of kinetically trapped intermediates, and are essential for the viability of all known cellular organisms. For many substrate proteins, the native fold cannot be reached without chaperone assistance under physiological crowding conditions.",
+          "source": "Hartl, F.U. & Hayer-Hartl, M. (2009). 'Converging concepts of protein folding in vitro and in vivo.' Nature Structural & Molecular Biology 16: 574–581."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — Anfinsen's dogma states proteins fold spontaneously to their native state 'without the assistance of any other macromolecule' — this is the defining claim. Passage B states that many proteins cannot reach their native fold without chaperone assistance under physiological conditions.",
+        "Step 2 — Chaperones are macromolecules (proteins). If a subset of cellular proteins cannot achieve their native fold under physiological conditions without chaperone assistance, then Anfinsen's claim that no macromolecular assistance is required under physiological conditions is falsified for that subset — two inference steps connect the subset claim to the general principle's falsification.",
+        "CONFLICT — Two inference steps expose the conflict: identifying chaperones as the 'other macromolecules' Anfinsen excludes, and recognizing that their necessity for a significant protein fraction directly falsifies the universality of Anfinsen's dogma under in vivo conditions."
+      ],
+      "explanation": "Two inference steps: recognizing that chaperones are macromolecules, and then recognizing that necessity of chaperones for a significant protein fraction contradicts the dogma's universal claim of sequence-sufficient autonomous folding under physiological conditions.",
+      "conflicting_spans": [
+        "spontaneously and reproducibly folds into its native functional conformation without the assistance of any other macromolecule",
+        "for many substrate proteins, the native fold cannot be reached without chaperone assistance under physiological crowding conditions"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L3_001",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The miasma theory of disease (dominant through the mid-19th century) holds that epidemic diseases — including cholera, malaria, and the Black Death — are caused by 'bad air' arising from rotting organic matter, swamps, and filth. Disease prevention should focus on eliminating foul odors and improving ventilation. Geographic clustering of disease cases is explained by the spatial distribution of miasmatic sources.",
+          "source": "Farr, W. (1852). 'Report on the Mortality of Cholera in England, 1848–49.' General Register Office, London."
+        },
+        {
+          "id": "B",
+          "text": "John Snow's investigation of the 1854 Broad Street cholera outbreak in London identified a contaminated water pump as the source of the epidemic. Snow mapped 616 cholera deaths and found that cases clustered around the Broad Street pump regardless of proximity to putative miasmatic sources (e.g., a nearby brewery whose workers did not contract cholera because they drank beer rather than pump water). Removing the pump handle ended the outbreak. Snow's work, combined with Koch's isolation of Vibrio cholerae in 1883, established cholera as a waterborne bacterial disease.",
+          "source": "Snow, J. (1855). On the Mode of Communication of Cholera, 2nd ed. London: Churchill; Koch, R. (1883). Berliner Klinische Wochenschrift."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — Miasma theory predicts that cholera cases should cluster near sources of rotting matter and foul air, and that people exposed to the same air mass should have similar disease rates.",
+        "Step 2 — Snow's spatial analysis found that cholera cases clustered around the Broad Street water pump, not around identified miasmatic sources. The brewery workers — exposed to the same air but drinking different water — were unaffected, directly violating miasma theory's air-exposure prediction.",
+        "Step 3 — If disease risk is determined by the specific water source consumed rather than the ambient air quality, then the causal mechanism must be waterborne (a contaminant in the water) rather than airborne — and Koch's subsequent isolation of Vibrio cholerae from contaminated water confirms a bacterial pathogen transmitted through fecal-oral contamination, not air. This three-step chain makes the miasmatic causal mechanism not merely incomplete but fundamentally incorrect.",
+        "CONFLICT — Three inference steps — applying miasma's spatial prediction to Snow's map, identifying the brewery anomaly as a decisive air-exposure control, and inferring a waterborne bacterial mechanism — expose the theory as causally and mechanistically wrong."
+      ],
+      "explanation": "Three inference steps are required: deriving miasma's spatial prediction, applying it to the Broad Street data (including the brewery control group), and inferring the waterborne bacterial mechanism that the data necessitates.",
+      "conflicting_spans": [
+        "epidemic diseases are caused by 'bad air' arising from rotting organic matter",
+        "Disease prevention should focus on eliminating foul odors",
+        "cases clustered around the Broad Street pump regardless of proximity to putative miasmatic sources",
+        "nearby brewery whose workers did not contract cholera because they drank beer rather than pump water",
+        "cholera as a waterborne bacterial disease"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L3_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Classical cardiovascular physiology held that the heart muscle (myocardium) is a terminally differentiated, post-mitotic tissue incapable of regeneration. Adult cardiomyocytes do not divide. Following a myocardial infarction, lost cardiomyocytes are replaced entirely by fibrotic scar tissue (collagen), not by new functional muscle cells. This is the basis for the permanent loss of cardiac function following heart attacks and the irreversibility of heart failure.",
+          "source": "Anversa, P. et al. (1991). 'Myocyte cell loss and myocyte hypertrophy in the aging rat heart.' J. Am. Coll. Cardiol. 18(5): 1441–1448 (pre-revision consensus statement section)."
+        },
+        {
+          "id": "B",
+          "text": "Carbon-14 retrospective birth-dating of cardiomyocyte DNA (exploiting the atmospheric ¹⁴C pulse from nuclear weapons testing) demonstrates that human cardiomyocytes are renewed throughout adult life, with an annual renewal rate of approximately 1% at age 25, declining to ~0.45% by age 75. Approximately 45% of cardiomyocytes present at age 75 were generated after birth. Cardiac progenitor cells (c-Kit+ and Sca-1+ populations) have been identified in the adult heart, though their regenerative capacity remains under investigation.",
+          "source": "Bergmann, O. et al. (2009). 'Evidence for Cardiomyocyte Renewal in Humans.' Science 324(5923): 98–102."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — Passage A claims that adult cardiomyocytes do not divide and lost cells are replaced only by fibrotic scar, implying zero cardiomyocyte renewal after development — a renewal rate of exactly 0%.",
+        "Step 2 — Passage B's ¹⁴C data establishes renewal rates of ~1%/year at age 25 and ~0.45%/year at age 75, with ~45% of a 75-year-old's cardiomyocytes having been generated post-birth. These renewal rates are nonzero, directly falsifying the zero-renewal claim.",
+        "Step 3 — If approximately 45% of cardiomyocytes in a 75-year-old were generated post-birth, then the claim that myocardial infarction damage cannot be repaired by new cardiomyocyte generation is not universally true; the heart has a measurable (if limited) regenerative mechanism. The classical model's clinical conclusion — that fibrotic replacement is the only possible response to cardiomyocyte loss — is therefore an overstated generalization contradicted by the renewal data.",
+        "CONFLICT — Three inference steps — computing the implied renewal rate from Passage A, comparing it to the ¹⁴C-derived nonzero renewal rate, and inferring the falsification of the fibrosis-only repair model — expose the conflict."
+      ],
+      "explanation": "Three inference steps: Passage A implies 0% renewal, ¹⁴C data shows nonzero renewal rates, and the 45% post-birth cardiomyocyte fraction falsifies the 'fibrosis is the only repair mechanism' claim derived from the zero-renewal assumption.",
+      "conflicting_spans": [
+        "Adult cardiomyocytes do not divide",
+        "lost cardiomyocytes are replaced entirely by fibrotic scar tissue, not by new functional muscle cells",
+        "annual renewal rate of approximately 1% at age 25",
+        "approximately 45% of cardiomyocytes present at age 75 were generated after birth"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L3_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 3,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Malthus's principle of population (1798) predicts that human population grows geometrically (exponentially) while food production grows arithmetically (linearly). As a consequence, population will always tend to outrun food supply, and the natural checks on population — famine, disease, and war — are inevitable and recurrent. Sustained improvement in living standards for the general population is impossible because any gains are rapidly offset by population growth.",
+          "source": "Malthus, T.R. (1798). An Essay on the Principle of Population. London: J. Johnson."
+        },
+        {
+          "id": "B",
+          "text": "Global agricultural output has grown faster than world population since 1961. The Green Revolution (1960s–1980s) achieved 2–3× yield increases for wheat, rice, and maize through high-yielding variety breeding, synthetic fertilizers, and irrigation. Global per-capita food supply increased from approximately 2,200 kcal/person/day in 1961 to over 2,900 kcal/person/day by 2020, while world population grew from 3 billion to 8 billion over the same period. The demographic transition model predicts that fertility rates decline as living standards rise, breaking the Malthusian coupling between wealth and population growth.",
+          "source": "FAO (2022). The State of Food Security and Nutrition in the World; Borlaug, N.E. (1970). Nobel Peace Prize Lecture; UN Population Division (2022)."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — Malthus predicts food production grows arithmetically (linearly), meaning per-capita food supply must decline as population grows exponentially.",
+        "Step 2 — Passage B establishes that per-capita food supply increased from 2,200 to 2,900 kcal/person/day between 1961 and 2020, even as population grew from 3 to 8 billion — meaning food production grew faster than population, directly contradicting the arithmetic/geometric asymmetry.",
+        "Step 3 — Malthus's model also predicts that improvements in living standards are unsustainable because they stimulate population growth, restoring poverty. The demographic transition model (Passage B) predicts and documents the opposite: rising living standards reduce fertility rates, breaking the feedback loop Malthus assumed. The empirical fertility decline in developed nations directly falsifies Malthus's coupling assumption.",
+        "CONFLICT — Three inference steps — deriving Malthus's per-capita food prediction, checking it against the FAO data (per-capita increase despite population growth), and verifying the demographic transition's falsification of the poverty-restoring feedback loop — expose the three-part conflict."
+      ],
+      "explanation": "Three inference steps: Malthus's arithmetic-food/geometric-population premise predicts declining per-capita supply; FAO data shows the opposite; the demographic transition model additionally falsifies the poverty-restoration feedback that Malthus treated as iron law.",
+      "conflicting_spans": [
+        "population grows geometrically while food production grows arithmetically",
+        "Sustained improvement in living standards for the general population is impossible",
+        "per-capita food supply increased from approximately 2,200 kcal/person/day in 1961 to over 2,900 kcal/person/day by 2020",
+        "fertility rates decline as living standards rise, breaking the Malthusian coupling"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L4_001",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The classical theory of special relativity (Einstein, 1905) requires that no object with mass can be accelerated to or beyond the speed of light c, because the relativistic mass m = γm₀ (where γ = 1/√(1−v²/c²)) diverges to infinity as v → c, requiring infinite energy for further acceleration. Faster-than-light (FTL) travel for massive particles is therefore physically impossible. Causality is preserved: no signal or influence can propagate faster than c.",
+          "source": "Einstein, A. (1905). 'Zur Elektrodynamik bewegter Körper.' Annalen der Physik 17: 891–921."
+        },
+        {
+          "id": "B",
+          "text": "The OPERA experiment (2011, CERN-to-Gran Sasso baseline, 730 km) measured the time-of-flight of muon neutrinos and reported an anomalous early arrival of (60.7 ± 6.9 (stat.) ± 7.4 (sys.)) ns relative to the speed-of-light expectation — corresponding to a superluminal velocity of v − c ≈ 7.5 × 10⁻⁶ c. Subsequent investigation identified two hardware faults: a loose fiber-optic cable connector and an oscillator running at an incorrect frequency. After correction, the neutrino arrival time was consistent with c.",
+          "source": "OPERA Collaboration (2011). arXiv:1109.4897v1; OPERA Collaboration (2012). 'Measurement of the neutrino velocity with the OPERA detector in the CNGS beam.' JHEP 2012, 093."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — Passage A's special relativity framework predicts that massive particles (including neutrinos, which have nonzero mass per oscillation experiments) cannot travel at or above c. Any measured v > c for a massive particle would falsify special relativity.",
+        "Step 2 — The OPERA 2011 result (v − c ≈ 7.5 × 10⁻⁶ c) appeared, if taken at face value, to report exactly such a falsification — neutrinos (massive particles) traveling faster than light over a 730 km baseline.",
+        "Step 3 — However, the conflict is resolved by the hardware faults: the loose cable reduced signal transit time, and the oscillator error introduced a timing offset. Correcting both artifacts removes the anomalous time advance and restores consistency with c.",
+        "Step 4 — The four-hop conflict is therefore between: (1) SR's FTL prohibition, (2) the reported anomaly, (3) the experimental error analysis, and (4) the corrected result — the conflict exists only if one accepts the uncorrected OPERA data at face value while also knowing SR is supported by decades of precision tests (e.g., time dilation in muon decay, GPS corrections). The apparent conflict between Passage A and the initial OPERA claim requires four inference steps to fully characterize and resolve, because the conflict is only apparent after tracing the measurement chain through two hardware error modes and their quantitative effects on the timing.",
+        "CONFLICT — Taken at face value (pre-correction), OPERA's reported superluminal neutrino velocity is a direct four-hop conflict with special relativity, requiring: applying SR mass-energy divergence to neutrinos, computing the implied energy requirement for v > c, recognizing the experimental measurement purports to show v > c, and then tracing the two hardware fault modes that created the illusory conflict — only at step four is it clear the apparent conflict is an artifact of systematic instrumental errors."
+      ],
+      "explanation": "Four inference steps are needed to characterize this apparent vs. real conflict: applying SR to massive neutrinos, interpreting the OPERA anomaly as an apparent SR violation, identifying the two hardware fault modes, and verifying that correcting them restores consistency — demonstrating a conflict that is real at the data level but illusory at the physics level.",
+      "conflicting_spans": [
+        "no object with mass can be accelerated to or beyond the speed of light",
+        "Faster-than-light travel for massive particles is therefore physically impossible",
+        "reported an anomalous early arrival...corresponding to a superluminal velocity of v − c ≈ 7.5 × 10⁻⁶ c",
+        "a loose fiber-optic cable connector and an oscillator running at an incorrect frequency",
+        "neutrino arrival time was consistent with c"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L4_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The standard ΛCDM cosmological model predicts that the universe is spatially flat (Ω_total ≈ 1) and that its expansion is accelerating, driven by dark energy characterized by equation-of-state parameter w = −1 (a cosmological constant Λ). The Hubble constant H₀ has been measured from the CMB power spectrum (Planck 2018) as H₀ = 67.4 ± 0.5 km/s/Mpc, assuming ΛCDM.",
+          "source": "Planck Collaboration (2018). 'Planck 2018 results VI: Cosmological parameters.' A&A 641, A6."
+        },
+        {
+          "id": "B",
+          "text": "Distance-ladder measurements of the Hubble constant using Cepheid-calibrated Type Ia supernovae (SH0ES collaboration, Riess et al. 2022) yield H₀ = 73.04 ± 1.04 km/s/Mpc. This value is in 5σ tension with the Planck CMB-based measurement. The tension persists across multiple independent late-universe probes (strong gravitational lensing time delays, surface brightness fluctuations, megamaser distances) and cannot be explained by any single identified systematic error in either measurement.",
+          "source": "Riess, A.G. et al. (2022). 'A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty from the Hubble Space Telescope and the SH0ES Team.' ApJ Letters 934(1): L7."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — The Planck CMB measurement assumes the ΛCDM model (flat universe, w = −1 cosmological constant) and extrapolates H₀ from the early-universe power spectrum — H₀ = 67.4 ± 0.5 km/s/Mpc.",
+        "Step 2 — The SH0ES distance-ladder measurement is a direct late-universe geometric measurement chain (parallax → Cepheids → Type Ia SNe) that does not assume ΛCDM — H₀ = 73.04 ± 1.04 km/s/Mpc.",
+        "Step 3 — The two values are inconsistent at 5σ significance. At this confidence level, the probability that both measurements are correct and the discrepancy is a statistical fluctuation is ~1 in 3.5 million. Multiple independent late-universe probes corroborate the higher value, ruling out a single systematic error explanation.",
+        "Step 4 — If both measurements are correct, the ΛCDM model itself is wrong — either dark energy is not a simple cosmological constant (w ≠ −1), spatial flatness is violated, there is new physics in the early universe (e.g., early dark energy), or the distance ladder contains an unidentified systematic. The four-hop chain — assuming ΛCDM, computing early-universe H₀, comparing to late-universe H₀, and inferring ΛCDM incompleteness — reveals the cosmological model conflict.",
+        "CONFLICT — Four inference steps reveal that the 5σ Hubble tension, when fully traced from its measurement assumptions through the ΛCDM framework, constitutes a genuine conflict between the standard cosmological model's predictions and direct late-universe observations that is not attributable to measurement error alone."
+      ],
+      "explanation": "Four inference steps: the CMB measurement's ΛCDM assumption, the distance ladder's model-independence, the 5σ statistical significance ruling out chance, and the implication that ΛCDM must be incomplete or wrong — together constitute a deep cross-document scientific conflict.",
+      "conflicting_spans": [
+        "H₀ = 67.4 ± 0.5 km/s/Mpc, assuming ΛCDM",
+        "H₀ = 73.04 ± 1.04 km/s/Mpc",
+        "5σ tension with the Planck CMB-based measurement",
+        "cannot be explained by any single identified systematic error in either measurement"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L4_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The standard model of particle physics treats the neutrino as a massless particle (in its original formulation). Neutrinos come in three flavors: electron (νₑ), muon (νμ), and tau (ντ). Because neutrinos are massless, their flavor is a conserved quantum number — an electron neutrino produced in a nuclear reaction remains an electron neutrino indefinitely, and the three flavors are completely distinct species with no inter-conversion.",
+          "source": "Weinberg, S. (1967). 'A Model of Leptons.' Phys. Rev. Lett. 19: 1264; Glashow, S.L. (1961). Nucl. Phys. 22: 579–588 (original Standard Model formulation)."
+        },
+        {
+          "id": "B",
+          "text": "The Super-Kamiokande experiment (Fukuda et al., 1998) observed a deficit in the atmospheric muon neutrino flux and demonstrated that νμ oscillate into ντ with mixing angle θ₂₃ ≈ 45° and squared mass difference Δm²₂₃ ≈ 2.5 × 10⁻³ eV². Solar neutrino oscillations (SNO, 2001–2002) confirmed νₑ → νμ/ντ transitions. Neutrino oscillation is only possible if neutrinos have nonzero mass, which requires physics beyond the Standard Model. The 2015 Nobel Prize in Physics was awarded for this discovery.",
+          "source": "Fukuda, Y. et al. [Super-Kamiokande] (1998). Phys. Rev. Lett. 81: 1562–1567; Ahmad, Q.R. et al. [SNO] (2002). Phys. Rev. Lett. 89: 011301."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — The original Standard Model (Passage A) assumes neutrino mass = 0, from which it follows that neutrino flavor is a conserved quantum number.",
+        "Step 2 — Flavor conservation means a νμ produced at one location is still a νμ when detected at any distance — no inter-flavor transitions are possible.",
+        "Step 3 — Super-Kamiokande observed a ~50% deficit in the expected atmospheric νμ flux at large L/E (ratio of travel distance to neutrino energy), consistent with νμ → ντ oscillations. If flavor were conserved (as the massless Standard Model requires), no deficit would exist.",
+        "Step 4 — Quantum mechanical neutrino oscillation (νμ → ντ with mixing angle θ₂₃ ≈ 45°) is mathematically possible only if the three mass eigenstates are not degenerate — i.e., if at least two neutrino mass eigenstates have different nonzero masses. This directly requires m_ν ≠ 0, contradicting the Standard Model's massless assumption in step one, and the conflict propagates back through all four steps to invalidate the massless neutrino assumption.",
+        "CONFLICT — Four inference steps — from massless assumption to flavor conservation, to predicted no-oscillation, to observed ~50% νμ deficit, to the mathematical requirement of nonzero mass for oscillation — reveal an irreconcilable conflict between the original Standard Model and experimental neutrino physics."
+      ],
+      "explanation": "Four inference steps trace the conflict: massless neutrinos → flavor conservation → no oscillations → but oscillations are observed → therefore neutrinos have nonzero mass and the Standard Model as originally formulated is incomplete.",
+      "conflicting_spans": [
+        "neutrino as a massless particle",
+        "flavor is a conserved quantum number",
+        "three flavors are completely distinct species with no inter-conversion",
+        "νμ oscillate into ντ with mixing angle θ₂₃ ≈ 45°",
+        "Neutrino oscillation is only possible if neutrinos have nonzero mass, which requires physics beyond the Standard Model"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L5_001",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The classical theory of black holes (Hawking, 1967–1974) holds that black holes are perfect absorbers with an event horizon from which nothing — including information — can escape. A black hole is fully characterized by only three external parameters: mass (M), charge (Q), and angular momentum (J) — the 'no-hair theorem.' All information about the infalling matter is permanently destroyed when it crosses the event horizon and is lost from the observable universe.",
+          "source": "Hawking, S.W. (1974). 'Black hole explosions?' Nature 248: 30–31; Wheeler, J.A. (1971). 'Adding the 'L' to physics.' Lecture (no-hair theorem)."
+        },
+        {
+          "id": "B",
+          "text": "Hawking radiation: a black hole of mass M radiates thermally with a Hawking temperature T_H = ℏc³/(8πGMk_B). Over time, a black hole loses mass through this radiation and eventually evaporates completely. The radiation is precisely thermal — it has no correlations that encode the quantum state of the infalling matter. Because thermal radiation carries no information, the final state after complete evaporation is a thermal bath with maximal entropy, regardless of the initial state — this is the black hole information paradox (Hawking, 1976).",
+          "source": "Hawking, S.W. (1976). 'Breakdown of predictability in gravitational collapse.' Phys. Rev. D 14: 2460–2473."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — The no-hair theorem (Passage A) states that a black hole is fully characterized by M, Q, J — meaning all other information about infalling matter is destroyed at the horizon, consistent with general relativity's classical framework.",
+        "Step 2 — Hawking radiation (Passage B) demonstrates that black holes are not perfect absorbers but rather emit thermal radiation with T_H = ℏc³/(8πGMk_B) and evaporate over time — a quantum mechanical effect absent from classical GR.",
+        "Step 3 — Because Hawking radiation is purely thermal (a blackbody spectrum with no correlations), it carries zero information about the initial quantum state of the infalling matter. Over the full evaporation lifetime, the pure initial quantum state of infalling matter maps to a mixed thermal final state.",
+        "Step 4 — In quantum mechanics, the fundamental postulate of unitarity requires that the evolution of a closed quantum system always maps pure states to pure states (no information is destroyed). A pure initial state cannot evolve into a mixed thermal state under unitary evolution.",
+        "Step 5 — This creates an irreducible conflict: if general relativity (no-hair theorem) and Hawking radiation are both correct, quantum unitarity is violated — a fundamental postulate of quantum mechanics fails. If quantum mechanics (unitarity) and Hawking radiation are both correct, the information must escape encoded in subtle correlations in the Hawking radiation — but Passage B explicitly states the radiation is precisely thermal with no such correlations. At least one of {GR/no-hair, Hawking radiation thermal purity, quantum unitarity} must be wrong, but none can be abandoned without destroying a major theoretical framework — a conflict that requires five inference steps to fully develop.",
+        "CONFLICT — Five inference steps — no-hair's information destruction, Hawking radiation's quantum origin, thermal radiation's information-free spectrum, quantum mechanics' unitarity requirement, and the three-way impossibility — reveal the black hole information paradox as a deep irresolvable conflict between general relativity and quantum mechanics that, five decades after its formulation, remains one of the central unsolved problems in theoretical physics."
+      ],
+      "explanation": "Five inference steps trace the conflict from the no-hair theorem through Hawking radiation, thermal purity, quantum unitarity, and the three-way incompatibility — constituting the famous black hole information paradox.",
+      "conflicting_spans": [
+        "all information about the infalling matter is permanently destroyed when it crosses the event horizon",
+        "radiation is precisely thermal — it has no correlations that encode the quantum state of the infalling matter",
+        "final state after complete evaporation is a thermal bath with maximal entropy, regardless of the initial state"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L5_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The somatic mutation theory of cancer (SMT) holds that cancer arises from the accumulation of somatic mutations in genes that control cell proliferation (proto-oncogenes) and cell death (tumor suppressor genes). The sequence of mutation acquisition — e.g., APC → KRAS → SMAD4 → TP53 in colorectal cancer — drives progressive malignant transformation. Cancer is fundamentally a disease of the genome: heritable genetic alterations in single cells are the necessary and sufficient cause of tumorigenesis. The tumor microenvironment and tissue context are secondary.",
+          "source": "Hanahan, D. & Weinberg, R.A. (2000). 'The Hallmarks of Cancer.' Cell 100(1): 57–70; Fearon, E.R. & Vogelstein, B. (1990). Cell 61(5): 759–767."
+        },
+        {
+          "id": "B",
+          "text": "The tissue organization field theory (TOFT) proposes that cancer is primarily a tissue-level disease — a disruption of normal tissue architecture and cell-cell signaling rather than a cell-autonomous genomic disease. Evidence: (1) Normal nuclei transplanted into enucleated frog eggs develop normally despite containing mutations. (2) Cancer cells placed in normal tissue contexts can revert to normal behavior (Bissell et al.). (3) Non-mutagenic carcinogens (e.g., estrogen, asbestos) promote cancer through epigenetic and microenvironmental mechanisms without introducing driver mutations. (4) Many cells with classic driver mutations (e.g., KRAS G12D in pancreatic ductal cells) never progress to cancer in the absence of specific tissue signals.",
+          "source": "Soto, A.M. & Sonnenschein, C. (2011). 'The tissue organization field theory of cancer.' BioEssays 33(5): 332–340; Bissell, M.J. & Hines, W.C. (2011). Nature Medicine 17: 320–329."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — SMT (Passage A) holds that somatic driver mutations are 'necessary and sufficient' for tumorigenesis and that the tissue microenvironment is secondary.",
+        "Step 2 — TOFT's first datum (normal nuclei containing mutations develop normally in enucleated eggs) demonstrates that mutated nuclei placed in a normal developmental context do not produce cancer — falsifying 'sufficiency' of mutations alone.",
+        "Step 3 — TOFT's second datum (cancer cells reverting in normal tissue contexts) demonstrates that cells with a malignant phenotype can be normalized by the tissue environment — challenging the 'necessary' claim by showing the phenotype is reversible without mutation correction.",
+        "Step 4 — TOFT's third datum (non-mutagenic carcinogens cause cancer) shows that carcinogenesis can proceed without driver mutations, directly falsifying SMT's claim that heritable genetic alterations in single cells are the necessary cause.",
+        "Step 5 — TOFT's fourth datum (KRAS G12D in pancreatic ductal cells requires specific tissue signals to progress to cancer) demonstrates that classic driver mutations are insufficient by themselves and that SMT's genetic-determinism framework cannot account for the tissue-dependency of oncogenesis — requiring five inference steps to fully trace the conflict: from SMT's necessity/sufficiency claims through four independent experimental lines of evidence, each of which falsifies a different component of the SMT framework.",
+        "CONFLICT — Five inference steps — applying SMT's necessity claim, sufficiency claim, mutation-centrism, genetic determinism, and single-cell autonomous theory to the four experimental results reported by TOFT — reveal a deep, multi-pronged conflict between two competing frameworks for the causation of cancer that is not resolvable by minor modification to either theory."
+      ],
+      "explanation": "Five inference steps are required to trace SMT's necessity, sufficiency, mechanism, determinism, and tissue-independence claims against TOFT's four experimental counterexamples, each of which falsifies a distinct component of the SMT framework.",
+      "conflicting_spans": [
+        "heritable genetic alterations in single cells are the necessary and sufficient cause of tumorigenesis",
+        "The tumor microenvironment and tissue context are secondary",
+        "Normal nuclei transplanted into enucleated frog eggs develop normally despite containing mutations",
+        "Cancer cells placed in normal tissue contexts can revert to normal behavior",
+        "Non-mutagenic carcinogens promote cancer through epigenetic and microenvironmental mechanisms without introducing driver mutations",
+        "many cells with classic driver mutations never progress to cancer in the absence of specific tissue signals"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_L5_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The Copenhagen interpretation of quantum mechanics (Bohr, Heisenberg, 1920s–1930s) holds that a quantum system does not possess definite values of observable properties prior to measurement. The wavefunction ψ represents the complete description of reality. Upon measurement, the wavefunction instantaneously 'collapses' to an eigenstate of the measured observable. The collapse is non-unitary, irreversible, and occurs only when a measurement is performed by a classical apparatus or observer. Between measurements, the system evolves unitarily according to the Schrödinger equation.",
+          "source": "Bohr, N. (1928). 'The Quantum Postulate and the Recent Development of Atomic Theory.' Nature 121: 580–590; Heisenberg, W. (1927). Z. Phys. 43: 172."
+        },
+        {
+          "id": "B",
+          "text": "Quantum decoherence theory (Zurek, 1981–2003; Joos & Zeh, 1985) demonstrates that a quantum system interacting with an environment of N degrees of freedom undergoes rapid loss of quantum coherence (off-diagonal density matrix elements) on a timescale τ_D ∝ (λ_th/Δx)² × τ_R, where λ_th is the thermal de Broglie wavelength and Δx is the superposition separation. For macroscopic objects (Δx ~ 1 cm, T ~ 300 K), decoherence occurs in ~10⁻²³ seconds. Decoherence explains the appearance of classical definite outcomes without invoking a collapse postulate or a privileged observer/apparatus boundary; the preferred basis ('pointer states') is selected by the environment, not by measurement.",
+          "source": "Zurek, W.H. (1981). Phys. Rev. D 24: 1516; Zurek, W.H. (2003). Rev. Mod. Phys. 75: 715; Joos, E. & Zeh, H.D. (1985). Z. Phys. B 59: 223."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — Copenhagen (Passage A) requires a sharp, fundamental distinction between the classical measuring apparatus/observer and the quantum system being measured. The collapse is triggered by this boundary — the measurement postulate is irreducible and not derivable from unitary Schrödinger evolution alone.",
+        "Step 2 — Decoherence theory (Passage B) shows that the apparent collapse of the wavefunction (loss of superposition) arises from entanglement with environmental degrees of freedom — a fully unitary process described by the Schrödinger equation. No special observer, apparatus, or non-unitary collapse postulate is required.",
+        "Step 3 — For macroscopic objects at room temperature, decoherence occurs in ~10⁻²³ seconds — so fast that quantum superpositions of macroscopic states are destroyed by environmental entanglement long before any human observer could interact with the system. This means the 'observer' in Copenhagen plays no causal role; decoherence has already produced the effective collapse.",
+        "Step 4 — Copenhagen treats wavefunction collapse as a fundamental, non-unitary dynamical law that supplements the Schrödinger equation. Decoherence theory shows that no such supplemental law is needed — the appearance of collapse emerges from unitary dynamics alone. If decoherence is correct, the collapse postulate is redundant; if Copenhagen is correct and collapse is a primitive irreducible law, decoherence provides only an approximation to the true physics, not a derivation of it.",
+        "Step 5 — The two frameworks make different ontological claims about the completeness of the wavefunction description. Copenhagen holds that ψ is complete and collapse creates a definite outcome. Decoherence-based interpretations (Everett/many-worlds) hold that ψ remains complete and unitary but the apparent collapse is perspectival — multiple branches coexist. These ontologies are mutually exclusive: either definite outcomes are created by non-unitary collapse (Copenhagen) or they are not (decoherence/Everett). Five inference steps — the observer boundary, unitary decoherence, the observer's causal irrelevance, the redundancy of the collapse postulate, and the incompatible ontologies — reveal an irresolvable foundational conflict.",
+        "CONFLICT — Five inference steps trace the conflict from Copenhagen's measurement boundary, through decoherence's derivation of apparent collapse from unitary dynamics, through the observer's irrelevance at 10⁻²³ s timescales, to the redundancy of the collapse postulate, and finally to the incompatible ontological claims — a foundational conflict in quantum foundations that remains unresolved."
+      ],
+      "explanation": "Five inference steps expose the foundational conflict between Copenhagen's non-unitary collapse postulate and decoherence theory's derivation of apparent collapse from purely unitary environmental entanglement, culminating in incompatible ontological claims about the nature of quantum measurement.",
+      "conflicting_spans": [
+        "wavefunction instantaneously 'collapses' to an eigenstate of the measured observable",
+        "collapse is non-unitary, irreversible, and occurs only when a measurement is performed by a classical apparatus or observer",
+        "decoherence explains the appearance of classical definite outcomes without invoking a collapse postulate or a privileged observer/apparatus boundary",
+        "preferred basis is selected by the environment, not by measurement"
+      ],
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_001",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Newton's law of universal gravitation states that every particle of matter attracts every other particle with a force directly proportional to the product of their masses and inversely proportional to the square of the distance between them: F = Gm₁m₂/r². This law accurately describes planetary orbits, tidal forces, and ballistic trajectories at velocities much less than c and in weak gravitational fields.",
+          "source": "Newton, I. (1687). Philosophiæ Naturalis Principia Mathematica, Book III."
+        },
+        {
+          "id": "B",
+          "text": "General relativity reduces to Newtonian gravity in the weak-field, low-velocity limit. When gravitational potentials Φ ≪ c² and velocities v ≪ c, the geodesic equation of general relativity reproduces the Newtonian equation of motion F = Gm₁m₂/r² to first post-Newtonian order. This correspondence principle ensures that all classical gravitational observations (planetary orbits, tides) correctly predicted by Newtonian gravity remain correctly predicted by GR in the appropriate limit.",
+          "source": "Misner, C.W., Thorne, K.S. & Wheeler, J.A. (1973). Gravitation. San Francisco: W.H. Freeman. Chapter 17."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The Hardy-Weinberg principle states that in a large, randomly mating population with no mutation, migration, natural selection, or genetic drift, allele and genotype frequencies remain constant from generation to generation. For a diallelic locus with allele frequencies p and q (p + q = 1), genotype frequencies are p² (AA), 2pq (Aa), and q² (aa).",
+          "source": "Hardy, G.H. (1908). Science 28: 49–50; Weinberg, W. (1908). Jahresh. Ver. Vaterl. Naturk. Württemb. 64: 368–382."
+        },
+        {
+          "id": "B",
+          "text": "Natural selection, genetic drift, gene flow, and mutation are the primary evolutionary forces that cause allele frequency change in populations. The Hardy-Weinberg principle is used as a null model: deviations from Hardy-Weinberg equilibrium in observed genotype frequencies indicate that one or more of these evolutionary forces is acting on the population.",
+          "source": "Hartl, D.L. & Clark, A.G. (2007). Principles of Population Genetics, 4th ed. Sinauer Associates. Chapter 3."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The first law of thermodynamics states that the total energy of an isolated system is conserved: ΔU = Q − W, where ΔU is the change in internal energy, Q is heat added to the system, and W is work done by the system. Energy can neither be created nor destroyed, only transformed between forms.",
+          "source": "Clausius, R. (1850). 'Über die bewegende Kraft der Wärme.' Annalen der Physik 79: 368–397."
+        },
+        {
+          "id": "B",
+          "text": "ATP synthesis in oxidative phosphorylation converts the free energy stored in the proton motive force (Δp = ΔΨ − (RT/F)ΔpH) into the phosphodiester bond energy of ATP via the F₁F₀-ATP synthase. The overall efficiency of mitochondrial ATP synthesis is approximately 38–40% relative to the theoretical free energy of glucose oxidation (ΔG°' = −2870 kJ/mol). The remaining energy is dissipated as heat.",
+          "source": "Mitchell, P. (1961). 'Coupling of phosphorylation to electron and hydrogen transfer by a chemi-osmotic type of mechanism.' Nature 191: 144–148; Nelson, D.L. & Cox, M.M. (2021). Lehninger Principles of Biochemistry, 8th ed."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_004",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "CRISPR-Cas9 gene editing achieves targeted double-strand breaks (DSBs) in genomic DNA by using a guide RNA (gRNA) to direct the Cas9 nuclease to a complementary target sequence adjacent to a protospacer adjacent motif (PAM). The 20-nucleotide spacer in the gRNA determines target specificity through Watson-Crick base pairing. Off-target cleavage occurs at genomic sites with sequence similarity to the guide.",
+          "source": "Jinek, M. et al. (2012). 'A Programmable Dual-RNA-Guided DNA Endonuclease in Adaptive Bacterial Immunity.' Science 337(6096): 816–821."
+        },
+        {
+          "id": "B",
+          "text": "High-fidelity Cas9 variants (eSpCas9, SpCas9-HF1, HypaCas9) reduce off-target editing by introducing mutations that weaken non-specific DNA contacts between Cas9 and the target strand, making cleavage more dependent on perfect guide-target complementarity. These variants maintain near-wild-type on-target activity while reducing detectable off-target editing by orders of magnitude in whole-genome sequencing studies.",
+          "source": "Slaymaker, I.M. et al. (2016). Science 351(6268): 84–88; Kleinstiver, B.P. et al. (2016). Nature 529: 490–495."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_005",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The theory of plate tectonics holds that Earth's lithosphere is divided into approximately 15 major and several minor rigid plates that move relative to one another on the viscous asthenosphere. Plates diverge at mid-ocean ridges (constructive margins), converge at subduction zones or collision boundaries (destructive margins), and slide past each other at transform faults (conservative margins).",
+          "source": "Morgan, W.J. (1968). 'Rises, Trenches, Great Faults and Crustal Blocks.' J. Geophys. Res. 73(6): 1959–1982."
+        },
+        {
+          "id": "B",
+          "text": "Paleomagnetism confirms seafloor spreading: the symmetric striped pattern of normal and reversed magnetic anomalies recorded in oceanic crust on either side of mid-ocean ridges corresponds to the geomagnetic polarity timescale, demonstrating that new crust forms continuously at ridge crests and spreads laterally. Spreading rates range from ~1 cm/yr (ultra-slow ridges) to ~15 cm/yr (East Pacific Rise).",
+          "source": "Vine, F.J. & Matthews, D.H. (1963). 'Magnetic Anomalies Over Oceanic Ridges.' Nature 199: 947–949."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_006",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Darwin's theory of natural selection (1859) proposes that heritable variation exists in all populations, individuals with heritable traits better suited to their environment survive and reproduce at higher rates, and these advantageous traits accumulate in populations over generations, producing adaptation and ultimately speciation.",
+          "source": "Darwin, C. (1859). On the Origin of Species by Means of Natural Selection. London: John Murray."
+        },
+        {
+          "id": "B",
+          "text": "Modern evolutionary synthesis (neo-Darwinism) integrates Mendelian genetics and population genetics with Darwinian natural selection. Random mutations in DNA provide the heritable variation that Darwin's theory required but could not mechanistically explain. Natural selection acts on phenotypic variation produced by genetic mutations and recombination, with allele frequencies shifting over generations as predicted by the Hardy-Weinberg framework and its extensions.",
+          "source": "Mayr, E. & Provine, W.B. (1980). The Evolutionary Synthesis. Harvard University Press."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_007",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Climate sensitivity is defined as the equilibrium change in global mean surface temperature (GMST) resulting from a sustained doubling of atmospheric CO₂ concentration from pre-industrial levels (~280 ppm to 560 ppm). The IPCC Fifth Assessment Report (2013) estimated equilibrium climate sensitivity (ECS) to be likely in the range of 1.5°C to 4.5°C, with a best estimate of ~3°C.",
+          "source": "IPCC AR5 WG1 (2013). Chapter 12, Table 12.2."
+        },
+        {
+          "id": "B",
+          "text": "The IPCC Sixth Assessment Report (2021) narrowed the likely range of equilibrium climate sensitivity to 2.5°C to 4.0°C, with a best estimate of 3°C, based on improved synthesis of multiple lines of evidence including paleoclimate proxies, historical warming observations, and process-based model constraints. The previous lower bound of 1.5°C was assessed to be very unlikely.",
+          "source": "IPCC AR6 WG1 (2021). Chapter 7, Box 7.1."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_C_008",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The blood-brain barrier (BBB) is formed by specialized tight junctions between cerebral endothelial cells, restricting the paracellular movement of polar molecules, ions, and most macromolecules from the systemic circulation into the CNS parenchyma. Lipid-soluble small molecules cross by transcellular diffusion; essential nutrients use specific transporters (GLUT1 for glucose, LAT1 for amino acids).",
+          "source": "Abbott, N.J. et al. (2010). 'Structure and function of the blood-brain barrier.' Neurobiology of Disease 37(1): 13–25."
+        },
+        {
+          "id": "B",
+          "text": "Brain tumors (glioblastoma multiforme) exploit and disrupt the blood-brain barrier through multiple mechanisms including VEGF-driven angiogenesis of leaky vasculature, metalloproteinase-mediated degradation of tight junction proteins, and transcytosis upregulation. The resulting 'blood-tumor barrier' is heterogeneously permeable and accounts for the enhanced permeability and retention (EPR) effect exploited in nanoparticle drug delivery strategies.",
+          "source": "van Tellingen, O. et al. (2015). 'Overcoming the blood-brain tumor barrier for effective glioblastoma treatment.' Drug Resistance Updates 19: 1–12."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_A_001",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The extended evolutionary synthesis (EES) proposes that standard neo-Darwinian evolution (natural selection acting on random genetic mutation) is insufficient to explain macroevolutionary patterns and developmental diversity. EES incorporates epigenetic inheritance, developmental plasticity, niche construction, and extra-genetic inheritance as additional evolutionary mechanisms that act in parallel with and sometimes independently of genetic natural selection.",
+          "source": "Laland, K.N. et al. (2015). 'The extended evolutionary synthesis: its structure, assumptions and predictions.' Proc. R. Soc. B 282: 20151019."
+        },
+        {
+          "id": "B",
+          "text": "Critics of the extended evolutionary synthesis argue that all proposed EES mechanisms — epigenetic inheritance, phenotypic plasticity, niche construction — are either already incorporated into standard population genetics models or are quantitatively negligible compared to genetic natural selection in determining long-term evolutionary trajectories. The claimed empirical shortcomings of the Modern Synthesis are overstated; standard evolutionary theory is flexible enough to accommodate these phenomena without conceptual revision.",
+          "source": "Wray, G.A. et al. (2014). 'Does evolutionary theory need a rethink?' Nature 514: 161–164 (counterpoint)."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — Passage A claims that neo-Darwinian theory is insufficient and that EES mechanisms are additional, necessary evolutionary forces not fully captured by the Modern Synthesis.",
+        "Step 2 — Passage B claims that standard population genetics already accommodates EES mechanisms and that they are quantitatively negligible — meaning the perceived insufficiency is an overstatement.",
+        "Step 3 — Whether EES mechanisms constitute a genuine extension of evolutionary theory or merely a reframing of phenomena already within the Modern Synthesis is an active scientific debate; both positions are held by mainstream evolutionary biologists, and the question turns on contested empirical assessments of effect size and model inclusion — not on logical contradiction.",
+        "AMBIGUITY — The two passages represent genuinely competing scientific interpretations of the same body of evidence; neither can be shown to contradict the other by logic alone, and resolution requires empirical quantification that is currently disputed in the primary literature."
+      ],
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": "The disagreement between EES advocates and critics is an active empirical and conceptual debate in evolutionary biology. Whether EES mechanisms require a 'conceptual revision' to evolutionary theory versus 'quantitative accommodation' within existing models cannot be determined from the passages alone — both positions are scientifically reasonable given current evidence, making the relationship ambiguous rather than a clear conflict."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_A_002",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The amyloid cascade hypothesis of Alzheimer's disease (Hardy & Higgins, 1992) proposes that the initiating pathological event is the abnormal accumulation of amyloid-β (Aβ) peptide, forming senile plaques. Aβ aggregation leads sequentially to neurofibrillary tangle formation, neuroinflammation, synapse loss, and neuronal death. The implication is that reducing Aβ production or clearing Aβ aggregates should halt disease progression.",
+          "source": "Hardy, J.A. & Higgins, G.A. (1992). 'Alzheimer's disease: the amyloid cascade hypothesis.' Science 256(5054): 184–185."
+        },
+        {
+          "id": "B",
+          "text": "Several anti-amyloid immunotherapies (aducanumab, lecanemab, donanemab) have achieved significant Aβ plaque clearance in clinical trials. Lecanemab (CLARITY-AD, 2023) and donanemab (TRAILBLAZER-ALZ 2, 2023) demonstrated statistically significant slowing of clinical decline (27% and 35% slowing, respectively, on primary endpoints) compared to placebo in early Alzheimer's disease, with amyloid clearance confirmed by PET imaging. Both received FDA approval. Amyloid-related imaging abnormalities (ARIA) were observed as a significant adverse effect in ~20–35% of treated patients.",
+          "source": "van Dyck, C.H. et al. (2023). NEJM 388: 9–21 (lecanemab); Sims, J.R. et al. (2023). NEJM 389: 9–23 (donanemab)."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — The amyloid cascade hypothesis (Passage A) predicts that Aβ clearance should halt disease progression. The 2023 clinical trials (Passage B) show Aβ clearance does slow clinical decline — partially supporting the hypothesis.",
+        "Step 2 — However, the effect sizes are modest (27–35% slowing, not halting), and substantial disease progression occurs despite plaque clearance, suggesting either that Aβ is not the sole driver (tau, neuroinflammation, synaptic mechanisms are independent contributors) or that treatment began too late in the disease course. Neither confirms nor refutes the strong form of the cascade hypothesis.",
+        "Step 3 — The passages are neither fully consistent (the cascade hypothesis predicted efficacy that would halt progression, not merely slow it modestly) nor clearly in conflict (modest slowing is consistent with Aβ playing a causal but not exclusive role). The relationship is genuinely ambiguous: the trials provide partial evidence for and against the hypothesis simultaneously.",
+        "AMBIGUITY — The clinical trial results partially validate and partially undermine the amyloid cascade hypothesis; the relationship cannot be classified as consistent or conflicting without additional information about whether the modest effect size represents the hypothesis's prediction or its partial falsification."
+      ],
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": "The 2023 clinical trial results show modest but significant clinical slowing, which is consistent with a weak form of the amyloid cascade hypothesis but inconsistent with its stronger form (clearance should halt progression). Whether this constitutes support, partial falsification, or delayed-treatment artifact is genuinely underdetermined by the available evidence."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_A_003",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The gut microbiome (comprising ~10¹³ bacteria, archaea, fungi, and viruses) influences host metabolism, immune system development, and brain function via the gut-brain axis (involving the vagus nerve, enteric nervous system, and microbial metabolites including short-chain fatty acids, neurotransmitter precursors, and immune mediators). Dysbiosis — disruption of normal microbiome composition — has been associated with obesity, inflammatory bowel disease, depression, and autism spectrum disorder.",
+          "source": "Cryan, J.F. et al. (2019). 'The Microbiota-Gut-Brain Axis.' Physiological Reviews 99(4): 1877–2013."
+        },
+        {
+          "id": "B",
+          "text": "A 2022 meta-analysis of randomized controlled trials of probiotic supplementation for depression (32 RCTs, n = 2,456) found a statistically significant but small effect size (SMD = −0.34, 95% CI −0.49 to −0.19) on depressive symptom scales, with high heterogeneity (I² = 74%) across studies. Effect sizes were not significantly larger in studies with microbiome compositional data confirming dysbiosis at baseline. The clinical significance of the effect and its mechanistic basis remain uncertain.",
+          "source": "Ng, Q.X. et al. (2022). 'A systematic review and meta-analysis of the effects of probiotic supplementation on depression.' Journal of Affective Disorders 320: 402–414."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — Passage A claims the gut microbiome influences brain function and that dysbiosis is associated with depression, implying that correcting dysbiosis (e.g., via probiotics) should ameliorate depression.",
+        "Step 2 — Passage B's meta-analysis finds a statistically significant but small (SMD = −0.34) and highly heterogeneous probiotic effect on depression, with no signal amplification in dysbiotic subgroups — suggesting either that (a) the gut-brain mechanism exists but probiotics are a weak intervention, (b) the association in Passage A is correlational rather than causal, or (c) the intervention is too non-specific to target the relevant microbiome-brain pathways.",
+        "Step 3 — The passages are not clearly in conflict (a small effect is compatible with the gut-brain axis hypothesis) and not clearly consistent (the expected enrichment of effect in dysbiotic patients was not seen, casting doubt on the causal mechanism). The relationship is genuinely ambiguous: the clinical evidence neither confirms nor refutes the mechanistic claim in Passage A.",
+        "AMBIGUITY — The meta-analytic evidence is consistent with a weak or non-specific version of the gut-brain axis hypothesis but inconsistent with a strong, mechanistically specific version; without clearer evidence on mechanism and dysbiosis-stratified effect sizes, the relationship between the two passages is underdetermined."
+      ],
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": "The meta-analysis shows a small, heterogeneous probiotic effect on depression that neither clearly confirms the gut-brain axis hypothesis (effect is small and dysbiosis-stratification shows no enrichment) nor clearly refutes it (a small effect is still consistent with the mechanism). The relationship between the two passages is genuinely underdetermined."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  },
+  {
+    "id": "sci_A_004",
+    "domain": "science",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The dark matter hypothesis holds that approximately 27% of the universe's energy density consists of non-baryonic dark matter — particles that interact gravitationally but not electromagnetically. Evidence includes galactic rotation curves (Rubin & Ford, 1970), gravitational lensing observations (Bullet Cluster, 2006), and the CMB power spectrum. The leading dark matter candidate is the WIMP (Weakly Interacting Massive Particle) with mass ~10–1000 GeV.",
+          "source": "Zwicky, F. (1933); Rubin, V. & Ford, W.K. (1970). ApJ 159: 379; Clowe, D. et al. (2006). ApJ Letters 648: L109."
+        },
+        {
+          "id": "B",
+          "text": "Modified Newtonian Dynamics (MOND, Milgrom 1983) proposes that the anomalous galactic rotation curves attributed to dark matter are instead explained by a modification of Newtonian gravity below an acceleration threshold a₀ ≈ 1.2 × 10⁻¹⁰ m/s². MOND accurately predicts rotation curves of individual galaxies and satisfies the baryonic Tully-Fisher relation, but struggles to explain cluster-scale lensing, the Bullet Cluster observations, and CMB acoustic peaks without invoking some form of additional matter.",
+          "source": "Milgrom, M. (1983). 'A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis.' ApJ 270: 365–370; Famaey, B. & McGaugh, S.S. (2012). Living Reviews in Relativity 15: 10."
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — The dark matter hypothesis (Passage A) explains galactic rotation curves, lensing, and the CMB by invoking a new class of non-baryonic particles. MOND (Passage B) proposes a gravitational modification that explains galactic rotation curves without new particles.",
+        "Step 2 — The two frameworks are in direct competition for explaining galactic rotation curves specifically — but each has distinct domains of success: MOND succeeds at galaxy scales, dark matter succeeds at cluster and cosmological scales. Neither is universally superior.",
+        "Step 3 — The Bullet Cluster observation (Passage A) is often cited as a definitive falsification of MOND (spatial separation of mass and gas), but Passage B acknowledges that MOND 'struggles' with this — meaning MOND proponents accept this as a challenge, not a refutation (some versions of MOND/TeVeS can partially accommodate it). The relationship between the passages is therefore ambiguous: they conflict on galactic-scale mechanism but neither can be declared correct or incorrect without additional theoretical specification and empirical evidence.",
+        "AMBIGUITY — The passages represent competing research programs with overlapping and non-overlapping domains of empirical success; which framework is 'correct' for which observations is an active scientific debate, and the relationship cannot be determined to be a clear conflict or consistent coexistence without specifying the observational domain and the version of MOND under consideration."
+      ],
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": "Dark matter and MOND are competing frameworks with partially overlapping evidence domains. MOND explains galactic rotation curves that dark matter also explains; dark matter explains the Bullet Cluster that MOND struggles with; neither framework is falsified across all domains simultaneously. The relationship is ambiguous: they conflict in claimed mechanism but not necessarily in all predictions, and which framework is empirically superior depends on the observational context."
+    },
+    "metadata": {
+      "created_by": "human",
+      "version": "1.0"
+    }
+  }
+]
