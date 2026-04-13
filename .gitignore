@@ -28,10 +28,6 @@ ENV/
 *.swo
 .DS_Store
 
-# Benchmark results (generated at runtime)
-results/*.json
-results/*.md
-results/leaderboard.csv
 
 # Test cache
 .pytest_cache/
