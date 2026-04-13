@@ -30,14 +30,22 @@
       ],
       "explanation": "A direct intra-document contradiction: Section 4.1 grants penalty-free termination while Section 4.3 of the same agreement imposes a 50% termination fee for the same act.",
       "conflicting_spans": [
-        "without penalty or further obligation",
-        "liable for a termination fee equal to fifty percent (50%) of the remaining contract value"
+        {
+          "passage_id": "A",
+          "span": "without penalty or further obligation"
+        },
+        {
+          "passage_id": "B",
+          "span": "liable for a termination fee equal to fifty percent (50%) of the remaining contract value"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -71,14 +79,22 @@
       ],
       "explanation": "California Labor Code § 925 explicitly prohibits mandatory out-of-state adjudication clauses for California-resident employees, and Clause 19.2 explicitly mandates Delaware arbitration — a direct statutory-contractual conflict.",
       "conflicting_spans": [
-        "shall not require an employee who primarily resides and works in California...to adjudicate outside of California",
-        "exclusively adjudicated by binding arbitration conducted in the State of Delaware"
+        {
+          "passage_id": "A",
+          "span": "shall not require an employee who primarily resides and works in California...to adjudicate outside of California"
+        },
+        {
+          "passage_id": "B",
+          "span": "exclusively adjudicated by binding arbitration conducted in the State of Delaware"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -112,14 +128,22 @@
       ],
       "explanation": "The two sections of the same operating agreement assign Member Beta irreconcilable distribution percentages (40% vs. 60%) for the same time period and event, a surface-level contradiction.",
       "conflicting_spans": [
-        "Member Beta at 40%",
-        "Member Beta shall receive sixty percent (60%) of all distributions"
+        {
+          "passage_id": "A",
+          "span": "Member Beta at 40%"
+        },
+        {
+          "passage_id": "B",
+          "span": "Member Beta shall receive sixty percent (60%) of all distributions"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -152,14 +176,22 @@
       ],
       "explanation": "HR-14's blanket prohibition on disclosure to government agencies, enforced through termination, becomes a mechanism for federal witness retaliation prohibited by 18 U.S.C. § 1513(e) once one applies the statute's scope to the policy's operation.",
       "conflicting_spans": [
-        "may not disclose such information to any party, including government agencies, without prior written consent",
-        "takes any action harmful to any person, including interference with the lawful employment or livelihood of any person, for providing to a law enforcement officer any truthful information"
+        {
+          "passage_id": "A",
+          "span": "may not disclose such information to any party, including government agencies, without prior written consent"
+        },
+        {
+          "passage_id": "B",
+          "span": "takes any action harmful to any person, including interference with the lawful employment or livelihood of any person, for providing to a law enforcement officer any truthful information"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -192,14 +224,22 @@
       ],
       "explanation": "One inference step — the filing of a bankruptcy petition — reveals that the lender's acceleration right under the Loan Agreement is directly blocked by the automatic stay under 11 U.S.C. § 362(a), creating a cross-document legal conflict.",
       "conflicting_spans": [
-        "entitling the Lender to accelerate all outstanding principal immediately",
-        "operates as a stay...of...any act...to exercise control over property of the estate"
+        {
+          "passage_id": "A",
+          "span": "entitling the Lender to accelerate all outstanding principal immediately"
+        },
+        {
+          "passage_id": "B",
+          "span": "operates as a stay...of...any act...to exercise control over property of the estate"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -232,14 +272,22 @@
       ],
       "explanation": "One inference step establishes that Congress intended § 1201(f) to preserve reverse-engineering rights that cannot be contracted away, bringing the license clause into direct conflict with federal statute.",
       "conflicting_spans": [
-        "shall not reverse engineer, decompile, or disassemble the Software...for any purpose whatsoever",
-        "may circumvent a technological measure...for the sole purpose of identifying and analyzing those elements...necessary to achieve interoperability"
+        {
+          "passage_id": "A",
+          "span": "shall not reverse engineer, decompile, or disassemble the Software...for any purpose whatsoever"
+        },
+        {
+          "passage_id": "B",
+          "span": "may circumvent a technological measure...for the sole purpose of identifying and analyzing those elements...necessary to achieve interoperability"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -273,15 +321,26 @@
       ],
       "explanation": "Two inference steps — first, recognizing the Franchisor controls both sides of the mandated transaction; second, applying antitrust tying/exclusive-dealing doctrine — reveal the contractual arrangement conflicts with the Sherman Act.",
       "conflicting_spans": [
-        "purchase all food ingredients...exclusively from suppliers approved in writing by the Franchisor",
-        "all of which are wholly-owned subsidiaries of the Franchisor's parent corporation",
-        "Every contract...in restraint of trade or commerce...is declared to be illegal"
+        {
+          "passage_id": "A",
+          "span": "purchase all food ingredients...exclusively from suppliers approved in writing by the Franchisor"
+        },
+        {
+          "passage_id": "A",
+          "span": "all of which are wholly-owned subsidiaries of the Franchisor's parent corporation"
+        },
+        {
+          "passage_id": "B",
+          "span": "Every contract...in restraint of trade or commerce...is declared to be illegal"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -315,15 +374,26 @@
       ],
       "explanation": "Two inference steps reveal the conflict: first, identifying that the assignment covers off-hours inventions unrelated to employer business; second, applying § 2870(a)'s mandatory invalidity rule to that specific overreach.",
       "conflicting_spans": [
-        "all inventions without exception",
-        "whether during or outside of working hours",
-        "shall not apply to an invention that the employee developed entirely on his or her own time without using the employer's equipment"
+        {
+          "passage_id": "A",
+          "span": "all inventions without exception"
+        },
+        {
+          "passage_id": "A",
+          "span": "whether during or outside of working hours"
+        },
+        {
+          "passage_id": "B",
+          "span": "shall not apply to an invention that the employee developed entirely on his or her own time without using the employer's equipment"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -357,14 +427,22 @@
       ],
       "explanation": "Two inference steps expose the conflict: recognizing that post-termination data may exceed the 'necessary' threshold under GDPR, and then applying Article 17(1)'s non-derogable erasure right to the contractual retention mandate.",
       "conflicting_spans": [
-        "retain all personal data...for a minimum period of seven (7) years following the termination",
-        "right to obtain from the controller the erasure of personal data...without undue delay...where the personal data are no longer necessary"
+        {
+          "passage_id": "A",
+          "span": "retain all personal data...for a minimum period of seven (7) years following the termination"
+        },
+        {
+          "passage_id": "B",
+          "span": "right to obtain from the controller the erasure of personal data...without undue delay...where the personal data are no longer necessary"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -399,15 +477,26 @@
       ],
       "explanation": "Three inference steps are required: identifying the software license transfer, locating the anti-assignment clause in the underlying license, and recognizing that the APA's silence on obtaining consent means the transfer fails, contradicting the APA's asset schedule.",
       "conflicting_spans": [
-        "Purchased Assets include all intellectual property rights...including all software licenses",
-        "may not be transferred, assigned...by operation of law, merger, acquisition of assets...without Adobe's prior written consent",
-        "Any purported transfer without such consent is void ab initio"
+        {
+          "passage_id": "A",
+          "span": "Purchased Assets include all intellectual property rights...including all software licenses"
+        },
+        {
+          "passage_id": "B",
+          "span": "may not be transferred, assigned...by operation of law, merger, acquisition of assets...without Adobe's prior written consent"
+        },
+        {
+          "passage_id": "B",
+          "span": "Any purported transfer without such consent is void ab initio"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -442,17 +531,34 @@
       ],
       "explanation": "Three inference steps: identifying the control indicia in Clause 5, applying the Borello control test, and recognizing that misclassification creates a direct conflict between the contract label and statutory employment status.",
       "conflicting_spans": [
-        "Contractor agrees to work exclusively for Client",
-        "dedicate no fewer than 40 hours per week",
-        "follow all of Client's internal engineering processes",
-        "use only Client-provided hardware",
-        "principal test of an employment relationship is whether the person to whom service is rendered has the right to control the manner and means"
+        {
+          "passage_id": "A",
+          "span": "Contractor agrees to work exclusively for Client"
+        },
+        {
+          "passage_id": "A",
+          "span": "dedicate no fewer than 40 hours per week"
+        },
+        {
+          "passage_id": "A",
+          "span": "follow all of Client's internal engineering processes"
+        },
+        {
+          "passage_id": "A",
+          "span": "use only Client-provided hardware"
+        },
+        {
+          "passage_id": "B",
+          "span": "principal test of an employment relationship is whether the person to whom service is rendered has the right to control the manner and means"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -487,16 +593,30 @@
       ],
       "explanation": "Three inference steps trace the temporal conflict: establishing the 2014 legal landscape, identifying the NLRB's contemporaneous contrary position, and recognizing the resulting enforcement gap that directly contradicted the agreement's FAA-preemption rationale during its operative period.",
       "conflicting_spans": [
-        "class or collective arbitration is waived",
-        "FAA preempts any conflicting state law",
-        "employees retain the right to engage in concerted activity for mutual aid",
-        "NLRB's position prior to Epic Systems was that class waivers violated § 7"
+        {
+          "passage_id": "A",
+          "span": "class or collective arbitration is waived"
+        },
+        {
+          "passage_id": "A",
+          "span": "FAA preempts any conflicting state law"
+        },
+        {
+          "passage_id": "B",
+          "span": "employees retain the right to engage in concerted activity for mutual aid"
+        },
+        {
+          "passage_id": "B",
+          "span": "NLRB's position prior to Epic Systems was that class waivers violated § 7"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -532,16 +652,30 @@
       ],
       "explanation": "Four inference steps are needed: mapping Alpha's dual control, identifying the self-dealing structure, applying the entire fairness standard, and recognizing the procedural deficiency — only then is the conflict with Delaware fiduciary law apparent.",
       "conflicting_spans": [
-        "Alpha Holdings LLC as Gamma's Manager, giving Alpha full discretion",
-        "Alpha Holdings' principals are also the founders and majority shareholders of Delta Co.",
-        "transaction between a parent corporation and its subsidiary is subject to the entire fairness standard",
-        "transaction that benefits the parent at the expense of minority interests in the subsidiary is voidable"
+        {
+          "passage_id": "A",
+          "span": "Alpha Holdings LLC as Gamma's Manager, giving Alpha full discretion"
+        },
+        {
+          "passage_id": "A",
+          "span": "Alpha Holdings' principals are also the founders and majority shareholders of Delta Co."
+        },
+        {
+          "passage_id": "B",
+          "span": "transaction between a parent corporation and its subsidiary is subject to the entire fairness standard"
+        },
+        {
+          "passage_id": "B",
+          "span": "transaction that benefits the parent at the expense of minority interests in the subsidiary is voidable"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -577,14 +711,22 @@
       ],
       "explanation": "Four inference steps are required to trace how the MFN's automatic extension mechanism transforms a contractual protection into an anticompetitive pricing lock that conflicts with the Robinson-Patman Act.",
       "conflicting_spans": [
-        "shall automatically extend those terms to Content Provider within 30 days",
-        "to discriminate in price between different purchasers...where the effect...may be substantially to lessen competition"
+        {
+          "passage_id": "A",
+          "span": "shall automatically extend those terms to Content Provider within 30 days"
+        },
+        {
+          "passage_id": "B",
+          "span": "to discriminate in price between different purchasers...where the effect...may be substantially to lessen competition"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -616,20 +758,34 @@
         "Step 2 — Section 12.3 grants the General Partner sole discretion to allocate Fund II capital to follow-on investments in companies also held by Fund I, and explicitly waives the requirement for Fund II Limited Partner consent — meaning Fund II LPs have no oversight over decisions that directly benefit Fund I (e.g., protecting Fund I's position by having Fund II prop up a struggling portfolio company).",
         "Step 3 — Under the Investment Advisers Act § 206 and SEC Release IA-1092, the General Partner, as a registered investment adviser, owes a non-waivable fiduciary duty to both funds' investors and must disclose and manage cross-fund conflicts; the no-consent provision in Section 12.3 cannot substitute for the disclosure and management required by federal securities law.",
         "Step 4 — If the General Partner exercises sole discretion to have Fund II make a follow-on investment primarily to protect Fund I's existing position (rather than because it is in Fund II's independent interest), this constitutes a breach of fiduciary duty and fraud under § 206(1)-(2) — a conflict the subscription agreement's no-consent clause cannot cure, because federal fiduciary duties are not contractually waivable.",
-        "CONFLICT — Section 12.3's no-consent, sole-discretion allocation clause directly conflicts with the non-waivable fiduciary and disclosure duties under the Investment Advisers Act § 206; the contractual structure enables and arguably ratifies conduct that is fraudulent under federal securities law."
+        "CONFLICT — Section 12.3's no-consent, sole-discretion allocation clause directly conflicts with the non-waivable fiduciary and disclosure duties under the Investment Advisers Act § 206; the contractual structure enables and legally ratifies — through its no-consent, sole-discretion clause — conduct that federal securities law classifies as fraud under § 206(1)-(2), a duty that is not contractually waivable."
       ],
       "explanation": "Four inference steps — identifying the dual-fund structure, recognizing the consent waiver's effect, applying the Investment Advisers Act's non-waivable fiduciary duty, and tracing how sole discretion enables cross-fund self-dealing — expose the conflict.",
       "conflicting_spans": [
-        "General Partner may, in its sole discretion, re-invest Fund proceeds",
-        "No consent of the Limited Partners of Fund II is required",
-        "investment adviser has a fiduciary duty to act in the best interest of each advisory client",
-        "Allocating investment opportunities in a manner that favors one fund over another without adequate disclosure and consent...constitutes fraud"
+        {
+          "passage_id": "A",
+          "span": "General Partner may, in its sole discretion, re-invest Fund proceeds"
+        },
+        {
+          "passage_id": "A",
+          "span": "No consent of the Limited Partners of Fund II is required"
+        },
+        {
+          "passage_id": "B",
+          "span": "investment adviser has a fiduciary duty to act in the best interest of each advisory client"
+        },
+        {
+          "passage_id": "B",
+          "span": "Allocating investment opportunities in a manner that favors one fund over another without adequate disclosure and consent...constitutes fraud"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -666,16 +822,30 @@
       ],
       "explanation": "Five inference steps are required to trace the circular impossibility: Alpha's default triggers the cross-default, which triggers foreclosure, which impairs Beta's equity collateral, which triggers UCC § 3-605(b) discharge, which destroys the guarantee that the agreement's structure assumed would survive foreclosure.",
       "conflicting_spans": [
-        "cross-default provision: any default by Alpha under any other agreement is an immediate Event of Default",
-        "Beta LLC guarantees Alpha's obligations to Gamma Bank",
-        "Beta LLC's guarantee is secured by a pledge of Beta's 60% equity interest in Alpha Corp.",
-        "if a holder of a guaranteed instrument impairs the collateral securing the guarantee without the guarantor's consent, the guarantor is discharged to the extent of the impairment"
+        {
+          "passage_id": "A",
+          "span": "cross-default provision: any default by Alpha under any other agreement is an immediate Event of Default"
+        },
+        {
+          "passage_id": "A",
+          "span": "Beta LLC guarantees Alpha's obligations to Gamma Bank"
+        },
+        {
+          "passage_id": "A",
+          "span": "Beta LLC's guarantee is secured by a pledge of Beta's 60% equity interest in Alpha Corp."
+        },
+        {
+          "passage_id": "B",
+          "span": "if a holder of a guaranteed instrument impairs the collateral securing the guarantee without the guarantor's consent, the guarantor is discharged to the extent of the impairment"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -712,17 +882,34 @@
       ],
       "explanation": "Five inference steps trace the conflict through the merger's pension assumption, dual contribution requirements, automatic ERISA § 436 benefit restrictions, the 12-month maintenance covenant, and the PBGC's contingent claim — revealing an internally impossible obligation structure.",
       "conflicting_spans": [
-        "Acquirer expressly assumes all liabilities of the DB Plan",
-        "maintain all Target employee benefit plans for a minimum of 12 months",
-        "combined entity must maintain a minimum funding ratio of 90%",
-        "A plan with a funding ratio below 80% triggers mandatory benefit restrictions under ERISA § 436, including prohibition on lump-sum distributions",
-        "PBGC may assess the new plan sponsor for the entire unfunded benefit liability"
+        {
+          "passage_id": "A",
+          "span": "Acquirer expressly assumes all liabilities of the DB Plan"
+        },
+        {
+          "passage_id": "A",
+          "span": "maintain all Target employee benefit plans for a minimum of 12 months"
+        },
+        {
+          "passage_id": "A",
+          "span": "combined entity must maintain a minimum funding ratio of 90%"
+        },
+        {
+          "passage_id": "B",
+          "span": "A plan with a funding ratio below 80% triggers mandatory benefit restrictions under ERISA § 436, including prohibition on lump-sum distributions"
+        },
+        {
+          "passage_id": "B",
+          "span": "PBGC may assess the new plan sponsor for the entire unfunded benefit liability"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -759,16 +946,30 @@
       ],
       "explanation": "Five inference steps are needed: real-time data transfer to US servers, FISA § 702 mandatory disclosure without notice, the Privacy Framework's Schrems II vulnerability, GDPR Article 48's prohibition on third-country orders without an international agreement, and the resulting structural impossibility of dual compliance.",
       "conflicting_spans": [
-        "required by FISA § 702 to provide the NSA with access to any data held on US-based servers upon a lawful order, without notifying the data subjects or the EU Partner",
-        "EU Partner represents that all data processing complies with GDPR",
-        "any judgment or decision of a court or administrative authority of a third country requiring a controller to transfer personal data may only be recognized if based on an international agreement",
-        "US surveillance law (FISA § 702) provides surveillance access that is not limited to what is strictly necessary and proportionate"
+        {
+          "passage_id": "A",
+          "span": "required by FISA § 702 to provide the NSA with access to any data held on US-based servers upon a lawful order, without notifying the data subjects or the EU Partner"
+        },
+        {
+          "passage_id": "A",
+          "span": "EU Partner represents that all data processing complies with GDPR"
+        },
+        {
+          "passage_id": "B",
+          "span": "any judgment or decision of a court or administrative authority of a third country requiring a controller to transfer personal data may only be recognized if based on an international agreement"
+        },
+        {
+          "passage_id": "B",
+          "span": "US surveillance law (FISA § 702) provides surveillance access that is not limited to what is strictly necessary and proportionate"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -802,7 +1003,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -836,7 +1039,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -870,7 +1075,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -904,7 +1111,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -938,7 +1147,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -972,7 +1183,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1006,7 +1219,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1040,7 +1255,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1079,7 +1296,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1118,7 +1337,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1157,7 +1378,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1196,7 +1419,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "composite",
+      "source_verifiability": "verifiable"
     }
   }
 ]

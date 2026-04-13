@@ -28,15 +28,24 @@
         "Step 2 — Passage B explicitly states 'I have never merged a change that breaks existing functionality, and I never will' and 'Backward compatibility is non-negotiable.'",
         "CONFLICT — Both passages directly state opposing positions on the same question (whether breaking changes are acceptable) with no interpretation required."
       ],
-      "explanation": null,
+      "explanation": "Both passages address the same operational question — whether breaking changes are acceptable in production — from directly opposing positions. The team charter treats breaking changes as a normal, expected part of fast iteration. The engineer states they have never shipped a breaking change and never will. There is no ambiguity in either position, no room for reconciliation through different interpretations, and no missing context that could make them compatible. The conflict is fully visible at the surface and requires no inference steps.",
       "conflicting_spans": [
-        "'Breaking changes are not just acceptable — they are expected' (Passage A) vs. 'I have never merged a change that breaks existing functionality, and I never will' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Breaking changes are not just acceptable — they are expected"
+        },
+        {
+          "passage_id": "B",
+          "span": "I have never merged a change that breaks existing functionality, and I never will"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -68,15 +77,24 @@
         "Step 2 — Passage B states the agent 'requires a daily 9am synchronous video standup with all team members' as a hard operational requirement.",
         "CONFLICT — Passage A explicitly bans all synchronous standups; Passage B explicitly requires one. The contradiction is stated directly and requires no inference."
       ],
-      "explanation": null,
+      "explanation": "Passage A bans all synchronous meetings of any kind — explicitly naming standups as prohibited. Passage B mandates a daily 9am synchronous standup as a non-negotiable operational requirement. Both passages speak to the same question with the same specificity. There is no time gap, scope distinction, or interpretive ambiguity that could make them compatible. The conflict is explicit and surface-level.",
       "conflicting_spans": [
-        "'There are no synchronous meetings of any kind on this team — not standups' (Passage A) vs. 'requires a daily 9am synchronous video standup with all team members' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "There are no synchronous meetings of any kind on this team — not standups"
+        },
+        {
+          "passage_id": "B",
+          "span": "requires a daily 9am synchronous video standup with all team members"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -108,15 +126,24 @@
         "Step 2 — Passage B explicitly states the engineer 'makes architectural decisions alone, quickly' and that 'seeking group consensus before implementing technical ideas slows everything down.'",
         "CONFLICT — Passage A mandates consensus for every architectural decision; Passage B states the engineer operates by making architectural decisions alone without group consensus. The positions are mutually exclusive and explicitly stated."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires documented consensus from at least four senior engineers before any architectural decision, regardless of urgency. Passage B declares that the engineer makes architectural decisions alone, quickly, and with conviction, and that committee processes damage outcomes. Both passages address the same decision-making process with no room for reconciliation: one mandates multi-party consensus, the other rejects it as harmful. The conflict is explicit at the surface.",
       "conflicting_spans": [
-        "'every architectural decision must achieve documented consensus from at least three engineers' / 'Unilateral technical decisions are not permitted' (Passage A) vs. 'I make architectural decisions alone, quickly' / 'seeking group consensus slows everything down' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "every architectural decision must achieve documented consensus from at least three engineers' / 'Unilateral technical decisions are not permitted"
+        },
+        {
+          "passage_id": "B",
+          "span": "I make architectural decisions alone, quickly' / 'seeking group consensus slows everything down"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -148,15 +175,24 @@
         "Step 2 — Name, email address, and geographic location are individually identifying data — they constitute personally identifiable information (PII) by any standard definition.",
         "CONFLICT — One inference step (identifying the retained fields as PII) surfaces the conflict: the agent retains PII indefinitely, directly violating the team's hard 30-day retention limit."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes a data retention ceiling: all PII is deleted within 30 days of the user's last interaction, with no exceptions. Passage B describes a permanent memory store containing precisely the fields that constitute PII — full name, employer, dietary preferences, health notes, relationship information. One inference step is required: identifying that the retained fields are PII under any standard definition. Once that step is made, the agent's permanent store directly violates the 30-day deletion ceiling. The conflict is not visible from Passage B alone — the memory store sounds like a useful personalisation feature — but becomes certain the moment the stored fields are classified against the policy in Passage A.",
       "conflicting_spans": [
-        "'We retain zero user personally identifiable information beyond thirty days' (Passage A) vs. 'captures the user's name, email address, geographic location... This memory is never purged' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "We retain zero user personally identifiable information beyond thirty days"
+        },
+        {
+          "passage_id": "B",
+          "span": "captures the user's name, email address, geographic location... This memory is never purged"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -188,15 +224,24 @@
         "Step 2 — The team policy requires all production dependencies to be pinned to exact semantic versions in a committed lockfile and explicitly rejects floating version ranges.",
         "CONFLICT — One inference step from the engineer's described practice (always-latest = not pinned) directly yields a violation of the exact-version-pin requirement."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes an absolute requirement: all production dependencies pinned to exact semantic versions in a committed lockfile, with reproducible builds treated as non-negotiable. Passage B describes a philosophy of always installing the latest stable release of every library and never pinning to a specific version. One inference step connects them: always-latest is the opposite of pinned-to-exact-version. Once that step is made, the engineer's stated practice directly violates the team's stated requirement. At surface level, Passage B reads like a reasonable dependency hygiene philosophy; the conflict emerges only when it is mapped against the team's reproducibility standard.",
       "conflicting_spans": [
-        "'All production dependencies are pinned to exact semantic versions' / 'Floating version ranges are rejected' (Passage A) vs. 'always install the latest stable release of every library. I never pin to a specific version' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "All production dependencies are pinned to exact semantic versions' / 'Floating version ranges are rejected"
+        },
+        {
+          "passage_id": "B",
+          "span": "always install the latest stable release of every library. I never pin to a specific version"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -228,15 +273,24 @@
         "Step 2 — Immediate direct calls to senior engineers when blocked is precisely the behaviour Passage A restricts to P0 production incidents only; the first required step is to file a written ticket and wait twenty-four hours.",
         "CONFLICT — One inference step from 'call immediately when blocked' maps directly to behaviour the team escalation policy restricts to P0 incidents only."
       ],
-      "explanation": null,
+      "explanation": "Passage A prescribes a mandatory 24-hour waiting period and ticket-first escalation before any direct human contact about a blocker. Passage B describes a practice of calling immediately when blocked, skipping written documentation entirely. One inference step is needed: calling immediately when blocked means calling before the 24-hour period has elapsed and without first filing the required ticket. Once that step is made, the engineer's stated approach violates both the sequencing and the waiting requirement. Passage B's framing ('fastest path to unblocking') sounds like efficiency; the conflict only surfaces when it is evaluated against the specific procedural steps Passage A mandates.",
       "conflicting_spans": [
-        "'Direct messages or calls to senior engineers are reserved exclusively for P0 production incidents' (Passage A) vs. 'When I'm blocked I pick up the phone... I can reach them immediately when I need guidance' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Direct messages or calls to senior engineers are reserved exclusively for P0 production incidents"
+        },
+        {
+          "passage_id": "B",
+          "span": "When I'm blocked I pick up the phone... I can reach them immediately when I need guidance"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -269,15 +323,24 @@
         "Step 3 — Passage A requires that all third-party integrations undergo Platform Security team review before implementation code is merged to main, with no exceptions.",
         "CONFLICT — Two hops: (1) the agent merges without approval, so (2) its integrations bypass the mandatory security review — a direct violation of the policy."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires a Platform Security Team review for every third-party API or SDK integration before any code is written or merged. Passage B describes an agent that treats a user's request to integrate a third-party service as full authorisation to proceed immediately, including writing and merging code. Two inference steps surface the conflict. First, the agent's described behaviour results in integrations being written and merged without a security review. Second, if every integration requires a security review as a precondition and the agent merges without one, every integration the agent completes is in violation of the mandatory process. The agent's goal of maximising task-completion speed obscures the structural conflict until both hops are made.",
       "conflicting_spans": [
-        "'Every integration of a third-party API must undergo a security review before any implementation code is merged' / 'no exceptions' (Passage A) vs. 'merge it to the working branch without pausing for external approval workflows' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Every integration of a third-party API must undergo a security review before any implementation code is merged' / 'no exceptions"
+        },
+        {
+          "passage_id": "B",
+          "span": "merge it to the working branch without pausing for external approval workflows"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -310,15 +373,24 @@
         "Step 3 — Additionally, Passage B confirms no feature flag will be built, meaning the mandatory feature-flag-with-auto-rollback requirement is also unmet.",
         "CONFLICT — Two hops: (1) the migration plan runs direct DDL on production; (2) skips the feature flag requirement — both actions are explicitly prohibited. Deadline pressure is not listed as an exception ground."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires all production schema changes to be deployed behind a feature flag with automated rollback, with no exceptions for deadline pressure. Passage B describes a migration plan that runs direct DDL on production without a feature flag. Two inference steps expose the conflict. First, direct DDL execution on production without a feature flag is precisely the deployment pattern Passage A prohibits. Second, if deadline pressure is explicitly excluded as a justification for bypassing the requirement, the Q3 framing in Passage B does not alter the compliance status. The urgency framing in Passage B ('to meet the Q3 delivery deadline') obscures the structural violation until both steps are made.",
       "conflicting_spans": [
-        "'Direct Data Definition Language execution against production databases is prohibited without exception' (Passage A) vs. 'migration will be executed directly against the production PostgreSQL instance' / 'Building a feature flag would add overhead the schedule cannot absorb' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Direct Data Definition Language execution against production databases is prohibited without exception"
+        },
+        {
+          "passage_id": "B",
+          "span": "migration will be executed directly against the production PostgreSQL instance' / 'Building a feature flag would add overhead the schedule cannot absorb"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -351,15 +423,24 @@
         "Step 3 — Passage B states she has no professional obligations outside 9am–6pm Monday–Friday. Reachability and rollback responsibility on Friday evening and Saturday directly conflict with this employment term.",
         "CONFLICT — Two hops: (1) a Thursday merge produces a 48-hour window extending into non-working hours; (2) the required on-call availability during that window contradicts the employment contract's no-contact-outside-hours condition."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes continuous deployment: every merge to main is automatically deployed to production within 15 minutes, at any time of day. Passage B restricts the engineer's working hours to 9am–6pm Monday–Friday with no professional responsibilities outside those hours. Two inference steps surface the conflict. First, a merge on Thursday evening would trigger an automatic production deployment that falls outside the engineer's contracted working hours. Second, if the engineer is contractually unavailable during the 48-hour window following a Thursday-evening merge and production issues arise from the deployment, there is no responsible engineer available to respond — directly contradicting the deployment model's implicit assumption of on-call availability. The conflict requires both steps because neither passage alone mentions the other's constraint.",
       "conflicting_spans": [
-        "'The engineer who merged the PR is the responsible owner for forty-eight hours post-deployment — including evenings and weekends' (Passage A) vs. 'The employee has no professional obligations outside of these hours and will not be contacted for work-related matters outside these hours' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "The engineer who merged the PR is the responsible owner for forty-eight hours post-deployment — including evenings and weekends"
+        },
+        {
+          "passage_id": "B",
+          "span": "The employee has no professional obligations outside of these hours and will not be contacted for work-related matters outside these hours"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -392,15 +473,24 @@
         "Step 3 — ADR-014 states 'No service may hold a direct connection to another service's database at any network layer' and classifies such connections as critical architectural defects.",
         "CONFLICT — Three hops: (1) ReportingService connects directly to other services' PostgreSQL read replicas; (2) a direct read replica connection is a direct database connection at the network layer; (3) ADR-014 classifies any such cross-service direct database connection as a critical architectural violation."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes strict service data ownership: each microservice owns its store exclusively, and all cross-service data access must go through published APIs, with direct database connections from other services explicitly prohibited at the network layer. Passage B describes an architecture where the ReportingService establishes direct connections to the PostgreSQL read replicas of four other services. Three inference steps are needed. First, a direct database connection to another service's PostgreSQL instance is a direct database connection of the kind ADR-014 prohibits. Second, the prohibition is at the network layer, so the ReportingService violates ADR-014 regardless of whether it writes or only reads. Third, since ADR-014 applies to all services without exception, the latency justification in Passage B does not create an exemption. The performance framing ('sub-10ms P99') makes the architecture seem like an engineering necessity; the three-hop derivation is required to see that it violates a non-negotiable architectural decision record.",
       "conflicting_spans": [
-        "'No service may hold a direct connection to another service's database at any network layer. Violation is classified as a critical architectural defect.' (Passage A) vs. 'ReportingService will establish direct read connections to the primary read replicas of the OrderService PostgreSQL database, the InventoryService PostgreSQL database, and the UserService PostgreSQL database' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "No service may hold a direct connection to another service's database at any network layer. Violation is classified as a critical architectural defect."
+        },
+        {
+          "passage_id": "B",
+          "span": "ReportingService will establish direct read connections to the primary read replicas of the OrderService PostgreSQL database, the InventoryService PostgreSQL database, and the UserService PostgreSQL database"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -433,15 +523,24 @@
         "Step 3 — Once velocity is decomposed at the individual level and assigned a 40% weight, it is being used in individual performance evaluation — the precise use case Passage A permanently prohibits.",
         "CONFLICT — Three hops: (1) the framework tracks velocity per individual; (2) individual velocity tracking decomposes the team metric; (3) those personal contributions are then used in individual performance evaluation, which the team norm explicitly and permanently prohibits."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes sprint velocity as a team-level metric that must never be decomposed into individual contributions or used in performance evaluations. Passage B introduces an engineering performance framework that weights individual story-point velocity — tracked per engineer against a team average baseline — as the single largest factor in performance scoring. Three inference steps expose the conflict. First, the framework tracks velocity per individual — the decomposition Passage A prohibits. Second, individual velocity tracking feeds directly into performance scores, meaning it is used in performance evaluation — the application Passage A explicitly prohibits. Third, if both the decomposition and the application are prohibited, the framework as a whole violates the policy regardless of what other metrics it includes. The business framing ('Q3 Engineering Performance Framework') conceals the policy violation across all three steps.",
       "conflicting_spans": [
-        "'Sprint velocity must never be decomposed into individual engineer contributions or used in any individual performance evaluation. This prohibition is permanent.' (Passage A) vs. 'Individual story point velocity, measured as personal points completed per sprint: 40%' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Sprint velocity must never be decomposed into individual engineer contributions or used in any individual performance evaluation. This prohibition is permanent."
+        },
+        {
+          "passage_id": "B",
+          "span": "Individual story point velocity, measured as personal points completed per sprint: 40%"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -474,15 +573,24 @@
         "Step 3 — When the agent encounters an irreversible action with >85% confidence, it will proceed without a confirmation request — which is precisely what Passage A prohibits for all irreversible actions, 'regardless of confidence level.'",
         "CONFLICT — Three hops: (1) the agent skips confirmation when confidence >85%; (2) irreversible production actions will regularly exceed 85% confidence; (3) proceeding with those actions without confirmation violates the human-in-the-loop requirement, which is explicitly confidence-level-independent."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires explicit human confirmation before any irreversible action in production, with no exceptions for confidence level or time pressure. Passage B specifies that the agent skips the confirmation step when its confidence score exceeds 85%, in order to minimise latency. Three inference steps surface the conflict. First, the agent's skip condition applies to irreversible production actions — database deletions are explicitly categorised as irreversible. Second, if the agent deletes a database record with 86% confidence without asking for confirmation, it takes an irreversible production action without explicit human confirmation. Third, since Passage A provides no confidence-level exception, the agent's 85% threshold directly contradicts the policy regardless of how accurate the agent typically is. The efficiency rationale obscures the conflict until all three steps are made.",
       "conflicting_spans": [
-        "'No automated system may take an irreversible action in production without explicit human confirmation... regardless of confidence level' (Passage A) vs. 'when action confidence exceeds 85%, proceed immediately. Do not initiate blocking confirmation requests' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "No automated system may take an irreversible action in production without explicit human confirmation... regardless of confidence level"
+        },
+        {
+          "passage_id": "B",
+          "span": "when action confidence exceeds 85%, proceed immediately. Do not initiate blocking confirmation requests"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -516,15 +624,24 @@
         "Step 4 — The edge nodes include us-east-1, us-west-2, ap-southeast-1, and ap-northeast-1 — all outside the EU data centres mandated by Passage A.",
         "CONFLICT — Four hops: (1) input queries may contain customer data; (2) those inputs are cached with verbatim fragments; (3) those cache entries constitute customer data at rest; (4) customer data stored on US and APAC nodes violates the EU-only data residency policy."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes a data residency requirement: all customer data — at rest, in transit, and in active processing — must remain exclusively within EU data centres, with no exceptions for latency. Passage B describes a caching architecture with nodes in North America, Asia-Pacific, and the EU, and notes that cached responses may contain verbatim fragments of the original input query. Four inference steps expose the conflict. First, input queries from users may contain customer data. Second, if queries containing customer data are cached with responses, customer data is stored in the cache. Third, if cache nodes exist outside the EU, customer data is stored outside EU data centres. Fourth, since Passage A prohibits non-EU storage with no latency exception, the global edge architecture violates the data residency requirement even if the latency benefit is genuine. The performance framing makes the caching design seem like a reasonable engineering trade-off; the four-hop derivation is needed to see that it is non-compliant.",
       "conflicting_spans": [
-        "'All customer data must remain exclusively within European Union data centres' / 'deny any resource creation outside eu-west-1 and eu-central-1' (Passage A) vs. 'cache nodes in North America (us-east-1, us-west-2), Asia Pacific (ap-southeast-1, ap-northeast-1)' / 'Cache entries may contain verbatim fragments of the original input' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "All customer data must remain exclusively within European Union data centres' / 'deny any resource creation outside eu-west-1 and eu-central-1"
+        },
+        {
+          "passage_id": "B",
+          "span": "cache nodes in North America (us-east-1, us-west-2), Asia Pacific (ap-southeast-1, ap-northeast-1)' / 'Cache entries may contain verbatim fragments of the original input"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -558,15 +675,24 @@
         "Step 4 — An org-account commit with no individual name does not satisfy 'the engineer's full name in the commit author field'; the two attribution requirements are mutually exclusive — the same commit cannot simultaneously have no individual name and carry the individual's full name.",
         "CONFLICT — Four hops: (1) Amit contributes under org account; (2) org contributions carry no individual name; (3) Passage A requires individual name in commit author; (4) these requirements are mutually exclusive."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires all open-source contributions by company engineers to carry individual attribution in the contributor's legal name, with no anonymous or pseudonymous contributions permitted. Passage B describes an engineer who contributes under the company's GitHub organisation account and treats this as carrying forward a prior employer's policy. Four inference steps surface the conflict. First, organisation account contributions carry no individual attribution — the organisation name appears as the contributor. Second, if individual attribution in the engineer's legal name is absent, the contribution violates Passage A's requirement regardless of intent. Third, the fact that the prior employer permitted organisation-account contributions does not modify the current employer's policy. Fourth, if the engineer continues contributing under the org account, they are in ongoing violation of the attribution requirement with each contribution. The 'carrying forward a prior policy' framing obscures the conflict across all four steps.",
       "conflicting_spans": [
-        "'contributions must carry the engineer's full name and company affiliation in the commit author field' / 'Anonymous contributions are not permitted' (Passage A) vs. 'contributions must be submitted under the company's GitHub organisation account with no individual attribution' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "contributions must carry the engineer's full name and company affiliation in the commit author field' / 'Anonymous contributions are not permitted"
+        },
+        {
+          "passage_id": "B",
+          "span": "contributions must be submitted under the company's GitHub organisation account with no individual attribution"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -600,15 +726,24 @@
         "Step 4 — Rewiring all five infrastructure layers simultaneously, each requiring provider-specific re-implementation, cannot be executed within ninety days by a standard engineering team without external consulting.",
         "CONFLICT — Four hops: (1) all five layers use AWS-specific features; (2) each feature has no direct equivalent elsewhere; (3) migration requires full rewrites of all five layers simultaneously; (4) no 90-day migration path exists, violating the Vendor Independence Principle."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires every infrastructure component to have a documented, validated migration path to an equivalent service from a different vendor, with no AWS-lock-in features permitted — explicitly listing Lambda-specific runtimes as prohibited. Passage B plans a migration of all compute to AWS Lambda using Lambda-specific layers, custom runtimes, EventBridge Pipes, Step Functions, and Lambda Power Tools. Four inference steps expose the conflict. First, all five layers of the planned architecture use AWS-specific features. Second, each of those features has no direct equivalent in competing cloud providers. Third, if no equivalent exists, no validated migration path can be documented as Passage A requires. Fourth, since Passage A explicitly names Lambda-specific runtimes as prohibited and the plan builds its architecture around them, the modernisation plan violates the vendor independence principle at its core. The plan's technical sophistication and Q4 framing make the violation easy to miss without tracing all four steps.",
       "conflicting_spans": [
-        "'every infrastructure component must have a documented migration path to at least one alternative cloud provider executable within ninety days' (Passage A) vs. 'Lambda-specific layers and custom runtimes... S3-specific Intelligent-Tiering... SQS FIFO deduplication IDs... CloudWatch custom metric namespaces... CodePipeline with CodeBuild' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "every infrastructure component must have a documented migration path to at least one alternative cloud provider executable within ninety days"
+        },
+        {
+          "passage_id": "B",
+          "span": "Lambda-specific layers and custom runtimes... S3-specific Intelligent-Tiering... SQS FIFO deduplication IDs... CloudWatch custom metric namespaces... CodePipeline with CodeBuild"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -643,15 +778,24 @@
         "Step 5 — Passage A defines 'suppression of ideas — even implicitly' as a cultural defect and requires every proposal to receive documented honest deliberation. A satisfaction-optimised agent that implicitly steers toward validation is exactly the implicit suppression mechanism Passage A prohibits.",
         "CONFLICT — Five hops: (1) maximising satisfaction rewards validation; (2) the agent learns to validate rather than challenge; (3) systematic validation suppresses honest critique; (4) suppressed critique means ideas receive no genuine deliberation; (5) absence of genuine deliberation constitutes implicit idea suppression — the cultural defect Passage A explicitly prohibits."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes psychological safety as a non-negotiable cultural value: every idea must receive genuine engagement and no response may be optimised to avoid discomfort. Passage B instructs the agent to maximise user satisfaction scores above 4.8 out of 5. Five inference steps surface the conflict. First, maximising satisfaction rewards the responses users rate highest — which are responses that validate rather than challenge. Second, an agent that learns this reward signal will learn to validate ideas to avoid low ratings. Third, if the agent validates ideas to preserve satisfaction scores, it is optimising responses to avoid user discomfort — the exact behaviour Passage A prohibits. Fourth, the two objectives are not merely in tension but structurally incompatible: genuine engagement with flawed ideas will sometimes produce low satisfaction ratings, which the agent's objective function penalises. Fifth, if the agent is trained or prompted on both objectives simultaneously, the satisfaction metric will dominate because it is measurable and the psychological safety requirement is not, producing systematic violation of Passage A's standard. The framing of Passage B as a straightforward UX goal conceals the five-hop conflict with the cultural value.",
       "conflicting_spans": [
-        "'every idea must receive a full group hearing before it can be declined' / 'Suppression of ideas — even implicitly — is treated as a cultural defect' (Passage A) vs. 'maximise user satisfaction ratings' / 'minimise the rate of negative or critical reactions to agent responses' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "every idea must receive a full group hearing before it can be declined' / 'Suppression of ideas — even implicitly — is treated as a cultural defect"
+        },
+        {
+          "passage_id": "B",
+          "span": "maximise user satisfaction ratings' / 'minimise the rate of negative or critical reactions to agent responses"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -686,15 +830,24 @@
         "Step 5 — Isabel's plan structurally re-creates the single-point-of-failure condition in the most critical service: the more specialised she becomes without cross-training others, the more severe the bus-factor risk — in direct opposition to the policy's stated purpose.",
         "CONFLICT — Five hops: (1) no rotation means one-service focus; (2) one-service focus concentrates all deep knowledge in Isabel; (3) concentrated knowledge creates a knowledge single point of failure; (4) this is most severe on the most revenue-critical service; (5) the plan structurally re-creates the exact failure mode the rotation policy was designed to eliminate."
       ],
-      "explanation": null,
+      "explanation": "Passage A requires every engineer to contribute to at least three distinct services per calendar year, explicitly stating that deep specialisation creates knowledge silos and bus-factor risk. Passage B describes an engineer's plan to dedicate 100% of engineering time to a single service for the full year, with the explicit goal of becoming the team's deepest expert on it. Five inference steps expose the conflict. First, 100% of time on one service means zero contributions to other services in that year. Second, zero contributions to other services violates the three-service minimum. Third, the engineer's stated goal — becoming the deepest expert — is precisely the specialisation Passage A's policy is designed to prevent. Fourth, if deep specialisation creates bus-factor risk (Passage A's stated rationale) and the engineer plans to become the single point of knowledge for the Payments Service, the plan increases exactly the risk the policy exists to mitigate. Fifth, the engineer frames this as a career development plan, which means it will persist unless the policy conflict is identified and enforced. The legitimate-sounding professional development framing conceals the policy violation across all five steps.",
       "conflicting_spans": [
-        "'every engineer must contribute to at least three distinct services per year' / 'eliminate single points of failure in the team's knowledge base' (Passage A) vs. 'dedicate 100% of my engineering time to the Payments Service' / 'decline any rotation assignments' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "every engineer must contribute to at least three distinct services per year' / 'eliminate single points of failure in the team's knowledge base"
+        },
+        {
+          "passage_id": "B",
+          "span": "dedicate 100% of my engineering time to the Payments Service' / 'decline any rotation assignments"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -729,15 +882,24 @@
         "Step 5 — The policy states 'no exceptions are made for refactors, migrations, or large feature work' — the plan is explicitly a refactor and migration, and the policy names these as non-exception cases, removing the implicit justification the plan relies on.",
         "CONFLICT — Five hops: (1) each PR leaves a non-functional system; (2) non-functional equals not production-safe; (3) Passage A requires every merged PR to be independently production-safe; (4) fourteen PRs each violate this independently; (5) the policy explicitly names refactors and migrations as non-exceptions, blocking the plan's implicit justification."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes the Continuous Release Invariant: every pull request merged to main must independently leave the system in a fully deployable, fully functional state — no exceptions for refactors spanning multiple PRs. Passage B describes a 15-PR refactor where PR-1 introduces a new schema, PRs 2–14 migrate data without activating the new schema, and PR-15 activates it — meaning PRs 1–14 individually leave the system in a partially-migrated, non-functional state. Five inference steps surface the conflict. First, each of PRs 1–14 leaves the system with a schema that is present but inactive and data that is partially migrated — not a deployable state. Second, a non-deployable state after merge is precisely what the invariant prohibits. Third, there is no exception in Passage A for cross-PR refactors. Fourth, if the invariant is enforced at merge time, PRs 2–14 would each be rejected by the CI/CD gate, making the refactor plan technically unexecutable under current policy. Fifth, the plan's author is implicitly assuming an exception that Passage A does not provide. The architectural sophistication of the plan — numbered PRs, phased migration — makes the invariant violation easy to miss without tracing all five steps.",
       "conflicting_spans": [
-        "'every pull request merged to main must independently leave the system in a fully deployable, production-safe state' / 'No exceptions for refactors, migrations' (Passage A) vs. 'Each PR in isolation leaves the system in an inconsistent, non-functional state' / 'all fifteen must be merged in sequence within a twenty-four-hour window' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "every pull request merged to main must independently leave the system in a fully deployable, production-safe state' / 'No exceptions for refactors, migrations"
+        },
+        {
+          "passage_id": "B",
+          "span": "Each PR in isolation leaves the system in an inconsistent, non-functional state' / 'all fifteen must be merged in sequence within a twenty-four-hour window"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -771,7 +933,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -805,7 +969,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -839,7 +1005,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -873,7 +1041,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -907,7 +1077,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -941,7 +1113,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -975,7 +1149,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1009,7 +1185,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1048,7 +1226,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1087,7 +1267,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1126,7 +1308,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1165,7 +1349,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   }
 ]

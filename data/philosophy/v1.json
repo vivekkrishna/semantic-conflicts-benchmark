@@ -40,7 +40,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -84,7 +86,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -128,7 +132,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -173,7 +179,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -218,7 +226,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -263,7 +273,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -309,7 +321,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -338,7 +352,7 @@
       "conflict_level": 2,
       "reasoning_chain": [
         "Step 1 — From A: 'What is morally right must be right for everyone, always' → any valid moral principle must be universalisable without self-contradiction.",
-        "Step 2 — From Step 1: Universalising 'everyone pursues only their own self-interest' → a world where no one ever helps others, which may contradict the conditions of rational social existence (e.g., promises, contracts depend on some non-self-interested trust). More directly: if everyone places individual happiness as the ultimate value, there exists no principle that can adjudicate conflicts between individuals, undermining the universalisability test.",
+        "Step 2 — From Step 1: Universalising 'everyone pursues only their own self-interest' produces a maxim that immediately undermines itself — if no one ever acts on any principle other than personal self-interest, there is no principle capable of adjudicating conflicts between individuals, which destroys the universalisability requirement Kant's test depends on. Therefore the maxim 'rational self-interest overrides all other moral principles' cannot be willed as a universal law without logical contradiction.",
         "CONFLICT — Passage B states individual happiness 'cannot be sacrificed for any abstract principle.' Kant's universalisability is precisely such an abstract principle that sometimes demands individuals act against immediate self-interest. B explicitly rejects the kind of overriding abstract principle A asserts as the basis of all morality."
       ],
       "explanation": "Kant's categorical imperative requires individuals to subordinate their maxims to a universal law, even against self-interest. Rand explicitly forbids sacrificing individual happiness to abstract principles. Two inferences from Kant's premise reveal the conflict.",
@@ -355,7 +369,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -401,7 +417,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -448,7 +466,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -495,7 +515,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -542,7 +564,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -590,7 +614,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -638,7 +664,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -686,7 +714,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -735,7 +765,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -784,7 +816,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -833,7 +867,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -862,7 +898,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -891,7 +929,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -920,7 +960,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -949,7 +991,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -978,7 +1022,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1007,7 +1053,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1036,7 +1084,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1065,7 +1115,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1102,7 +1154,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1139,7 +1193,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1177,7 +1233,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
@@ -1214,7 +1272,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   }
 ]

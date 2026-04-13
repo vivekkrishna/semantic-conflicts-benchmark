@@ -47,9 +47,10 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
     "Step 3 — ...",
     "CONFLICT — ..."
   ],
-  "explanation": null,
+  "explanation": "Prose summary of why the conflict is non-obvious and what makes it semantically significant.",
   "conflicting_spans": [
-    "'span text from A' (Passage A) vs. 'span text from B' (Passage B)"
+    { "passage_id": "A", "span": "exact or near-verbatim span from passage A" },
+    { "passage_id": "B", "span": "exact or near-verbatim span from passage B" }
   ],
   "ambiguity_reason": null
 }
@@ -93,10 +94,22 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
 - Integer 0–5 for conflict items, representing the minimum number of 100%-certain inference steps required to detect the conflict.
 - `null` for consistent and ambiguous items.
 
+### `explanation`
+- Required for conflict and ambiguous items; `null` for consistent items (there is no conflict to explain).
+- Prose description that (a) describes the surface appearance that makes the conflict non-obvious, (b) identifies what derivation is required, and (c) articulates the core conflict in plain language.
+- Consistent items intentionally have no explanation field populated — this is by design, not missing data.
+
+### `conflicting_spans`
+- Required for conflict items; `null` for consistent and ambiguous.
+- An array of objects: `[{"passage_id": "A", "span": "..."}, {"passage_id": "B", "span": "..."}]`.
+- `passage_id` must be `"A"` or `"B"`. Spans should be exact or near-verbatim extracts from the passage text.
+- Multiple spans per passage are permitted for high-level items where the conflict involves multiple textual anchors.
+
 ### `reasoning_chain`
 - Required for conflict and ambiguous items; `null` for consistent.
 - Each entry is a string. Conflict chains end with `"CONFLICT — ..."`. Ambiguous chains end with `"AMBIGUOUS — ..."`.
 - Every step must follow from the previous with **100% logical certainty** — no probabilistic leaps.
+- Words like "may", "might", "arguably", or "likely" are **not permitted** in conflict item chains — only in ambiguous item chains where the underdetermination is the point.
 
 ### `category`
 | Value | Meaning |
@@ -113,6 +126,40 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
 | `easy` | L0–L1 |
 | `medium` | L2–L3 |
 | `hard` | L4–L5 |
+
+### `metadata`
+
+Every item carries provenance metadata:
+
+```json
+{
+  "created_by": "human",
+  "version": "1.0",
+  "source_type": "paraphrased_real",
+  "source_verifiability": "verifiable"
+}
+```
+
+| Field | Values | Meaning |
+|-------|--------|---------|
+| `source_type` | `real` | Verbatim extract from a real document |
+| | `paraphrased_real` | Paraphrase of a real source; arguments/claims are historically grounded |
+| | `composite` | Combines a real statute/text with a synthetic contract or scenario |
+| | `synthetic` | Fully invented text (realistic documents, not toy examples) |
+| `source_verifiability` | `verifiable` | Claims can be traced to real sources |
+| | `illustrative` | Realistic but not intended to map to a specific real document |
+| | `fictional` | Invented personas and documents; represents realistic but fictional scenarios |
+
+**Per-domain provenance:**
+
+| Domain | `source_type` | `source_verifiability` | Notes |
+|--------|--------------|----------------------|-------|
+| philosophy | `paraphrased_real` | `verifiable` | Named primary sources (Kant, Nietzsche, etc.) |
+| software | `synthetic` | `illustrative` | Realistic system docs, configs, ADRs |
+| law | `composite` | `verifiable` | Real statutes + synthetic contracts |
+| science | `paraphrased_real` | `verifiable` | Real theories and papers, cited |
+| content | `synthetic` | `fictional` | Invented creator profiles and posts |
+| teams | `synthetic` | `fictional` | Invented team docs and Slack messages |
 
 ---
 

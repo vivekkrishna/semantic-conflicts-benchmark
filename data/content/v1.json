@@ -28,15 +28,24 @@
         "Step 2 — Passage B explicitly states 'My morning routine starts with two scoops of whey isolate' and 'I've been supplementing for years.'",
         "CONFLICT — The creator directly contradicts himself: Passage A claims a lifetime of zero supplement use; Passage B describes a multi-year daily supplement habit. No interpretation is required; the contradiction is stated at the surface level."
       ],
-      "explanation": null,
+      "explanation": "At surface level the two passages might appear to describe different individuals or different periods of a creator's life. But both passages carry the same first-person voice, the same content domain (fitness/nutrition), and are attributed to the same creator. Passage A makes an absolute, permanent claim ('I never use protein supplements — real nutrition comes from whole foods only'). Passage B describes an established, non-negotiable daily habit centred on whey isolate. There is no gap in time or change of position to reconcile them: one passage denies a practice the other passage treats as a fixed part of the creator's identity. The conflict is immediate and requires no inference beyond reading both passages.",
       "conflicting_spans": [
-        "'I never use protein supplements' / 'I've never touched a protein shake in my life' (Passage A) vs. 'two scoops of whey isolate' / 'I've been supplementing for years' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I never use protein supplements' / 'I've never touched a protein shake in my life"
+        },
+        {
+          "passage_id": "B",
+          "span": "two scoops of whey isolate' / 'I've been supplementing for years"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -68,15 +77,24 @@
         "Step 2 — Passage B announces the creator just financed a new vehicle — a voluntary consumer debt — and endorses the decision explicitly.",
         "CONFLICT — The creator stated she would never take on voluntary consumer debt; she then voluntarily took on consumer debt and celebrated it. The contradiction is explicit and requires no inference."
       ],
-      "explanation": null,
+      "explanation": "Passage A presents a seven-year track record of being completely debt-free and an explicit teaching principle against voluntary consumer debt. Passage B announces the voluntary financing of a luxury vehicle. The conflict is explicit at the surface: the same creator who teaches others never to take on consumer debt has just done precisely that. No inference beyond reading both statements is needed. Superficially a reader might wonder whether the purchase was made before the seven-year debt-free streak, but the present-tense framing of both passages and the single creator voice rule this out.",
       "conflicting_spans": [
-        "'I would never advise anyone to take on consumer debt voluntarily' (Passage A) vs. 'just signed the papers on a brand new Tesla Model S, financed at 2.9% APR' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I would never advise anyone to take on consumer debt voluntarily"
+        },
+        {
+          "passage_id": "B",
+          "span": "just signed the papers on a brand new Tesla Model S, financed at 2.9% APR"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -108,15 +126,24 @@
         "Step 2 — Passage B announces a planned month-long posting hiatus starting immediately, directly breaking the streak she described.",
         "CONFLICT — A stated three-year unbroken daily posting streak is directly contradicted by an announcement of a month-long posting pause. No inference is needed."
       ],
-      "explanation": null,
+      "explanation": "Both passages carry the same creator voice on the same platform. Passage A establishes an unbroken three-year daily posting record as a defining identity marker ('consistency is the algorithm'). Passage B announces an immediate and total month-long cessation of posting. A three-year unbroken daily streak and a planned one-month complete silence are directly contradictory states for the same person on the same platform. No inference is required; the conflict is fully visible at the surface level.",
       "conflicting_spans": [
-        "'I have not missed a single day of posting in three years' (Passage A) vs. 'Taking a full month off social media starting today. No posts, no stories, no engagement.' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I have not missed a single day of posting in three years"
+        },
+        {
+          "passage_id": "B",
+          "span": "Taking a full month off social media starting today. No posts, no stories, no engagement."
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -148,15 +175,24 @@
         "Step 2 — Passage B describes the creator performing an entire workout consisting exclusively of the exact categories he condemned: cable flyes (cable isolation), preacher curls (isolation), lateral raises (isolation), leg extensions (machine isolation), face pulls (cable).",
         "CONFLICT — One inference step from Passage A's stated rule ('isolation and machines are a complete waste of time') applied to Passage B's documented behaviour (a session of only isolation and cable exercises) reveals a direct behavioural contradiction."
       ],
-      "explanation": null,
+      "explanation": "Passage A makes a categorical claim: isolation exercises and machines are 'a complete waste of time' and only compound lifts build muscle. Passage B documents a full workout consisting exclusively of isolation and machine exercises — cable flyes, preacher curls, lateral raises, and leg extensions. A single inference step connects them: if the creator follows a workout built entirely from exercises they declared worthless, their behaviour contradicts their stated principle. The conflict is not visible from Passage A alone (a general rule) or Passage B alone (a workout log) but becomes certain the moment the rule is applied to the described behaviour.",
       "conflicting_spans": [
-        "'Isolation exercises are a complete waste of time — machines, cables, all of it' (Passage A) vs. '4 sets of cable flyes, 3 sets of preacher curls, 3 sets of lateral raises, 4 sets of leg extensions, 3 sets of face pulls' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Isolation exercises are a complete waste of time — machines, cables, all of it"
+        },
+        {
+          "passage_id": "B",
+          "span": "4 sets of cable flyes, 3 sets of preacher curls, 3 sets of lateral raises, 4 sets of leg extensions, 3 sets of face pulls"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -188,15 +224,24 @@
         "Step 2 — Passage B shows the creator promoting and endorsing an actively managed fund (Beacon Capital's small-cap fund) to her audience.",
         "CONFLICT — From the stated principle that active management destroys value, one inference step shows that endorsing an active fund is a direct contradiction of that principle."
       ],
-      "explanation": null,
+      "explanation": "Passage A states an empirically grounded belief — index funds beat active managers after fees over any 20-year horizon — and a personal practice consistent with it: 100% passive investing. Passage B announces a paid promotional partnership for an actively managed fund. One inference step is required: if the creator believes active management destroys value and holds zero active positions, then accepting payment to promote an active fund directly contradicts both the belief and the practice. The conflict is one hop because neither passage alone states the contradiction explicitly; it emerges when the promotion is evaluated against the stated investment belief.",
       "conflicting_spans": [
-        "'Paying anyone to actively manage your money is throwing it away' (Passage A) vs. 'partnered with Beacon Capital to help promote their actively managed small-cap fund' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Paying anyone to actively manage your money is throwing it away"
+        },
+        {
+          "passage_id": "B",
+          "span": "partnered with Beacon Capital to help promote their actively managed small-cap fund"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -228,15 +273,24 @@
         "Step 2 — Applying that stated principle to Passage B's announced action of deliberately removing 'several older videos' from the channel yields a direct contradiction: by the creator's own definition, this act is cowardly and inauthentic.",
         "CONFLICT — One inference step (applying the creator's own stated rule to their documented action) surfaces the conflict."
       ],
-      "explanation": null,
+      "explanation": "Passage A articulates a principle: authentic creators never delete content, because past posts are part of the honest record of who you were. Passage B announces the removal of older videos. One inference step is required: removing older videos is deleting content. Once that step is made, the creator's action directly violates their own stated rule. At surface level Passage B could seem like a reasonable platform management decision; the conflict only becomes certain when it is evaluated against the creator's publicly stated principle in Passage A.",
       "conflicting_spans": [
-        "'Authentic creators never delete content' / 'Deleting videos is cowardly' (Passage A) vs. 'I've removed several older videos from my channel' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Authentic creators never delete content' / 'Deleting videos is cowardly"
+        },
+        {
+          "passage_id": "B",
+          "span": "I've removed several older videos from my channel"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -269,15 +323,24 @@
         "Step 3 — However, Passage B also introduces a brand sponsorship (Brilliant), meaning she is now running sponsored integrations. Sponsorships, like ads, create financial incentives tied to video performance, which is the very incentive misalignment she claimed ad-free operation would prevent.",
         "CONFLICT — Two inference steps are needed: first, that algorithmic optimisation for retention is the same incentive corruption she condemned; second, that a sponsorship deal reintroduces the misaligned financial incentive she claimed ad-free operation eliminated. Both her new training and her monetisation structure contradict her stated rationale."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes two interrelated commitments: ads are harmful because they interrupt the learning experience, and the commitment to ad-free content is permanent. Passage B announces a branded sponsorship. Two inference steps are needed. First, an 'episode sponsor' delivering integrated promotional content is functionally a form of advertising regardless of whether it is presented as a personal recommendation. Second, if sponsorships are a form of advertising and the creator has committed to ad-free content forever, this partnership violates that commitment. At surface level the creator's framing ('only partners I personally believe in') makes the sponsorship feel different from a banner ad; the two-hop derivation is needed to see that this distinction does not survive the creator's own stated reasoning about why ads harm the audience.",
       "conflicting_spans": [
-        "'Ads interrupt the learning experience and misalign creator incentives — you start optimising for watch time' (Passage A) vs. 'structure your first seven seconds, your retention hooks... to maximise YouTube's algorithm signals' and brand sponsorship (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "Ads interrupt the learning experience and misalign creator incentives — you start optimising for watch time"
+        },
+        {
+          "passage_id": "B",
+          "span": "structure your first seven seconds, your retention hooks... to maximise YouTube's algorithm signals' and brand sponsorship"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -310,15 +373,24 @@
         "Step 3 — Since she is a women's wellness educator (her stated role), producing and distributing a women's 18:6 fasting guide constitutes a recommendation of that protocol to women — the exact action she said she would never take.",
         "CONFLICT — Two hops: (1) completing a protocol she said was harmful and (2) publishing a women's guide for it, which by her role entails recommending it to women — contradicting her explicit commitment."
       ],
-      "explanation": null,
+      "explanation": "Passage A makes a categorical health claim: fasting windows beyond 14 hours are hormonally dangerous for women and constitute irresponsible advice. Passage B describes the creator — who identifies as a woman — completing an 18:6 fasting protocol (18-hour fast, 6-hour eating window) and reporting positive outcomes, then producing a guide for other women to follow the same protocol. Two inference steps connect the conflict. First, an 18:6 protocol is a fasting window of 18 hours — clearly exceeding the 14-hour threshold the creator named as dangerous. Second, if the creator considered this protocol dangerous for women but practised it herself and wrote a guide encouraging others to follow it, she has both violated her own health standard and advised others to do the same. The surface framing ('my experiment') obscures the conflict until both steps are made.",
       "conflicting_spans": [
-        "'I will never recommend these protocols to women' / '18:6 fasting protocols cause cortisol dysregulation' (Passage A) vs. '30-day 18:6 intermittent fasting experiment' / 'complete 30-day 18:6 fasting guide for women' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I will never recommend these protocols to women' / '18:6 fasting protocols cause cortisol dysregulation"
+        },
+        {
+          "passage_id": "B",
+          "span": "30-day 18:6 intermittent fasting experiment' / 'complete 30-day 18:6 fasting guide for women"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -351,15 +423,24 @@
         "Step 3 — His stated rule is that once money (or equivalent value) changes hands, the recommendation is 'worthless' and he is 'not for sale'; the free unit plus sponsorship constitutes exactly the arrangement he defined as a corruption of honest reviewing.",
         "CONFLICT — Two hops: (1) a free review unit plus sponsorship is a form of paid promotion under his stated definition; (2) this directly contradicts both 'every product I bought with my own money' and 'I never take paid promotions.'"
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes a bright-line principle: the moment money changes hands for a recommendation — in any form — objectivity is compromised. Passage B reviews a laptop product and the review unit was sent for free; the episode is also described as sponsored. Two inference steps surface the conflict. First, receiving a free product and accepting sponsorship money are both forms of value exchange that meet the creator's own definition of 'money changing hands.' Second, if any such exchange compromises objectivity and the creator has committed to never accepting paid promotions, then this review — however enthusiastically presented as genuine — violates that commitment. The creator's framing ('the Apex X1 is phenomenal') may be entirely sincere, but sincerity does not resolve the structural conflict the creator's own rule defines.",
       "conflicting_spans": [
-        "'I never take paid promotions' / 'Every product I've ever mentioned I bought with my own money' (Passage A) vs. 'This video was sponsored by Apex Technologies. A review unit was provided free of charge.' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I never take paid promotions' / 'Every product I've ever mentioned I bought with my own money"
+        },
+        {
+          "passage_id": "B",
+          "span": "This video was sponsored by Apex Technologies. A review unit was provided free of charge."
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -393,15 +474,24 @@
         "Step 4 — The 'never sell' and 'five-year minimum hold' rules mean that executing a rotation — any rotation — violates the stated philosophy regardless of the reasoning given; 'rotating out of' sectors means selling, which she said she would never do in response to market conditions.",
         "CONFLICT — Three chained inference steps: (1) rotation requires selling; (2) selling triggered by macro news is market timing; (3) market timing is what she explicitly condemned and swore off. The implied position from Passage A (no macro-driven selling ever) directly conflicts with the documented action in Passage B."
       ],
-      "explanation": null,
+      "explanation": "Passage A asserts that timing the market is a fool's game and that no short-term information can improve on buy-and-hold. The creator states they have never and will never trade based on market movements. Passage B describes a newsletter recommending sector rotation triggered by Fed rate-hike signals. Three inference steps are needed. First, sector rotation requires selling existing positions. Second, if a sell decision is triggered by Fed signals (current market information), it constitutes acting on short-term market information — the strategy the creator declared foolish. Third, if the creator has committed never to trade on market movements but is now advising paid subscribers to rotate sectors in response to Fed signals, the advice they are selling contradicts the principle they publicly endorse. The conflict is not visible in either passage alone and requires all three steps to surface.",
       "conflicting_spans": [
-        "'buy, hold, never sell' / 'market timing is a fool's game' / 'Reacting to market news is what amateurs do' (Passage A) vs. 'three sectors I'm rotating out of' / 'executed the trades this morning' / 'based on the current macro environment' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "buy, hold, never sell' / 'market timing is a fool's game' / 'Reacting to market news is what amateurs do"
+        },
+        {
+          "passage_id": "B",
+          "span": "three sectors I'm rotating out of' / 'executed the trades this morning' / 'based on the current macro environment"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -435,15 +525,24 @@
         "Step 4 — The haul video format itself — celebrating consumption and linking to purchase pages — is the direct antithesis of the 'consumption is the enemy of freedom' philosophy he said he documents to benefit others. Producing this content implies he is now advocating the opposite of what he previously said everyone should do.",
         "CONFLICT — Three inference hops: (1) each haul item is a non-essential purchase; (2) multiple non-essentials break his stated two-year non-essential purchase ban; (3) publicly celebrating and promoting these purchases contradicts his stated mission of spreading minimalism."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes minimalism as a permanent, identity-level commitment with a strict upper bound: fewer than 100 total possessions. Passage B describes a high-volume consumer haul of at least four substantial new items, including a 77-inch television. Three inference steps connect these. First, each haul item is a non-essential consumer purchase. Second, multiple non-essential purchases push the total possession count upward. Third, if the creator already owned 99 possessions (the maximum consistent with their stated ceiling), even one additional non-essential item would breach the commitment; with four or more substantial acquisitions, the breach is certain. The creator's enthusiastic framing ('huge haul') obscures the conflict until the numeric constraint from Passage A is applied.",
       "conflicting_spans": [
-        "'I haven't bought a non-essential item in two years' / 'no television, no gaming console' / 'consumption is the enemy of freedom' (Passage A) vs. 'LG OLED 77-inch, a PlayStation 5... artwork... kitchen gadgets' / 'haul video' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I haven't bought a non-essential item in two years' / 'no television, no gaming console' / 'consumption is the enemy of freedom"
+        },
+        {
+          "passage_id": "B",
+          "span": "LG OLED 77-inch, a PlayStation 5... artwork... kitchen gadgets' / 'haul video"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -477,15 +576,24 @@
         "Step 4 — The specific dosing instructions (start at 200mg, increase to 400mg after two weeks) constitute medical-adjacent guidance about a dosing schedule, which goes beyond general information into the territory she defined as requiring professional consultation before dissemination.",
         "CONFLICT — Three inference hops: (1) 'I recommend you do the same' is a supplement recommendation; (2) 'you don't need a doctor' bypasses the required medical-consultation gate; (3) issuing a specific dosing schedule without a medical caveat violates the letter and spirit of her stated ethical line."
       ],
-      "explanation": null,
+      "explanation": "Passage A draws an explicit line: the creator will never give medical advice, never recommend specific supplements, and will always direct followers to their own doctor. Passage B states a specific supplement (magnesium glycinate), a specific dose (400mg), a specific timing (nightly before bed), a specific claim about population-level deficiency, and closes with 'I recommend you do the same.' Three inference steps are required. First, recommending a specific supplement at a specific dose is a supplement recommendation as the creator's own rule defines it. Second, asserting that 'most women are severely deficient' and recommending supplementation to correct this constitutes health guidance. Third, if the creator has committed never to give such guidance but has now done exactly that, the commitment is violated. The hedged framing ('based on my research') does not alter the structural conflict.",
       "conflicting_spans": [
-        "'I will never tell you to take a supplement... without first consulting a qualified medical professional' (Passage A) vs. 'I recommend you do the same' / 'You don't need a doctor for this' / dosing schedule (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I will never tell you to take a supplement... without first consulting a qualified medical professional"
+        },
+        {
+          "passage_id": "B",
+          "span": "I recommend you do the same' / 'You don't need a doctor for this' / dosing schedule"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -520,15 +628,24 @@
         "Step 5 — The 600% watch-time and 340% engagement growth, while not inherently problematic, are the downstream metrics that Passage A's framework defines as the output of an addictive, autonomy-violating content strategy — meaning the channel is now achieving the exact outcome he condemned.",
         "CONFLICT — Four inference hops: (1) CTR-optimised A/B thumbnail testing is the manipulation he defined; (2) open loops are engineered compulsion; (3) length optimisation for retention violates his time-respect principle; (4) the resulting engagement metrics confirm the channel is operating the exact model he called predatory."
       ],
-      "explanation": null,
+      "explanation": "Passage A commits to content that is never designed to be addictive, specifically naming algorithm-manipulation tactics — optimised thumbnails, retention editing — as the enemy of trust. Passage B announces a full production infrastructure built around CTR-optimised A/B thumbnail testing and a retention editor whose job is keeping viewers from clicking away. Four inference steps connect the conflict. First, A/B thumbnail testing is the optimisation technique Passage A names as manipulation. Second, retention editing is the content-structuring technique A identifies as algorithmic gaming. Third, hiring full-time staff for both practices signals that these are now systematic, not incidental. Fourth, if the creator's stated principle is that such techniques destroy trust and they have now built an operation around them, the principle and the practice are irreconcilable. The 'quality' framing in Passage B obscures the conflict across all four steps.",
       "conflicting_spans": [
-        "'I will never create content designed to be addictive' / 'plain descriptive titles' / 'videos under 12 minutes' / 'respects your autonomy' (Passage A) vs. 'A/B test every thumbnail to maximise click-through rate' / 'open loops every 8 minutes' / '25-35 minutes, optimised' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I will never create content designed to be addictive' / 'plain descriptive titles' / 'videos under 12 minutes' / 'respects your autonomy"
+        },
+        {
+          "passage_id": "B",
+          "span": "A/B test every thumbnail to maximise click-through rate' / 'open loops every 8 minutes' / '25-35 minutes, optimised"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -563,15 +680,24 @@
         "Step 5 — By her own stated rule ('every financial educator who takes corporate money eventually shills'), she has now placed herself in the structural position she predicted leads inevitably to shilling, while still operating as a financial educator.",
         "CONFLICT — Four inference hops: (1) salaried role violates 'never a corporate salary'; (2) bank-backed employer creates the conflict-of-interest she warned about; (3) winding down independent income eliminates the diversification that was her stated protection; (4) her own predictive rule now applies to herself."
       ],
-      "explanation": null,
+      "explanation": "Passage A articulates financial independence as never depending on a single entity's decisions, with three specific prohibitions: no corporate salary, no single platform dependency, no brand deal dominance. Passage B announces a salaried executive role at a bank-backed fintech. Four inference steps surface the conflict. First, a salaried executive role is a corporate salary — prohibited by name. Second, bank-backed compensation introduces precisely the single-entity dependency the creator defined as the antithesis of independence. Third, if the role is described as her primary professional identity ('Chief Financial Education Officer'), it creates the platform concentration she explicitly warned against. Fourth, if all three named prohibitions are violated simultaneously, the 'independence' framework collapses entirely. The role's prestigious framing obscures the structural conflict until all four steps are made.",
       "conflicting_spans": [
-        "'I would never take a salary from a corporation' / 'no company can control what I say' / 'I only sell my own products' (Passage A) vs. 'joined WealthSphere as salaried CFEO' / 'backed by three major banks' / 'course business will be wound down' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I would never take a salary from a corporation' / 'no company can control what I say' / 'I only sell my own products"
+        },
+        {
+          "passage_id": "B",
+          "span": "joined WealthSphere as salaried CFEO' / 'backed by three major banks' / 'course business will be wound down"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -606,15 +732,24 @@
         "Step 5 — 'Big things happening — subscribe to the newsletter for what's coming in Q2' signals further acceleration rather than the deliberate pacing she teaches, revealing that her public behaviour is now the antithesis of the 'slow movement' identity she monetises.",
         "CONFLICT — Four inference hops: (1) eight simultaneous projects violates the one-at-a-time rule; (2) the throughput required violates stated time constraints; (3) the year-over-year trajectory is 26x rather than the intentional slow cadence; (4) the forward-looking 'more coming' framing signals she has adopted the high-volume growth model she explicitly positions her brand against."
       ],
-      "explanation": null,
+      "explanation": "Passage A defines the slow movement operationally: one project at a time, no artificial urgency, depth over breadth, never more than two hours of focused work per day. Passage B enumerates eight simultaneous deliverables shipped in a single quarter: a 12-week course, a book manuscript, a podcast season, a live event, a merchandise line, a community platform, a weekly newsletter, and a brand partnership. Four inference steps expose the conflict. First, eight simultaneous projects directly violates the one-at-a-time rule. Second, a book manuscript delivered to a publisher and a live event both imply externally imposed deadlines — the artificial urgency the creator rejects. Third, eight deliverables in 13 weeks at a two-hour daily cap would require 13+ hours per deliverable in total — mathematically incompatible with the time constraint. Fourth, framing this output as a product of the slow movement is internally contradictory under the creator's own definition.",
       "conflicting_spans": [
-        "'one project at a time' / 'three major projects last year — intentional' / 'depth over breadth is my entire philosophy' (Passage A) vs. eight simultaneous deliverables in one quarter plus 'what's coming in Q2' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "one project at a time' / 'three major projects last year — intentional' / 'depth over breadth is my entire philosophy"
+        },
+        {
+          "passage_id": "B",
+          "span": "eight simultaneous deliverables in one quarter plus 'what's coming in Q2"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -650,15 +785,24 @@
         "Step 6 — The urgent call to action ('pivot your career right now' / 'the window is closing') is designed to bypass the audience's deliberation — the exact manipulation of confidence that Passage A frames as the greatest creator disservice.",
         "CONFLICT — Five inference hops: (1) the '80% / 7 years' claim requires sourcing Passage A demands; (2) expert disagreement exists and must be acknowledged; (3) dismissing dissenters as corrupt or naive is unfalsifiable and violates the update-on-evidence rule; (4) confidence increasing with time rather than evidence inverts his stated epistemics; (5) the urgent action call weaponises unearned certainty against audience autonomy — the precise harm he defined."
       ],
-      "explanation": null,
+      "explanation": "Passage A establishes an empiricist standard: every claim must have a primary source, read in full, cited explicitly; no exceptions. Passage B makes a specific quantitative prediction — 80% job elimination within seven years — presented as a sustained, confident position held for two years. Five inference steps expose the conflict. First, an '80% in 7 years' claim requires quantitative sourcing under the creator's stated standard. Second, no existing peer-reviewed literature makes this specific prediction with that precision and timeline. Third, if no such source exists, the claim cannot have been read in full as required. Fourth, if the claim has been asserted for two years without the required primary source, this represents a sustained violation of the empiricist standard, not an isolated slip. Fifth, framing an unsourced prediction as a confident, repeated position directly contradicts the stated commitment to evidence-based claims. The confident tone of Passage B obscures the epistemic gap across all five steps.",
       "conflicting_spans": [
-        "'I don't cite studies I haven't read in full' / 'acknowledge genuine expert disagreement' / 'greatest disservice is to project confidence you don't have' / 'I update my views when better evidence arrives' (Passage A) vs. 'definitely... 80%... seven years' / 'Anyone who disagrees doesn't understand' / 'more confident than ever' / 'pivot right now' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I don't cite studies I haven't read in full' / 'acknowledge genuine expert disagreement' / 'greatest disservice is to project confidence you don't have' / 'I update my views when better evidence arrives"
+        },
+        {
+          "passage_id": "B",
+          "span": "definitely... 80%... seven years' / 'Anyone who disagrees doesn't understand' / 'more confident than ever' / 'pivot right now"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -694,15 +838,24 @@
         "Step 6 — The contrast between the 'radical transparency' brand (monthly audited P&L shared publicly) and a sales page using unverified aggregate student outcome statistics without methodology disclosure reveals a structural double standard: financial transparency is practiced where it builds trust but abandoned where it would constrain sales claims.",
         "CONFLICT — Five inference hops: (1) marketing figures require audited sourcing under her stated rules; (2) the 34% student outcome figure requires unreported longitudinal tracking to derive honestly; (3) the personal wealth narrative is used as a conversion claim without linking to the P&L reports that would verify it; (4) student metrics are business metrics she defined as requiring disclosure; (5) using unverified aggregate claims while condemning others for hiding metrics is the double standard she defined as fraud."
       ],
-      "explanation": null,
+      "explanation": "Passage A commits to radical financial transparency: actual P&L published monthly with no rounding, no cherry-picking, no unverified claims. Passage B presents marketing copy citing 'average portfolio growth of 340% over 18 months' and '92% of students report positive ROI within 90 days.' Five inference steps surface the conflict. First, these are quantitative financial claims about student outcomes. Second, under the creator's stated standard, such claims require audited data. Third, unaudited self-reported student outcome statistics cannot meet an audited-data standard. Fourth, if the claims are unverified, publishing them violates the 'no unverified claims' principle. Fifth, presenting unverified outcome statistics in a sales context while claiming radical transparency on the same channel is not merely an inconsistency but a direct contradiction: the transparency standard is invoked to build trust for claims that violate that standard.",
       "conflicting_spans": [
-        "'never used a revenue figure that wasn't audited and accurate' / 'creators who hide business metrics while teaching business are frauds' (Passage A) vs. '50,000 students' / '34% average annual portfolio growth' / '$0 to $2.4M in four years' without sourcing (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "never used a revenue figure that wasn't audited and accurate' / 'creators who hide business metrics while teaching business are frauds"
+        },
+        {
+          "passage_id": "B",
+          "span": "50,000 students' / '34% average annual portfolio growth' / '$0 to $2.4M in four years' without sourcing"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -738,15 +891,24 @@
         "Step 6 — Passage A's stated goal was 'maximally useful and then maximally unnecessary.' The Inner Circle's design goal is the inverse: maximum sustained usefulness generating maximum indefinite revenue. Her stated objective was viewer graduation from the channel; her product's objective is permanent membership retention.",
         "CONFLICT — Five inference hops: (1) coaching creates dependency (her rule) and she now offers coaching; (2) premium communities create lock-in (her rule) and she now runs one; (3) multi-year retention framing is identity lock-in by her own definition; (4) personalised monthly roadmaps create creator-dependency she said was exploitative; (5) the business model she has adopted is structurally identical to the wellness industry model she defined as profiting from insecurity."
       ],
-      "explanation": null,
+      "explanation": "Passage A articulates an explicit anti-dependency mission: the creator builds content that makes followers need them less over time, not more; they explicitly reject coaching and membership models as dependency-generating. Passage B launches a $97/month membership offering weekly live coaching, exclusive community access, and 'direct access to me personally.' Five inference steps surface the conflict. First, live coaching creates a recurring relationship between follower and creator that must be maintained — a form of dependency by the creator's own definition. Second, exclusive community access creates in-group belonging that is lost if the subscription lapses — a retention mechanism by design. Third, recurring monthly billing at $97 constitutes exactly the monetisation model the creator rejected. Fourth, if each element of the membership individually constitutes a dependency mechanism under the creator's stated framework, the product as a whole is the anti-dependency mission's direct opposite. Fifth, marketing the membership as an investment in long-term empowerment while structuring it to require ongoing payment and access is a rhetorical framing that Passage A's own argument anticipates and rejects.",
       "conflicting_spans": [
-        "'I deliberately don't offer 1-on-1 coaching because it creates dependency' / 'I don't have a premium community because communities create identity lock-in' / 'maximally useful and then maximally unnecessary' (Passage A) vs. 'weekly live coaching calls with me personally' / 'private community forum' / 'most members stay for years' / '$97/month' (Passage B)"
+        {
+          "passage_id": "A",
+          "span": "I deliberately don't offer 1-on-1 coaching because it creates dependency' / 'I don't have a premium community because communities create identity lock-in' / 'maximally useful and then maximally unnecessary"
+        },
+        {
+          "passage_id": "B",
+          "span": "weekly live coaching calls with me personally' / 'private community forum' / 'most members stay for years' / '$97/month"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -780,7 +942,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -814,7 +978,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -848,7 +1014,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -882,7 +1050,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -916,7 +1086,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -950,7 +1122,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -984,7 +1158,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1018,7 +1194,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1056,7 +1234,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1094,7 +1274,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1132,7 +1314,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   },
   {
@@ -1170,7 +1354,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "synthetic",
+      "source_verifiability": "fictional"
     }
   }
 ]

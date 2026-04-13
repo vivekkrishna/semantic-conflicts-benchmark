@@ -1,6 +1,6 @@
 [
   {
-    "id": "sci_L0_001",
+    "id": "science_L0_001",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 0,
@@ -30,20 +30,34 @@
       ],
       "explanation": "Passage A reflects the pre-1984 consensus that the stomach is sterile and ulcers are acid-driven. Passage B reflects the Nobel Prize-winning discovery that H. pylori bacteria cause most ulcers — a direct contradiction of both claims in Passage A.",
       "conflicting_spans": [
-        "stomach...sterile environment due to its extreme acidity",
-        "peptic ulcers were caused by excess gastric acid secretion, stress, and dietary factors",
-        "H. pylori is the causative agent of the majority of peptic ulcers and chronic gastritis",
-        "colonizes the gastric mucosa in approximately 50% of the world's population"
+        {
+          "passage_id": "A",
+          "span": "stomach...sterile environment due to its extreme acidity"
+        },
+        {
+          "passage_id": "A",
+          "span": "peptic ulcers were caused by excess gastric acid secretion, stress, and dietary factors"
+        },
+        {
+          "passage_id": "B",
+          "span": "H. pylori is the causative agent of the majority of peptic ulcers and chronic gastritis"
+        },
+        {
+          "passage_id": "B",
+          "span": "colonizes the gastric mucosa in approximately 50% of the world's population"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L0_002",
+    "id": "science_L0_002",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 0,
@@ -73,18 +87,26 @@
       ],
       "explanation": "Passage A's categorical denial of adult vertebrate electrical synapses is directly contradicted by Passage B's experimental demonstration of widespread Cx36-based gap junctions in adult mammalian brain structures.",
       "conflicting_spans": [
-        "Electrical coupling between neurons does not occur in the mature vertebrate nervous system",
-        "Electrical synapses (gap junctions) are widespread in the adult vertebrate central nervous system"
+        {
+          "passage_id": "A",
+          "span": "Electrical coupling between neurons does not occur in the mature vertebrate nervous system"
+        },
+        {
+          "passage_id": "B",
+          "span": "Electrical synapses (gap junctions) are widespread in the adult vertebrate central nervous system"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L0_003",
+    "id": "science_L0_003",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 0,
@@ -114,21 +136,38 @@
       ],
       "explanation": "Einstein's 1917 static universe model is directly and explicitly contradicted by Hubble's 1929 observational finding of galactic recession — a paradigm shift acknowledged even by Einstein.",
       "conflicting_spans": [
-        "universe is static and eternal",
-        "yields a universe of constant size and infinite age",
-        "Expansion or contraction of the universe is inconsistent with this formulation",
-        "universe is expanding",
-        "originated in a hot, dense state approximately 13.8 billion years ago"
+        {
+          "passage_id": "A",
+          "span": "universe is static and eternal"
+        },
+        {
+          "passage_id": "A",
+          "span": "yields a universe of constant size and infinite age"
+        },
+        {
+          "passage_id": "A",
+          "span": "Expansion or contraction of the universe is inconsistent with this formulation"
+        },
+        {
+          "passage_id": "B",
+          "span": "universe is expanding"
+        },
+        {
+          "passage_id": "B",
+          "span": "originated in a hot, dense state approximately 13.8 billion years ago"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L1_001",
+    "id": "science_L1_001",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 1,
@@ -157,18 +196,26 @@
       ],
       "explanation": "One inference step connects the aether theory's c − v prediction to Earth's orbital velocity (~30 km/s), yielding a predicted but unobserved fringe shift — directly falsifying the aether model.",
       "conflicting_spans": [
-        "An observer moving at velocity v relative to the aether...should measure the speed of light as c − v",
-        "speed of light in vacuum is constant at c = 299,792,458 m/s regardless of the motion of the source or observer"
+        {
+          "passage_id": "A",
+          "span": "An observer moving at velocity v relative to the aether...should measure the speed of light as c − v"
+        },
+        {
+          "passage_id": "B",
+          "span": "speed of light in vacuum is constant at c = 299,792,458 m/s regardless of the motion of the source or observer"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L1_002",
+    "id": "science_L1_002",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 1,
@@ -197,20 +244,34 @@
       ],
       "explanation": "One inference step — asking how somatic changes would enter the germline — reveals the direct mechanistic impossibility under the central dogma and Weismann barrier.",
       "conflicting_spans": [
-        "traits acquired by an organism during its lifetime...are heritable by offspring",
-        "adaptive morphological changes...directly incorporated into the germline",
-        "somatic mutations and acquired phenotypic modifications [cannot be] transmitted to offspring",
-        "protein-level changes do not alter the nucleotide sequence of germline DNA"
+        {
+          "passage_id": "A",
+          "span": "traits acquired by an organism during its lifetime...are heritable by offspring"
+        },
+        {
+          "passage_id": "A",
+          "span": "adaptive morphological changes...directly incorporated into the germline"
+        },
+        {
+          "passage_id": "B",
+          "span": "somatic mutations and acquired phenotypic modifications [cannot be] transmitted to offspring"
+        },
+        {
+          "passage_id": "B",
+          "span": "protein-level changes do not alter the nucleotide sequence of germline DNA"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L1_003",
+    "id": "science_L1_003",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 1,
@@ -239,18 +300,26 @@
       ],
       "explanation": "One inference step connecting phlogiston's release mechanism to conservation of mass exposes the theory's falsification: burning metals gain mass (they react with oxygen), whereas phlogiston theory predicts mass loss.",
       "conflicting_spans": [
-        "when wood burns, phlogiston is released into the air, and the residual ash is dephlogisticated wood",
-        "metals that burn gain mass — they oxidize — which phlogiston theory predicts incorrectly (if phlogiston were released, the residue should be lighter, not heavier, than the metal)"
+        {
+          "passage_id": "A",
+          "span": "when wood burns, phlogiston is released into the air, and the residual ash is dephlogisticated wood"
+        },
+        {
+          "passage_id": "B",
+          "span": "metals that burn gain mass — they oxidize — which phlogiston theory predicts incorrectly (if phlogiston were released, the residue should be lighter, not heavier, than the metal)"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L2_001",
+    "id": "science_L2_001",
     "domain": "science",
     "category": "temporal",
     "conflict_level": 2,
@@ -280,19 +349,30 @@
       ],
       "explanation": "Two inference steps are needed: first, the steady-state perfect cosmological principle requires epoch-invariant appearance; second, CMB's T ∝ (1+z) scaling proves the early universe was orders-of-magnitude hotter, violating that requirement.",
       "conflicting_spans": [
-        "universe...has always appeared the same at all cosmic epochs",
-        "perfect cosmological principle",
-        "CMB temperature scales as T ∝ (1+z) with redshift z"
+        {
+          "passage_id": "A",
+          "span": "universe...has always appeared the same at all cosmic epochs"
+        },
+        {
+          "passage_id": "A",
+          "span": "perfect cosmological principle"
+        },
+        {
+          "passage_id": "B",
+          "span": "CMB temperature scales as T ∝ (1+z) with redshift z"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L2_002",
+    "id": "science_L2_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 2,
@@ -322,20 +402,34 @@
       ],
       "explanation": "Two inference steps are needed: extrapolating the 'no adult neurogenesis' claim to human hippocampus, and verifying it against ¹⁴C-dated neuronal turnover data showing 1.75% annual replacement.",
       "conflicting_spans": [
-        "adult mammalian brains are incapable of neurogenesis",
-        "neuron death is permanent and irreplaceable",
-        "adult neurogenesis occurs in...the subgranular zone of the dentate gyrus in the hippocampus",
-        "annual turnover rate of ~1.75% of dentate gyrus neurons"
+        {
+          "passage_id": "A",
+          "span": "adult mammalian brains are incapable of neurogenesis"
+        },
+        {
+          "passage_id": "A",
+          "span": "neuron death is permanent and irreplaceable"
+        },
+        {
+          "passage_id": "B",
+          "span": "adult neurogenesis occurs in...the subgranular zone of the dentate gyrus in the hippocampus"
+        },
+        {
+          "passage_id": "B",
+          "span": "annual turnover rate of ~1.75% of dentate gyrus neurons"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L2_003",
+    "id": "science_L2_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 2,
@@ -365,18 +459,26 @@
       ],
       "explanation": "Two inference steps: recognizing that chaperones are macromolecules, and then recognizing that necessity of chaperones for a significant protein fraction contradicts the dogma's universal claim of sequence-sufficient autonomous folding under physiological conditions.",
       "conflicting_spans": [
-        "spontaneously and reproducibly folds into its native functional conformation without the assistance of any other macromolecule",
-        "for many substrate proteins, the native fold cannot be reached without chaperone assistance under physiological crowding conditions"
+        {
+          "passage_id": "A",
+          "span": "spontaneously and reproducibly folds into its native functional conformation without the assistance of any other macromolecule"
+        },
+        {
+          "passage_id": "B",
+          "span": "for many substrate proteins, the native fold cannot be reached without chaperone assistance under physiological crowding conditions"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L3_001",
+    "id": "science_L3_001",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 3,
@@ -407,21 +509,38 @@
       ],
       "explanation": "Three inference steps are required: deriving miasma's spatial prediction, applying it to the Broad Street data (including the brewery control group), and inferring the waterborne bacterial mechanism that the data necessitates.",
       "conflicting_spans": [
-        "epidemic diseases are caused by 'bad air' arising from rotting organic matter",
-        "Disease prevention should focus on eliminating foul odors",
-        "cases clustered around the Broad Street pump regardless of proximity to putative miasmatic sources",
-        "nearby brewery whose workers did not contract cholera because they drank beer rather than pump water",
-        "cholera as a waterborne bacterial disease"
+        {
+          "passage_id": "A",
+          "span": "epidemic diseases are caused by 'bad air' arising from rotting organic matter"
+        },
+        {
+          "passage_id": "A",
+          "span": "Disease prevention should focus on eliminating foul odors"
+        },
+        {
+          "passage_id": "B",
+          "span": "cases clustered around the Broad Street pump regardless of proximity to putative miasmatic sources"
+        },
+        {
+          "passage_id": "B",
+          "span": "nearby brewery whose workers did not contract cholera because they drank beer rather than pump water"
+        },
+        {
+          "passage_id": "B",
+          "span": "cholera as a waterborne bacterial disease"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L3_002",
+    "id": "science_L3_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 3,
@@ -452,20 +571,34 @@
       ],
       "explanation": "Three inference steps: Passage A implies 0% renewal, ¹⁴C data shows nonzero renewal rates, and the 45% post-birth cardiomyocyte fraction falsifies the 'fibrosis is the only repair mechanism' claim derived from the zero-renewal assumption.",
       "conflicting_spans": [
-        "Adult cardiomyocytes do not divide",
-        "lost cardiomyocytes are replaced entirely by fibrotic scar tissue, not by new functional muscle cells",
-        "annual renewal rate of approximately 1% at age 25",
-        "approximately 45% of cardiomyocytes present at age 75 were generated after birth"
+        {
+          "passage_id": "A",
+          "span": "Adult cardiomyocytes do not divide"
+        },
+        {
+          "passage_id": "A",
+          "span": "lost cardiomyocytes are replaced entirely by fibrotic scar tissue, not by new functional muscle cells"
+        },
+        {
+          "passage_id": "B",
+          "span": "annual renewal rate of approximately 1% at age 25"
+        },
+        {
+          "passage_id": "B",
+          "span": "approximately 45% of cardiomyocytes present at age 75 were generated after birth"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L3_003",
+    "id": "science_L3_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 3,
@@ -496,20 +629,34 @@
       ],
       "explanation": "Three inference steps: Malthus's arithmetic-food/geometric-population premise predicts declining per-capita supply; FAO data shows the opposite; the demographic transition model additionally falsifies the poverty-restoration feedback that Malthus treated as iron law.",
       "conflicting_spans": [
-        "population grows geometrically while food production grows arithmetically",
-        "Sustained improvement in living standards for the general population is impossible",
-        "per-capita food supply increased from approximately 2,200 kcal/person/day in 1961 to over 2,900 kcal/person/day by 2020",
-        "fertility rates decline as living standards rise, breaking the Malthusian coupling"
+        {
+          "passage_id": "A",
+          "span": "population grows geometrically while food production grows arithmetically"
+        },
+        {
+          "passage_id": "A",
+          "span": "Sustained improvement in living standards for the general population is impossible"
+        },
+        {
+          "passage_id": "B",
+          "span": "per-capita food supply increased from approximately 2,200 kcal/person/day in 1961 to over 2,900 kcal/person/day by 2020"
+        },
+        {
+          "passage_id": "B",
+          "span": "fertility rates decline as living standards rise, breaking the Malthusian coupling"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L4_001",
+    "id": "science_L4_001",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 4,
@@ -541,21 +688,38 @@
       ],
       "explanation": "Four inference steps are needed to characterize this apparent vs. real conflict: applying SR to massive neutrinos, interpreting the OPERA anomaly as an apparent SR violation, identifying the two hardware fault modes, and verifying that correcting them restores consistency — demonstrating a conflict that is real at the data level but illusory at the physics level.",
       "conflicting_spans": [
-        "no object with mass can be accelerated to or beyond the speed of light",
-        "Faster-than-light travel for massive particles is therefore physically impossible",
-        "reported an anomalous early arrival...corresponding to a superluminal velocity of v − c ≈ 7.5 × 10⁻⁶ c",
-        "a loose fiber-optic cable connector and an oscillator running at an incorrect frequency",
-        "neutrino arrival time was consistent with c"
+        {
+          "passage_id": "A",
+          "span": "no object with mass can be accelerated to or beyond the speed of light"
+        },
+        {
+          "passage_id": "A",
+          "span": "Faster-than-light travel for massive particles is therefore physically impossible"
+        },
+        {
+          "passage_id": "B",
+          "span": "reported an anomalous early arrival...corresponding to a superluminal velocity of v − c ≈ 7.5 × 10⁻⁶ c"
+        },
+        {
+          "passage_id": "B",
+          "span": "a loose fiber-optic cable connector and an oscillator running at an incorrect frequency"
+        },
+        {
+          "passage_id": "B",
+          "span": "neutrino arrival time was consistent with c"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L4_002",
+    "id": "science_L4_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 4,
@@ -587,20 +751,34 @@
       ],
       "explanation": "Four inference steps: the CMB measurement's ΛCDM assumption, the distance ladder's model-independence, the 5σ statistical significance ruling out chance, and the implication that ΛCDM must be incomplete or wrong — together constitute a deep cross-document scientific conflict.",
       "conflicting_spans": [
-        "H₀ = 67.4 ± 0.5 km/s/Mpc, assuming ΛCDM",
-        "H₀ = 73.04 ± 1.04 km/s/Mpc",
-        "5σ tension with the Planck CMB-based measurement",
-        "cannot be explained by any single identified systematic error in either measurement"
+        {
+          "passage_id": "A",
+          "span": "H₀ = 67.4 ± 0.5 km/s/Mpc, assuming ΛCDM"
+        },
+        {
+          "passage_id": "B",
+          "span": "H₀ = 73.04 ± 1.04 km/s/Mpc"
+        },
+        {
+          "passage_id": "B",
+          "span": "5σ tension with the Planck CMB-based measurement"
+        },
+        {
+          "passage_id": "B",
+          "span": "cannot be explained by any single identified systematic error in either measurement"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L4_003",
+    "id": "science_L4_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 4,
@@ -632,21 +810,38 @@
       ],
       "explanation": "Four inference steps trace the conflict: massless neutrinos → flavor conservation → no oscillations → but oscillations are observed → therefore neutrinos have nonzero mass and the Standard Model as originally formulated is incomplete.",
       "conflicting_spans": [
-        "neutrino as a massless particle",
-        "flavor is a conserved quantum number",
-        "three flavors are completely distinct species with no inter-conversion",
-        "νμ oscillate into ντ with mixing angle θ₂₃ ≈ 45°",
-        "Neutrino oscillation is only possible if neutrinos have nonzero mass, which requires physics beyond the Standard Model"
+        {
+          "passage_id": "A",
+          "span": "neutrino as a massless particle"
+        },
+        {
+          "passage_id": "A",
+          "span": "flavor is a conserved quantum number"
+        },
+        {
+          "passage_id": "A",
+          "span": "three flavors are completely distinct species with no inter-conversion"
+        },
+        {
+          "passage_id": "B",
+          "span": "νμ oscillate into ντ with mixing angle θ₂₃ ≈ 45°"
+        },
+        {
+          "passage_id": "B",
+          "span": "Neutrino oscillation is only possible if neutrinos have nonzero mass, which requires physics beyond the Standard Model"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L5_001",
+    "id": "science_L5_001",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 5,
@@ -679,19 +874,30 @@
       ],
       "explanation": "Five inference steps trace the conflict from the no-hair theorem through Hawking radiation, thermal purity, quantum unitarity, and the three-way incompatibility — constituting the famous black hole information paradox.",
       "conflicting_spans": [
-        "all information about the infalling matter is permanently destroyed when it crosses the event horizon",
-        "radiation is precisely thermal — it has no correlations that encode the quantum state of the infalling matter",
-        "final state after complete evaporation is a thermal bath with maximal entropy, regardless of the initial state"
+        {
+          "passage_id": "A",
+          "span": "all information about the infalling matter is permanently destroyed when it crosses the event horizon"
+        },
+        {
+          "passage_id": "B",
+          "span": "radiation is precisely thermal — it has no correlations that encode the quantum state of the infalling matter"
+        },
+        {
+          "passage_id": "B",
+          "span": "final state after complete evaporation is a thermal bath with maximal entropy, regardless of the initial state"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L5_002",
+    "id": "science_L5_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 5,
@@ -724,22 +930,42 @@
       ],
       "explanation": "Five inference steps are required to trace SMT's necessity, sufficiency, mechanism, determinism, and tissue-independence claims against TOFT's four experimental counterexamples, each of which falsifies a distinct component of the SMT framework.",
       "conflicting_spans": [
-        "heritable genetic alterations in single cells are the necessary and sufficient cause of tumorigenesis",
-        "The tumor microenvironment and tissue context are secondary",
-        "Normal nuclei transplanted into enucleated frog eggs develop normally despite containing mutations",
-        "Cancer cells placed in normal tissue contexts can revert to normal behavior",
-        "Non-mutagenic carcinogens promote cancer through epigenetic and microenvironmental mechanisms without introducing driver mutations",
-        "many cells with classic driver mutations never progress to cancer in the absence of specific tissue signals"
+        {
+          "passage_id": "A",
+          "span": "heritable genetic alterations in single cells are the necessary and sufficient cause of tumorigenesis"
+        },
+        {
+          "passage_id": "A",
+          "span": "The tumor microenvironment and tissue context are secondary"
+        },
+        {
+          "passage_id": "B",
+          "span": "Normal nuclei transplanted into enucleated frog eggs develop normally despite containing mutations"
+        },
+        {
+          "passage_id": "B",
+          "span": "Cancer cells placed in normal tissue contexts can revert to normal behavior"
+        },
+        {
+          "passage_id": "B",
+          "span": "Non-mutagenic carcinogens promote cancer through epigenetic and microenvironmental mechanisms without introducing driver mutations"
+        },
+        {
+          "passage_id": "B",
+          "span": "many cells with classic driver mutations never progress to cancer in the absence of specific tissue signals"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_L5_003",
+    "id": "science_L5_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": 5,
@@ -772,20 +998,34 @@
       ],
       "explanation": "Five inference steps expose the foundational conflict between Copenhagen's non-unitary collapse postulate and decoherence theory's derivation of apparent collapse from purely unitary environmental entanglement, culminating in incompatible ontological claims about the nature of quantum measurement.",
       "conflicting_spans": [
-        "wavefunction instantaneously 'collapses' to an eigenstate of the measured observable",
-        "collapse is non-unitary, irreversible, and occurs only when a measurement is performed by a classical apparatus or observer",
-        "decoherence explains the appearance of classical definite outcomes without invoking a collapse postulate or a privileged observer/apparatus boundary",
-        "preferred basis is selected by the environment, not by measurement"
+        {
+          "passage_id": "A",
+          "span": "wavefunction instantaneously 'collapses' to an eigenstate of the measured observable"
+        },
+        {
+          "passage_id": "A",
+          "span": "collapse is non-unitary, irreversible, and occurs only when a measurement is performed by a classical apparatus or observer"
+        },
+        {
+          "passage_id": "B",
+          "span": "decoherence explains the appearance of classical definite outcomes without invoking a collapse postulate or a privileged observer/apparatus boundary"
+        },
+        {
+          "passage_id": "B",
+          "span": "preferred basis is selected by the environment, not by measurement"
+        }
       ],
       "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_001",
+    "id": "science_C_001",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -815,11 +1055,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_002",
+    "id": "science_C_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -849,11 +1091,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_003",
+    "id": "science_C_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -883,11 +1127,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_004",
+    "id": "science_C_004",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -917,11 +1163,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_005",
+    "id": "science_C_005",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -951,11 +1199,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_006",
+    "id": "science_C_006",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -985,11 +1235,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_007",
+    "id": "science_C_007",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1019,11 +1271,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_C_008",
+    "id": "science_C_008",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1053,11 +1307,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_A_001",
+    "id": "science_A_001",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1092,11 +1348,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_A_002",
+    "id": "science_A_002",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1131,11 +1389,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_A_003",
+    "id": "science_A_003",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1170,11 +1430,13 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   },
   {
-    "id": "sci_A_004",
+    "id": "science_A_004",
     "domain": "science",
     "category": "cross_document",
     "conflict_level": null,
@@ -1209,7 +1471,9 @@
     },
     "metadata": {
       "created_by": "human",
-      "version": "1.0"
+      "version": "1.0",
+      "source_type": "paraphrased_real",
+      "source_verifiability": "verifiable"
     }
   }
 ]
