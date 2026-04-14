@@ -1,0 +1,289 @@
+[
+  {
+    "id": "e2e_L0_001",
+    "domain": "software",
+    "category": "state_divergence",
+    "conflict_level": 0,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Service health-check endpoint /status: HTTP 200 OK. All systems operational. No incidents reported.",
+          "source": "StatusPage API, 2024-01-15T09:00:00Z"
+        },
+        {
+          "id": "B",
+          "text": "Service health-check endpoint /status: HTTP 503 Service Unavailable. Emergency maintenance in progress. ETA unknown.",
+          "source": "OpsBoard API, 2024-01-15T09:00:00Z"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 0,
+      "reasoning_chain": [
+        "Step 1 — Passage A reports the service health endpoint returns HTTP 200 with all systems operational.",
+        "Step 2 — Passage B reports the same endpoint returns HTTP 503 with emergency maintenance in progress.",
+        "CONFLICT — Both records describe the same endpoint at the same timestamp and assert mutually exclusive HTTP status codes and operational states."
+      ],
+      "explanation": "Two monitoring sources read the same health endpoint simultaneously and report opposite HTTP status codes and service states, constituting a direct state divergence conflict.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "HTTP 200 OK. All systems operational"},
+        {"passage_id": "B", "span": "HTTP 503 Service Unavailable. Emergency maintenance in progress"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_L1_001",
+    "domain": "software",
+    "category": "state_divergence",
+    "conflict_level": 1,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "User profile data is served exclusively from an in-memory cache with a TTL of 300 seconds. All GET /profile requests read from cache; no request ever hits the primary database directly.",
+          "source": "ProfileService architecture doc, v2.1"
+        },
+        {
+          "id": "B",
+          "text": "Profile data consistency guarantee: any change written by a PUT /profile request is immediately visible to all subsequent GET /profile requests. Read-after-write consistency is enforced at the API level.",
+          "source": "ProfileService API contract, v2.1"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 1,
+      "reasoning_chain": [
+        "Step 1 — Passage A states all GET /profile requests read exclusively from a cache with a 300-second TTL, meaning a read may return data up to 300 seconds stale.",
+        "CONFLICT — Passage B guarantees that any write is immediately visible to subsequent reads (read-after-write consistency), but Step 1 shows a write is not visible for up to 300 seconds if the cache has not yet expired. The cache architecture directly violates the consistency guarantee."
+      ],
+      "explanation": "A 300-second cache TTL means writes are not immediately reflected in reads, directly violating the stated read-after-write consistency guarantee.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "in-memory cache with a TTL of 300 seconds"},
+        {"passage_id": "B", "span": "immediately visible to all subsequent GET /profile requests"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_L2_001",
+    "domain": "software",
+    "category": "normative",
+    "conflict_level": 2,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Write-ahead logging (WAL) is disabled on all production database nodes to maximise write throughput. Transactions commit directly to the data files without writing to any log.",
+          "source": "DB cluster config, production.conf, section [durability]"
+        },
+        {
+          "id": "B",
+          "text": "Crash recovery procedure: on node restart after an unclean shutdown, the recovery daemon replays the write-ahead log to restore the database to the last consistent committed state before accepting new connections.",
+          "source": "Operations Runbook, Chapter 4: Incident Recovery"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 2,
+      "reasoning_chain": [
+        "Step 1 — Passage A disables WAL entirely, meaning no WAL records are written at any time.",
+        "Step 2 — Without any WAL records, WAL replay is impossible because there is nothing to replay.",
+        "CONFLICT — Passage B's crash recovery procedure depends entirely on replaying the WAL; Step 2 establishes that replay is impossible when WAL is disabled, making the stated recovery procedure non-functional."
+      ],
+      "explanation": "Disabling WAL eliminates the data structure that the crash recovery procedure depends on, rendering the recovery runbook non-functional.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "Write-ahead logging (WAL) is disabled"},
+        {"passage_id": "B", "span": "recovery daemon replays the write-ahead log"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_L3_001",
+    "domain": "software",
+    "category": "normative",
+    "conflict_level": 3,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The payment event queue uses at-most-once delivery semantics. Each event is attempted exactly once; if delivery fails for any reason the event is silently discarded and no retry is attempted.",
+          "source": "PaymentQueue service spec, section 3.2"
+        },
+        {
+          "id": "B",
+          "text": "Billing integrity requirement: every payment event emitted by the checkout service must result in exactly one charge to the customer's account. Missed charges are not acceptable under any circumstances.",
+          "source": "Billing system requirements doc, section 1.1"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 3,
+      "reasoning_chain": [
+        "Step 1 — Passage A uses at-most-once delivery, meaning a failed delivery attempt results in the event being silently discarded with no retry.",
+        "Step 2 — A discarded payment event never reaches the billing system, so the corresponding customer charge is never created.",
+        "Step 3 — A charge that is never created is a missed charge.",
+        "CONFLICT — Passage B states missed charges are not acceptable under any circumstances, but Step 3 establishes that the at-most-once queue design produces missed charges whenever a delivery fails."
+      ],
+      "explanation": "At-most-once delivery guarantees that some payment events will be permanently lost on failure, which directly violates the billing requirement that every event must produce exactly one charge.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "event is silently discarded and no retry is attempted"},
+        {"passage_id": "B", "span": "every payment event emitted... must result in exactly one charge"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_L4_001",
+    "domain": "software",
+    "category": "normative",
+    "conflict_level": 4,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Distributed lock configuration: TTL is set to 10 seconds for all locks. A lock is automatically released by the lock server after 10 seconds regardless of whether the holder has explicitly released it.",
+          "source": "LockService config, locks.yaml"
+        },
+        {
+          "id": "B",
+          "text": "Inventory reservation atomicity requirement: the reserve-and-decrement operation (check stock > 0, then decrement stock) must execute as an atomic unit. No other process may observe or modify the stock value between the check and the decrement.",
+          "source": "InventoryService design spec, section 2.4"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 4,
+      "reasoning_chain": [
+        "Step 1 — Passage A sets the lock TTL to 10 seconds, meaning a process holding a lock automatically loses it after 10 seconds.",
+        "Step 2 — If the reserve-and-decrement operation takes longer than 10 seconds (e.g., due to slow I/O), the holding process's lock expires mid-operation.",
+        "Step 3 — Once the lock expires, another process can acquire the same lock and begin its own reserve-and-decrement operation on the same stock item.",
+        "Step 4 — Both processes now execute the check-then-decrement sequence concurrently, meaning a second process can read and modify stock between the first process's check and decrement.",
+        "CONFLICT — Passage B requires that no other process may observe or modify stock between the check and decrement; Step 4 establishes that the 10-second TTL makes this concurrent interleaving possible."
+      ],
+      "explanation": "A 10-second lock TTL creates a window where lock expiry during a slow operation allows a second process to interleave its reads and writes, breaking the atomicity guarantee.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "automatically released by the lock server after 10 seconds"},
+        {"passage_id": "B", "span": "No other process may observe or modify the stock value between the check and the decrement"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_L5_001",
+    "domain": "software",
+    "category": "normative",
+    "conflict_level": 5,
+    "difficulty": "hard",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "Session tokens are stored in a signed JWT with a 1-hour expiry embedded in the token payload. Token validation is stateless: the API gateway verifies the signature and expiry claim locally without querying any external service.",
+          "source": "Auth service design doc, section 4.1"
+        },
+        {
+          "id": "B",
+          "text": "Security requirement: when a user changes their password, all existing sessions for that user must be immediately invalidated. A session that was valid before the password change must not be accepted after the password change.",
+          "source": "Security policy, section 7.3"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "conflict",
+      "conflict_level": 5,
+      "reasoning_chain": [
+        "Step 1 — Passage A uses stateless JWT validation: the gateway checks only the embedded signature and expiry claim, with no external service call.",
+        "Step 2 — Because validation is purely local, the gateway has no mechanism to learn about external state changes that occurred after the token was issued.",
+        "Step 3 — A password change is an external state change that occurs after the token was issued; per Step 2, the gateway cannot learn of it.",
+        "Step 4 — Since the gateway cannot learn of the password change, it continues to accept any token whose signature is valid and whose expiry has not elapsed, regardless of when the password change occurred.",
+        "Step 5 — A token issued before a password change therefore remains accepted by the gateway for up to 1 hour after the change, because from the gateway's perspective the token is still valid.",
+        "CONFLICT — Passage B requires immediate invalidation of all sessions on password change; Step 5 establishes that a stateless JWT gateway will continue accepting pre-change tokens for up to 1 hour, directly violating the immediate invalidation requirement."
+      ],
+      "explanation": "Stateless JWT validation has no channel to receive revocation signals, so tokens remain valid until natural expiry. This makes immediate invalidation on password change structurally impossible without adding a stateful revocation store.",
+      "conflicting_spans": [
+        {"passage_id": "A", "span": "stateless: the API gateway verifies the signature and expiry claim locally without querying any external service"},
+        {"passage_id": "B", "span": "all existing sessions for that user must be immediately invalidated"}
+      ]
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_C_001",
+    "domain": "software",
+    "category": "cross_document",
+    "conflict_level": null,
+    "difficulty": "easy",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The API uses token-based authentication. Every request must include a Bearer token in the Authorization header. Requests without a valid token receive a 401 response.",
+          "source": "API security spec, section 2.1"
+        },
+        {
+          "id": "B",
+          "text": "Access control: all unauthenticated requests are rejected with HTTP 401 Unauthorized. Clients must obtain a Bearer token via the /auth/token endpoint before making any API calls.",
+          "source": "API onboarding guide, section 1.3"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "consistent"
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  },
+  {
+    "id": "e2e_A_001",
+    "domain": "software",
+    "category": "normative",
+    "conflict_level": null,
+    "difficulty": "medium",
+    "input": {
+      "passages": [
+        {
+          "id": "A",
+          "text": "The service implements eventual consistency. After a write, all replicas will converge to the same state, but reads immediately following a write may return stale data for up to 500ms.",
+          "source": "DataStore consistency model doc, v1.4"
+        },
+        {
+          "id": "B",
+          "text": "For analytics dashboards, latency of up to one second in data freshness is acceptable. The dashboard team has confirmed that displaying data that is slightly behind the primary store does not affect business decisions.",
+          "source": "Analytics team SLA agreement, Q1 2024"
+        }
+      ],
+      "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
+    },
+    "label": {
+      "verdict": "ambiguous",
+      "conflict_level": null,
+      "reasoning_chain": [
+        "Step 1 — Passage A states reads may return stale data for up to 500ms after a write.",
+        "Step 2 — Passage B states the analytics team accepts up to 1 second of data latency.",
+        "AMBIGUOUS — Whether these passages conflict depends on whether 'latency' in B includes data staleness or only network/rendering delay. If it includes staleness, the 500ms window fits within the 1-second tolerance and the passages are consistent. If 'latency' means only transmission delay, then A introduces an additional 500ms staleness not covered by B's SLA. The passage text does not resolve which interpretation applies."
+      ],
+      "explanation": "The relationship depends on the definition of 'latency' in Passage B, which the text does not settle.",
+      "ambiguity_reason": "The term 'latency' in Passage B is ambiguous: it may refer to network latency only, or to total data freshness including replication lag."
+    },
+    "metadata": {"created_by": "human", "version": "1.0"}
+  }
+]

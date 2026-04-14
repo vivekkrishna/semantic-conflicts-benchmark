@@ -47,3 +47,4 @@ include = ["benchmark*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers   = ["e2e: end-to-end tests that call the real Anthropic API (requires ANTHROPIC_API_KEY)"]
