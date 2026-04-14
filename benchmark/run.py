@@ -28,6 +28,13 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Load .env from the project root if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent / ".env")
+except ImportError:
+    pass  # dotenv not installed; rely on environment variables being set externally
+
 from benchmark.evaluator import DOMAINS, Evaluator
 from benchmark.reporter import print_console, write_json, write_leaderboard, write_markdown
 
