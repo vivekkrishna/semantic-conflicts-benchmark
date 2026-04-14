@@ -94,6 +94,8 @@ def main() -> None:
     )
 
     parser.add_argument("--model",      default=None,      help="Model name passed to the adapter constructor.")
+    parser.add_argument("--n-runs",     type=int,          default=1,
+                        help="Number of independent runs per item; majority vote is used when >1 (default: 1).")
     parser.add_argument("--domains",    nargs="+",         default=None,
                         metavar="DOMAIN",
                         help=f"Domains to evaluate. Choices: {DOMAINS} (default: all).")
@@ -124,6 +126,7 @@ def main() -> None:
         adapter=adapter,
         domains=requested_domains,
         data_dir=args.data_dir,
+        n_runs=args.n_runs,
         verbose=args.verbose,
     )
     results = evaluator.run()

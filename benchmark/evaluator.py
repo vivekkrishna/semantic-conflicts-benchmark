@@ -8,8 +8,10 @@ Flow:
       └── Return EvaluationResults
 """
 
+import hashlib
 import json
 import sys
+from collections import Counter
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,6 +45,8 @@ class EvaluationResults:
     by_category:      dict[str, dict[str, Any]]
     by_difficulty:    dict[str, dict[str, Any]]
     per_item:         list[dict[str, Any]] = field(default_factory=list)
+    dataset_hash:     str = ""
+    n_runs:           int = 1
 
 
 class Evaluator:
@@ -53,17 +57,20 @@ class Evaluator:
         adapter: ModelAdapter,
         domains: Optional[list[str]] = None,
         data_dir: str = "data/",
+        n_runs: int = 1,
         verbose: bool = False,
     ) -> None:
         self.adapter  = adapter
         self.domains  = domains or DOMAINS
         self.data_dir = Path(data_dir)
+        self.n_runs   = max(1, n_runs)
         self.verbose  = verbose
         self._task    = VerdictClassificationTask()
 
     def run(self) -> EvaluationResults:
-        run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        items  = self._load_items()
+        run_id      = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        items       = self._load_items()
+        dataset_hash = _hash_dataset(items)
 
         if not items:
             raise RuntimeError(f"No dataset items found under {self.data_dir}")
@@ -76,10 +83,14 @@ class Evaluator:
                 tick  = "✓" if result["correct"] else "✗"
                 level = result["conflict_level"]
                 lvl_s = f"L{level}" if level is not None else "  "
+                runs_info = ""
+                if self.n_runs > 1:
+                    agree = result.get("run_agreement", 1.0)
+                    runs_info = f" agree={agree:.0%}"
                 print(
                     f"  [{tick}] {item['id']:<30} {lvl_s:<4} "
                     f"label={result['label']:<12} pred={result['prediction']:<12} "
-                    f"bert={result['explanation_bert_f1'] or 0:.3f}"
+                    f"bert={result['explanation_bert_f1'] or 0:.3f}{runs_info}"
                 )
 
         # Compute per-level metrics and LW-F1
@@ -93,6 +104,12 @@ class Evaluator:
         )
         overall["lw_f1"] = lw_f1
 
+        # Agreement rate across runs (1.0 when n_runs == 1)
+        if self.n_runs > 1:
+            overall["mean_run_agreement"] = round(
+                sum(r.get("run_agreement", 1.0) for r in results) / len(results), 4
+            )
+
         return EvaluationResults(
             model_name=self.adapter.name,
             run_id=run_id,
@@ -104,6 +121,8 @@ class Evaluator:
             by_category=self._group_metrics(results, "category"),
             by_difficulty=self._group_metrics(results, "difficulty"),
             per_item=results,
+            dataset_hash=dataset_hash,
+            n_runs=self.n_runs,
         )
 
     # ------------------------------------------------------------------
@@ -123,20 +142,34 @@ class Evaluator:
         return items
 
     def _evaluate_item(self, item: dict[str, Any]) -> dict[str, Any]:
-        prompt   = self._task.build_prompt(item)
-        response = self.adapter.predict(prompt)
-
-        label         = item["label"]["verdict"]
-        prediction    = response.verdict
-        correct       = label == prediction
+        prompt = self._task.build_prompt(item)
+        label  = item["label"]["verdict"]
         conflict_level = item.get("conflict_level")  # int or None
+
+        if self.n_runs == 1:
+            response   = self.adapter.predict(prompt)
+            prediction = response.verdict
+            run_verdicts  = [prediction]
+            run_agreement = 1.0
+        else:
+            responses: list = []
+            for _ in range(self.n_runs):
+                responses.append(self.adapter.predict(prompt))
+            run_verdicts = [r.verdict for r in responses]
+            counts       = Counter(run_verdicts)
+            prediction   = counts.most_common(1)[0][0]
+            run_agreement = round(counts[prediction] / self.n_runs, 4)
+            # Use the last response's explanation/raw for storage
+            response = responses[-1]
+
+        correct = label == prediction
 
         bert_f1 = None
         if should_score_explanation(item):
             reference = _build_reference_text(item)
             bert_f1   = score_explanation(response.explanation, reference)
 
-        return {
+        result: dict[str, Any] = {
             "id":                  item["id"],
             "domain":              item.get("domain", "unknown"),
             "category":            item.get("category", "unknown"),
@@ -150,6 +183,10 @@ class Evaluator:
             "model_explanation":   response.explanation,
             "raw_response":        response.raw_response,
         }
+        if self.n_runs > 1:
+            result["run_verdicts"]  = run_verdicts
+            result["run_agreement"] = run_agreement
+        return result
 
     @staticmethod
     def _group_metrics(
@@ -172,6 +209,16 @@ def _conflict_type(level: Optional[int]) -> str:
     if level == 0:
         return "surface"
     return f"implicit_L{level}"
+
+
+def _hash_dataset(items: list[dict]) -> str:
+    """SHA-256 of the sorted, canonically serialised dataset (first 16 hex chars)."""
+    serialized = json.dumps(
+        sorted(items, key=lambda x: x["id"]),
+        sort_keys=True,
+        ensure_ascii=False,
+    )
+    return hashlib.sha256(serialized.encode()).hexdigest()[:16]
 
 
 def _build_reference_text(item: dict[str, Any]) -> str:

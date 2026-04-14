@@ -31,6 +31,8 @@ def write_json(results: EvaluationResults, path: str) -> None:
         "model":             results.model_name,
         "run_id":            results.run_id,
         "total_items":       results.total_items,
+        "n_runs":            results.n_runs,
+        "dataset_hash":      results.dataset_hash,
         "overall":           results.overall,
         "by_domain":         results.by_domain,
         "by_level":          {str(k): v for k, v in results.by_level.items()},
@@ -53,7 +55,9 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
     lines: list[str] = []
 
     lines.append(f"# Benchmark Results — {results.model_name}")
-    lines.append(f"\n**Run ID:** `{results.run_id}`  |  **Items:** {results.total_items}\n")
+    hash_str = f"  |  **Dataset:** `{results.dataset_hash}`" if results.dataset_hash else ""
+    runs_str = f"  |  **Runs/item:** {results.n_runs}" if results.n_runs > 1 else ""
+    lines.append(f"\n**Run ID:** `{results.run_id}`  |  **Items:** {results.total_items}{hash_str}{runs_str}\n")
 
     # Overall scores
     o = results.overall
@@ -170,6 +174,9 @@ def print_console(results: EvaluationResults) -> None:
     print(f"\n{'='*64}")
     print(f"  Model : {results.model_name}")
     print(f"  Run   : {results.run_id}  |  Items: {results.total_items}")
+    if results.dataset_hash:
+        runs_s = f"  |  Runs/item: {results.n_runs}" if results.n_runs > 1 else ""
+        print(f"  Hash  : {results.dataset_hash}{runs_s}")
     print(f"{'='*64}")
 
     overall_rows = [

@@ -14,6 +14,7 @@ class AnthropicAdapter(ModelAdapter):
     """Adapter for Anthropic Claude models."""
 
     def __init__(self, model: str = "claude-haiku-4-5-20251001",
+                 temperature: float = 0.0,
                  max_tokens: int = 512, api_key: Optional[str] = None) -> None:
         try:
             import anthropic as _anthropic
@@ -22,6 +23,7 @@ class AnthropicAdapter(ModelAdapter):
                 "Anthropic package not installed. Run: pip install 'semantic-conflicts-benchmark[anthropic]'"
             )
         self._model = model
+        self._temperature = temperature
         self._max_tokens = max_tokens
         self._client = _anthropic.Anthropic(api_key=api_key)
 
@@ -33,6 +35,7 @@ class AnthropicAdapter(ModelAdapter):
         message = self._client.messages.create(
             model=self._model,
             max_tokens=self._max_tokens,
+            temperature=self._temperature,
             system=self.system_prompt,
             messages=[{"role": "user", "content": prompt}],
         )
