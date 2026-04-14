@@ -14,7 +14,8 @@ class HuggingFaceAdapter(ModelAdapter):
     """Adapter for HuggingFace text-generation pipeline models."""
 
     def __init__(self, model: str = "mistralai/Mistral-7B-Instruct-v0.2",
-                 max_new_tokens: int = 512, device: Optional[str] = None) -> None:
+                 max_new_tokens: int = 512, temperature: float = 0.0,
+                 device: Optional[str] = None) -> None:
         try:
             from transformers import pipeline
         except ImportError:
@@ -22,7 +23,11 @@ class HuggingFaceAdapter(ModelAdapter):
                 "Transformers not installed. Run: pip install 'semantic-conflicts-benchmark[hf]'"
             )
         self._model_name = model
-        kwargs: dict = {"max_new_tokens": max_new_tokens, "do_sample": False}
+        # temperature=0.0 → greedy decoding (do_sample=False); >0 → sampling
+        do_sample = temperature > 0.0
+        kwargs: dict = {"max_new_tokens": max_new_tokens, "do_sample": do_sample}
+        if do_sample:
+            kwargs["temperature"] = temperature
         if device:
             kwargs["device"] = device
         self._pipe = pipeline("text-generation", model=model, **kwargs)
