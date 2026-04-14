@@ -256,6 +256,28 @@ items. Report the gap as an upper-bound leakage estimate in the README.
 
 ---
 
+## Phase 5b — Robustness Testing
+**Goal:** Verify that model scores reflect semantic reasoning, not surface pattern matching.
+**Can run in parallel with Phase 5.**
+
+### R-5.3 · Add paraphrase and distractor robustness variants
+**Maps to:** I-19
+**Effort:** 3–4 weeks
+
+For a representative subset of existing items:
+- Write paraphrase variants (same logical content, different surface vocabulary) for
+  all L0–L1 conflict items (18 items → 18 paraphrase twins)
+- Write distractor variants for 20 consistent items (negation traps that look like
+  conflicts but are not)
+
+Extend the evaluator and leaderboard to report a robustness ratio:
+  `robustness = score_on_paraphrase / score_on_original`
+
+A ratio below 0.9 signals surface pattern matching. Report this in the README
+alongside the main LW-F1 score.
+
+---
+
 ## Phase 6 — Infrastructure & Reproducibility
 **Goal:** Ensure the benchmark can be reliably reproduced and extended.
 
@@ -278,6 +300,23 @@ loading v1.x results. Document schema changes in `CHANGELOG.md`.
 
 ---
 
+### R-6.3 · Publish to Hugging Face Hub and get a DOI
+**Maps to:** I-18
+**Effort:** 2–3 days
+
+Steps:
+1. Write a HF dataset card (`data/README.md`) covering: task description, conflict
+   taxonomy, split definitions, label schema, citation, and license
+2. Push the dataset to `huggingface.co/datasets/<org>/semantic-conflicts-benchmark`
+   using `huggingface_hub`
+3. Register a DOI via Zenodo (free; link your HF or GitHub repo)
+4. Update the GitHub README with HF badge, dataset link, and DOI
+
+Acceptance criterion: `datasets.load_dataset("semantic-conflicts-benchmark")` works
+and returns the correct splits and schema.
+
+---
+
 ## Roadmap Summary
 
 | Phase | Roadmap Items | Addresses | Blockers | Status |
@@ -287,10 +326,11 @@ loading v1.x results. Document schema changes in `CHANGELOG.md`.
 | 3 — Statistical Rigor | R-3.1, R-3.2, R-3.3 | I-08, I-09, I-16 | Phase 2 complete | After Phase 2 |
 | 4 — Metric Validity | R-4.1, R-4.2, R-4.3 | I-10, I-11, I-12 | Phase 3 data | After Phase 3 |
 | 5 — Leakage Controls | R-5.1, R-5.2 | I-13, I-14 | Phase 4 complete | Long-term |
-| 6 — Infrastructure | R-6.1, R-6.2 | I-15, I-17 | None | Anytime (low effort) |
+| 5b — Robustness | R-5.3 | I-19 | Phase 3 data | Parallel with Phase 5 |
+| 6 — Infrastructure | R-6.1, R-6.2, R-6.3 | I-15, I-17, I-18 | None | Anytime (low effort) |
 
 **Can be done in parallel with any phase:** R-3.2 (temperature control), R-4.3
-(reframe binary F1), R-6.1, R-6.2 — these are low-effort and have no blockers.
+(reframe binary F1), R-6.1, R-6.2, R-6.3 — these are low-effort and have no blockers.
 
 ---
 
@@ -299,6 +339,6 @@ loading v1.x results. Document schema changes in `CHANGELOG.md`.
 | Gate | Required items | Not required |
 |------|---------------|--------------|
 | **Share with external researchers** | R-1.1, R-1.2, R-1.3 | Everything else |
-| **Blog post / technical report** | All Phase 1 + R-2.1 + R-3.2 | Phases 4–6 |
+| **Blog post / technical report** | All Phase 1 + R-2.1 + R-3.2 + R-6.3 (HF Hub) | Phases 4–5 |
 | **Workshop paper (ACL/EMNLP)** | All Phase 1–3 + R-4.1 + R-4.2 | Phase 5–6 |
 | **Full conference paper (NeurIPS/EMNLP)** | All Phase 1–5 + IRR κ ≥ 0.70 | R-6.2 |

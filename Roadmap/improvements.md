@@ -357,6 +357,53 @@ schema versions. Add a migration script for loading older results.
 
 ---
 
+### I-18 · No Hugging Face dataset card or hosted dataset
+**Severity:** HIGH
+
+The dataset is not published on Hugging Face Hub. This is the primary discovery and
+citation channel for NLP benchmarks. Without it:
+- Researchers cannot `load_dataset("...")` it programmatically
+- It will not appear in benchmark discovery searches
+- Papers citing it must point to a GitHub repo, which is not citable via DOI
+
+Compare: ConflictBank, MMKC-Bench, TruthfulQA — all have HF Hub presence.
+
+**Files affected:** New: `data/hf_dataset_card.md`, HF Hub repository
+
+**Fix:**
+- Write a `README.md` for the HF dataset card (task description, format, splits,
+  citation, licensing)
+- Push `data/` to a Hugging Face dataset repository using `huggingface_hub`
+- Add a DOI via Zenodo (free, permanent, citable)
+- Link the HF dataset from the GitHub README
+
+---
+
+### I-19 · No adversarial or paraphrase robustness examples
+**Severity:** MEDIUM
+
+All 180 items are clean, well-formed passages. The dataset does not test whether
+models degrade under:
+- Paraphrase perturbations (same logical content, different surface form)
+- Distractors (an additional passage that is irrelevant or misleading)
+- Negation traps (a passage that superficially looks like a conflict but is not)
+
+Without these, a model that does surface pattern matching on distinctive keywords
+cannot be distinguished from a model doing genuine semantic reasoning.
+
+**Files affected:** New items in `data/` under a `robustness/` subdataset or
+as additional metadata fields on existing items
+
+**Fix:**
+- For each L0–L1 conflict item, write one paraphrase variant that preserves the
+  logical structure but changes the surface vocabulary
+- For 20 consistent items, write a "distractor" version where one passage contains
+  a negation that looks like a conflict but isn't (e.g., "not X is wrong" ≠ "X is right")
+- Report model performance on original vs. paraphrase vs. distractor variants
+  as a robustness score in the leaderboard
+
+---
+
 ## Summary Table
 
 | ID | Title | Severity | Effort |
@@ -378,3 +425,5 @@ schema versions. Add a migration script for loading older results.
 | I-15 | No dataset hash in results | MEDIUM | Low |
 | I-16 | No standardized test split | MEDIUM | Medium |
 | I-17 | Results JSON schema not versioned | LOW | Low |
+| I-18 | No Hugging Face dataset card or hosted dataset | HIGH | Medium |
+| I-19 | No adversarial / paraphrase robustness examples | MEDIUM | High |

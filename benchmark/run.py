@@ -36,7 +36,7 @@ except ImportError:
     pass  # dotenv not installed; rely on environment variables being set externally
 
 from benchmark.evaluator import DOMAINS, Evaluator
-from benchmark.reporter import print_console, write_json, write_leaderboard, write_markdown
+from benchmark.reporter import print_console, write_json, write_leaderboard, write_markdown, write_runlog
 
 
 BUILTIN_ADAPTERS = {
@@ -104,6 +104,8 @@ def main() -> None:
                         help="Directory for this run's outputs (default: results/<run_id>_<model>/).")
     parser.add_argument("--leaderboard",default="results/leaderboard.csv",
                         help="Path for leaderboard CSV (appended to, default: results/leaderboard.csv).")
+    parser.add_argument("--runlog",      default="runs/runlog.jsonl",
+                        help="Path for cumulative run log JSONL (appended to, default: runs/runlog.jsonl).")
     parser.add_argument("--no-markdown",action="store_true",
                         help="Skip writing the Markdown report.")
     parser.add_argument("--verbose",    action="store_true",
@@ -142,6 +144,7 @@ def main() -> None:
     if not args.no_markdown:
         write_markdown(results, md_path)
     write_leaderboard(results, args.leaderboard)
+    write_runlog(results, args.runlog, results_path=json_path)
 
 
 if __name__ == "__main__":

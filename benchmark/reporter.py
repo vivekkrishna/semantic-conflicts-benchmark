@@ -4,6 +4,7 @@ Supported formats:
     JSON     — full results, per-item predictions, raw responses
     Markdown — human-readable report with tables and failure examples
     CSV      — one row appended to a running leaderboard file
+    JSONL    — one line appended to a cumulative run log (audit trail)
     Console  — formatted table printed to stdout
 """
 
@@ -163,6 +164,40 @@ def write_leaderboard(results: EvaluationResults, path: str) -> None:
             writer.writeheader()
         writer.writerow(row)
     print(f"  CSV   → {path}")
+
+
+# ---------------------------------------------------------------------------
+# JSONL run log
+# ---------------------------------------------------------------------------
+
+def write_runlog(results: EvaluationResults, path: str, results_path: str = "") -> None:
+    """Append one summary record to a cumulative JSONL run log.
+
+    Captures all aggregate metrics but omits per_item (kept in results_path).
+    Two entries with the same dataset_hash + model + n_runs should produce
+    identical metric values — mismatches signal non-determinism or data drift.
+    """
+    os.makedirs(Path(path).parent, exist_ok=True)
+
+    def _slim(metrics: dict) -> dict:
+        """Keep only the scalar metrics; drop per_class_f1 nesting for compactness."""
+        return {k: v for k, v in metrics.items() if not isinstance(v, dict)}
+
+    entry = {
+        "run_id":       results.run_id,
+        "model":        results.model_name,
+        "dataset_hash": results.dataset_hash,
+        "n_runs":       results.n_runs,
+        "n_items":      results.total_items,
+        "overall":      results.overall,
+        "by_level":     {str(k): _slim(v) for k, v in results.by_level.items()},
+        "by_domain":    {k: _slim(v) for k, v in results.by_domain.items()},
+        "results_path": results_path,
+    }
+
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    print(f"  LOG   → {path}")
 
 
 # ---------------------------------------------------------------------------
