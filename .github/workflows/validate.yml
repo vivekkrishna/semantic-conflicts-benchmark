@@ -1,0 +1,39 @@
+name: Dataset Validation
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "benchmark/validator.py"
+      - "scripts/validate_dataset.py"
+      - "tests/test_dataset_distribution.py"
+      - "tests/test_validator.py"
+  pull_request:
+    paths:
+      - "data/**"
+      - "benchmark/validator.py"
+      - "scripts/validate_dataset.py"
+      - "tests/test_dataset_distribution.py"
+      - "tests/test_validator.py"
+
+jobs:
+  validate:
+    name: Validate dataset integrity
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package and dev dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Structural validation (chain lengths, modal words, prefixes)
+        run: python scripts/validate_dataset.py --strict
+
+      - name: Distributional invariant tests
+        run: pytest tests/test_dataset_distribution.py tests/test_validator.py -v
