@@ -24,9 +24,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A explicitly states 'Breaking changes are not just acceptable — they are expected' and frames shipping speed above correctness as the team's core value.",
-        "Step 2 — Passage B explicitly states 'I have never merged a change that breaks existing functionality, and I never will' and 'Backward compatibility is non-negotiable.'",
-        "CONFLICT — Both passages directly state opposing positions on the same question (whether breaking changes are acceptable) with no interpretation required."
+        "CONFLICT — Passage A explicitly states 'Breaking changes are not just acceptable — they are expected' and frames shipping speed above correctness as the team's core value. Passage B explicitly states 'I have never merged a change that breaks existing functionality, and I never will' and that backward compatibility is non-negotiable. Both passages directly state mutually exclusive positions on the same question — no interpretation is required."
       ],
       "explanation": "Both passages address the same operational question — whether breaking changes are acceptable in production — from directly opposing positions. The team charter treats breaking changes as a normal, expected part of fast iteration. The engineer states they have never shipped a breaking change and never will. There is no ambiguity in either position, no room for reconciliation through different interpretations, and no missing context that could make them compatible. The conflict is fully visible at the surface and requires no inference steps.",
       "conflicting_spans": [
@@ -73,9 +71,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A states 'There are no synchronous meetings of any kind on this team — not standups' as an absolute operating constraint.",
-        "Step 2 — Passage B states the agent 'requires a daily 9am synchronous video standup with all team members' as a hard operational requirement.",
-        "CONFLICT — Passage A explicitly bans all synchronous standups; Passage B explicitly requires one. The contradiction is stated directly and requires no inference."
+        "CONFLICT — Passage A states 'There are no synchronous meetings of any kind on this team — not standups' as an absolute operating constraint. Passage B states the agent requires a daily 9am synchronous video standup with all team members as a hard operational requirement. The contradiction is stated directly and requires no inference."
       ],
       "explanation": "Passage A bans all synchronous meetings of any kind — explicitly naming standups as prohibited. Passage B mandates a daily 9am synchronous standup as a non-negotiable operational requirement. Both passages speak to the same question with the same specificity. There is no time gap, scope distinction, or interpretive ambiguity that could make them compatible. The conflict is explicit and surface-level.",
       "conflicting_spans": [
@@ -122,9 +118,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A explicitly requires that 'every architectural decision' must achieve 'documented consensus from at least three engineers' and states that 'unilateral technical decisions are not permitted at any seniority level.'",
-        "Step 2 — Passage B explicitly states the engineer 'makes architectural decisions alone, quickly' and that 'seeking group consensus before implementing technical ideas slows everything down.'",
-        "CONFLICT — Passage A mandates consensus for every architectural decision; Passage B states the engineer operates by making architectural decisions alone without group consensus. The positions are mutually exclusive and explicitly stated."
+        "CONFLICT — Passage A requires 'every architectural decision' to achieve documented consensus from at least three engineers, and states that unilateral technical decisions are not permitted at any seniority level. Passage B states the engineer makes architectural decisions alone, quickly, and views group consensus as a slowdown to avoid. The positions are mutually exclusive and explicitly stated."
       ],
       "explanation": "Passage A requires documented consensus from at least four senior engineers before any architectural decision, regardless of urgency. Passage B declares that the engineer makes architectural decisions alone, quickly, and with conviction, and that committee processes damage outcomes. Both passages address the same decision-making process with no room for reconciliation: one mandates multi-party consensus, the other rejects it as harmful. The conflict is explicit at the surface.",
       "conflicting_spans": [
@@ -171,9 +165,8 @@
       "verdict": "conflict",
       "conflict_level": 1,
       "reasoning_chain": [
-        "Step 1 — Passage B states the agent retains 'the user's name, email address, geographic location, stated preferences, and all prior conversation content' permanently and that this memory 'is never purged.'",
-        "Step 2 — Name, email address, and geographic location are individually identifying data — they constitute personally identifiable information (PII) by any standard definition.",
-        "CONFLICT — One inference step (identifying the retained fields as PII) surfaces the conflict: the agent retains PII indefinitely, directly violating the team's hard 30-day retention limit."
+        "Step 1 — The retained fields — name, email address, and geographic location — are individually identifying and constitute PII under any standard definition.",
+        "CONFLICT — One inference step (classifying the retained fields as PII) surfaces the conflict: the agent retains PII indefinitely, directly violating the team's hard 30-day retention limit for personal data."
       ],
       "explanation": "Passage A establishes a data retention ceiling: all PII is deleted within 30 days of the user's last interaction, with no exceptions. Passage B describes a permanent memory store containing precisely the fields that constitute PII — full name, employer, dietary preferences, health notes, relationship information. One inference step is required: identifying that the retained fields are PII under any standard definition. Once that step is made, the agent's permanent store directly violates the 30-day deletion ceiling. The conflict is not visible from Passage B alone — the memory store sounds like a useful personalisation feature — but becomes certain the moment the stored fields are classified against the policy in Passage A.",
       "conflicting_spans": [
@@ -220,9 +213,8 @@
       "verdict": "conflict",
       "conflict_level": 1,
       "reasoning_chain": [
-        "Step 1 — 'Always install the latest stable release' and running '--upgrade' as standard setup means dependencies are resolved to their current latest version at install time — they are not pinned to a fixed version in a lockfile.",
-        "Step 2 — The team policy requires all production dependencies to be pinned to exact semantic versions in a committed lockfile and explicitly rejects floating version ranges.",
-        "CONFLICT — One inference step from the engineer's described practice (always-latest = not pinned) directly yields a violation of the exact-version-pin requirement."
+        "Step 1 — 'Always install the latest stable release' with --upgrade resolves dependencies to their current latest version at install time — they are not pinned to a fixed version in a committed lockfile.",
+        "CONFLICT — One inference step from the engineer's described practice (always-latest = not pinned) directly yields a violation of the team policy's exact-version-pin and committed-lockfile requirement."
       ],
       "explanation": "Passage A establishes an absolute requirement: all production dependencies pinned to exact semantic versions in a committed lockfile, with reproducible builds treated as non-negotiable. Passage B describes a philosophy of always installing the latest stable release of every library and never pinning to a specific version. One inference step connects them: always-latest is the opposite of pinned-to-exact-version. Once that step is made, the engineer's stated practice directly violates the team's stated requirement. At surface level, Passage B reads like a reasonable dependency hygiene philosophy; the conflict emerges only when it is mapped against the team's reproducibility standard.",
       "conflicting_spans": [
@@ -269,8 +261,7 @@
       "verdict": "conflict",
       "conflict_level": 1,
       "reasoning_chain": [
-        "Step 1 — Passage B states that when blocked, the engineer calls senior colleagues immediately and builds relationships specifically to enable immediate direct access.",
-        "Step 2 — Immediate direct calls to senior engineers when blocked is precisely the behaviour Passage A restricts to P0 production incidents only; the first required step is to file a written ticket and wait twenty-four hours.",
+        "Step 1 — Immediate direct calls to senior engineers when blocked is precisely the behaviour the escalation policy restricts to P0 production incidents; for all other situations the required first step is filing a written ticket and waiting twenty-four hours.",
         "CONFLICT — One inference step from 'call immediately when blocked' maps directly to behaviour the team escalation policy restricts to P0 incidents only."
       ],
       "explanation": "Passage A prescribes a mandatory 24-hour waiting period and ticket-first escalation before any direct human contact about a blocker. Passage B describes a practice of calling immediately when blocked, skipping written documentation entirely. One inference step is needed: calling immediately when blocked means calling before the 24-hour period has elapsed and without first filing the required ticket. Once that step is made, the engineer's stated approach violates both the sequencing and the waiting requirement. Passage B's framing ('fastest path to unblocking') sounds like efficiency; the conflict only surfaces when it is evaluated against the specific procedural steps Passage A mandates.",
@@ -318,10 +309,9 @@
       "verdict": "conflict",
       "conflict_level": 2,
       "reasoning_chain": [
-        "Step 1 — Passage B states the agent will 'generate the integration code, and merge it to the working branch without pausing for external approval workflows' for any user-requested third-party integration.",
-        "Step 2 — Merging integration code without pausing for external approval means the code reaches main without a Platform Security team review.",
-        "Step 3 — Passage A requires that all third-party integrations undergo Platform Security team review before implementation code is merged to main, with no exceptions.",
-        "CONFLICT — Two hops: (1) the agent merges without approval, so (2) its integrations bypass the mandatory security review — a direct violation of the policy."
+        "Step 1 — Merging integration code 'without pausing for external approval workflows' means no review gate exists between code generation and the merge — the code reaches the working branch as soon as the agent generates it.",
+        "Step 2 — Platform Security team review is an external approval workflow; 'no external approval' therefore means no Platform Security review occurs before the integration code lands in main.",
+        "CONFLICT — Passage A mandates Platform Security review for every third-party integration before merge to main. Steps 1–2 show this review is unconditionally bypassed by the agent's operating mode, with no exceptions."
       ],
       "explanation": "Passage A requires a Platform Security Team review for every third-party API or SDK integration before any code is written or merged. Passage B describes an agent that treats a user's request to integrate a third-party service as full authorisation to proceed immediately, including writing and merging code. Two inference steps surface the conflict. First, the agent's described behaviour results in integrations being written and merged without a security review. Second, if every integration requires a security review as a precondition and the agent merges without one, every integration the agent completes is in violation of the mandatory process. The agent's goal of maximising task-completion speed obscures the structural conflict until both hops are made.",
       "conflicting_spans": [
@@ -368,10 +358,9 @@
       "verdict": "conflict",
       "conflict_level": 2,
       "reasoning_chain": [
-        "Step 1 — Passage B describes executing DDL directly against the production PostgreSQL instance during a maintenance window, explicitly citing the decision to skip building a feature flag.",
-        "Step 2 — Executing DDL directly against a production database is the definition of 'direct Data Definition Language execution against production databases,' which Passage A explicitly prohibits without exception.",
-        "Step 3 — Additionally, Passage B confirms no feature flag will be built, meaning the mandatory feature-flag-with-auto-rollback requirement is also unmet.",
-        "CONFLICT — Two hops: (1) the migration plan runs direct DDL on production; (2) skips the feature flag requirement — both actions are explicitly prohibited. Deadline pressure is not listed as an exception ground."
+        "Step 1 — Executing DDL directly against the production PostgreSQL instance during a maintenance window is definitionally 'direct Data Definition Language execution against production databases' — the two descriptions are equivalent.",
+        "Step 2 — Skipping the feature flag means the schema change goes live immediately with no auto-rollback path, eliminating the emergency abort mechanism that the feature-flag-with-auto-rollback requirement exists to provide.",
+        "CONFLICT — Two hops: (1) direct DDL on production violates the categorical prohibition; (2) the absent feature flag removes the required rollback safety net. Both conditions are simultaneously met; neither deadline pressure nor maintenance windows are listed exceptions."
       ],
       "explanation": "Passage A requires all production schema changes to be deployed behind a feature flag with automated rollback, with no exceptions for deadline pressure. Passage B describes a migration plan that runs direct DDL on production without a feature flag. Two inference steps expose the conflict. First, direct DDL execution on production without a feature flag is precisely the deployment pattern Passage A prohibits. Second, if deadline pressure is explicitly excluded as a justification for bypassing the requirement, the Q3 framing in Passage B does not alter the compliance status. The urgency framing in Passage B ('to meet the Q3 delivery deadline') obscures the structural violation until both steps are made.",
       "conflicting_spans": [
@@ -418,9 +407,8 @@
       "verdict": "conflict",
       "conflict_level": 2,
       "reasoning_chain": [
-        "Step 1 — Passage A requires the merging engineer to be reachable and capable of rolling back for forty-eight hours post-deployment, including evenings and weekends.",
-        "Step 2 — If Sofia merges a PR on Thursday afternoon, the forty-eight-hour ownership window extends through Friday evening and into Saturday — a non-working period under her contract.",
-        "Step 3 — Passage B states she has no professional obligations outside 9am–6pm Monday–Friday. Reachability and rollback responsibility on Friday evening and Saturday directly conflict with this employment term.",
+        "Step 1 — If Sofia merges a PR on Thursday afternoon, the forty-eight-hour ownership window extends through Friday evening and into Saturday — a period outside her contracted working hours.",
+        "Step 2 — Required reachability and rollback capability on Saturday directly conflict with the employment term in Passage B stating she has no professional obligations outside 9am–6pm Monday–Friday.",
         "CONFLICT — Two hops: (1) a Thursday merge produces a 48-hour window extending into non-working hours; (2) the required on-call availability during that window contradicts the employment contract's no-contact-outside-hours condition."
       ],
       "explanation": "Passage A establishes continuous deployment: every merge to main is automatically deployed to production within 15 minutes, at any time of day. Passage B restricts the engineer's working hours to 9am–6pm Monday–Friday with no professional responsibilities outside those hours. Two inference steps surface the conflict. First, a merge on Thursday evening would trigger an automatic production deployment that falls outside the engineer's contracted working hours. Second, if the engineer is contractually unavailable during the 48-hour window following a Thursday-evening merge and production issues arise from the deployment, there is no responsible engineer available to respond — directly contradicting the deployment model's implicit assumption of on-call availability. The conflict requires both steps because neither passage alone mentions the other's constraint.",
@@ -470,7 +458,7 @@
       "reasoning_chain": [
         "Step 1 — Passage B proposes that ReportingService establishes 'direct read connections to the primary read replicas' of OrderService's, InventoryService's, and UserService's PostgreSQL databases.",
         "Step 2 — A direct read connection to another service's PostgreSQL database is a direct connection to another service's data store at the network layer.",
-        "Step 3 — ADR-014 states 'No service may hold a direct connection to another service's database at any network layer' and classifies such connections as critical architectural defects.",
+        "Step 3 — ADR-014 prohibits any service from holding a direct connection to another service's database at any network layer and classifies such connections as critical architectural defects.",
         "CONFLICT — Three hops: (1) ReportingService connects directly to other services' PostgreSQL read replicas; (2) a direct read replica connection is a direct database connection at the network layer; (3) ADR-014 classifies any such cross-service direct database connection as a critical architectural violation."
       ],
       "explanation": "Passage A establishes strict service data ownership: each microservice owns its store exclusively, and all cross-service data access must go through published APIs, with direct database connections from other services explicitly prohibited at the network layer. Passage B describes an architecture where the ReportingService establishes direct connections to the PostgreSQL read replicas of four other services. Three inference steps are needed. First, a direct database connection to another service's PostgreSQL instance is a direct database connection of the kind ADR-014 prohibits. Second, the prohibition is at the network layer, so the ReportingService violates ADR-014 regardless of whether it writes or only reads. Third, since ADR-014 applies to all services without exception, the latency justification in Passage B does not create an exemption. The performance framing ('sub-10ms P99') makes the architecture seem like an engineering necessity; the three-hop derivation is required to see that it violates a non-negotiable architectural decision record.",
@@ -618,7 +606,7 @@
       "verdict": "conflict",
       "conflict_level": 4,
       "reasoning_chain": [
-        "Step 1 — Passage B states that cached responses 'may contain verbatim fragments of the original input' and are stored on a global edge network.",
+        "Step 1 — Passage B acknowledges that cached responses contain verbatim fragments of the original input and are stored on a global edge network.",
         "Step 2 — Input queries to an AI assistant operating on customer workflows will regularly contain customer-supplied content — account identifiers, personal details, query parameters — that constitutes customer data under the DPA.",
         "Step 3 — Cache entries containing customer-data fragments are customer data at rest on the edge nodes.",
         "Step 4 — The edge nodes include us-east-1, us-west-2, ap-southeast-1, and ap-northeast-1 — all outside the EU data centres mandated by Passage A.",

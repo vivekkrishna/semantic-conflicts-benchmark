@@ -40,6 +40,7 @@ def write_json(results: EvaluationResults, path: str) -> None:
         "by_conflict_type":  results.by_conflict_type,
         "by_category":       results.by_category,
         "by_difficulty":     results.by_difficulty,
+        "failure_breakdown": _compute_failure_breakdown(results.per_item, results.total_items),
         "per_item":          results.per_item,
     }
     with open(path, "w", encoding="utf-8") as f:
@@ -100,6 +101,20 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
                           tablefmt="github"))
     lines.append("")
 
+    # Failure breakdown (R-4.5)
+    breakdown = _compute_failure_breakdown(results.per_item, results.total_items)
+    nonzero = {k: v for k, v in breakdown.items() if v["count"] > 0}
+    if nonzero:
+        lines.append("## Failure Breakdown\n")
+        breakdown_rows = [
+            [ftype, entry["count"], f"{entry['pct']:.1f}%"]
+            for ftype, entry in sorted(nonzero.items(), key=lambda x: -x[1]["count"])
+        ]
+        lines.append(tabulate(breakdown_rows,
+                              headers=["Failure type", "Count", "% of items"],
+                              tablefmt="github"))
+        lines.append("")
+
     # Example failures
     failures = [r for r in results.per_item if not r["correct"]][:5]
     if failures:
@@ -135,10 +150,31 @@ LEADERBOARD_HEADER = [
     "philosophy_f1", "software_f1", "law_f1", "science_f1", "content_f1", "teams_f1",
 ]
 
+# R-4.4: Static baseline row — always-predict-conflict trivial baseline.
+# Pre-computed for the standard 180-item dataset (18 conflict + 72 non-conflict per level).
+#   conflict precision = 18/90 = 0.2, recall = 1.0 → F1 = 1/3
+#   accuracy = 108/180 = 0.6 (18 conflict items per level × 6 correct, all non-conflict wrong)
+#   macro_f1 = (1/3 + 0 + 0) / 3 ≈ 0.111 (consistent-F1 = 0, ambiguous-F1 = 0)
+#   binary_conflict_f1: positive = conflict+ambiguous (108 items), always predicted conflict
+#     precision = 108/180 = 0.6, recall = 1.0 → F1 = 2*0.6/(0.6+1.0) = 0.75
+BASELINE_ROW = {
+    "model":               "baseline_always_conflict",
+    "run_id":              "static",
+    "n_items":             180,
+    "lw_f1":               0.333,
+    "accuracy":            0.600,
+    "macro_f1":            0.250,
+    "binary_conflict_f1":  0.750,
+    "expl_bert_f1":        "",
+    **{f"level_{l}_f1": 0.333 for l in range(6)},
+    **{d: "" for d in ["philosophy_f1", "software_f1", "law_f1",
+                        "science_f1", "content_f1", "teams_f1"]},
+}
+
 
 def write_leaderboard(results: EvaluationResults, path: str) -> None:
     os.makedirs(Path(path).parent, exist_ok=True)
-    write_header = not Path(path).exists()
+    file_exists = Path(path).exists()
 
     o  = results.overall
     bl = results.by_level
@@ -160,8 +196,9 @@ def write_leaderboard(results: EvaluationResults, path: str) -> None:
 
     with open(path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=LEADERBOARD_HEADER)
-        if write_header:
+        if not file_exists:
             writer.writeheader()
+            writer.writerow(BASELINE_ROW)   # R-4.4: baseline always first
         writer.writerow(row)
     print(f"  CSV   → {path}")
 
@@ -258,6 +295,43 @@ def _level_table_rows(by_level: dict[int, dict[str, Any]]) -> list[list]:
             m.get("n_items", 0),
         ])
     return rows
+
+
+def _compute_failure_breakdown(
+    per_item: list[dict[str, Any]], total_items: int
+) -> dict[str, dict[str, Any]]:
+    """R-4.5: Count each failure type across all items.
+
+    Failure types:
+        conflict_as_ambiguous   — conflict item predicted ambiguous
+        conflict_as_consistent  — conflict item predicted consistent
+        consistent_as_conflict  — consistent item predicted conflict
+        consistent_as_ambiguous — consistent item predicted ambiguous
+        ambiguous_as_conflict   — ambiguous item predicted conflict
+        ambiguous_as_consistent — ambiguous item predicted consistent
+    """
+    counts: dict[str, int] = {
+        "conflict_as_ambiguous":   0,
+        "conflict_as_consistent":  0,
+        "consistent_as_conflict":  0,
+        "consistent_as_ambiguous": 0,
+        "ambiguous_as_conflict":   0,
+        "ambiguous_as_consistent": 0,
+    }
+    for item in per_item:
+        if item.get("correct"):
+            continue
+        label = item.get("label")
+        pred  = item.get("prediction")
+        key   = f"{label}_as_{pred}"
+        if key in counts:
+            counts[key] += 1
+
+    n = total_items or 1
+    return {
+        ftype: {"count": count, "pct": round(count / n * 100, 1)}
+        for ftype, count in counts.items()
+    }
 
 
 def _dict_to_table_rows(by_group: dict[str, dict[str, Any]]) -> list[list]:

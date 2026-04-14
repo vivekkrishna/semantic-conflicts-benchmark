@@ -24,9 +24,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A explicitly states the stomach is sterile and peptic ulcers are caused by acid, stress, and diet.",
-        "Step 2 — Passage B explicitly states peptic ulcers are caused by H. pylori bacterial infection, and the stomach is not sterile (H. pylori colonizes it in 50% of humans).",
-        "CONFLICT — The two passages directly contradict each other on both the sterility of the stomach and the etiology of peptic ulcers; this is a surface-level, explicitly stated temporal scientific conflict."
+        "CONFLICT — Passage A states the stomach is sterile and peptic ulcers are caused by acid, stress, and diet. Passage B states ulcers are caused by H. pylori bacterial infection and the stomach is not sterile. The passages directly contradict each other on both the sterility of the stomach and the etiology of peptic ulcers — a surface-level, explicitly stated temporal scientific conflict."
       ],
       "explanation": "Passage A reflects the pre-1984 consensus that the stomach is sterile and ulcers are acid-driven. Passage B reflects the Nobel Prize-winning discovery that H. pylori bacteria cause most ulcers — a direct contradiction of both claims in Passage A.",
       "conflicting_spans": [
@@ -81,9 +79,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A explicitly states electrical coupling between neurons does not occur in the mature vertebrate nervous system.",
-        "Step 2 — Passage B explicitly states electrical synapses are widespread in the adult vertebrate CNS and play critical functional roles.",
-        "CONFLICT — The passages directly and explicitly contradict each other on whether electrical coupling exists in mature vertebrate neurons — a textbook surface-level conflict between early 20th-century neuroscience doctrine and mid-20th/21st-century empirical findings."
+        "CONFLICT — Passage A states that electrical coupling between neurons does not occur in the mature vertebrate nervous system. Passage B states that electrical synapses are widespread in the adult vertebrate CNS and play critical functional roles. The passages directly and explicitly contradict each other — a surface-level conflict between early 20th-century doctrine and later empirical findings."
       ],
       "explanation": "Passage A's categorical denial of adult vertebrate electrical synapses is directly contradicted by Passage B's experimental demonstration of widespread Cx36-based gap junctions in adult mammalian brain structures.",
       "conflicting_spans": [
@@ -130,9 +126,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Passage A explicitly states the universe is static, constant in size, and of infinite age.",
-        "Step 2 — Passage B explicitly states the universe is expanding, originated 13.8 billion years ago in the Big Bang, and that Einstein himself recanted the static universe model.",
-        "CONFLICT — The passages directly and explicitly contradict each other on the fundamental nature of the universe (static vs. expanding, infinite age vs. 13.8 Gyr), a canonical surface-level temporal conflict between Einstein's 1917 model and Hubble's 1929 empirical discovery."
+        "CONFLICT — Passage A states the universe is static, constant in size, and of infinite age. Passage B states the universe is expanding, originated 13.8 billion years ago, and that Einstein himself recanted the static model. The passages directly contradict each other on the fundamental nature of the universe — a surface-level conflict between the 1917 static model and Hubble's 1929 discovery."
       ],
       "explanation": "Einstein's 1917 static universe model is directly and explicitly contradicted by Hubble's 1929 observational finding of galactic recession — a paradigm shift acknowledged even by Einstein.",
       "conflicting_spans": [
@@ -990,11 +984,11 @@
       "conflict_level": 5,
       "reasoning_chain": [
         "Step 1 — Copenhagen (Passage A) requires a sharp, fundamental distinction between the classical measuring apparatus/observer and the quantum system being measured. The collapse is triggered by this boundary — the measurement postulate is irreducible and not derivable from unitary Schrödinger evolution alone.",
-        "Step 2 — Decoherence theory (Passage B) shows that the apparent collapse of the wavefunction (loss of superposition) arises from entanglement with environmental degrees of freedom — a fully unitary process described by the Schrödinger equation. No special observer, apparatus, or non-unitary collapse postulate is required.",
-        "Step 3 — For macroscopic objects at room temperature, decoherence occurs in ~10⁻²³ seconds — so fast that quantum superpositions of macroscopic states are destroyed by environmental entanglement long before any human observer could interact with the system. This means the 'observer' in Copenhagen plays no causal role; decoherence has already produced the effective collapse.",
-        "Step 4 — Copenhagen treats wavefunction collapse as a fundamental, non-unitary dynamical law that supplements the Schrödinger equation. Decoherence theory shows that no such supplemental law is needed — the appearance of collapse emerges from unitary dynamics alone. If decoherence is correct, the collapse postulate is redundant; if Copenhagen is correct and collapse is a primitive irreducible law, decoherence provides only an approximation to the true physics, not a derivation of it.",
-        "Step 5 — The two frameworks make different ontological claims about the completeness of the wavefunction description. Copenhagen holds that ψ is complete and collapse creates a definite outcome. Decoherence-based interpretations (Everett/many-worlds) hold that ψ remains complete and unitary but the apparent collapse is perspectival — multiple branches coexist. These ontologies are mutually exclusive: either definite outcomes are created by non-unitary collapse (Copenhagen) or they are not (decoherence/Everett). Five inference steps — the observer boundary, unitary decoherence, the observer's causal irrelevance, the redundancy of the collapse postulate, and the incompatible ontologies — reveal an irresolvable foundational conflict.",
-        "CONFLICT — Five inference steps trace the conflict from Copenhagen's measurement boundary, through decoherence's derivation of apparent collapse from unitary dynamics, through the observer's irrelevance at 10⁻²³ s timescales, to the redundancy of the collapse postulate, and finally to the incompatible ontological claims — a foundational conflict in quantum foundations that remains unresolved."
+        "Step 2 — Decoherence theory (Passage B) shows that the apparent collapse of the wavefunction arises from entanglement with environmental degrees of freedom — a fully unitary process described by the Schrödinger equation. No special observer, apparatus, or non-unitary collapse postulate is required.",
+        "Step 3 — For macroscopic objects at room temperature, decoherence occurs in ~10⁻²³ seconds — so fast that quantum superpositions of macroscopic states are destroyed by environmental entanglement long before any human observer interacts with the system. The observer therefore plays no causal role in the collapse.",
+        "Step 4 — Copenhagen treats wavefunction collapse as a fundamental, non-unitary dynamical law that supplements the Schrödinger equation. Decoherence theory shows that no such supplemental law is needed — the appearance of collapse emerges from unitary dynamics alone. If decoherence is correct, the collapse postulate is redundant; if Copenhagen is correct and collapse is a primitive irreducible law, decoherence provides only an approximation, not a derivation.",
+        "Step 5 — The two frameworks make mutually exclusive ontological claims about the completeness of the wavefunction description. Copenhagen holds that ψ is complete and collapse creates a definite outcome. Decoherence-based interpretations hold that ψ remains complete and unitary but the apparent collapse is perspectival — multiple branches coexist. Either definite outcomes are created by non-unitary collapse (Copenhagen) or they are not (decoherence/Everett). These ontologies are mutually exclusive.",
+        "CONFLICT — Five inference steps trace the conflict from Copenhagen's measurement boundary, through decoherence's derivation of apparent collapse from unitary dynamics, through the observer's causal irrelevance at 10⁻²³ s timescales, to the redundancy of the collapse postulate, and finally to the incompatible ontological claims — a foundational conflict in quantum foundations that remains unresolved."
       ],
       "explanation": "Five inference steps expose the foundational conflict between Copenhagen's non-unitary collapse postulate and decoherence theory's derivation of apparent collapse from purely unitary environmental entanglement, culminating in incompatible ontological claims about the nature of quantum measurement.",
       "conflicting_spans": [
@@ -1340,7 +1334,7 @@
         "Step 1 — Passage A claims that neo-Darwinian theory is insufficient and that EES mechanisms are additional, necessary evolutionary forces not fully captured by the Modern Synthesis.",
         "Step 2 — Passage B claims that standard population genetics already accommodates EES mechanisms and that they are quantitatively negligible — meaning the perceived insufficiency is an overstatement.",
         "Step 3 — Whether EES mechanisms constitute a genuine extension of evolutionary theory or merely a reframing of phenomena already within the Modern Synthesis is an active scientific debate; both positions are held by mainstream evolutionary biologists, and the question turns on contested empirical assessments of effect size and model inclusion — not on logical contradiction.",
-        "AMBIGUITY — The two passages represent genuinely competing scientific interpretations of the same body of evidence; neither can be shown to contradict the other by logic alone, and resolution requires empirical quantification that is currently disputed in the primary literature."
+        "AMBIGUOUS — The two passages represent genuinely competing scientific interpretations of the same body of evidence; neither can be shown to contradict the other by logic alone, and resolution requires empirical quantification that is currently disputed in the primary literature."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1381,7 +1375,7 @@
         "Step 1 — The amyloid cascade hypothesis (Passage A) predicts that Aβ clearance should halt disease progression. The 2023 clinical trials (Passage B) show Aβ clearance does slow clinical decline — partially supporting the hypothesis.",
         "Step 2 — However, the effect sizes are modest (27–35% slowing, not halting), and substantial disease progression occurs despite plaque clearance, suggesting either that Aβ is not the sole driver (tau, neuroinflammation, synaptic mechanisms are independent contributors) or that treatment began too late in the disease course. Neither confirms nor refutes the strong form of the cascade hypothesis.",
         "Step 3 — The passages are neither fully consistent (the cascade hypothesis predicted efficacy that would halt progression, not merely slow it modestly) nor clearly in conflict (modest slowing is consistent with Aβ playing a causal but not exclusive role). The relationship is genuinely ambiguous: the trials provide partial evidence for and against the hypothesis simultaneously.",
-        "AMBIGUITY — The clinical trial results partially validate and partially undermine the amyloid cascade hypothesis; the relationship cannot be classified as consistent or conflicting without additional information about whether the modest effect size represents the hypothesis's prediction or its partial falsification."
+        "AMBIGUOUS — The clinical trial results partially validate and partially undermine the amyloid cascade hypothesis; the relationship cannot be classified as consistent or conflicting without additional information about whether the modest effect size represents the hypothesis's prediction or its partial falsification."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1422,7 +1416,7 @@
         "Step 1 — Passage A claims the gut microbiome influences brain function and that dysbiosis is associated with depression, implying that correcting dysbiosis (e.g., via probiotics) should ameliorate depression.",
         "Step 2 — Passage B's meta-analysis finds a statistically significant but small (SMD = −0.34) and highly heterogeneous probiotic effect on depression, with no signal amplification in dysbiotic subgroups — suggesting either that (a) the gut-brain mechanism exists but probiotics are a weak intervention, (b) the association in Passage A is correlational rather than causal, or (c) the intervention is too non-specific to target the relevant microbiome-brain pathways.",
         "Step 3 — The passages are not clearly in conflict (a small effect is compatible with the gut-brain axis hypothesis) and not clearly consistent (the expected enrichment of effect in dysbiotic patients was not seen, casting doubt on the causal mechanism). The relationship is genuinely ambiguous: the clinical evidence neither confirms nor refutes the mechanistic claim in Passage A.",
-        "AMBIGUITY — The meta-analytic evidence is consistent with a weak or non-specific version of the gut-brain axis hypothesis but inconsistent with a strong, mechanistically specific version; without clearer evidence on mechanism and dysbiosis-stratified effect sizes, the relationship between the two passages is underdetermined."
+        "AMBIGUOUS — The meta-analytic evidence is consistent with a weak or non-specific version of the gut-brain axis hypothesis but inconsistent with a strong, mechanistically specific version; without clearer evidence on mechanism and dysbiosis-stratified effect sizes, the relationship between the two passages is underdetermined."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1463,7 +1457,7 @@
         "Step 1 — The dark matter hypothesis (Passage A) explains galactic rotation curves, lensing, and the CMB by invoking a new class of non-baryonic particles. MOND (Passage B) proposes a gravitational modification that explains galactic rotation curves without new particles.",
         "Step 2 — The two frameworks are in direct competition for explaining galactic rotation curves specifically — but each has distinct domains of success: MOND succeeds at galaxy scales, dark matter succeeds at cluster and cosmological scales. Neither is universally superior.",
         "Step 3 — The Bullet Cluster observation (Passage A) is often cited as a definitive falsification of MOND (spatial separation of mass and gas), but Passage B acknowledges that MOND 'struggles' with this — meaning MOND proponents accept this as a challenge, not a refutation (some versions of MOND/TeVeS can partially accommodate it). The relationship between the passages is therefore ambiguous: they conflict on galactic-scale mechanism but neither can be declared correct or incorrect without additional theoretical specification and empirical evidence.",
-        "AMBIGUITY — The passages represent competing research programs with overlapping and non-overlapping domains of empirical success; which framework is 'correct' for which observations is an active scientific debate, and the relationship cannot be determined to be a clear conflict or consistent coexistence without specifying the observational domain and the version of MOND under consideration."
+        "AMBIGUOUS — The passages represent competing research programs with overlapping and non-overlapping domains of empirical success; which framework is 'correct' for which observations is an active scientific debate, and the relationship cannot be determined to be a clear conflict or consistent coexistence without specifying the observational domain and the version of MOND under consideration."
       ],
       "explanation": null,
       "conflicting_spans": null,

@@ -496,7 +496,7 @@
       "verdict": "conflict",
       "conflict_level": 3,
       "reasoning_chain": [
-        "Step 1 — From A: Each person has inherent dignity that 'may never be violated for any external purpose' → no external outcome, however good, can justify treating a person as a mere instrument.",
+        "Step 1 — From A: Each rational being possesses inherent dignity that is inviolable — no external outcome, however compelling, can justify treating a person merely as a means to an end.",
         "Step 2 — From Step 1: 'Never for any external purpose' explicitly includes maximising aggregate happiness — even the welfare of the many cannot justify violating one person's dignity.",
         "Step 3 — From Step 2: Therefore, there exists at least one scenario (sacrificing one for the many) that is absolutely forbidden regardless of aggregate welfare.",
         "CONFLICT — Passage B states that 'justice requires' the individual to bear the cost when aggregate welfare demands it. This is precisely the scenario Step 3 declares absolutely forbidden."
@@ -594,11 +594,11 @@
       "verdict": "conflict",
       "conflict_level": 4,
       "reasoning_chain": [
-        "Step 1 — From A: Causation is a psychological habit → it is contingent, variable across individuals, and could in principle be absent in a mind that observed the same sequence.",
-        "Step 2 — From Step 1: If causation is merely a contingent psychological habit → there is no necessity to the causal connection. The mind could, in principle, have not formed this habit and experienced the same events without any causal interpretation.",
-        "Step 3 — From Step 2: If causal interpretation is not necessary → the structure of experience is not necessarily causal. Experience could be acausal in principle.",
-        "Step 4 — From Step 3: If experience could be acausal in principle → causation is not a necessary, universal, a priori condition of experience itself.",
-        "CONFLICT — Passage B states causation is an a priori category without which experience is impossible — making it a necessary, universal condition. Step 4 directly contradicts this: under Hume, causation is unnecessary and merely contingent."
+        "Step 1 — From A: Causation is a psychological habit → it is contingent and variable across individuals; a mind can observe the same sequence of events without forming a causal interpretation.",
+        "Step 2 — From Step 1: If causation is merely a contingent psychological habit → there is no necessity to the causal connection. The same events are in principle experienceable without any causal interpretation.",
+        "Step 3 — From Step 2: If causal interpretation is not necessary → the structure of experience is not necessarily causal. Acausal experience is a coherent possibility on Hume's account.",
+        "Step 4 — From Step 3: If acausal experience is coherent → causation is not a necessary, universal, a priori condition of experience itself.",
+        "CONFLICT — Passage B states causation is an a priori category without which experience is impossible — making it a necessary, universal condition. Step 4 directly contradicts this: under Hume, causation is contingent and unnecessary."
       ],
       "explanation": "Hume reduces causation to psychological habit — contingent and non-necessary. Kant makes causation a necessary a priori condition of all possible experience. These positions are incompatible at four inference steps: Hume's contingency directly defeats Kant's necessity claim.",
       "conflicting_spans": [
@@ -644,9 +644,9 @@
       "verdict": "conflict",
       "conflict_level": 4,
       "reasoning_chain": [
-        "Step 1 — From A: Labour-mixing creates ownership rights that 'others may not violate' → these rights are negative, side-constraint rights — they cannot be overridden by social utility.",
-        "Step 2 — From Step 1: If property rights are inviolable side constraints → the state may not redistribute property holdings even when redistribution would benefit the worst-off, because redistribution would violate the rights of property holders.",
-        "Step 3 — From Step 2: If redistribution of legitimately acquired property is forbidden → significant, persistent inequalities arising from legitimate initial acquisitions are just and may not be corrected.",
+        "Step 1 — From A: Labour-mixing creates ownership rights that are inviolable — others cannot override them for social utility. These are negative, side-constraint rights that exist independently of aggregate outcomes.",
+        "Step 2 — From Step 1: If property rights are inviolable side constraints → the state cannot redistribute property holdings even when redistribution would benefit the worst-off, because redistribution violates the rights of property holders.",
+        "Step 3 — From Step 2: If redistribution of legitimately acquired property is forbidden → significant, persistent inequalities arising from legitimate initial acquisitions are just and admit no correction through redistribution.",
         "Step 4 — From Step 3: If persistent inequalities from legitimate acquisition are just → there is no Rawlsian 'difference principle' obligation to alter inequalities that happen not to benefit the worst-off.",
         "CONFLICT — Passage B requires institutions to be structured so that inequalities maximise benefits to the worst-off. Step 4 shows that under Lockean rights, there is no such obligation — inequalities stemming from legitimate property rights are just regardless of their effect on the worst-off."
       ],
@@ -695,10 +695,10 @@
       "conflict_level": 4,
       "reasoning_chain": [
         "Step 1 — From A: The fundamental drive is will to power — growth and self-overcoming — 'even self-preservation is subordinate to this.'",
-        "Step 2 — From Step 1: If self-preservation is subordinate to will to power → there are conditions under which an organism would sacrifice its own survival in order to express or expand its power (e.g., reckless risk for dominance).",
+        "Step 2 — From Step 1: If self-preservation is subordinate to will to power → there are conditions under which an organism sacrifices its own survival in order to express or expand its power (e.g., reckless risk for dominance).",
         "Step 3 — From Step 2: If self-sacrifice for power-expression is possible → the organism's deepest goal is not to persist but to discharge strength. Survival is an instrument, not the final end.",
-        "Step 4 — From Step 3: If survival is merely instrumental → the organism could rationally (by its own inner logic) accept death as the price of greater power-expression. The will-to-live is not the deepest principle.",
-        "CONFLICT — Passage B states the will to live is the fundamental, primary drive and that all organisms 'strive above all to preserve their own existence.' Step 4 shows Nietzsche's will to power makes self-preservation merely instrumental, directly contradicting Schopenhauer's claim that self-preservation is the primary drive."
+        "Step 4 — From Step 3: If survival is merely instrumental → accepting death as the price of greater power-expression follows from the will-to-power's inner logic. The will-to-live is not the deepest principle.",
+        "CONFLICT — Passage B states the will to live is the fundamental, primary drive and that all organisms 'strive above all to preserve their own existence.' Step 4 shows Nietzsche's will to power makes self-preservation merely instrumental, directly contradicting Schopenhauer's claim."
       ],
       "explanation": "Nietzsche built his will-to-power concept explicitly against Schopenhauer's will-to-live, arguing that self-preservation is subordinate to power-expansion. Four inference steps from Nietzsche's premise contradict Schopenhauer's foundational claim.",
       "conflicting_spans": [

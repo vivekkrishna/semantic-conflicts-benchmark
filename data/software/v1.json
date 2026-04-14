@@ -162,8 +162,8 @@
       "verdict": "conflict",
       "conflict_level": 1,
       "reasoning_chain": [
-        "Step 1 — From A: 'Clients may safely retry...without risk of duplicate charges' and the endpoint is idempotent → retrying with the same key must produce no additional observable side effects beyond the first call.",
-        "CONFLICT — The implementation unconditionally sends an email and adds loyalty points on every call, regardless of idempotency key. These are side effects that are NOT idempotent — a retry produces a second email and second points addition. This directly contradicts the idempotency guarantee stated in A."
+        "Step 1 — From A: The endpoint is idempotent and safe to retry with the same key → retrying with the same idempotency key must produce no additional observable side effects beyond the first call.",
+        "CONFLICT — The implementation unconditionally sends an email and adds loyalty points on every call, regardless of idempotency key. These side effects are NOT idempotent — a retry produces a second email and second points addition, directly contradicting the idempotency guarantee stated in Passage A."
       ],
       "explanation": "Idempotency requires that repeated calls with the same key produce the same observable result. One inference from 'idempotent' reveals that sending emails and adding points on every call violates this — the documentation promises something the code breaks.",
       "conflicting_spans": [
@@ -351,7 +351,7 @@
       "verdict": "conflict",
       "conflict_level": 2,
       "reasoning_chain": [
-        "Step 1 — From A: 'No service may maintain a persistent local copy of order records' → the Shipping Service must not store order data in its own database.",
+        "Step 1 — From A: The prohibition on persistent local copies of order records applies to all services → the Shipping Service must not store order data in its own database.",
         "Step 2 — From Step 1: If the Shipping Service must not store order data → the table `local_orders` in the Shipping Service's schema, which stores order_id, customer_id, total_amount, and status, violates this principle.",
         "CONFLICT — The Shipping Service migration creates a `local_orders` table that is a persistent local copy of order records — precisely what the architecture document forbids."
       ],
@@ -447,7 +447,7 @@
       "verdict": "conflict",
       "conflict_level": 3,
       "reasoning_chain": [
-        "Step 1 — From B: Log compaction removes intermediate message states that have not yet been consumed → a consumer that has not yet read a message may find it removed by the compactor.",
+        "Step 1 — From B: Log compaction removes intermediate message states that have not yet been consumed → a consumer that has not yet read a message will find it removed by the compactor when compaction runs.",
         "Step 2 — From Step 1: If an unconsumed message is removed by the compactor → that message will never be delivered to the consumer. The consumer receives zero deliveries for that message.",
         "Step 3 — From Step 2: If a message can be removed before being consumed → exactly-once delivery cannot be guaranteed — some messages will be delivered zero times.",
         "CONFLICT — Passage A guarantees no message is lost (every message delivered at least once, at most once). Step 3 shows that log compaction can delete unconsumed messages, violating the 'at least once' component of exactly-once delivery."
@@ -596,7 +596,7 @@
       "reasoning_chain": [
         "Step 1 — From A: Lock lease expires after 30 seconds if not renewed → a lock held for more than 30 seconds without renewal is automatically released.",
         "Step 2 — From Step 1: If a worker acquires a lock and begins processing a job that runs for 31–45 seconds, the lock expires at 30s while the worker is still processing → another worker can acquire the same lock at second 30.",
-        "Step 3 — From Step 2: If two workers simultaneously hold the same lock → mutual exclusion is violated. Both workers may be processing the same resource concurrently.",
+        "Step 3 — From Step 2: If two workers simultaneously hold the same lock → mutual exclusion is violated. Both workers are then processing the same resource concurrently.",
         "Step 4 — From Step 3: If mutual exclusion is violated → the guarantee stated in A ('at most one process holds any given lock at any time') is violated for all jobs running 30–45 seconds.",
         "CONFLICT — Passage A guarantees mutual exclusion; Passage B allows jobs up to 45 seconds without lock renewal logic. Steps 1–4 show that any job between 30 and 45 seconds will violate the mutual exclusion guarantee."
       ],

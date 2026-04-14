@@ -24,9 +24,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Section 4.1 explicitly states termination by the Client carries 'no penalty or further obligation.'",
-        "Step 2 — Section 4.3 explicitly states termination by the Client (other than for breach) carries a 50% termination fee.",
-        "CONFLICT — The same document directly contradicts itself: one clause eliminates any penalty; the other imposes a substantial financial penalty for the identical act."
+        "CONFLICT — The same document directly contradicts itself: Section 4.1 states termination by the Client carries 'no penalty or further obligation,' while Section 4.3 imposes a 50% termination fee for the identical act. One clause eliminates any penalty; the other imposes a substantial financial penalty."
       ],
       "explanation": "A direct intra-document contradiction: Section 4.1 grants penalty-free termination while Section 4.3 of the same agreement imposes a 50% termination fee for the same act.",
       "conflicting_spans": [
@@ -73,9 +71,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — California Labor Code § 925 expressly prohibits requiring California-based employees to adjudicate California claims outside California.",
-        "Step 2 — Clause 19.2 expressly requires adjudication exclusively in Delaware for all employment disputes.",
-        "CONFLICT — The statute directly forbids exactly what the contract clause mandates, creating a surface-level, openly stated contradiction."
+        "CONFLICT — California Labor Code § 925 expressly prohibits requiring California-based employees to adjudicate California claims outside the state. Clause 19.2 expressly requires adjudication exclusively in Delaware for all employment disputes. The statute directly forbids exactly what the contract clause mandates — a surface-level, openly stated contradiction."
       ],
       "explanation": "California Labor Code § 925 explicitly prohibits mandatory out-of-state adjudication clauses for California-resident employees, and Clause 19.2 explicitly mandates Delaware arbitration — a direct statutory-contractual conflict.",
       "conflicting_spans": [
@@ -122,9 +118,7 @@
       "verdict": "conflict",
       "conflict_level": 0,
       "reasoning_chain": [
-        "Step 1 — Section 1 assigns Member Beta a 40% distribution share based on Percentage Interest.",
-        "Step 2 — Section 5 assigns Member Beta a 60% distribution share during the first five fiscal years.",
-        "CONFLICT — Both provisions govern the same event (distributions during the first five years) and explicitly assign different percentages to the same member, which is a direct arithmetic and legal contradiction within the same document."
+        "CONFLICT — Section 1 assigns Member Beta a 40% distribution share; Section 5 assigns the same member a 60% share during the first five fiscal years. Both provisions govern identical events and explicitly assign different percentages to the same member — a direct arithmetic contradiction within the same document."
       ],
       "explanation": "The two sections of the same operating agreement assign Member Beta irreconcilable distribution percentages (40% vs. 60%) for the same time period and event, a surface-level contradiction.",
       "conflicting_spans": [
@@ -171,7 +165,7 @@
       "verdict": "conflict",
       "conflict_level": 1,
       "reasoning_chain": [
-        "Step 1 — HR-14 prohibits employees from disclosing company information to any party, including government agencies, without prior written consent — meaning an employee who reports federal crimes to law enforcement without consent could be terminated for violating HR-14.",
+        "Step 1 — HR-14 prohibits employees from disclosing company information to any party, including government agencies, without prior written consent — an employee reporting federal crimes to law enforcement without consent violates HR-14 and is subject to termination under that policy.",
         "CONFLICT — Terminating an employee specifically because they provided truthful information about a federal offense to law enforcement is the very conduct criminalized by 18 U.S.C. § 1513(e). The policy creates the precondition for a federal crime in one inference step."
       ],
       "explanation": "HR-14's blanket prohibition on disclosure to government agencies, enforced through termination, becomes a mechanism for federal witness retaliation prohibited by 18 U.S.C. § 1513(e) once one applies the statute's scope to the policy's operation.",
@@ -705,7 +699,7 @@
       "reasoning_chain": [
         "Step 1 — The MFN clause requires Platform to automatically match any more favorable third-party licensing terms and extend them to Content Provider within 30 days, effectively creating a price floor for all distributors at the level of the best available deal.",
         "Step 2 — If Platform attempts to offer a lower-priced deal to a new entrant distributor as a competitive incentive (e.g., to help a smaller distributor compete), the MFN clause compels Platform to immediately raise that distributor's effective cost by extending the better rate to Content Provider — or, conversely, it deters Platform from ever offering competitive entry-level pricing to any distributor.",
-        "Step 3 — This mechanism effectively locks all distributors into uniform pricing, removing the Platform's ability to price-discriminate in ways that might actually benefit competition (e.g., lower rates to nascent competitors).",
+        "Step 3 — This mechanism effectively locks all distributors into uniform pricing, removing the Platform's ability to price-discriminate in ways that benefit competition (e.g., lower rates to nascent competitors).",
         "Step 4 — The Robinson-Patman Act, however, prohibits price discrimination that injures competition — yet the MFN clause, by forcing price uniformity through automatic extension, can itself injure competition by preventing the very price flexibility that would allow smaller distributors to enter the market, creating a paradox in which both compliance with and violation of the MFN clause can trigger antitrust exposure.",
         "CONFLICT — The MFN clause creates a pricing rigidity that, in certain market configurations, either forces Platform into conduct that injures smaller distributors' competitive position (by denying entry-level pricing) or creates a per se price-fixing mechanism — both of which conflict with the Robinson-Patman Act's anti-discrimination mandate."
       ],
@@ -877,7 +871,7 @@
         "Step 2 — The DB Plan's trust documents require the combined entity to maintain a 90% minimum funding ratio as of the first annual valuation following the merger. If the plan is currently underfunded by $40M, the combined entity must make substantial contributions to reach 90% funding — but the Merger Agreement makes no provision for such contributions and sets no escrow or funding reserve.",
         "Step 3 — ERISA § 302 independently requires minimum required contributions to avoid an accumulated funding deficiency. If Acquirer cannot meet both the trust's 90% requirement and ERISA § 302's minimum contributions simultaneously (e.g., due to cash constraints), it faces both a trust document breach and a statutory funding deficiency — two simultaneous, non-equivalent obligations.",
         "Step 4 — If the plan's funding ratio falls below 80% (possible given the $40M underfunding and Acquirer's assumed liabilities), ERISA § 436 automatically restricts lump-sum distributions — which conflicts with the Merger Agreement's requirement to maintain Target's benefit plans 'as is' for 12 months, because ERISA § 436 would force immediate modifications to the plan that Section 8.7 prohibits.",
-        "Step 5 — Additionally, under ERISA § 4062(b)(1)(A) and 29 C.F.R. § 4062.8, if Acquirer terminates the plan within five years (which it may be forced to do if contributions become unsustainable), the PBGC can assess the entire $40M+ unfunded liability against Acquirer — a contingent liability that the Merger Agreement's representations (that all DB Plan liabilities are 'fully reflected' in disclosure schedules) did not account for, because the PBGC's post-merger claim did not exist at closing and arose as a contingency only after the change of sponsor.",
+        "Step 5 — Additionally, under ERISA § 4062(b)(1)(A) and 29 C.F.R. § 4062.8, if Acquirer terminates the plan within five years due to contributions becoming unsustainable, the PBGC can assess the entire $40M+ unfunded liability against Acquirer — a contingent liability that the Merger Agreement's representations (that all DB Plan liabilities are 'fully reflected' in disclosure schedules) did not account for, because the PBGC's post-merger claim did not exist at closing and arose as a contingency only after the change of sponsor.",
         "CONFLICT — The Merger Agreement's pension assumption structure creates a five-step chain of impossible obligations: inherited underfunding triggers conflicting contribution requirements (ERISA § 302 vs. trust documents), a potential § 436 benefit freeze conflicts with the 12-month maintenance covenant, and PBGC's post-transaction claim right creates a liability that cannot be 'fully reflected' in pre-closing disclosures — making the agreement's representations, covenants, and the governing ERISA regime internally irreconcilable."
       ],
       "explanation": "Five inference steps trace the conflict through the merger's pension assumption, dual contribution requirements, automatic ERISA § 436 benefit restrictions, the 12-month maintenance covenant, and the PBGC's contingent claim — revealing an internally impossible obligation structure.",
@@ -1288,7 +1282,7 @@
         "Step 1 — Section 9.1 grants each party the right to exploit jointly-owned IP 'without accounting to the other party' — which on its face mirrors the default rule under 35 U.S.C. § 262 for US patents.",
         "Step 2 — However, 35 U.S.C. § 262 applies only in the 'absence of any agreement to the contrary,' meaning the statute is a default that parties can override. Section 9.1 may be interpreted as (a) merely restating the statutory default, or (b) affirmatively creating a contractual right that extends to non-US jurisdictions (where joint ownership default rules differ — e.g., under German Patent Act § 741, joint owners cannot exploit jointly-owned patents without co-owner consent).",
         "Step 3 — If the JDA governs global exploitation, Section 9.1's 'without accounting' right may conflict with mandatory foreign joint-ownership regimes that require consent. If the JDA is US-only, it is consistent with 35 U.S.C. § 262. The Agreement does not specify its geographic scope, making it genuinely underdetermined whether Section 9.1 is consistent with, exceeds, or conflicts with applicable law.",
-        "AMBIGUITY — The relationship between Section 9.1 and 35 U.S.C. § 262 (and potentially foreign equivalents) cannot be resolved without knowing the geographic scope of the JDA — an issue the Agreement leaves open."
+        "AMBIGUOUS — The relationship between Section 9.1 and 35 U.S.C. § 262 (and potentially foreign equivalents) cannot be resolved without knowing the geographic scope of the JDA — an issue the Agreement leaves open."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1329,7 +1323,7 @@
         "Step 1 — Section 7.4 imposes a two-year, 50-mile non-compete. Whether this is enforceable depends entirely on the governing jurisdiction: California (Bus. & Prof. Code § 16600) would void it entirely; other states (e.g., Massachusetts, Illinois post-2022) impose statutory reasonableness limits; Delaware and New York analyze reasonableness under common law.",
         "Step 2 — Section 7.6 authorizes blue-penciling — judicial modification to make the provision enforceable. In California, courts do not blue-pencil non-competes (they void them under § 16600 without modification). In other states, blue-penciling is available, meaning Section 7.6 would operate effectively. The Agreement does not specify a governing law clause in the excerpted provisions.",
         "Step 3 — Without knowing the governing law, it is impossible to determine whether Sections 7.4 and 7.6 are consistent (in a blue-pencil-friendly state), or whether Section 7.6 is surplusage/ineffective (in California), or whether the interaction creates any enforceable obligation at all. The relationship between the two provisions is genuinely underdetermined.",
-        "AMBIGUITY — The enforceability and interaction of Sections 7.4 and 7.6 cannot be resolved without the governing law clause; the passages may be consistent, partially conflicting, or entirely inoperative depending on applicable state law."
+        "AMBIGUOUS — The enforceability and interaction of Sections 7.4 and 7.6 cannot be resolved without the governing law clause; the passages may be consistent, partially conflicting, or entirely inoperative depending on applicable state law."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1370,7 +1364,7 @@
         "Step 1 — Addendum 3's 'as is' waiver and disclaimer of all liability for physical defects facially conflicts with § 1102's non-waivable disclosure duty.",
         "Step 2 — However, California courts have held that 'as is' clauses are not per se void under § 1102; they are effective to the extent they do not eliminate the seller's duty to disclose known material defects — meaning the clause could be partially enforceable (as to unknown defects and conditions the buyer inspected) while the statutory duty survives for known defects the seller concealed.",
         "Step 3 — Whether Addendum 3 is consistent with or conflicts with § 1102 depends on (a) what defects the Seller actually knew about, (b) whether a TDS was delivered, and (c) whether the specific defect at issue was within the scope of the buyer's 'as is' inspection waiver. None of these facts are discernible from the passages alone.",
-        "AMBIGUITY — The passages may be consistent (if the Seller disclosed all known defects via TDS and the 'as is' clause covers only conditions the Buyer inspected), partially conflicting (if the clause is construed to waive the TDS duty for specific known defects), or in direct conflict (if no TDS was delivered) — the relationship is underdetermined on the available text."
+        "AMBIGUOUS — The passages may be consistent (if the Seller disclosed all known defects via TDS and the 'as is' clause covers only conditions the Buyer inspected), partially conflicting (if the clause is construed to waive the TDS duty for specific known defects), or in direct conflict (if no TDS was delivered) — the relationship is underdetermined on the available text."
       ],
       "explanation": null,
       "conflicting_spans": null,
@@ -1411,7 +1405,7 @@
         "Step 1 — The 18% per annum interest rate on late payments exceeds New York's 16% civil usury limit for individuals but falls below the 25% criminal usury threshold.",
         "Step 2 — Whether this constitutes a conflict depends entirely on the legal nature of the contracting parties: if both are corporations (or other non-individual entities), N.Y. G.O.L. § 5-521 exempts them from civil usury limits, and the 18% rate is lawful; if either party is an individual, the 18% rate violates the civil usury limit.",
         "Step 3 — The passages do not identify the legal nature of 'Client' — it could be a corporation, LLC, partnership, or individual. Without that information, it is impossible to determine whether the late payment rate conflicts with New York usury law or is consistent with it.",
-        "AMBIGUITY — The legal validity of the 18% interest rate cannot be determined without knowing the legal status of the contracting parties; the relationship between the contract clause and New York usury law is genuinely underdetermined on the face of the available text."
+        "AMBIGUOUS — The legal validity of the 18% interest rate cannot be determined without knowing the legal status of the contracting parties; the relationship between the contract clause and New York usury law is genuinely underdetermined on the face of the available text."
       ],
       "explanation": null,
       "conflicting_spans": null,

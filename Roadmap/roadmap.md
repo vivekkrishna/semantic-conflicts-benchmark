@@ -62,6 +62,28 @@ why the language is acceptable.
 
 ---
 
+### R-1.5 · Add CI gate and distributional invariant tests
+**Maps to:** I-24, I-25
+**Effort:** 1–2 days
+
+Two companion steps that make the dataset validator self-enforcing:
+
+1. **CI workflow:** Add `.github/workflows/validate.yml` that runs
+   `python scripts/validate_dataset.py --strict` on every push or PR touching
+   `data/`. This converts the validator from a manual tool into an enforced gate.
+
+2. **Distributional tests:** Add `tests/test_dataset_distribution.py` asserting:
+   - 180 items total, 30 per domain, 30 per level
+   - Per-level verdict split: {conflict: 18, consistent: 8, ambiguous: 4}
+   - All conflict items have non-null `conflict_level` and `reasoning_chain`
+
+   These tests run in CI alongside the structural validator.
+
+Acceptance criterion: any PR that introduces a chain-length error, wrong class
+distribution, or modal violation fails CI before it can be merged.
+
+---
+
 ### R-1.4 · Level minimality spot-check for L3–L5
 **Maps to:** I-04
 **Effort:** 1 week (54 items: 18 per level × levels 3–5)
@@ -166,6 +188,25 @@ evaluations on the test split only. Publish the train split for community use.
 
 ---
 
+### R-3.4 · Add external model baselines to the leaderboard
+**Maps to:** I-21
+**Effort:** 1–2 days (API cost + run time)
+
+Run the benchmark on at least two additional models before any external sharing:
+- One non-Anthropic frontier model: GPT-4o via `--adapter openai --model gpt-4o`
+- One open-source model: Llama-3-70B-Instruct or Mistral-Large via `--adapter hf`
+
+Optionally add a rule-based NLI baseline (DeBERTa-NLI zero-shot) as a lower-bound anchor.
+
+Acceptance criterion: `leaderboard.csv` contains at least four rows (two Claude,
+one OpenAI, one open-source) before Phase 3 is considered complete. This is a
+prerequisite for any credible cross-provider comparative claim.
+
+**Dependency:** Can run in parallel with R-3.1–R-3.3 once Phase 1 is complete,
+since Phase 1 ensures the dataset being evaluated is valid.
+
+---
+
 ## Phase 4 — Metric Validity
 **Goal:** Ensure the primary metric measures what it claims to measure.
 **Prerequisite for:** Any paper claim that "LW-F1 measures multi-hop reasoning depth."
@@ -218,6 +259,65 @@ the 3-way task.
 
 Consider replacing it with `ambiguous_class_f1` as the diagnostic metric, since the
 conflict/ambiguous distinction is where current models most visibly struggle.
+
+---
+
+### R-4.4 · Add "always-predict-conflict" baseline as a static leaderboard row
+**Maps to:** I-22
+**Effort:** 1 hour
+
+Add a fixed header row to `leaderboard.csv` representing the trivial baseline of
+always predicting "conflict" (LW-F1 = 0.333, accuracy = 0.600, macro_f1 = 0.333,
+binary_conflict_f1 = 0.750). This row should not be appended via `write_leaderboard()`
+but maintained as a permanent first row so every leaderboard view has an interpretable
+lower bound.
+
+Update `reporter.py` to skip appending this row if it already exists.
+
+---
+
+### R-4.5 · Add failure taxonomy to reports
+**Maps to:** I-23
+**Effort:** 2–3 days
+
+Extend `reporter.py` and `evaluator.py` to produce a structured failure breakdown:
+
+| Type | Example |
+|------|---------|
+| `conflict_as_ambiguous` | Conflict item predicted ambiguous |
+| `conflict_as_consistent` | Conflict item predicted consistent |
+| `consistent_as_conflict` | Consistent item predicted conflict |
+| `consistent_as_ambiguous` | Consistent item predicted ambiguous |
+| `ambiguous_as_conflict` | Ambiguous item predicted conflict |
+| `ambiguous_as_consistent` | Ambiguous item predicted consistent |
+
+Add counts and percentages per type to the Markdown report and results JSON.
+Break down the two most common types by conflict level. This surfaces whether
+models fail by hallucinating conflicts (over-prediction) or by hedging on real
+conflicts (under-prediction) — a diagnostic distinction that raw F1 hides.
+
+---
+
+### R-4.6 · Automated BERTScore regression on chain edits
+**Maps to:** I-26
+**Effort:** 2–3 days
+
+Extend the quality monitoring pipeline so that reasoning chain edits are
+automatically checked for semantic quality regression:
+
+1. Compute a clean per-item BERTScore baseline (reasoning chain vs. `explanation`
+   field) once the dataset is fully validated, and store in `data/quality_baseline.json`
+2. Add a CI check (or pre-commit hook) that re-runs BERTScore for any item whose
+   chain was modified and asserts the score does not drop below `baseline - 0.05`
+3. Flag items that regress for human review before merging
+
+This complements the structural validator (R-1.5): the validator catches rule
+violations; the BERTScore regression catches semantically degrading rewrites that
+are structurally valid.
+
+**Dependency:** Requires R-4.2 (BERTScore sensitivity validation) to confirm the
+metric is worth regressing on. If R-4.2 finds BERTScore insensitive, replace the
+threshold check with an LLM-judge score instead.
 
 ---
 
@@ -317,17 +417,70 @@ and returns the correct splits and schema.
 
 ---
 
+### R-6.4 · Pin dependency versions in a lockfile
+**Maps to:** I-20
+**Effort:** 1 hour
+
+Add a `requirements-lock.txt` pinned to the exact package versions used to produce
+all published leaderboard results. Critical packages to pin: `bert-score`,
+`scikit-learn`, `tabulate`, `transformers`, `torch`.
+
+Document in the README which lockfile was active for each dataset version. This
+closes the gap between the `dataset_hash` reproducibility guarantee (data unchanged)
+and full end-to-end score reproducibility (data + code + dependencies unchanged).
+
+---
+
+### R-6.5 · Add failure taxonomy to reports
+**Maps to:** I-23
+*(Duplicate of R-4.5 — see Phase 4 for the implementation spec. Listed here to
+confirm it also belongs in the infrastructure rollout.)*
+
+Ensure the failure taxonomy output is included in the initial public release
+(R-6.3) so that the first external users of the benchmark can see structured
+error diagnostics, not just raw scores.
+
+---
+
+### R-6.6 · Canary model probe and model-as-judge quality checks
+**Maps to:** I-27
+**Effort:** 2–3 days
+
+Two lightweight mechanisms for detecting data quality regressions that slip past
+structural validation:
+
+**Canary probe:**
+- Run a cheap, stable reference model (e.g., `gpt-4o-mini` at temperature=0) on
+  all 180 items once the dataset is clean, and store per-item predictions and
+  per-level accuracy in `data/canary_baseline.json`
+- After any batch of data edits (>3 items changed), re-run the canary and diff
+  against baseline; flag any level with >5% accuracy change for human review
+- A jump in accuracy on a level after an edit signals items may have gotten easier
+- Keyed by `dataset_hash` so baselines from different data versions are never mixed
+
+**Model-as-judge:**
+- Write `scripts/judge_sample.py` that samples 10% of items (18 items), prompts
+  a judge model with a structured rubric rating: (1) is the conflict real? (2) is
+  the chain logically sound? (3) does the difficulty match the level?
+- Run before any major release or after any annotation pass
+- Report an aggregate quality score alongside the standard validator output
+
+**Dependency:** Can only establish a meaningful canary baseline after Phase 1 data
+fixes are complete and the `dataset_hash` is stable.
+
+---
+
 ## Roadmap Summary
 
 | Phase | Roadmap Items | Addresses | Blockers | Status |
 |-------|--------------|-----------|----------|--------|
-| 1 — Data Integrity | R-1.1, R-1.2, R-1.3, R-1.4 | I-01, I-02, I-03, I-04 | None | **Start now** |
+| 1 — Data Integrity | R-1.1, R-1.2, R-1.3, R-1.4, R-1.5 | I-01, I-02, I-03, I-04, I-24, I-25 | None | **Start now** |
 | 2 — Annotation Quality | R-2.1, R-2.2 | I-05, I-06, I-07 | Phase 1 complete | After Phase 1 |
-| 3 — Statistical Rigor | R-3.1, R-3.2, R-3.3 | I-08, I-09, I-16 | Phase 2 complete | After Phase 2 |
-| 4 — Metric Validity | R-4.1, R-4.2, R-4.3 | I-10, I-11, I-12 | Phase 3 data | After Phase 3 |
+| 3 — Statistical Rigor | R-3.1, R-3.2, R-3.3, R-3.4 | I-08, I-09, I-16, I-21 | Phase 2 complete | After Phase 2 |
+| 4 — Metric Validity | R-4.1, R-4.2, R-4.3, R-4.4, R-4.5, R-4.6 | I-10, I-11, I-12, I-22, I-23, I-26 | Phase 3 data | After Phase 3 |
 | 5 — Leakage Controls | R-5.1, R-5.2 | I-13, I-14 | Phase 4 complete | Long-term |
 | 5b — Robustness | R-5.3 | I-19 | Phase 3 data | Parallel with Phase 5 |
-| 6 — Infrastructure | R-6.1, R-6.2, R-6.3 | I-15, I-17, I-18 | None | Anytime (low effort) |
+| 6 — Infrastructure | R-6.1, R-6.2, R-6.3, R-6.4, R-6.5, R-6.6 | I-15, I-17, I-18, I-20, I-23, I-27 | None | Anytime (low effort) |
 
 **Can be done in parallel with any phase:** R-3.2 (temperature control), R-4.3
 (reframe binary F1), R-6.1, R-6.2, R-6.3 — these are low-effort and have no blockers.
@@ -339,6 +492,6 @@ and returns the correct splits and schema.
 | Gate | Required items | Not required |
 |------|---------------|--------------|
 | **Share with external researchers** | R-1.1, R-1.2, R-1.3 | Everything else |
-| **Blog post / technical report** | All Phase 1 + R-2.1 + R-3.2 + R-6.3 (HF Hub) | Phases 4–5 |
-| **Workshop paper (ACL/EMNLP)** | All Phase 1–3 + R-4.1 + R-4.2 | Phase 5–6 |
-| **Full conference paper (NeurIPS/EMNLP)** | All Phase 1–5 + IRR κ ≥ 0.70 | R-6.2 |
+| **Blog post / technical report** | All Phase 1 + R-2.1 + R-3.2 + R-3.4 (external baselines) + R-6.3 (HF Hub) | Phases 4–5 |
+| **Workshop paper (ACL/EMNLP)** | All Phase 1–3 + R-4.1 + R-4.2 + R-4.5 (failure taxonomy) | Phase 5–6 |
+| **Full conference paper (NeurIPS/EMNLP)** | All Phase 1–5 + IRR κ ≥ 0.70 + R-6.4 (lockfile) | R-6.2 |
