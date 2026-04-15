@@ -36,7 +36,8 @@
           "passage_id": "B",
           "span": "killing that person is the morally correct action"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -82,7 +83,8 @@
           "passage_id": "B",
           "span": "only legitimate source of political authority is the consent of the governed"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -128,7 +130,8 @@
           "passage_id": "B",
           "span": "Man is born free...humans are naturally good"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -175,7 +178,8 @@
           "passage_id": "B",
           "span": "Existence is primary; consciousness is not"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -222,7 +226,8 @@
           "passage_id": "B",
           "span": "universally and necessarily binding on all rational beings"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -269,7 +274,8 @@
           "passage_id": "B",
           "span": "From the fact that reason is man's means of survival, it follows that rational self-interest is the objective moral standard"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -317,7 +323,8 @@
           "passage_id": "B",
           "span": "no final state...only the eternal cycle"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -365,7 +372,8 @@
           "passage_id": "B",
           "span": "cannot be sacrificed for the collective or for any abstract principle"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -413,7 +421,8 @@
           "passage_id": "B",
           "span": "pure reason alone, prior to any experience"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -462,7 +471,8 @@
           "passage_id": "B",
           "span": "Moral values are human constructions...each person must become the author of their own values"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -511,7 +521,8 @@
           "passage_id": "B",
           "span": "justice requires that one to bear the cost"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -560,7 +571,8 @@
           "passage_id": "B",
           "span": "full actualisation of the specific capacities and functions that constitute human nature"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -610,7 +622,8 @@
           "passage_id": "B",
           "span": "pure category of the understanding...experience itself would be impossible"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -660,7 +673,8 @@
           "passage_id": "B",
           "span": "maximise the prospects of the least advantaged"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -710,7 +724,8 @@
           "passage_id": "B",
           "span": "Every organism strives above all to preserve its own existence"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -761,7 +776,8 @@
           "passage_id": "B",
           "span": "Being cannot be fully captured in propositional representation"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -812,7 +828,8 @@
           "passage_id": "B",
           "span": "If non-existence were possible, it would be preferable to existence"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -863,7 +880,8 @@
           "passage_id": "B",
           "span": "Knowledge begins from sensory particulars"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -894,7 +912,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -925,7 +948,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -956,7 +984,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -987,7 +1020,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1018,7 +1056,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1049,7 +1092,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1080,7 +1128,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1111,7 +1164,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1150,6 +1208,7 @@
         "AMBIGUOUS — Under interpretation I1 (Rand means external creative output, Nietzsche means internal becoming), these conflict: external achievement vs. internal transformation are distinct goods. Under interpretation I2 (self-overcoming could include productive achievement as one form of it), they are consistent. The text does not resolve which sense applies."
       ],
       "explanation": "Rand and Nietzsche both valorise a form of striving and creation. Whether they conflict depends on whether 'self-overcoming' subsumes productive achievement or competes with it — the passages do not specify.",
+      "conflicting_spans": null,
       "ambiguity_reason": "'Productive achievement' and 'self-overcoming' may refer to the same activity under different descriptions, or may be genuinely distinct — the texts do not resolve this."
     },
     "metadata": {
@@ -1189,6 +1248,7 @@
         "AMBIGUOUS — The conflict is real under most realistic distributions but disappears under specific empirical assumptions about marginal utility. Whether these passages conflict depends on empirical conditions not stated in the texts."
       ],
       "explanation": "Rawls and Bentham propose different distributive principles that often yield different prescriptions, but may coincide under specific conditions. The conflict is probable but not logically necessary from the texts alone.",
+      "conflicting_spans": null,
       "ambiguity_reason": "Whether maximising aggregate welfare conflicts with maximising the worst-off's position depends on empirical assumptions about distribution and marginal utility not stated in the passages."
     },
     "metadata": {
@@ -1229,6 +1289,7 @@
         "AMBIGUOUS — Under a reconciling reading, the categorical imperative could operate as a high-level constraint while Aristotelian phronesis handles the particularities of application within those constraints. The passages do not specify whether they are claiming to be complete and exclusive theories or complementary elements of a full account."
       ],
       "explanation": "On the surface these conflict — Aristotle denies algorithms, Kant provides one. But they may be describing different levels of moral reasoning (a universal constraint vs. the wisdom of application), in which case they are compatible. The passages do not resolve which scope each author intends.",
+      "conflicting_spans": null,
       "ambiguity_reason": "Conflict depends on whether Kant claims his procedure is a complete and sufficient guide to action (conflicting with Aristotle) or a necessary constraint that still requires practical wisdom in application (compatible)."
     },
     "metadata": {
@@ -1268,6 +1329,7 @@
         "AMBIGUOUS — The conflict is real under the second interpretation but dissolves under the first. The passages use 'nature' in potentially different senses without clarification."
       ],
       "explanation": "Whether 'live according to nature' (Stoic) and 'overcome nature' (Nietzsche) conflict depends entirely on whether they use 'nature' in the same sense. The passages do not specify, making the relationship genuinely ambiguous.",
+      "conflicting_spans": null,
       "ambiguity_reason": "The word 'nature' may refer to cosmic rational order (Stoic) or biological/common human nature (Nietzsche). If they use it in different senses, the passages are consistent; if the same, they conflict."
     },
     "metadata": {

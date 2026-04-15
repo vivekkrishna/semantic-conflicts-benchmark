@@ -43,6 +43,11 @@ REQUIRED_FIELDS = [
     "difficulty", "input", "label", "metadata",
 ]
 
+REQUIRED_LABEL_KEYS = [
+    "verdict", "conflict_level", "reasoning_chain",
+    "explanation", "conflicting_spans", "ambiguity_reason",
+]
+
 # Words that indicate epistemic uncertainty — prohibited in conflict-item inference steps.
 # These are checked with word-boundary matching to avoid false positives
 # (e.g. "Mayflower", "courageous").
@@ -91,6 +96,14 @@ def validate_item(item: dict[str, Any]) -> list[ValidationError]:
     label = item.get("label", {})
     verdict = label.get("verdict")
     top_level_cl = item.get("conflict_level")
+
+    # --- Required label keys ---
+    for key in REQUIRED_LABEL_KEYS:
+        if key not in label:
+            errors.append(ValidationError(
+                item_id, f"label.{key}",
+                f"Missing required label key '{key}'",
+            ))
 
     if verdict == "conflict":
         errors.extend(_validate_conflict_item(item_id, item, label, top_level_cl))

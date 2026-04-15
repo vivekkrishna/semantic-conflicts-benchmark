@@ -36,7 +36,8 @@
           "passage_id": "B",
           "span": "User account status: SUSPENDED"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -82,7 +83,8 @@
           "passage_id": "B",
           "span": "\"orderId\": str(uuid.uuid4())"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -128,7 +130,8 @@
           "passage_id": "B",
           "span": "quantity_available=0"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -175,7 +178,8 @@
           "passage_id": "B",
           "span": "send_receipt_email(charge)  # Always sends email on each call\n    loyalty_points.add(charge.user_id, amount // 10)  # Adds points on each call"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -222,7 +226,8 @@
           "passage_id": "B",
           "span": "timestamp=2024-03-15T14:02:58.000Z"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -269,7 +274,8 @@
           "passage_id": "B",
           "span": "max_retries=3"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -317,7 +323,8 @@
           "passage_id": "B",
           "span": "No INVENTORY_RESERVED event found for order_id=ORD-8823"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -365,7 +372,8 @@
           "passage_id": "B",
           "span": "CREATE TABLE local_orders (order_id UUID PRIMARY KEY..."
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -413,7 +421,8 @@
           "passage_id": "B",
           "span": "strategy: Recreate...Average deployment time: 3–5 minutes...Release cadence: weekly"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -462,7 +471,8 @@
           "passage_id": "B",
           "span": "remove duplicate log entries...may remove intermediate message states that have not yet been consumed"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -511,7 +521,8 @@
           "passage_id": "B",
           "span": "User preference vectors...stored indefinitely in the model store"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -560,7 +571,8 @@
           "passage_id": "B",
           "span": "Typical end-to-end latency: 800ms–2s"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -610,7 +622,8 @@
           "passage_id": "B",
           "span": "maximum wall-clock timeout of 45 seconds"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -660,7 +673,8 @@
           "passage_id": "B",
           "span": "Conflicting writes can arise from concurrent client sessions"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -710,7 +724,8 @@
           "passage_id": "B",
           "span": "invalidate all active sessions and tokens...within 5 minutes"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -761,7 +776,8 @@
           "passage_id": "B",
           "span": "continues to accept writes in all regions during a partition"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -812,7 +828,8 @@
           "passage_id": "B",
           "span": "model is retrained weekly using a snapshot...T-7 days...48-hour validation period"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -863,7 +880,8 @@
           "passage_id": "B",
           "span": "permanently deletes all data associated with the requesting user...including all records"
         }
-      ]
+      ],
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -894,7 +912,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -925,7 +948,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -956,7 +984,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -987,7 +1020,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1018,7 +1056,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1049,7 +1092,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1080,7 +1128,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1111,7 +1164,12 @@
       "question": "Do these passages present a conflict, are they consistent, or is the relationship ambiguous?"
     },
     "label": {
-      "verdict": "consistent"
+      "verdict": "consistent",
+      "conflict_level": null,
+      "reasoning_chain": null,
+      "explanation": null,
+      "conflicting_spans": null,
+      "ambiguity_reason": null
     },
     "metadata": {
       "created_by": "human",
@@ -1151,6 +1209,7 @@
         "AMBIGUOUS — Whether this is a conflict or expected eventual consistency depends on whether the system guarantees eventual consistency with bounded lag (not stated) or strong consistency."
       ],
       "explanation": "The state difference may represent a conflict or expected replication lag. Without knowing the consistency model and acceptable lag bounds, this is genuinely ambiguous.",
+      "conflicting_spans": null,
       "ambiguity_reason": "The time difference (2 seconds) may be within acceptable eventual-consistency lag or may indicate a real state divergence — the consistency model is not specified in the passages."
     },
     "metadata": {
@@ -1191,6 +1250,7 @@
         "AMBIGUOUS — Whether this is a conflict depends on whether 'all downstream services' in Passage A is prescriptive (conflict) or advisory (consistent), and whether the 1-hour cache TTL is acceptable for cancelled subscriptions."
       ],
       "explanation": "The access control cache does not invalidate on SUBSCRIPTION_CANCELLED, which may or may not be a conflict depending on whether real-time accuracy for cancellations is required.",
+      "conflicting_spans": null,
       "ambiguity_reason": "'Should update their state' may be a strict requirement (conflict) or a best-practice recommendation (consistent). The risk tolerance for stale access control on cancellation is not specified."
     },
     "metadata": {
@@ -1231,6 +1291,7 @@
         "AMBIGUOUS — Whether the exactly-once guarantee holds depends on whether events can arrive more than 24 hours apart, which is a deployment/operational assumption not stated in the passages."
       ],
       "explanation": "The exactly-once claim holds under the assumption that duplicate events are always within 24 hours; it breaks for events arriving outside the deduplication window. Whether that scenario can occur is not specified.",
+      "conflicting_spans": null,
       "ambiguity_reason": "The conflict only materialises if duplicate events can arrive more than 24 hours apart. Whether that is operationally possible is not stated."
     },
     "metadata": {
@@ -1271,6 +1332,7 @@
         "AMBIGUOUS — If rolling-window features are pre-computed and cached, 12ms is plausible and the passages are consistent. If they are computed on-the-fly for every transaction, 12ms may be implausibly fast for complex aggregations."
       ],
       "explanation": "The 12ms real-time latency and 30-day rolling window aggregation may or may not be compatible depending on whether features are pre-computed — the passages do not specify the feature serving architecture.",
+      "conflicting_spans": null,
       "ambiguity_reason": "Consistency depends on whether cross-account rolling window features are pre-computed in a feature store (consistent) or computed on-the-fly at inference time (potentially conflicting)."
     },
     "metadata": {

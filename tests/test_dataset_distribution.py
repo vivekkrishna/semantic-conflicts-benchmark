@@ -165,12 +165,12 @@ class TestFieldIntegrityByVerdict:
 
     def test_consistent_items_have_null_conflict_level(self, consistent_items):
         bad = [i["id"] for i in consistent_items
-               if i["label"].get("conflict_level") is not None]
+               if i["label"]["conflict_level"] is not None]
         assert bad == [], f"Consistent items with non-null conflict_level: {bad}"
 
     def test_ambiguous_items_have_null_conflict_level(self, ambiguous_items):
         bad = [i["id"] for i in ambiguous_items
-               if i["label"].get("conflict_level") is not None]
+               if i["label"]["conflict_level"] is not None]
         assert bad == [], f"Ambiguous items with non-null conflict_level: {bad}"
 
     def test_ambiguous_items_have_ambiguity_reason(self, ambiguous_items):
