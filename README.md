@@ -89,6 +89,7 @@ _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous item
 ```bash
 git clone https://github.com/your-org/semantic-conflicts-benchmark
 cd semantic-conflicts-benchmark
+pip install -r requirements-lock.txt   # exact versions used for published results
 pip install -e ".[anthropic]"
 
 ANTHROPIC_API_KEY=sk-... scbench \

@@ -1,0 +1,54 @@
+# Pinned dependency versions for reproducible benchmark evaluation (R-6.4 / I-20).
+#
+# These versions were used to produce all leaderboard results published with
+# dataset version identified by the dataset_hash in each results JSON.
+#
+# To reproduce exactly:
+#   pip install -r requirements-lock.txt
+#   pip install -e .
+#
+# Packages are grouped by role. Only direct and transitive dependencies of the
+# benchmark itself are pinned — not the full dev environment.
+
+# --- Core metrics ---
+bert-score==0.3.13
+scikit-learn==1.8.0
+scipy==1.17.1
+numpy==2.4.4
+
+# --- Model inference ---
+anthropic==0.94.0
+openai==2.31.0
+transformers==5.5.3
+torch==2.11.0
+tokenizers==0.22.2
+safetensors==0.7.0
+
+# --- Reporting ---
+tabulate==0.10.0
+
+# --- Utilities ---
+python-dotenv==1.2.2
+regex==2026.4.4
+huggingface_hub==1.10.1
+tqdm==4.67.3
+
+# --- Testing ---
+pytest==9.0.3
+
+# --- Transitive dependencies of the above (version-sensitive) ---
+nltk==3.9.4
+rouge_score==0.1.2
+packaging==26.0
+filelock==3.25.2
+fsspec==2026.3.0
+networkx==3.6.1
+sympy==1.14.0
+mpmath==1.3.0
+requests==2.33.1
+httpx==0.28.1
+httpcore==1.0.9
+anyio==4.13.0
+sniffio==1.3.1
+joblib==1.5.3
+threadpoolctl==3.6.0
