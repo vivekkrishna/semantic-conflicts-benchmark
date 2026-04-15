@@ -11,6 +11,7 @@ Supported formats:
 import csv
 import json
 import os
+import statistics
 from pathlib import Path
 from typing import Any
 
@@ -28,13 +29,28 @@ LEVEL_NAMES = {0: "L0 Surface", 1: "L1 Immediate", 2: "L2 Two-hop",
 
 def write_json(results: EvaluationResults, path: str) -> None:
     os.makedirs(Path(path).parent, exist_ok=True)
+
+    lw_f1_std = None
+    unstable  = False
+    if len(results.per_run_lw_f1) > 1:
+        lw_f1_std = statistics.stdev(results.per_run_lw_f1)
+        unstable  = lw_f1_std > 0.01
+
+    # Mirror lw_f1_std into the overall dict for convenience
+    overall = dict(results.overall)
+    overall["lw_f1_std"] = lw_f1_std
+
     payload = {
         "model":             results.model_name,
         "run_id":            results.run_id,
         "total_items":       results.total_items,
         "n_runs":            results.n_runs,
+        "temperature":       results.temperature,
         "dataset_hash":      results.dataset_hash,
-        "overall":           results.overall,
+        "overall":           overall,
+        "lw_f1_std":         lw_f1_std,
+        "per_run_lw_f1":     results.per_run_lw_f1 if results.per_run_lw_f1 else [],
+        "unstable":          unstable if results.n_runs > 1 else False,
         "by_domain":         results.by_domain,
         "by_level":          {str(k): v for k, v in results.by_level.items()},
         "by_conflict_type":  results.by_conflict_type,
@@ -144,8 +160,8 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
 # ---------------------------------------------------------------------------
 
 LEADERBOARD_HEADER = [
-    "model", "run_id", "n_items",
-    "lw_f1", "accuracy", "macro_f1", "binary_conflict_f1", "expl_bert_f1",
+    "model", "run_id", "n_items", "n_runs", "temperature",
+    "lw_f1", "lw_f1_std", "accuracy", "macro_f1", "binary_conflict_f1", "expl_bert_f1",
     "level_0_f1", "level_1_f1", "level_2_f1", "level_3_f1", "level_4_f1", "level_5_f1",
     "philosophy_f1", "software_f1", "law_f1", "science_f1", "content_f1", "teams_f1",
 ]
@@ -161,7 +177,10 @@ BASELINE_ROW = {
     "model":               "baseline_always_conflict",
     "run_id":              "static",
     "n_items":             180,
+    "n_runs":              1,
+    "temperature":         "",
     "lw_f1":               0.333,
+    "lw_f1_std":           "",
     "accuracy":            0.600,
     "macro_f1":            0.250,
     "binary_conflict_f1":  0.750,
@@ -180,11 +199,19 @@ def write_leaderboard(results: EvaluationResults, path: str) -> None:
     bl = results.by_level
     bd = results.by_domain
 
+    lw_f1_std = (
+        statistics.stdev(results.per_run_lw_f1)
+        if len(results.per_run_lw_f1) > 1 else ""
+    )
+
     row = {
         "model":               results.model_name,
         "run_id":              results.run_id,
         "n_items":             results.total_items,
+        "n_runs":              results.n_runs,
+        "temperature":         results.temperature,
         "lw_f1":               o.get("lw_f1", ""),
+        "lw_f1_std":           lw_f1_std,
         "accuracy":            o["accuracy"],
         "macro_f1":            o["macro_f1"],
         "binary_conflict_f1":  o["binary_conflict_f1"],

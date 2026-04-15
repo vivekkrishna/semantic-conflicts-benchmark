@@ -63,9 +63,11 @@ def _load_adapter(args: argparse.Namespace):
     module = importlib.import_module(module_path)
     cls    = getattr(module, class_name)
 
-    kwargs = {}
+    kwargs: dict = {}
     if args.model:
         kwargs["model"] = args.model
+    if hasattr(args, "temperature"):
+        kwargs["temperature"] = args.temperature
     return cls(**kwargs)
 
 
@@ -93,8 +95,10 @@ def main() -> None:
         help="Dotted import path to a custom ModelAdapter subclass.",
     )
 
-    parser.add_argument("--model",      default=None,      help="Model name passed to the adapter constructor.")
-    parser.add_argument("--n-runs",     type=int,          default=1,
+    parser.add_argument("--model",       default=None,   help="Model name passed to the adapter constructor.")
+    parser.add_argument("--temperature", type=float,     default=0.0,
+                        help="Sampling temperature passed to the adapter (default: 0.0 for greedy decoding).")
+    parser.add_argument("--n-runs",      type=int,       default=1,
                         help="Number of independent runs per item; majority vote is used when >1 (default: 1).")
     parser.add_argument("--domains",    nargs="+",         default=None,
                         metavar="DOMAIN",
@@ -129,6 +133,7 @@ def main() -> None:
         domains=requested_domains,
         data_dir=args.data_dir,
         n_runs=args.n_runs,
+        temperature=args.temperature,
         verbose=args.verbose,
     )
     results = evaluator.run()

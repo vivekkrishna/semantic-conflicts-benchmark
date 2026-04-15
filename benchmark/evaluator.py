@@ -47,6 +47,8 @@ class EvaluationResults:
     per_item:         list[dict[str, Any]] = field(default_factory=list)
     dataset_hash:     str = ""
     n_runs:           int = 1
+    temperature:      float = 0.0
+    per_run_lw_f1:    list[float] = field(default_factory=list)
 
 
 class Evaluator:
@@ -58,14 +60,16 @@ class Evaluator:
         domains: Optional[list[str]] = None,
         data_dir: str = "data/",
         n_runs: int = 1,
+        temperature: float = 0.0,
         verbose: bool = False,
     ) -> None:
-        self.adapter  = adapter
-        self.domains  = domains or DOMAINS
-        self.data_dir = Path(data_dir)
-        self.n_runs   = max(1, n_runs)
-        self.verbose  = verbose
-        self._task    = VerdictClassificationTask()
+        self.adapter     = adapter
+        self.domains     = domains or DOMAINS
+        self.data_dir    = Path(data_dir)
+        self.n_runs      = max(1, n_runs)
+        self.temperature = temperature
+        self.verbose     = verbose
+        self._task       = VerdictClassificationTask()
 
     def run(self) -> EvaluationResults:
         run_id      = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -105,10 +109,20 @@ class Evaluator:
         overall["lw_f1"] = lw_f1
 
         # Agreement rate across runs (1.0 when n_runs == 1)
+        per_run_lw_f1: list[float] = []
         if self.n_runs > 1:
             overall["mean_run_agreement"] = round(
                 sum(r.get("run_agreement", 1.0) for r in results) / len(results), 4
             )
+            # Compute LW-F1 independently per run using that run's verdict
+            for run_idx in range(self.n_runs):
+                run_results = []
+                for r in results:
+                    verdicts = r.get("run_verdicts", [r["prediction"]])
+                    verdict_i = verdicts[run_idx] if run_idx < len(verdicts) else r["prediction"]
+                    run_results.append({**r, "prediction": verdict_i})
+                run_by_level = compute_level_metrics(run_results)
+                per_run_lw_f1.append(round(level_weighted_f1(run_by_level), 6))
 
         return EvaluationResults(
             model_name=self.adapter.name,
@@ -123,6 +137,8 @@ class Evaluator:
             per_item=results,
             dataset_hash=dataset_hash,
             n_runs=self.n_runs,
+            temperature=self.temperature,
+            per_run_lw_f1=per_run_lw_f1,
         )
 
     # ------------------------------------------------------------------
