@@ -32,6 +32,8 @@ Modelled after TruthfulQA and FEVER. Plug in any model in one Python class.
 
 _Each level's N = 18 conflict items at that depth + 72 consistent/ambiguous items (90 total). This measures whether the model can identify level-L conflicts **without** over-predicting on non-conflict items._
 
+> **Statistical note:** Per-level scores at L4–L5 are based on 18 conflict items each (95% CI ≈ ±0.33 on conflict-class F1) and should be interpreted with wide uncertainty. Cross-level comparisons at these depths are indicative only until the dataset is expanded (see [Roadmap](Roadmap/roadmap.md)).
+
 #### claude-sonnet-4-6
 
 | Level | Name | Accuracy | Macro-F1 | Conflict-F1 | BERTScore-F1 | N |
@@ -194,6 +196,57 @@ Weights: L0=1, L1=2, L2=3, L3=4, L4=5, L5=6. A model that only detects surface c
 | **teams** | Conflicts between team norms and a new joiner's stated principles | Async-only team vs AI agent that requires daily standups |
 
 Each domain contains **30 items**: 18 conflict (3 × L0–L5), 8 consistent, 4 ambiguous.
+
+---
+
+## How This Benchmark Compares
+
+Every major benchmark measures a different underlying skill. The table below maps 10 standard benchmarks against the Semantic Conflicts Benchmark (SCB) across the dimensions that actually differentiate them — not just topic coverage.
+
+### Benchmark Skill Taxonomy
+
+| Benchmark | Core Skill | Input Format | Structured Difficulty | Explanation Scored | Detects Implicit Conflicts | Ambiguity Class | Domain Coverage |
+|-----------|-----------|:------------:|:--------------------:|:-----------------:|:--------------------------:|:---------------:|-----------------|
+| MMLU | Factual recall | MCQ (4-choice) | — | — | — | — | 57 academic subjects |
+| GSM8K | Arithmetic reasoning | Word problem → number | — | — | — | — | Math only |
+| HumanEval | Code synthesis | Docstring → Python fn | — | — | — | — | Code only |
+| BIG-bench | Diverse reasoning (200+ subtasks) | Varies per task | Per-task only | — | — | — | Mixed |
+| HellaSwag | Commonsense completion | Partial sentence → MCQ | — | — | — | — | Everyday text |
+| TruthfulQA | Factual honesty / hallucination | Open-ended question | — | — | — | — | Myths & misconceptions |
+| ARC | Elementary science reasoning | MCQ (4-choice) | Easy / Challenge split | — | — | — | Science only |
+| Winogrande | Pronoun coreference | Fill-in-the-blank (2-choice) | — | — | — | — | Language |
+| DROP | Reading comprehension + arithmetic | Passage + question → span | — | — | — | — | News / history |
+| MT-Bench / Chatbot Arena | Conversational quality | Multi-turn dialogue | — | — | — | — | Open-ended |
+| **SCB (this work) ✦** | **Semantic conflict detection** | **Passage pair → 3-class verdict** | **L0–L5 (6 levels)** | **BERTScore vs. reasoning chain** | **Yes (multi-hop)** | **Yes** | **6 real-world domains** |
+
+### Unique Value Propositions
+
+**1. Difficulty defined by reasoning depth, not subject matter.**
+L0–L5 maps to the exact number of 100%-certain inference steps required to surface a conflict. This pinpoints *where* a model's reasoning chain breaks — not just whether it gets the final answer right. No other benchmark in this list offers structured depth at this granularity.
+
+**2. Tests the skill that determines real-world reliability.**
+MMLU asks "do you know X?" SCB asks "do you notice that source A and source B contradict each other?" — the skill a model needs when reviewing contracts, audit trails, distributed-system logs, or scientific literature. Pattern-matching is insufficient; derived semantics must be checked.
+
+**3. Explanation faithfulness is a first-class metric.**
+A model can predict "conflict" for the wrong reason. Scoring model explanations with BERTScore against ground-truth `reasoning_chain` fields catches this. No other benchmark in this list measures whether the model traced the *correct* logical path.
+
+**4. Ambiguity is a scored class, not noise.**
+Most benchmarks force binary correctness. SCB's 3-class taxonomy (conflict / consistent / ambiguous) rewards models that correctly surface genuine uncertainty, and penalises both over-confident labelling and reflexive hedging. Macro-F1 over all three classes is reported alongside the primary LW-F1.
+
+**5. Domains drawn from real professional contexts.**
+Philosophy, software, law, science, content moderation, team dynamics — chosen because semantic conflicts arise in each with real consequences, not because they produce convenient synthetic puzzles.
+
+**6. LW-F1 prevents shallow-reasoning models from hiding.**
+A model that only catches surface (L0) contradictions scores ≈ 0.048 on LW-F1 even with 100% L0 accuracy. The level-weighted primary metric exposes the "pattern-matching vs. reasoning" gap that flat accuracy obscures.
+
+### When to reach for this benchmark
+
+| If you want to measure… | Reach for |
+|-------------------------|-----------|
+| General knowledge breadth across subjects | MMLU |
+| Math, code, or language fundamentals | GSM8K · HumanEval · Winogrande |
+| Truthfulness and hallucination resistance | TruthfulQA |
+| Multi-hop semantic conflict detection and reasoning faithfulness | **SCB** |
 
 ---
 
