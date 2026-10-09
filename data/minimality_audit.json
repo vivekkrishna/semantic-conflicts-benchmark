@@ -1,0 +1,2216 @@
+[
+  {
+    "id": "content_L3_001",
+    "domain": "content",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B reveals she executed a sector rotation — selling positions in three sectors and buying into two others — driven by Fed rate-hike signals received 'this morning.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5npv1s2QBJbjt4h2q'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Selling positions in response to current macro news is, by definition, market timing: acting on market signals to alter a portfolio. Passage A explicitly condemns market timing as 'a fool's game' that 'destroys returns.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5pkkm6gjfwvQqccY3'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The 'never sell' and 'five-year minimum hold' rules mean that executing a rotation — any rotation — violates the stated philosophy regardless of the reasoning given; 'rotating out of' sectors means selling, which she said she would never do in response to market conditions.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p63hNpvWu4PXQbiD3f'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L3_002",
+    "domain": "content",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B documents the purchase of a 77-inch television (LG OLED), a gaming console (PS5), multiple games, a keyboard, artwork, and kitchen gadgets — all categories he either listed as absent or as non-essential.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p667UvKcj8gq7LZnhF'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Adding a television, a gaming console, artwork, and multiple gadgets to a claimed sub-100-item inventory almost certainly violates the 100-item constraint (each item counts separately), and each purchase is a 'non-essential item' under the minimalist framework he described.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p67xrKgwjySrfXvurN'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The haul video format itself — celebrating consumption and linking to purchase pages — is the direct antithesis of the 'consumption is the enemy of freedom' philosophy he said he documents to benefit others. Producing this content implies he is now advocating the opposite of what he previously said everyone should do.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p69shcsTx4eydJxHCY'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L3_003",
+    "domain": "content",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B explicitly states 'I recommend you do the same' (taking 400mg of magnesium glycinate nightly) — this is a direct supplement recommendation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6BqWwDvhU4q1yntBm'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Passage B adds 'You don't need a doctor for this,' which is a direct instruction to the audience to bypass medical consultation before following the supplement protocol — the exact safeguard she promised she would require.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6Dht9LoxzP1zVstx1'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The specific dosing instructions (start at 200mg, increase to 400mg after two weeks) constitute medical-adjacent guidance about a dosing schedule, which goes beyond general information into the territory she defined as requiring professional consultation before dissemination.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6FWn7BnWgmx5xpCaW'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L3_001",
+    "domain": "law",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The APA purports to transfer 'all software licenses' from Seller to Buyer as part of the Purchased Assets.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6HTc4QqHW2TuCC9E8'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Adobe's license agreement (Section 14.2) prohibits assignment of the license by operation of law or asset acquisition without Adobe's prior written consent.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6Kh3r49p7JqPF2kuQ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Because the APA does not list Adobe's written consent as a condition to closing (it is not on Schedule 2.3 or referenced elsewhere), and the license is non-assignable without such consent, the APA's purported transfer of the Adobe license is void ab initio under the license's own terms — meaning the Buyer acquires no rights under the Adobe license despite the APA's representations.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6MbeHzFKg5Fw8vWAf'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L3_002",
+    "domain": "law",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Clause 5 requires exclusivity, a fixed minimum of 40 hours per week, adherence to the Client's internal processes and style guides, and use of only Client-provided hardware — all hallmarks of behavioral control by the hirer.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6PgudXngzDghv5smh'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Under the Borello multi-factor test codified in California Labor Code § 3353, a worker who is subject to the hirer's control over the manner and means of work (not just the result) is legally an employee, not an independent contractor.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6RaWZ3bUAz9wmGNdm'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Because the Contractor satisfies every Borello indicia of employee status (exclusivity, set hours, process/style control, equipment provision), classifying the worker as an independent contractor is legally incorrect under California law — meaning the 'Independent Contractor Agreement' label is a legal misclassification.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6ThkTZ7ZYQ5zdrHWv'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L3_003",
+    "domain": "law",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The 2014 Arbitration Agreement relies on FAA preemption to validate its class waiver, which was the prevailing interpretation under AT&T Mobility LLC v. Concepcion, 563 U.S. 333 (2011) at the time of execution.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6VioF85YZk8FFjrM7'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — However, the NLRB's pre-2018 position (operative at the time of the agreement's execution) was that such waivers violate NLRA § 7 rights to concerted activity, meaning the agreement contained a provision that a federal agency considered illegal at execution — creating regulatory conflict.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6XmaWwgs4v3aSwzE6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Post-Epic Systems (2018), the Supreme Court resolved this split in favor of FAA enforceability, but the agreement was already subject to NLRB enforcement actions during 2014–2018, meaning the agreement's legal status changed over time — and employees subject to the agreement during that window had a valid NLRB-backed argument that the waiver was void, directly conflicting with the agreement's own FAA preemption claim.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6ZfBb4VdMGezyHwjA'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L3_001",
+    "domain": "philosophy",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: 'There exists an objective morality' → a moral standard holds independently of whether any individual constructs or accepts it. It is true regardless of individual will.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6beEyvXnBpJDmBs2U'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If moral standards exist independently of individuals → some values are universally correct; they are discovered, not created. Individuals cannot be the authors of all their own values — some are already determined by objective morality.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6dcJvuj4JMn2X3R1N'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If some values are already objectively determined → it is not the case that ALL moral values are human constructions or that each person must create ALL their values from scratch.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6fZt6CHHBrYAnaZuo'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L3_002",
+    "domain": "philosophy",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Each rational being possesses inherent dignity that is inviolable — no external outcome, however compelling, can justify treating a person merely as a means to an end.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6hdQnjNphiu3qfuCE'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: 'Never for any external purpose' explicitly includes maximising aggregate happiness — even the welfare of the many cannot justify violating one person's dignity.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6jzHsgHsYm2CBQYEF'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: Therefore, there exists at least one scenario (sacrificing one for the many) that is absolutely forbidden regardless of aggregate welfare.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6ncYbn3DESBQAYt3a'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L3_003",
+    "domain": "philosophy",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: 'There is no pre-given human nature' → there is no fixed set of human capacities or functions that define what a person should become.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6pUuxW8zzLMbwUstP'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If there is no human nature → there is no species-specific form of flourishing. A person cannot 'fail' to actualise their nature because there is no nature to actualise.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6rSytAZaFkqbshTBZ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If no form of flourishing is defined by nature → there is no correct or incorrect way to live as a human being — every life-choice is equally valid in principle.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6tVWa1cnd7t7dV3u9'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L3_001",
+    "domain": "science",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Miasma theory predicts that cholera cases should cluster near sources of rotting matter and foul air, and that people exposed to the same air mass should have similar disease rates.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6vYnpukGvi27WtYa6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Snow's spatial analysis found that cholera cases clustered around the Broad Street water pump, not around identified miasmatic sources. The brewery workers — exposed to the same air but drinking different water — were unaffected, directly violating miasma theory's air-exposure prediction.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6xZ6D4VxRNZ2ygKVK'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — If disease risk is determined by the specific water source consumed rather than the ambient air quality, then the causal mechanism must be waterborne (a contaminant in the water) rather than airborne — and Koch's subsequent isolation of Vibrio cholerae from contaminated water confirms a bacterial pathogen transmitted through fecal-oral contamination, not air. This three-step chain makes the miasmatic causal mechanism not merely incomplete but fundamentally incorrect.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p6zeMLTAB27Z9mgizu'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L3_002",
+    "domain": "science",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage A claims that adult cardiomyocytes do not divide and lost cells are replaced only by fibrotic scar, implying zero cardiomyocyte renewal after development — a renewal rate of exactly 0%.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p72dADqqtpfAeqLTNR'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Passage B's ¹⁴C data establishes renewal rates of ~1%/year at age 25 and ~0.45%/year at age 75, with ~45% of a 75-year-old's cardiomyocytes having been generated post-birth. These renewal rates are nonzero, directly falsifying the zero-renewal claim.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p74VGsX4NUNi6Vqy7P'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — If approximately 45% of cardiomyocytes in a 75-year-old were generated post-birth, then the claim that myocardial infarction damage cannot be repaired by new cardiomyocyte generation is not universally true; the heart has a measurable (if limited) regenerative mechanism. The classical model's clinical conclusion — that fibrotic replacement is the only possible response to cardiomyocyte loss — is therefore an overstated generalization contradicted by the renewal data.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p76XK2U69QdvKZakE6'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L3_003",
+    "domain": "science",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Malthus predicts food production grows arithmetically (linearly), meaning per-capita food supply must decline as population grows exponentially.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p78a6Sfa9A9MpuE18v'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Passage B establishes that per-capita food supply increased from 2,200 to 2,900 kcal/person/day between 1961 and 2020, even as population grew from 3 to 8 billion — meaning food production grew faster than population, directly contradicting the arithmetic/geometric asymmetry.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7ANzRJRFMtDxexk2c'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Malthus's model also predicts that improvements in living standards are unsustainable because they stimulate population growth, restoring poverty. The demographic transition model (Passage B) predicts and documents the opposite: rising living standards reduce fertility rates, breaking the feedback loop Malthus assumed. The empirical fertility decline in developed nations directly falsifies Malthus's coupling assumption.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7CDNRK8iyqZVGugfA'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L3_001",
+    "domain": "software",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From B: Log compaction removes intermediate message states that have not yet been consumed → a consumer that has not yet read a message will find it removed by the compactor when compaction runs.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7EakEY8RBpxCr5Pa4'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If an unconsumed message is removed by the compactor → that message will never be delivered to the consumer. The consumer receives zero deliveries for that message.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7GfWgUj9qeSmsBUrf'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If a message can be removed before being consumed → exactly-once delivery cannot be guaranteed — some messages will be delivered zero times.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7JuhRLu4cemDute6i'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L3_002",
+    "domain": "software",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From B: User preference vectors are computed from 'full behavioural history' and stored 'indefinitely' → these vectors encode behavioural PII about each user.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7LrGrTfZcMojiqdNB'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: Behavioural data is explicitly listed as PII in the security policy → these vectors are PII and subject to the 30-day deletion requirement after account closure.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7NhQAEyxz7goMrgFq'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If these PII vectors must be deleted within 30 days of closure → storing them 'indefinitely' violates the retention policy for any closed account whose vectors have not been deleted.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7QakyVP5DwddZPm5o'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L3_003",
+    "domain": "software",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From B: The write path involves four asynchronous hops (PostgreSQL → Debezium → Kafka → Elasticsearch) with 800ms–2s latency → the search index is updated asynchronously, not synchronously.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7SXbDCRiKkyeoJmTQ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: During the 800ms–2s window after a write, the search index does not yet reflect the new data → there is a window of inconsistency between the catalogue and the search index.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7UUuwgpNPdS8wFse4'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If a search query arrives during this window → the search service returns stale data, not the current state of the catalogue.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7WNmBWvLX6PVBb7Nj'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L3_001",
+    "domain": "teams",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B proposes that ReportingService establishes 'direct read connections to the primary read replicas' of OrderService's, InventoryService's, and UserService's PostgreSQL databases.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7YP4kk3qxHmPf9GJg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — A direct read connection to another service's PostgreSQL database is a direct connection to another service's data store at the network layer.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7aLtRHGHZagHjZvpc'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — ADR-014 prohibits any service from holding a direct connection to another service's database at any network layer and classifies such connections as critical architectural defects.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7cC1fxMhBvWg4C7EQ'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L3_002",
+    "domain": "teams",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The performance framework assigns 40% of each engineer's quarterly score to 'Individual story point velocity, measured as personal points completed per sprint.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7eDoHDtXxxVQCfM16'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Measuring individual story point velocity requires decomposing sprint velocity data into per-engineer contributions — exactly the decomposition Passage A prohibits.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7gEM5GcdVTg2KYJJ7'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Once velocity is decomposed at the individual level and assigned a 40% weight, it is being used in individual performance evaluation — the precise use case Passage A permanently prohibits.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7i3jcN9wrF35cgjiS'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L3_003",
+    "domain": "teams",
+    "conflict_level": 3,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B directs the agent to 'proceed with the highest-probability correct action immediately' and to 'not initiate blocking confirmation requests' when confidence exceeds 85%.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7jya827XZGfspoWfv'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Irreversible actions such as production deployments and data deletion are among the high-confidence actions the agent will encounter — many routine production operations will exceed 85% confidence.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7moi8may5vAR3Keed'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — When the agent encounters an irreversible action with >85% confidence, it will proceed without a confirmation request — which is precisely what Passage A prohibits for all irreversible actions, 'regardless of confidence level.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p7ogpDTvSMGeu4ppac'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L4_001",
+    "domain": "content",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B describes A/B testing thumbnails to 'maximise click-through rate' — this is precisely the thumbnail optimisation Passage A equates with manipulation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3DGkkTKaqaodeaVPX'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — 'Open loops every 8 minutes to keep viewers watching' is a documented retention technique designed to create psychological compulsion to continue viewing — the definition of addictive design under Passage A's framework.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3FBbkrrDoNbFBsTxz'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Moving to 25-35 minute videos 'optimised' for retention contradicts his 'under 12 minutes to not waste your time' principle, which was explicitly framed as a respect-for-autonomy design choice rather than a practical constraint.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3H6hARvQpEAfAXgWE'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The 600% watch-time and 340% engagement growth, while not inherently problematic, are the downstream metrics that Passage A's framework defines as the output of an addictive, autonomy-violating content strategy — meaning the channel is now achieving the exact outcome he condemned.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3K41r8hpbxzaUJBuo'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L4_002",
+    "domain": "content",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B announces a salaried executive role at WealthSphere — a direct violation of the stated commitment in Passage A.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3LxrsTHxtgzgtxQCT'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — WealthSphere is 'backed by three major banks,' meaning the entity paying her salary is itself financially tied to the banking industry she has positioned herself in contrast to. Under her own framework, this is a maximal conflict-of-interest scenario.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3Wv9aRfU5aufz6Nks'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Winding down her existing course business ('only sell my own products') and consolidating all content creation under the employer's brand means she is now 100% dependent on a single corporate entity for her livelihood — the exact 'single entity controls what I say' scenario she said destroys editorial independence.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3ZD4dwB8Siw2hLupH'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — By her own stated rule ('every financial educator who takes corporate money eventually shills'), she has now placed herself in the structural position she predicted leads inevitably to shilling, while still operating as a financial educator.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3b8tzjsfD7TnTwhLZ'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L4_003",
+    "domain": "content",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B lists in a single quarter: a new course, a book manuscript, a 14-session workshop series, a new paid newsletter, a membership community, a new podcast, a website redesign, and a merchandise store — that is at minimum eight distinct major projects simultaneously.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3d21JMgPiFHiXBuaq'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Eight simultaneous projects in one quarter is structurally incompatible with 'one project at a time' and 'no multitasking policy in my own life'; the sheer number requires parallel workstreams.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3eurzdH3Xj4S7BQ2b'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Three major projects per year (her Passage A baseline) maps to roughly one per quarter. Shipping eight in one quarter represents approximately a 26x increase in project throughput — which cannot be achieved within the four-day workweek, nine-hours-of-sleep, and no-after-6pm-email constraints she claims to maintain.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3gjW5dad7yqnZeEfT'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — 'Big things happening — subscribe to the newsletter for what's coming in Q2' signals further acceleration rather than the deliberate pacing she teaches, revealing that her public behaviour is now the antithesis of the 'slow movement' identity she monetises.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3idquosFBMawDqLjs'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L4_001",
+    "domain": "law",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Alpha Holdings LLC is both the 100% owner of Beta Corp. and the Manager of Gamma LLC, giving it control over both the seller (Gamma) and — through its principals — the buyer (Delta Co.).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3kYhGEcs2NPcPWz7D'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The transaction is therefore a self-dealing transaction in which Alpha's principals benefit from Delta acquiring Gamma's assets at whatever price is set, while Beta Corp. (which owns Gamma) bears any shortfall in fair value.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3naEV6iLHw7vQFvKg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Under Delaware's entire fairness doctrine (Sinclair Oil; DGCL § 144), Alpha Holdings, as the controlling party on both sides of the transaction, must demonstrate both fair dealing (process) and fair price — a burden it bears by virtue of standing on both sides.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3pb2P3yq3GaFn4oBg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The Transaction Memorandum records Beta Corp.'s board approval but makes no mention of independent director review, special committee formation, fairness opinion, or minority interest protection — none of the procedural indicia required by the entire fairness process.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3rTtKF8VVvn8QDcME'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L4_002",
+    "domain": "law",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The MFN clause requires Platform to automatically match any more favorable third-party licensing terms and extend them to Content Provider within 30 days, effectively creating a price floor for all distributors at the level of the best available deal.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3tPUqrEmqeq4W3UsY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — If Platform attempts to offer a lower-priced deal to a new entrant distributor as a competitive incentive (e.g., to help a smaller distributor compete), the MFN clause compels Platform to immediately raise that distributor's effective cost by extending the better rate to Content Provider — or, conversely, it deters Platform from ever offering competitive entry-level pricing to any distributor.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3vS1SJT3CatCQvLr8'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — This mechanism effectively locks all distributors into uniform pricing, removing the Platform's ability to price-discriminate in ways that benefit competition (e.g., lower rates to nascent competitors).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3xT43uFoxZeejrWXc'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The Robinson-Patman Act, however, prohibits price discrimination that injures competition — yet the MFN clause, by forcing price uniformity through automatic extension, can itself injure competition by preventing the very price flexibility that would allow smaller distributors to enter the market, creating a paradox in which both compliance with and violation of the MFN clause can trigger antitrust exposure.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3zQsuo2oS6NELHxd6'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L4_003",
+    "domain": "law",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The General Partner manages both Fund I and Fund II, both of which hold investments in the same portfolio companies, creating a structural conflict of interest in allocation decisions.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p42GzYFFkxfuueTeWU'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Section 12.3 grants the General Partner sole discretion to allocate Fund II capital to follow-on investments in companies also held by Fund I, and explicitly waives the requirement for Fund II Limited Partner consent — meaning Fund II LPs have no oversight over decisions that directly benefit Fund I (e.g., protecting Fund I's position by having Fund II prop up a struggling portfolio company).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p44CajXhhfrjAw3Uhc'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Under the Investment Advisers Act § 206 and SEC Release IA-1092, the General Partner, as a registered investment adviser, owes a non-waivable fiduciary duty to both funds' investors and must disclose and manage cross-fund conflicts; the no-consent provision in Section 12.3 cannot substitute for the disclosure and management required by federal securities law.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p46DNkHFYxLdRXc7vR'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — If the General Partner exercises sole discretion to have Fund II make a follow-on investment primarily to protect Fund I's existing position (rather than because it is in Fund II's independent interest), this constitutes a breach of fiduciary duty and fraud under § 206(1)-(2) — a conflict the subscription agreement's no-consent clause cannot cure, because federal fiduciary duties are not contractually waivable.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p488y7vjm13swkJLMj'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L4_001",
+    "domain": "philosophy",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Causation is a psychological habit → it is contingent and variable across individuals; a mind can observe the same sequence of events without forming a causal interpretation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4A15ZaiVoK2tXM3gw'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If causation is merely a contingent psychological habit → there is no necessity to the causal connection. The same events are in principle experienceable without any causal interpretation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4Bze4WZajd2agiBmY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If causal interpretation is not necessary → the structure of experience is not necessarily causal. Acausal experience is a coherent possibility on Hume's account.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4DtzCZLjBrXsQjjPX'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If acausal experience is coherent → causation is not a necessary, universal, a priori condition of experience itself.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4FsJdVrSZSMQiN9Hz'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L4_002",
+    "domain": "philosophy",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Labour-mixing creates ownership rights that are inviolable — others cannot override them for social utility. These are negative, side-constraint rights that exist independently of aggregate outcomes.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4HuLiw6rcDqRuzWMt'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If property rights are inviolable side constraints → the state cannot redistribute property holdings even when redistribution would benefit the worst-off, because redistribution violates the rights of property holders.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4KnhP3dBNSWNpE51s'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If redistribution of legitimately acquired property is forbidden → significant, persistent inequalities arising from legitimate initial acquisitions are just and admit no correction through redistribution.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4Mc5sjVjugkoHw4xQ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If persistent inequalities from legitimate acquisition are just → there is no Rawlsian 'difference principle' obligation to alter inequalities that happen not to benefit the worst-off.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4PVhGSDZQuuZrRrK8'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L4_003",
+    "domain": "philosophy",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: The fundamental drive is will to power — growth and self-overcoming — 'even self-preservation is subordinate to this.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4RN46vvVuMscv4i6A'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If self-preservation is subordinate to will to power → there are conditions under which an organism sacrifices its own survival in order to express or expand its power (e.g., reckless risk for dominance).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4TKNqd57pg1Rv6sBj'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If self-sacrifice for power-expression is possible → the organism's deepest goal is not to persist but to discharge strength. Survival is an instrument, not the final end.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4V7XqZPoPWFi1aqKa'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If survival is merely instrumental → accepting death as the price of greater power-expression follows from the will-to-power's inner logic. The will-to-live is not the deepest principle.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4XHkRHPkeaU5jqUhD'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L4_001",
+    "domain": "science",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage A's special relativity framework predicts that massive particles (including neutrinos, which have nonzero mass per oscillation experiments) cannot travel at or above c. Any measured v > c for a massive particle would falsify special relativity.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4aUF8xPF6orW2mXeB'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The OPERA 2011 result (v − c ≈ 7.5 × 10⁻⁶ c) appeared, if taken at face value, to report exactly such a falsification — neutrinos (massive particles) traveling faster than light over a 730 km baseline.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4cmedhNRCdDTkv4tE'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — However, the conflict is resolved by the hardware faults: the loose cable reduced signal transit time, and the oscillator error introduced a timing offset. Correcting both artifacts removes the anomalous time advance and restores consistency with c.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4erfapq1PEV5BVape'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The four-hop conflict is therefore between: (1) SR's FTL prohibition, (2) the reported anomaly, (3) the experimental error analysis, and (4) the corrected result — the conflict exists only if one accepts the uncorrected OPERA data at face value while also knowing SR is supported by decades of precision tests (e.g., time dilation in muon decay, GPS corrections). The apparent conflict between Passage A and the initial OPERA claim requires four inference steps to fully characterize and resolve, because the conflict is only apparent after tracing the measurement chain through two hardware error modes and their quantitative effects on the timing.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4h2dqCd8XA6jFhq9k'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L4_002",
+    "domain": "science",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The Planck CMB measurement assumes the ΛCDM model (flat universe, w = −1 cosmological constant) and extrapolates H₀ from the early-universe power spectrum — H₀ = 67.4 ± 0.5 km/s/Mpc.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4iu14rwmjUtFhjo8R'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The SH0ES distance-ladder measurement is a direct late-universe geometric measurement chain (parallax → Cepheids → Type Ia SNe) that does not assume ΛCDM — H₀ = 73.04 ± 1.04 km/s/Mpc.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4kjt7aik9D5yRovNi'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The two values are inconsistent at 5σ significance. At this confidence level, the probability that both measurements are correct and the discrepancy is a statistical fluctuation is ~1 in 3.5 million. Multiple independent late-universe probes corroborate the higher value, ruling out a single systematic error explanation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4ndjCJxMzqEAgjdFJ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — If both measurements are correct, the ΛCDM model itself is wrong — either dark energy is not a simple cosmological constant (w ≠ −1), spatial flatness is violated, there is new physics in the early universe (e.g., early dark energy), or the distance ladder contains an unidentified systematic. The four-hop chain — assuming ΛCDM, computing early-universe H₀, comparing to late-universe H₀, and inferring ΛCDM incompleteness — reveals the cosmological model conflict.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4pXq3rxagjE9GXJcq'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L4_003",
+    "domain": "science",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The original Standard Model (Passage A) assumes neutrino mass = 0, from which it follows that neutrino flavor is a conserved quantum number.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4rNxLprSxwHNvUgWM'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Flavor conservation means a νμ produced at one location is still a νμ when detected at any distance — no inter-flavor transitions are possible.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4tJoDV11z6UFEu5Kb'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Super-Kamiokande observed a ~50% deficit in the expected atmospheric νμ flux at large L/E (ratio of travel distance to neutrino energy), consistent with νμ → ντ oscillations. If flavor were conserved (as the massless Standard Model requires), no deficit would exist.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4vPooV1iFwNEKmTiu'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Quantum mechanical neutrino oscillation (νμ → ντ with mixing angle θ₂₃ ≈ 45°) is mathematically possible only if the three mass eigenstates are not degenerate — i.e., if at least two neutrino mass eigenstates have different nonzero masses. This directly requires m_ν ≠ 0, contradicting the Standard Model's massless assumption in step one, and the conflict propagates back through all four steps to invalidate the massless neutrino assumption.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4xEvkh4SKo58mYWMF'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L4_001",
+    "domain": "software",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Lock lease expires after 30 seconds if not renewed → a lock held for more than 30 seconds without renewal is automatically released.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p4zHTiFLdSUrBddbeH'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If a worker acquires a lock and begins processing a job that runs for 31–45 seconds, the lock expires at 30s while the worker is still processing → another worker can acquire the same lock at second 30.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p529aeoALNwLp1v5Wf'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If two workers simultaneously hold the same lock → mutual exclusion is violated. Both workers are then processing the same resource concurrently.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p53xy2b3Tk5GxR5K2M'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If mutual exclusion is violated → the guarantee stated in A ('at most one process holds any given lock at any time') is violated for all jobs running 30–45 seconds.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p55q68Ygy7Qz7f4G8s'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L4_002",
+    "domain": "software",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: All writes are committed to all N replicas before acknowledgement → at any point in time, all replicas have identical state. No replica can have a write that another does not.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p586Wfw3m1hjPimju7'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If all replicas are always in sync after each acknowledged write → two clients writing the same key 'concurrently' will have their writes serialised by the replication protocol. One write always happens after the other across all replicas.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5A2r4wPhkP2paefn6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If writes are always serialised across all replicas → there can be no 'conflicting writes' (two different values for the same key residing on different replicas simultaneously). Conflicts, in the distributed systems sense, require replicas to diverge.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5ByvQnED2TKUmgMS1'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If conflicts cannot arise → the LWW conflict resolution mechanism described in B is unnecessary. Its invocation condition ('conflicting writes from concurrent sessions') cannot occur under the synchronous replication model.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5Dmpm6BA7thcNe4j5'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L4_003",
+    "domain": "software",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Tokens cannot be revoked before their 15-minute expiry because revocation requires a stateful blacklist, which the service explicitly rejects.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5Fcx5Fgx1kppbegto'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If pre-expiry revocation is architecturally impossible → after a token is issued, it remains valid for up to 15 minutes regardless of what happens to the account.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5HUpBnpqSQMcCg684'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If tokens remain valid for up to 15 minutes after issuance → a compromised account's tokens can still be used for up to 15 minutes after the compromise is detected and the account is flagged.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5KHxbKfPZFA7YvE2M'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If the window of post-detection token validity is up to 15 minutes → the security team cannot fulfil the 5-minute invalidation requirement using the current architecture.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5MAKjULgxGeYS6rbG'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L4_001",
+    "domain": "teams",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B acknowledges that cached responses contain verbatim fragments of the original input and are stored on a global edge network.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5PFqGSNRfD3WHJmJ5'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Input queries to an AI assistant operating on customer workflows will regularly contain customer-supplied content — account identifiers, personal details, query parameters — that constitutes customer data under the DPA.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5R9S6JDg2EEUr1aJs'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Cache entries containing customer-data fragments are customer data at rest on the edge nodes.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5SypPcM1QUWTwF1mp'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The edge nodes include us-east-1, us-west-2, ap-southeast-1, and ap-northeast-1 — all outside the EU data centres mandated by Passage A.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5UphHSEjp72ntRJCW'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L4_002",
+    "domain": "teams",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B states Amit intends to submit contributions 'under the company's GitHub organisation account with no individual attribution.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5WqjkxESizvrTbzfE'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Contributing under the company org account with no individual attribution means the commit author field and any CLA will not contain Amit's full name.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5YjbRafTEDijqn8ng'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Passage A requires all contributions to carry 'the engineer's full name and company affiliation in the commit author field' and explicitly states anonymous contributions are not permitted.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5aeSAUuD8fXqCZMmv'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — An org-account commit with no individual name does not satisfy 'the engineer's full name in the commit author field'; the two attribution requirements are mutually exclusive — the same commit cannot simultaneously have no individual name and carry the individual's full name.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5cb27z4tX2KhAhUUP'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L4_003",
+    "domain": "teams",
+    "conflict_level": 4,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The plan adopts AWS-proprietary features across all five infrastructure layers: Lambda custom runtimes, S3 Intelligent-Tiering lifecycle policies, SQS FIFO deduplication IDs, CloudWatch custom metric namespaces, and CodePipeline with CodeBuild.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5eTPPbJxheqB7Yip6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Each of these features is AWS-specific with no direct equivalent on GCP or Azure: Lambda custom runtimes differ from Cloud Run containers; SQS FIFO deduplication IDs are SQS-specific; S3 Intelligent-Tiering has no GCP analogue; CodePipeline/CodeBuild are AWS-only CI/CD services.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5gRwoCzb4D33hBUXT'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Migrating away from this stack would require simultaneously rewriting compute, storage, queueing, observability, and deployment systems — all five layers.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5ijMdPE9AZcSQRxYx'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Rewiring all five infrastructure layers simultaneously, each requiring provider-specific re-implementation, cannot be executed within ninety days by a standard engineering team without external consulting.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p5kcU1KJj68NyFj3iw'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L5_001",
+    "domain": "content",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The claim that AI will 'definitely' eliminate '80% of white-collar jobs within seven years' is a precise quantitative prediction. The methodological standard from Passage A requires: (a) a primary source for the 80% figure, (b) evidence justifying the seven-year timeframe, and (c) acknowledgment of expert disagreement where it exists.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6oz68JxSGazzTr7AphG'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Labour economists, AI researchers, and policy bodies hold widely divergent views on AI job displacement timelines and magnitude; this is an area of genuine expert disagreement. Passage A's rules require acknowledging this; Passage B instead dismisses dissenters as 'naive or bought.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6oz858fuzdMuTWpSqiW'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — 'Anyone who disagrees just doesn't understand the technology' is an unfalsifiable dismissal of counter-evidence — the exact epistemic move Passage A condemns. Under Passage A's methodology, one is required to engage with expert objections and update if evidence warrants; Passage B instead pre-emptively delegitimises all counter-evidence.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozAF78NCHbEd7Yijeh'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — 'I've been saying this for two years and I'm more confident than ever' presents increased confidence as a function of time elapsed rather than as a function of accumulating evidence. This inverts the Bayesian updating process described in Passage A ('I update my views when better evidence arrives') — confidence should track evidence quality, not assertion duration.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozC8TxyeeRiu2MtfTf'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — The urgent call to action ('pivot your career right now' / 'the window is closing') is designed to bypass the audience's deliberation — the exact manipulation of confidence that Passage A frames as the greatest creator disservice.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozDyLh3BqrZazWgiPH'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L5_002",
+    "domain": "content",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B claims '50,000 students,' 'average portfolio growth of 34% annually,' and a personal wealth journey of '$0 to $2.4M in four years.' Under Passage A's stated standard, each of these figures requires auditability: actual student count records, tracked student portfolio data, and verified personal net worth statements.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozFyeGjjt9zTNZyWQv'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The '34% average annual portfolio growth' claim is particularly problematic under her stated methodology: computing a true average requires tracking every student's portfolio over time — a form of data collection she has never disclosed in any monthly P&L or transparency report, suggesting this figure was not derived through the audited process she commits to.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozJEaCs2HCUydxLbNY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The '$0 to $2.4M in four years' personal claim, if accurate, represents a specific four-year compound growth period. Her monthly P&L reports (referenced in Passage A as the transparency mechanism) would have to contain the data to verify this journey. The claim is used here as a marketing statement rather than as a sourced figure with reference to those reports — which violates her stated rule that figures in marketing materials must be audited and accurate.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozL3xq7S9ZHRscTY2t'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Passage A explicitly states: 'creators who hide their business metrics while teaching business are frauds' and 'the moment I stop being fully transparent... the community should stop trusting me.' The student outcome data ('34% growth') and enrollment figure ('50,000') are business metrics used to teach and sell business education. Hiding the methodology behind those figures while using them for conversion is precisely the behaviour she defined as fraud.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozMrbuEs6u2969mEhr'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — The contrast between the 'radical transparency' brand (monthly audited P&L shared publicly) and a sales page using unverified aggregate student outcome statistics without methodology disclosure reveals a structural double standard: financial transparency is practiced where it builds trust but abandoned where it would constrain sales claims.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozPpvHcrGZvcCDv5UX'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "content_L5_003",
+    "domain": "content",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B launches exactly both products she rejected: 1-on-1 coaching ('weekly live coaching calls with me personally') and a premium community ('private community forum'), combined into a single $97/month subscription.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozS1PWNii32vjbaU1z'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — 'Your wellness journey is a lifelong practice and I want to walk it with you indefinitely' and 'most members stay for years' are not just descriptions — they are aspirational selling points designed to attract long-term retention. Under Passage A's framework, optimising for long-term member retention in a paid community is the definition of 'identity lock-in' and making exit psychologically costly.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozTrWwYopY3xNVPhbk'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — A personalised wellness roadmap 'updated monthly' and 'accountability partnerships matched by me' create ongoing bespoke dependencies on Wendy specifically — the creator becomes load-bearing infrastructure in the member's wellness practice. Passage A identified this as the mechanism by which wellness content exploits insecurity: making the audience need the creator.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozVferbVa5qzfnPRzD'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The pricing ($97/month) and the long-term framing ('designed to be a long-term transformational container') mean the product is optimised for maximum recurring revenue from sustained engagement — which is the business model of the wellness industry she defined as profiting from insecurity. She has recreated the exact commercial structure she positioned her channel against.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozXVYGnbLHjujU3uiD'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — Passage A's stated goal was 'maximally useful and then maximally unnecessary.' The Inner Circle's design goal is the inverse: maximum sustained usefulness generating maximum indefinite revenue. Her stated objective was viewer graduation from the channel; her product's objective is permanent membership retention.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozZW6JvafLYdAJtzLe'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L5_001",
+    "domain": "law",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Alpha Corp. is currently in default under the Delta Bank revolving credit facility due to missed interest payments.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozbVtvwYvWzK3dpYhg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The cross-default provision in the Tri-Party Agreement (Section 9) makes Alpha's default under the Delta Bank facility an immediate Event of Default under the Tri-Party Agreement, triggering Gamma Bank's right to foreclose on its first-priority security interest in all of Alpha's assets.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozdMWvtJUZLtvFxrhj'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Beta LLC's guarantee of Alpha's obligations to Gamma Bank is secured by Beta's 60% pledge of Alpha equity. Upon Gamma Bank foreclosing on Alpha's assets, the value of Alpha's equity (and thus Beta's pledged collateral) is necessarily impaired — because a company whose assets have been foreclosed upon has its equity reduced to zero or near-zero.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozfCtJaEbkS6e5EYn2'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Under UCC § 3-605(b), if Gamma Bank (as holder) impairs the collateral securing Beta's guarantee (i.e., the Alpha equity pledge) without Beta's consent, Beta LLC is discharged as guarantor to the extent of that impairment — potentially discharged in full if the equity is rendered worthless.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozhCh42Svt1sqrbfGr'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — This creates an impossible circular obligation: Gamma Bank must foreclose on Alpha's assets (its contractual right and the intended remedy), but doing so impairs Beta's guarantee collateral and thereby discharges Beta's guarantee under UCC § 3-605(b) — meaning Gamma Bank's exercise of its primary remedy under the Agreement simultaneously destroys its secondary remedy (the guarantee), and the Agreement itself creates no mechanism to cure this structural impossibility.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozj16Djt2HpHxHpUCv'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L5_002",
+    "domain": "law",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The DB Plan is underfunded by $40M and Acquirer assumes all DB Plan liabilities under Section 8.7 — meaning Acquirer inherits a plan with a material funding shortfall immediately upon closing.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozktT2phsfcJqqX236'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — The DB Plan's trust documents require the combined entity to maintain a 90% minimum funding ratio as of the first annual valuation following the merger. If the plan is currently underfunded by $40M, the combined entity must make substantial contributions to reach 90% funding — but the Merger Agreement makes no provision for such contributions and sets no escrow or funding reserve.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6oznrmH1Kwk8JdR1Z4p'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — ERISA § 302 independently requires minimum required contributions to avoid an accumulated funding deficiency. If Acquirer cannot meet both the trust's 90% requirement and ERISA § 302's minimum contributions simultaneously (e.g., due to cash constraints), it faces both a trust document breach and a statutory funding deficiency — two simultaneous, non-equivalent obligations.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozpfA6hKdzX1FSGqHA'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — If the plan's funding ratio falls below 80% (possible given the $40M underfunding and Acquirer's assumed liabilities), ERISA § 436 automatically restricts lump-sum distributions — which conflicts with the Merger Agreement's requirement to maintain Target's benefit plans 'as is' for 12 months, because ERISA § 436 would force immediate modifications to the plan that Section 8.7 prohibits.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozrdEAbMkN7kuDxiGi'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — Additionally, under ERISA § 4062(b)(1)(A) and 29 C.F.R. § 4062.8, if Acquirer terminates the plan within five years due to contributions becoming unsustainable, the PBGC can assess the entire $40M+ unfunded liability against Acquirer — a contingent liability that the Merger Agreement's representations (that all DB Plan liabilities are 'fully reflected' in disclosure schedules) did not account for, because the PBGC's post-merger claim did not exist at closing and arose as a contingency only after the change of sponsor.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6oztXL1ZG2j28hKoQ7i'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "law_L5_003",
+    "domain": "law",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The JV Agreement requires real-time sharing of EU customer personal data with the US Partner, who processes it on US-based servers — bringing the data within reach of FISA § 702 orders.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozvNxKvGL15xRJJSdD'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — FISA § 702 legally compels the US Partner to disclose EU personal data to the NSA upon a lawful order, without notifying the EU Partner or data subjects — meaning US law mandates disclosure that EU law (GDPR) prohibits without an adequate legal basis.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozxE5BqMPVEpZ3bS6w'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — The JV Agreement relies on the EU-US Privacy Framework (July 2023 adequacy decision) as its transfer mechanism. However, the EU-US Privacy Framework's adequacy decision is legally vulnerable to challenge under the Schrems II reasoning (C-311/18), which held that FISA § 702 surveillance is not limited to what is strictly necessary — and if the adequacy decision is invalidated (as Privacy Shield was), the transfer mechanism collapses.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6ozzLpiXGgHR4YL8RJu'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — GDPR Article 48 independently prohibits recognition or enforcement of third-country (US) court or government orders for personal data disclosure unless based on a qualifying international agreement in force between the US and EU. FISA § 702 orders are not based on such an agreement, meaning the US Partner's compliance with a FISA order would itself violate GDPR Article 48.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p12dVXHq5sAHe3LVfi'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — This creates a legally impossible obligation for the US Partner: compliance with FISA § 702 (a mandatory US legal duty) constitutes a GDPR Article 48 violation (a mandatory EU legal duty), and the JV Agreement simultaneously requires both GDPR compliance (EU Partner's representation, Section 12) and implicitly accepts the FISA obligation (Section 7) — meaning the Agreement requires the US Partner to simultaneously comply with two directly conflicting mandatory legal regimes, which is structurally impossible.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p14weGTffFZZTNckYk'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L5_001",
+    "domain": "philosophy",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: 'The limits of my language are the limits of my world' → whatever exists or is meaningful must be expressible in well-formed propositions. There is no meaningful reality beyond what language can clearly represent.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p16sjTBWZ8YbcLVZeE'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If all meaningful reality is within the limits of language → any purported 'content' beyond propositional representation is not meaningful — it is strictly nonsense (Unsinn) by Wittgenstein's standard.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p18o55Lxph6RzmaRWT'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If extra-propositional content is nonsense → there can be no legitimate philosophical activity that attends to what 'exceeds' propositional language. Such activity would be attempting to speak about the unspeakable, which Wittgenstein forbids.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1BCS1vbtaYu2pqU19'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If attending to the extra-propositional is forbidden → any philosophical method that seeks Being 'beyond assertion' is an illegitimate pseudo-activity that cannot yield knowledge or insight.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1DTN5fNAB2jesWaEY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If such methods are illegitimate → the project of meditative, non-assertoric thinking about Being is meaningless, and claiming that language 'houses' something ineffable is empty.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1FKUcsLAfaaMedpkQ'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L5_002",
+    "domain": "philosophy",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: God actualised the best compossible world → the sum total of actual value in this world exceeds that of any alternative possible world.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1HSUjDGXFbqYuyjZg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If this is the best possible world → any alternative world in which suffering was eliminated would have to be worse overall, since God chose not to actualise it.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1KHqzMoYCXfVLmhM2'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If eliminating suffering would produce a worse world → the existence of suffering is a necessary feature of the best possible world and thus justified.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1MKtHq2youAu3vwAd'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If suffering is justified by being part of the best world → conscious beings' suffering is not a net negative; the whole of which it is a part is net positive.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1PGDQYwXHAcFeLJsm'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If suffering is part of a net positive whole → existence is preferable to non-existence — the value of existing in this best world outweighs the suffering.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1R8pvzR93BjkGyLPC'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "philosophy_L5_003",
+    "domain": "philosophy",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Forms are eternal, unchanging, and separable from physical particulars → Forms have a mode of being independent of whether any physical object instantiates them.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1TCMjL4moEwniGZo9'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If Forms exist independently → there is a domain of purely intelligible reality (the intelligible realm) that exists whether or not any physical world exists. Physical particulars are epistemically secondary — they give only opinion.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1VCQdFRccMnLGeBih'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If physical particulars give only opinion → the starting point of genuine knowledge must be the intelligible realm, not sensory observation. Philosophy proceeds from universal to particular.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1X8jvUSfcryfAaYwP'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If knowledge proceeds from universal Forms to particulars → empirical inquiry (starting from sensory observation) is at best a tool for recollecting Forms, never a source of primary knowledge.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1Z8JC3iZfLEaV3ejG'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If empirical starting points cannot yield primary knowledge → a philosophical method grounded in sensory particulars and ascending through abstraction is epistemically inferior and cannot establish the foundations of knowledge.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1b96RxZoCH9rc7HVD'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L5_001",
+    "domain": "science",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — The no-hair theorem (Passage A) states that a black hole is fully characterized by M, Q, J — meaning all other information about infalling matter is destroyed at the horizon, consistent with general relativity's classical framework.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1dHpWZpR5gLC1A9BH'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Hawking radiation (Passage B) demonstrates that black holes are not perfect absorbers but rather emit thermal radiation with T_H = ℏc³/(8πGMk_B) and evaporate over time — a quantum mechanical effect absent from classical GR.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1f9hJquAHuUx6K7dd'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — Because Hawking radiation is purely thermal (a blackbody spectrum with no correlations), it carries zero information about the initial quantum state of the infalling matter. Over the full evaporation lifetime, the pure initial quantum state of infalling matter maps to a mixed thermal final state.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1h9zfmuThcNSekkfk'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — In quantum mechanics, the fundamental postulate of unitarity requires that the evolution of a closed quantum system always maps pure states to pure states (no information is destroyed). A pure initial state cannot evolve into a mixed thermal state under unitary evolution.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1jAnZAhgt4YRPzpUn'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — This creates an irreducible conflict: if general relativity (no-hair theorem) and Hawking radiation are both correct, quantum unitarity is violated — a fundamental postulate of quantum mechanics fails. If quantum mechanics (unitarity) and Hawking radiation are both correct, the information must escape encoded in subtle correlations in the Hawking radiation — but Passage B explicitly states the radiation is precisely thermal with no such correlations. At least one of {GR/no-hair, Hawking radiation thermal purity, quantum unitarity} must be wrong, but none can be abandoned without destroying a major theoretical framework — a conflict that requires five inference steps to fully develop.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1myDGLrQMGB21fLGW'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L5_002",
+    "domain": "science",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — SMT (Passage A) holds that somatic driver mutations are 'necessary and sufficient' for tumorigenesis and that the tissue microenvironment is secondary.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1pHs6DmUWBzhUkXZY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — TOFT's first datum (normal nuclei containing mutations develop normally in enucleated eggs) demonstrates that mutated nuclei placed in a normal developmental context do not produce cancer — falsifying 'sufficiency' of mutations alone.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1r8EtszsrLzdzdGHJ'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — TOFT's second datum (cancer cells reverting in normal tissue contexts) demonstrates that cells with a malignant phenotype can be normalized by the tissue environment — challenging the 'necessary' claim by showing the phenotype is reversible without mutation correction.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1sveJ6mwBRrYx2kKr'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — TOFT's third datum (non-mutagenic carcinogens cause cancer) shows that carcinogenesis can proceed without driver mutations, directly falsifying SMT's claim that heritable genetic alterations in single cells are the necessary cause.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1uo1ShsKRj2GksXSW'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — TOFT's fourth datum (KRAS G12D in pancreatic ductal cells requires specific tissue signals to progress to cancer) demonstrates that classic driver mutations are insufficient by themselves and that SMT's genetic-determinism framework cannot account for the tissue-dependency of oncogenesis — requiring five inference steps to fully trace the conflict: from SMT's necessity/sufficiency claims through four independent experimental lines of evidence, each of which falsifies a different component of the SMT framework.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1wrmxTiVQBsonv12q'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "science_L5_003",
+    "domain": "science",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Copenhagen (Passage A) requires a sharp, fundamental distinction between the classical measuring apparatus/observer and the quantum system being measured. The collapse is triggered by this boundary — the measurement postulate is irreducible and not derivable from unitary Schrödinger evolution alone.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p1yje7ZUYGztgzqPF2'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — Decoherence theory (Passage B) shows that the apparent collapse of the wavefunction arises from entanglement with environmental degrees of freedom — a fully unitary process described by the Schrödinger equation. No special observer, apparatus, or non-unitary collapse postulate is required.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p21nAzNCaJ2QrqQHAY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — For macroscopic objects at room temperature, decoherence occurs in ~10⁻²³ seconds — so fast that quantum superpositions of macroscopic states are destroyed by environmental entanglement long before any human observer interacts with the system. The observer therefore plays no causal role in the collapse.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p247pMw6fA2ZzUmvNn'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Copenhagen treats wavefunction collapse as a fundamental, non-unitary dynamical law that supplements the Schrödinger equation. Decoherence theory shows that no such supplemental law is needed — the appearance of collapse emerges from unitary dynamics alone. If decoherence is correct, the collapse postulate is redundant; if Copenhagen is correct and collapse is a primitive irreducible law, decoherence provides only an approximation, not a derivation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p266sbcq6bpEWSKa4q'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — The two frameworks make mutually exclusive ontological claims about the completeness of the wavefunction description. Copenhagen holds that ψ is complete and collapse creates a definite outcome. Decoherence-based interpretations hold that ψ remains complete and unitary but the apparent collapse is perspectival — multiple branches coexist. Either definite outcomes are created by non-unitary collapse (Copenhagen) or they are not (decoherence/Everett). These ontologies are mutually exclusive.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p281URa3xHCoK2omZi'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L5_001",
+    "domain": "software",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From B: The system accepts writes in all regions during a network partition → during a partition, Region A and Region B can both accept writes to the same key with different values, without knowledge of each other.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p29sLW55P3JvsDv4Q6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If divergent writes occur during a partition → after the partition heals, some mechanism must decide which write 'won.' During the partition, clients in Region A and clients in Region B observe different values for the same key.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2BpRFMFsZVygdvynk'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If two regions observe different values for the same key during a partition → there is no single, consistent global ordering of operations during that window — Region A's view and Region B's view are irreconcilable until healing.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2DqD761WsWoVyoPBG'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If no single global ordering exists during a partition → at least some operations cannot appear to take effect at a single globally consistent point — they take effect at different 'points' in different regions.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2FkJmSLF1RzL2spC6'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If operations take effect at different points in different regions → linearisability is violated, because linearisability requires every operation to appear at a single globally agreed-upon point between invocation and completion.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2HhdQTxPwh6PGjB6D'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L5_002",
+    "domain": "software",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From B: The model is trained on features from T-7 days and deployed after 48 hours of validation → the deployed model's weights reflect feature distributions from approximately 9 days ago (7 days training data + 2 days validation).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2KeD4NoFQUAW1yytY'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: The model's internal learned relationships (weights) encode how features relate to outcomes as observed 9 days ago → the model implicitly assumes that feature distributions are similar to what they were 9 days ago.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2MTbjEmambV8b4dgn'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If actual feature distributions drift over 9 days → the model's implicit assumptions become stale, even though the input features themselves are fresh (≤1 hour old as per Passage A).",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2PKUD9SfAnhuK7W8i'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: The model is receiving fresh input features but interpreting them through 9-day-old learned weights → the model's inference is based on a combination of fresh feature values and stale feature-distribution assumptions.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2RBqTXqoL7VxkPNwr'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If stale learned distributions are used with fresh feature values → the model's inference is systematically biased in ways that the 1-hour freshness guarantee does not prevent, and that Passage A's anti-staleness guarantee implicitly claims to prevent.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2T2iE9jzbZLkUApXa'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "software_L5_003",
+    "domain": "software",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — From A: Every state change is stored as an immutable event → 'immutable' means events cannot be modified or deleted after being written.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2VnQcsia65XKZPwyz'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — From Step 1: If events are immutable → a user's actions (e.g., placing orders, payments) generate immutable events that permanently reside in the event store. These events cannot be removed.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2YzdkedxKJ5uVbJLj'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — From Step 2: If a user's events cannot be removed → the current state reconstruction guarantee ('replay all events from the beginning of time') depends on the completeness of the event log — no events can be missing.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2apXBo9iTTzTqanoP'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — From Step 3: If no events can be missing from the log → exercising a Right to Erasure that deletes user-related events would break the reconstruction guarantee for any entity that interacted with that user.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2dBuGvq6NJRfr14hB'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — From Step 4: If erasing user data from the event log breaks state reconstruction → the system cannot simultaneously provide (a) a complete, replayable immutable log AND (b) irreversible deletion of user events. One or the other must be sacrificed.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2fBDCEp6AC8UmcxL4'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L5_001",
+    "domain": "teams",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — To maximise user satisfaction scores and minimise negative reactions, the agent must learn which responses receive high ratings; users consistently rate responses that validate their existing views more highly than responses that challenge or critique them.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2hFyX3DRCYf1kFLoB'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — An agent optimised to maximise validation will systematically favour agreeing with and affirming ideas over critically examining them, because affirmation reliably generates higher satisfaction scores than honest critique.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2jNxzZS1XiahgQGcc'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — An agent that systematically affirms ideas to avoid negative reactions will suppress honest critical deliberation — it will not surface substantive objections or present contrary evidence when doing so risks a low rating.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2mG5QWiqVqAZEm5zs'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — Systematically suppressing critical deliberation means proposals are not receiving genuine scrutiny; they receive the appearance of a hearing without substantive challenge.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2oVmP3KhGDemjnRZg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — Passage A defines 'suppression of ideas — even implicitly' as a cultural defect and requires every proposal to receive documented honest deliberation. A satisfaction-optimised agent that implicitly steers toward validation is exactly the implicit suppression mechanism Passage A prohibits.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2qSqqK3hqryR7svsi'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L5_002",
+    "domain": "teams",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Isabel intends to work exclusively on the Payments Service and to decline all rotation assignments, meaning she will contribute to one service rather than three and will not rotate.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2sVsZbcKAJBtWN585'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — If Isabel does not rotate, she will accumulate all deep Payments Service knowledge while no other engineer develops familiarity with it through rotation.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2uLVxnCvMq8w1k8A2'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — If only Isabel understands the Payments Service at depth, the team's operational knowledge of that system is dependent on her continuous availability — a single point of failure in the team's knowledge base.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2wHKxpMzJ92npkQFF'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The Payments Service is described as the most revenue-critical system. If Isabel is absent, no other engineer can safely modify or debug it under urgency — precisely the sustained-operations risk the rotation policy was designed to prevent.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p2yntohbcfoU6HQKN9'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — Isabel's plan structurally re-creates the single-point-of-failure condition in the most critical service: the more specialised she becomes without cross-training others, the more severe the bus-factor risk — in direct opposition to the policy's stated purpose.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p31wcw4RTxUDfvtEH1'}",
+        "skippable": false
+      }
+    ]
+  },
+  {
+    "id": "teams_L5_003",
+    "domain": "teams",
+    "conflict_level": 5,
+    "any_redundant": false,
+    "disposition": "PENDING_HUMAN_REVIEW",
+    "steps": [
+      {
+        "step_num": 1,
+        "step_text": "Step 1 — Passage B explicitly states 'each PR in isolation leaves the system in an inconsistent, non-functional state.'",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p33nzhQW7mivg2Rohb'}",
+        "skippable": false
+      },
+      {
+        "step_num": 2,
+        "step_text": "Step 2 — A non-functional system state is not a fully deployable, production-safe state — it is precisely the condition Passage A defines as a P1 incident.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p35f7fFssb6jZkFfop'}",
+        "skippable": false
+      },
+      {
+        "step_num": 3,
+        "step_text": "Step 3 — If PR-1 is merged and a blocking issue arises before PR-2 can follow, the team is unable to deploy any other work until the non-functional state is resolved — exactly the team-wide deploy blockage Passage A is designed to prevent.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p37WyoWeDg5G5fzQgg'}",
+        "skippable": false
+      },
+      {
+        "step_num": 4,
+        "step_text": "Step 4 — The plan requires fourteen of fifteen PRs to each individually create a non-functional state, meaning the team's deploy capability will be blocked fourteen consecutive times during the merge window, with no guarantee each transition is instantaneous.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p39UJccDSdC7msQvMG'}",
+        "skippable": false
+      },
+      {
+        "step_num": 5,
+        "step_text": "Step 5 — The policy states 'no exceptions are made for refactors, migrations, or large feature work' — the plan is explicitly a refactor and migration, and the policy names these as non-exception cases, removing the implicit justification the plan relies on.",
+        "verdict": "ERROR",
+        "confidence": "low",
+        "reason": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ca6p3BMuatAUY4bd3fMjJ'}",
+        "skippable": false
+      }
+    ]
+  }
+]
