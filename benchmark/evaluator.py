@@ -4,7 +4,7 @@ Flow:
     Evaluator.run()
       ├── Load JSON files from data/<domain>/v1.json
       ├── For each item: build prompt → adapter.predict() → score
-      ├── Compute: accuracy, macro-F1, LW-F1, BERTScore
+      ├── Compute: accuracy, macro-F1, LW-F1, BERTScore, conflict polarity
       └── Return EvaluationResults
 """
 
@@ -22,9 +22,14 @@ from benchmark.metrics import (
     compute_metrics,
     compute_metrics_for_subset,
     compute_level_metrics,
+    compute_polarity_metrics,
     level_weighted_f1,
 )
-from benchmark.tasks.explanation import score_explanation, should_score_explanation
+from benchmark.tasks.explanation import (
+    score_explanation,
+    score_explanations_batch,
+    should_score_explanation,
+)
 from benchmark.tasks.verdict_classification import VerdictClassificationTask
 
 
@@ -62,6 +67,7 @@ class Evaluator:
         n_runs: int = 1,
         temperature: float = 0.0,
         verbose: bool = False,
+        include_draft_polarity: bool = False,
     ) -> None:
         self.adapter     = adapter
         self.domains     = domains or DOMAINS
@@ -69,6 +75,8 @@ class Evaluator:
         self.n_runs      = max(1, n_runs)
         self.temperature = temperature
         self.verbose     = verbose
+        # Draft polarity labels are unreviewed; score them only when asked.
+        self.include_draft_polarity = include_draft_polarity
         self._task       = VerdictClassificationTask()
 
     def run(self) -> EvaluationResults:
@@ -91,11 +99,27 @@ class Evaluator:
                 if self.n_runs > 1:
                     agree = result.get("run_agreement", 1.0)
                     runs_info = f" agree={agree:.0%}"
+                type_info = ""
+                if result["polarity_label"]:
+                    type_info = (
+                        f" type={result['polarity_prediction'] or '-'}"
+                        f"/{result['polarity_label']}"
+                    )
                 print(
                     f"  [{tick}] {item['id']:<30} {lvl_s:<4} "
                     f"label={result['label']:<12} pred={result['prediction']:<12} "
-                    f"bert={result['explanation_bert_f1'] or 0:.3f}{runs_info}"
+                    f"bert={result['explanation_bert_f1'] or 0:.3f}{runs_info}{type_info}"
                 )
+
+        # Batch BERTScore — loads DistilBERT once for all scoreable items
+        _preds = [
+            r["model_explanation"] if "_bert_reference" in r else None
+            for r in results
+        ]
+        _refs = [r.pop("_bert_reference", None) for r in results]
+        for r, score in zip(results, score_explanations_batch(_preds, _refs)):
+            if score is not None:
+                r["explanation_bert_f1"] = score
 
         # Compute per-level metrics and LW-F1
         by_level = compute_level_metrics(results)
@@ -107,6 +131,13 @@ class Evaluator:
             [r.get("explanation_bert_f1") for r in results],
         )
         overall["lw_f1"] = lw_f1
+
+        polarity = compute_polarity_metrics(results)
+        polarity["n_excluded_draft"] = sum(
+            1 for r in results
+            if r["polarity_status"] == "draft" and not r["polarity_label"]
+        )
+        overall["polarity"] = polarity
 
         # Agreement rate across runs (1.0 when n_runs == 1)
         per_run_lw_f1: list[float] = []
@@ -167,6 +198,7 @@ class Evaluator:
             prediction = response.verdict
             run_verdicts  = [prediction]
             run_agreement = 1.0
+            polarity_prediction = response.conflict_type if prediction == "conflict" else None
         else:
             responses: list = []
             for _ in range(self.n_runs):
@@ -175,15 +207,27 @@ class Evaluator:
             counts       = Counter(run_verdicts)
             prediction   = counts.most_common(1)[0][0]
             run_agreement = round(counts[prediction] / self.n_runs, 4)
+            # Majority type among runs that agreed on "conflict"
+            run_types = [
+                r.conflict_type for r in responses
+                if r.verdict == "conflict" and r.conflict_type
+            ]
+            polarity_prediction = (
+                Counter(run_types).most_common(1)[0][0]
+                if prediction == "conflict" and run_types else None
+            )
             # Use the last response's explanation/raw for storage
             response = responses[-1]
 
         correct = label == prediction
 
-        bert_f1 = None
-        if should_score_explanation(item):
-            reference = _build_reference_text(item)
-            bert_f1   = score_explanation(response.explanation, reference)
+        polarity_status = item["label"].get("polarity_status")
+        polarity_label  = None
+        if label == "conflict" and (
+            polarity_status == "reviewed"
+            or (polarity_status == "draft" and self.include_draft_polarity)
+        ):
+            polarity_label = item["label"].get("conflict_polarity")
 
         result: dict[str, Any] = {
             "id":                  item["id"],
@@ -195,10 +239,18 @@ class Evaluator:
             "label":               label,
             "prediction":          prediction,
             "correct":             correct,
-            "explanation_bert_f1": bert_f1,
+            "explanation_bert_f1": None,
+            "polarity_label":      polarity_label,
+            "polarity_status":     polarity_status,
+            "polarity_prediction": polarity_prediction,
+            "polarity_correct":    (
+                polarity_prediction == polarity_label if polarity_label else None
+            ),
             "model_explanation":   response.explanation,
             "raw_response":        response.raw_response,
         }
+        if should_score_explanation(item):
+            result["_bert_reference"] = _build_reference_text(item)
         if self.n_runs > 1:
             result["run_verdicts"]  = run_verdicts
             result["run_agreement"] = run_agreement
@@ -212,7 +264,11 @@ class Evaluator:
         for r in results:
             g = r.get(key, "unknown")
             groups.setdefault(str(g), []).append(r)
-        return {g: compute_metrics_for_subset(items) for g, items in groups.items()}
+        out: dict[str, dict[str, Any]] = {}
+        for g, items in groups.items():
+            out[g] = compute_metrics_for_subset(items)
+            out[g]["polarity"] = compute_polarity_metrics(items)
+        return out
 
 
 # ------------------------------------------------------------------

@@ -4,6 +4,10 @@ Primary score: Level-Weighted F1 (LW-F1)
     LW-F1 = Σ ((level + 1) × conflict_F1_at_level) / Σ (level + 1)
     Weight surface (L0) = 1, deep (L5) = 6.
     A model that only detects surface conflicts scores ~0.05; perfect = 1.0.
+
+Secondary task: conflict polarity (destructive vs constructive)
+    Scored only on conflict items carrying a gold conflict_polarity label;
+    see compute_polarity_metrics. Does not affect LW-F1 or the verdict metrics.
 """
 
 from typing import Any, Optional
@@ -12,6 +16,7 @@ from sklearn.metrics import accuracy_score, f1_score
 
 
 LABELS = ["conflict", "consistent", "ambiguous"]
+POLARITY_LABELS = ["destructive", "constructive"]
 CONFLICT_LEVELS = list(range(6))   # 0 … 5
 
 
@@ -119,3 +124,56 @@ def level_weighted_f1(by_level: dict[int, dict[str, Any]]) -> float:
         for l, m in by_level.items()
     )
     return round(weighted_sum / total_weight, 4)
+
+
+# ---------------------------------------------------------------------------
+# Conflict polarity (destructive vs constructive)
+# ---------------------------------------------------------------------------
+
+def compute_polarity_metrics(results: list[dict[str, Any]]) -> dict[str, Any]:
+    """Score the destructive/constructive judgement on gold-labelled conflict items.
+
+    Two views, so type skill can be read apart from detection skill:
+      - Conditional (polarity_accuracy, polarity_macro_f1, per_class_f1): only
+        items the model correctly called "conflict". A missing type counts as wrong.
+      - End-to-end (joint_accuracy): verdict AND type both right, over every
+        gold-labelled conflict item.
+
+    type_coverage = share of detected conflicts where the model gave any type;
+    low coverage usually means the adapter or prompt isn't emitting the TYPE line.
+    Returns None-valued metrics when no item carries a gold polarity label.
+    """
+    labelled = [r for r in results if r.get("polarity_label")]
+    detected = [r for r in labelled if r.get("prediction") == "conflict"]
+    typed    = [r for r in detected if r.get("polarity_prediction")]
+
+    out: dict[str, Any] = {
+        "polarity_accuracy": None,
+        "polarity_macro_f1": None,
+        "per_class_f1":      {cls: None for cls in POLARITY_LABELS},
+        "joint_accuracy":    None,
+        "type_coverage":     None,
+        "n_labelled":        len(labelled),
+        "n_detected":        len(detected),
+        "n_typed":           len(typed),
+    }
+    if not labelled:
+        return out
+
+    n_correct = sum(1 for r in detected if r.get("polarity_prediction") == r["polarity_label"])
+    out["joint_accuracy"] = round(n_correct / len(labelled), 4)
+    if not detected:
+        return out
+
+    gold = [r["polarity_label"] for r in detected]
+    pred = [r.get("polarity_prediction") or "none" for r in detected]
+    out["polarity_accuracy"] = round(n_correct / len(detected), 4)
+    out["polarity_macro_f1"] = round(
+        f1_score(gold, pred, labels=POLARITY_LABELS, average="macro", zero_division=0), 4
+    )
+    out["per_class_f1"] = {
+        cls: round(f1_score(gold, pred, labels=[cls], average="micro", zero_division=0), 4)
+        for cls in POLARITY_LABELS
+    }
+    out["type_coverage"] = round(len(typed) / len(detected), 4)
+    return out

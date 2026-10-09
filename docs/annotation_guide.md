@@ -104,6 +104,39 @@ The conflict **exists under one interpretation** but **disappears under another*
 | Conflating consistent and ambiguous | Marking "could be either" as consistent | Ambiguous = missing fact decides it. Consistent = no conflict under any reading. |
 | Accepting contested premises | Chain step states a contested philosophical claim as fact | Flag as `contested_premise` |
 
+### 3.5 Destructive vs constructive (conflict items only)
+
+Every conflict item also carries a `conflict_polarity`. Decide it with one question:
+
+> **If nobody resolves this conflict and both passages stay in force, what happens?**
+
+| Label | Choose it when | Typical signals |
+|---|---|---|
+| `destructive` | Leaving the conflict in place causes concrete damage to someone | system failure or corrupted state; legal, regulatory or financial exposure; safety or health risk; a broken commitment that others relied on; wasted work |
+| `constructive` | The conflict is a productive tension; working through it improves understanding or a decision, and its existence harms no one | a theory meeting contrary evidence; a dialectical disagreement between schools; a legitimate trade-off raised before anyone acts on it |
+
+**Decision rules**
+
+1. **Judge the situation the passages describe, not the domain.** A lab protocol that contradicts a chemical safety data sheet is destructive even though it is "science"; two engineers debating a design trade-off in review is constructive even though it is "software".
+2. **Reliance makes it destructive.** If a third party acts on one passage (a client trusting an API contract, an audience trusting a creator's stated principle, a counterparty relying on a clause), the conflict harms them.
+3. **Hard boundaries make it destructive.** If one passage is a legal, contractual, security or safety rule and the other breaches it, label destructive, even if the breach looks well-intentioned.
+4. **Proposal-stage trade-offs lean constructive.** When both sides express legitimate goals and nothing has been executed yet, surfacing the conflict forces a better decision. If the proposal *as written* would immediately break something (e.g. merging non-deployable PRs), it is still destructive.
+5. **Superseded knowledge is constructive.** A temporal conflict where later evidence overturns an earlier theory is the engine of inquiry. A temporal conflict where stale information is still being *acted on* (e.g. a stale cache) is destructive.
+
+**Worked examples**
+
+| Item | Label | Why |
+|---|---|---|
+| `software_L0_003` — cache says 247 in stock, DB says 0 | destructive | customers buy stock that does not exist |
+| `science_L0_001` — "stomach is sterile" vs H. pylori | constructive | overturned the old model, led to a cure |
+| `law_L0_001` — penalty-free exit vs 50% exit fee in one contract | destructive | guaranteed dispute the moment the right is exercised |
+| `teams_L1_002` — pin all deps vs always-latest | constructive | a real trade-off whose resolution (automated update PRs) serves both goals |
+| `content_L2_002` — "fasting harms women" vs a women's fasting guide | destructive | exposes followers to the health risk she warned about |
+
+Write `polarity_rationale` as **one sentence naming the consequence** that decided the label. Set `polarity_status` to `"reviewed"` once a human has confirmed or corrected it.
+
+**Known limitation:** the v1 labels track domain closely (law, software and content are mostly destructive; science and philosophy entirely constructive). New items should prefer counter-examples — destructive science, constructive law and software — so the label cannot be guessed from the domain.
+
 ---
 
 ## 4. Reasoning chain rules
@@ -281,6 +314,7 @@ Valid `flag_type` values:
 - `chain_quality` — logical gap or weak entailment in a step
 - `boundary_ambiguity` — item sits on the consistent/ambiguous line
 - `canary_regression` — automated probe flagged this item
+- `polarity_draft` — drafted destructive/constructive label awaiting human review
 - `manual` — anything else (describe in `description`)
 
 ---
@@ -305,6 +339,10 @@ Work in this order:
    small (4 items per level) and poorly calibrated in current models.
 
 7. **`label_dispute` flags** — resolve via discussion with maintainer.
+
+8. **`polarity_draft` flags** — confirm or correct the drafted `conflict_polarity`,
+   then set `label.polarity_status` to `"reviewed"`. Do the `[BORDERLINE]` entries
+   first. These labels do not affect LW-F1, but they are not scored at all until reviewed.
 
 ---
 

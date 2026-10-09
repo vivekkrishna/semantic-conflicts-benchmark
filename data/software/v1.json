@@ -37,7 +37,10 @@
           "span": "User account status: SUSPENDED"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Unresolved, the account is simultaneously granted access and blocked for non-payment, producing inconsistent access control and revenue leakage.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -84,7 +87,10 @@
           "span": "\"orderId\": str(uuid.uuid4())"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Clients generated from the contract will fail to deserialise a UUID string as a 32-bit integer, breaking every integration built against the spec.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -131,7 +137,10 @@
           "span": "quantity_available=0"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Serving the stale cache count lets customers buy stock that no longer exists, causing oversold orders and cancellations.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -179,7 +188,10 @@
           "span": "send_receipt_email(charge)  # Always sends email on each call\n    loyalty_points.add(charge.user_id, amount // 10)  # Adds points on each call"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Clients that trust the documented idempotency will retry and trigger duplicate receipt emails and duplicate loyalty-point grants.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -227,7 +239,10 @@
           "span": "timestamp=2024-03-15T14:02:58.000Z"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A causal-order violation in the event logs signals clock skew or corruption that undermines reconciliation and auditability of payments.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -275,7 +290,10 @@
           "span": "max_retries=3"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Left unresolved, the retry policy silently never runs, so transient payment failures surface to users as hard failures.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -324,7 +342,10 @@
           "span": "No INVENTORY_RESERVED event found for order_id=ORD-8823"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A compensation released inventory that was never reserved, so stock counts are now corrupted.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -373,7 +394,10 @@
           "span": "CREATE TABLE local_orders (order_id UUID PRIMARY KEY..."
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A persistent shadow copy of order records will drift from the canonical Order Service and lead Shipping to act on stale order state.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -422,7 +446,10 @@
           "span": "strategy: Recreate...Average deployment time: 3–5 minutes...Release cadence: weekly"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The deployment strategy alone guarantees roughly four times the permitted annual downtime, breaching the contractual SLA.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -472,7 +499,10 @@
           "span": "remove duplicate log entries...may remove intermediate message states that have not yet been consumed"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Consumers relying on the exactly-once guarantee will silently lose messages that compaction deletes before consumption.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -522,7 +552,10 @@
           "span": "User preference vectors...stored indefinitely in the model store"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Indefinite retention of behavioural vectors for closed accounts violates the zero-exception PII deletion policy and creates regulatory exposure.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -572,7 +605,10 @@
           "span": "Typical end-to-end latency: 800ms–2s"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Developers who trust the 'always current' claim will build read-after-write flows that return stale search results during the pipeline lag.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -623,7 +659,10 @@
           "span": "maximum wall-clock timeout of 45 seconds"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Jobs running between 30 and 45 seconds outlive their lease, letting two workers hold the same lock and corrupt shared resources.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -674,7 +713,10 @@
           "span": "Conflicting writes can arise from concurrent client sessions"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The need for last-write-wins shows replicas can diverge, so acknowledged writes can be silently discarded despite the no-loss guarantee.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -725,7 +767,10 @@
           "span": "invalidate all active sessions and tokens...within 5 minutes"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Compromised accounts keep valid tokens for up to 15 minutes, breaching the 5-minute incident-response requirement during a live attack.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -777,7 +822,10 @@
           "span": "continues to accept writes in all regions during a partition"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Clients relying on linearisability will observe anomalies during partitions that the documented guarantee says cannot happen.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -829,7 +877,10 @@
           "span": "model is retrained weekly using a snapshot...T-7 days...48-hour validation period"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Surfacing that hourly feature freshness ignores train/serve distribution drift sharpens the platform's definition of staleness and motivates drift monitoring, rather than breaking a running system.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -881,7 +932,10 @@
           "span": "permanently deletes all data associated with the requesting user...including all records"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Every erasure request forces either a GDPR violation or destruction of the immutable audit trail, creating legal exposure either way.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -917,7 +971,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -953,7 +1010,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -989,7 +1049,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1025,7 +1088,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1061,7 +1127,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1097,7 +1166,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1133,7 +1205,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1169,7 +1244,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1210,7 +1288,10 @@
       ],
       "explanation": "The state difference may represent a conflict or expected replication lag. Without knowing the consistency model and acceptable lag bounds, this is genuinely ambiguous.",
       "conflicting_spans": null,
-      "ambiguity_reason": "The time difference (2 seconds) may be within acceptable eventual-consistency lag or may indicate a real state divergence — the consistency model is not specified in the passages."
+      "ambiguity_reason": "The time difference (2 seconds) may be within acceptable eventual-consistency lag or may indicate a real state divergence — the consistency model is not specified in the passages.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1251,7 +1332,10 @@
       ],
       "explanation": "The access control cache does not invalidate on SUBSCRIPTION_CANCELLED, which may or may not be a conflict depending on whether real-time accuracy for cancellations is required.",
       "conflicting_spans": null,
-      "ambiguity_reason": "'Should update their state' may be a strict requirement (conflict) or a best-practice recommendation (consistent). The risk tolerance for stale access control on cancellation is not specified."
+      "ambiguity_reason": "'Should update their state' may be a strict requirement (conflict) or a best-practice recommendation (consistent). The risk tolerance for stale access control on cancellation is not specified.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1292,7 +1376,10 @@
       ],
       "explanation": "The exactly-once claim holds under the assumption that duplicate events are always within 24 hours; it breaks for events arriving outside the deduplication window. Whether that scenario can occur is not specified.",
       "conflicting_spans": null,
-      "ambiguity_reason": "The conflict only materialises if duplicate events can arrive more than 24 hours apart. Whether that is operationally possible is not stated."
+      "ambiguity_reason": "The conflict only materialises if duplicate events can arrive more than 24 hours apart. Whether that is operationally possible is not stated.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1333,7 +1420,10 @@
       ],
       "explanation": "The 12ms real-time latency and 30-day rolling window aggregation may or may not be compatible depending on whether features are pre-computed — the passages do not specify the feature serving architecture.",
       "conflicting_spans": null,
-      "ambiguity_reason": "Consistency depends on whether cross-account rolling window features are pre-computed in a feature store (consistent) or computed on-the-fly at inference time (potentially conflicting)."
+      "ambiguity_reason": "Consistency depends on whether cross-account rolling window features are pre-computed in a feature store (consistent) or computed on-the-fly at inference time (potentially conflicting).",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",

@@ -25,6 +25,10 @@ Rules enforced:
     - reasoning_chain is present and final entry starts with "AMBIGUOUS — "
   consistent items:
     - conflict_level is null
+  conflict polarity (optional keys; checked only when present):
+    - conflict items: conflict_polarity in {destructive, constructive},
+      polarity_rationale non-empty, polarity_status in {draft, reviewed}
+    - non-conflict items: all three keys null
   all items:
     - required top-level fields are present
 """
@@ -54,6 +58,10 @@ REQUIRED_LABEL_KEYS = [
 PROHIBITED_MODAL_WORDS = [
     "may", "might", "could", "perhaps", "arguably", "likely",
 ]
+
+VALID_POLARITIES = {"destructive", "constructive"}
+VALID_POLARITY_STATUSES = {"draft", "reviewed"}
+POLARITY_KEYS = ["conflict_polarity", "polarity_rationale", "polarity_status"]
 
 _MODAL_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(w) for w in PROHIBITED_MODAL_WORDS) + r")\b",
@@ -112,6 +120,7 @@ def validate_item(item: dict[str, Any]) -> list[ValidationError]:
     elif verdict == "ambiguous":
         errors.extend(_validate_ambiguous_item(item_id, item, label, top_level_cl))
 
+    errors.extend(_validate_polarity(item_id, label, verdict))
     return errors
 
 
@@ -240,4 +249,39 @@ def _validate_ambiguous_item(
             f"got: {chain[-1][:60]!r}",
         ))
 
+    return errors
+
+
+def _validate_polarity(item_id: str, label: dict, verdict: Any) -> list[ValidationError]:
+    """Polarity keys are optional, but once any is present they must be coherent."""
+    if not any(k in label for k in POLARITY_KEYS):
+        return []
+    errors: list[ValidationError] = []
+
+    if verdict != "conflict":
+        for key in POLARITY_KEYS:
+            if label.get(key) is not None:
+                errors.append(ValidationError(
+                    item_id, f"label.{key}",
+                    f"{verdict} items must have {key}=null, got {label[key]!r}",
+                ))
+        return errors
+
+    polarity = label.get("conflict_polarity")
+    if polarity not in VALID_POLARITIES:
+        errors.append(ValidationError(
+            item_id, "label.conflict_polarity",
+            f"must be one of {sorted(VALID_POLARITIES)}, got {polarity!r}",
+        ))
+    if not label.get("polarity_rationale"):
+        errors.append(ValidationError(
+            item_id, "label.polarity_rationale",
+            "conflict items with a polarity label must have a non-empty polarity_rationale",
+        ))
+    status = label.get("polarity_status")
+    if status not in VALID_POLARITY_STATUSES:
+        errors.append(ValidationError(
+            item_id, "label.polarity_status",
+            f"must be one of {sorted(VALID_POLARITY_STATUSES)}, got {status!r}",
+        ))
     return errors

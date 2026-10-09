@@ -37,7 +37,10 @@
           "span": "liable for a termination fee equal to fifty percent (50%) of the remaining contract value"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Contradictory termination terms in one agreement invite a fee dispute and litigation the moment the Client exercises its exit right.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -84,7 +87,10 @@
           "span": "exclusively adjudicated by binding arbitration conducted in the State of Delaware"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The forum clause is voidable under California law, exposing the employer to challenge and fee-shifting while leaving the employee's rights uncertain.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -131,7 +137,10 @@
           "span": "Member Beta shall receive sixty percent (60%) of all distributions"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The operating agreement assigns Beta both 40% and 60% of distributions, so every payout during the first five years is open to dispute between members.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -179,7 +188,10 @@
           "span": "takes any action harmful to any person, including interference with the lawful employment or livelihood of any person, for providing to a law enforcement officer any truthful information"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Enforcing the policy against a whistleblower would expose the company to federal criminal liability for retaliation.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -227,7 +239,10 @@
           "span": "operates as a stay...of...any act...to exercise control over property of the estate"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The lender's acceleration remedy evaporates on a bankruptcy filing, so its credit protection fails exactly when it is needed.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -275,7 +290,10 @@
           "span": "may circumvent a technological measure...for the sole purpose of identifying and analyzing those elements...necessary to achieve interoperability"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The licensor relies on a categorical prohibition that is unenforceable against interoperability reverse engineering, leaving its protection illusory.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -328,7 +346,10 @@
           "span": "Every contract...in restraint of trade or commerce...is declared to be illegal"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The closed affiliate-only supplier list exposes the franchisor to Sherman Act liability and makes the exclusivity obligation potentially unenforceable.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -381,7 +402,10 @@
           "span": "shall not apply to an invention that the employee developed entirely on his or her own time without using the employer's equipment"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The blanket assignment is void as to protected inventions, inviting ownership disputes over employee side projects.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -430,7 +454,10 @@
           "span": "right to obtain from the controller the erasure of personal data...without undue delay...where the personal data are no longer necessary"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The processor is contractually bound to retain data that a data subject can lawfully demand be erased, so one of the two obligations will be breached.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -484,7 +511,10 @@
           "span": "Any purported transfer without such consent is void ab initio"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The buyer pays for software licenses that never transfer, creating a title misrepresentation and warranty claim inside the deal.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -546,7 +576,10 @@
           "span": "principal test of an employment relationship is whether the person to whom service is rendered has the right to control the manner and means"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Misclassifying a controlled worker as a contractor exposes the client to wage, overtime, and workers' compensation liability.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -604,7 +637,10 @@
           "span": "NLRB's position prior to Epic Systems was that class waivers violated § 7"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "During 2014–2018 the class waiver's validity was contested by the regulator, exposing the drafter to NLRB challenge until the Supreme Court settled the question.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -663,7 +699,10 @@
           "span": "transaction that benefits the parent at the expense of minority interests in the subsidiary is voidable"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A controller-on-both-sides transfer without fairness safeguards is voidable and exposes Alpha's principals to fiduciary-duty claims.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -714,7 +753,10 @@
           "span": "to discriminate in price between different purchasers...where the effect...may be substantially to lessen competition"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The MFN clause can lock the platform into price discrimination that triggers Robinson-Patman liability.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -773,7 +815,10 @@
           "span": "Allocating investment opportunities in a manner that favors one fund over another without adequate disclosure and consent...constitutes fraud"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The no-consent allocation clause purports to waive non-waivable fiduciary duties, exposing the GP to securities-fraud liability.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -833,7 +878,10 @@
           "span": "if a holder of a guaranteed instrument impairs the collateral securing the guarantee without the guarantor's consent, the guarantor is discharged to the extent of the impairment"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Exercising the primary remedy discharges the guarantee, so the lender's risk-allocation scheme defeats itself when invoked.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -897,7 +945,10 @@
           "span": "PBGC may assess the new plan sponsor for the entire unfunded benefit liability"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The acquirer takes on pension obligations that cannot all be satisfied together, creating PBGC liability and breach of its own representations and covenants.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -957,7 +1008,10 @@
           "span": "US surveillance law (FISA § 702) provides surveillance access that is not limited to what is strictly necessary and proportionate"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The US partner cannot comply with both FISA § 702 and GDPR Article 48, so the joint venture is in breach under at least one regime.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -993,7 +1047,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1029,7 +1086,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1065,7 +1125,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1101,7 +1164,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1137,7 +1203,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1173,7 +1242,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1209,7 +1281,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1245,7 +1320,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1286,7 +1364,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The JDA does not specify its geographic scope. In the US, Section 9.1 is consistent with the § 262 default; internationally, it may conflict with mandatory consent requirements in jurisdictions like Germany. The relationship is underdetermined without knowing which legal regime governs the parties' exploitation rights."
+      "ambiguity_reason": "The JDA does not specify its geographic scope. In the US, Section 9.1 is consistent with the § 262 default; internationally, it may conflict with mandatory consent requirements in jurisdictions like Germany. The relationship is underdetermined without knowing which legal regime governs the parties' exploitation rights.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1327,7 +1408,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Without a governing law designation, it is underdetermined whether the non-compete (Section 7.4) is enforceable and whether the blue-pencil clause (Section 7.6) is operative — the two provisions' relationship ranges from mutually reinforcing (common law states) to entirely void (California) depending on which state's law applies."
+      "ambiguity_reason": "Without a governing law designation, it is underdetermined whether the non-compete (Section 7.4) is enforceable and whether the blue-pencil clause (Section 7.6) is operative — the two provisions' relationship ranges from mutually reinforcing (common law states) to entirely void (California) depending on which state's law applies.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1368,7 +1452,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "California courts allow 'as is' clauses coexist with § 1102 only when the TDS is properly delivered and no known defects are concealed. Whether Addendum 3 conflicts with the statute depends entirely on facts not present in the excerpts (TDS delivery, Seller's actual knowledge), rendering the relationship genuinely ambiguous."
+      "ambiguity_reason": "California courts allow 'as is' clauses coexist with § 1102 only when the TDS is properly delivered and no known defects are concealed. Whether Addendum 3 conflicts with the statute depends entirely on facts not present in the excerpts (TDS delivery, Seller's actual knowledge), rendering the relationship genuinely ambiguous.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1409,7 +1496,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "New York's civil usury exemption for commercial entities (G.O.L. § 5-521) means the 18% rate is lawful if both parties are corporations, but unlawful if either is an individual. The legal character of 'Client' is unspecified in the passages, making the conflict question genuinely underdetermined."
+      "ambiguity_reason": "New York's civil usury exemption for commercial entities (G.O.L. § 5-521) means the 18% rate is lawful if both parties are corporations, but unlawful if either is an individual. The legal character of 'Client' is unspecified in the passages, making the conflict question genuinely underdetermined.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",

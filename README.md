@@ -124,6 +124,8 @@ class MyAdapter(ModelAdapter):
         return AdapterResponse(verdict=verdict, explanation=raw, raw_response=raw)
 ```
 
+To be scored on conflict type too, set `conflict_type="destructive"` or `"constructive"` on conflict verdicts. The easiest way is `return parse_verdict_response(raw)` (from `benchmark.adapters.base`), which reads the `TYPE:` line for you.
+
 ```bash
 scbench --adapter-class my_model.MyAdapter
 ```
@@ -155,6 +157,7 @@ scbench [options]
   --output PATH                     JSON output path (default: results/<run_id>.json)
   --leaderboard PATH                CSV leaderboard path (default: results/leaderboard.csv)
   --verbose                         Print per-item predictions during evaluation
+  --include-draft-polarity          Also score unreviewed (draft) destructive/constructive labels
 ```
 
 ---
@@ -262,6 +265,23 @@ The model reads two passages and classifies the relationship as:
 
 **Metrics**: accuracy, macro-F1, binary conflict F1 (conflict+ambiguous vs. consistent), per-class F1, **LW-F1** (primary).
 
+### Task 1b: Conflict Type (destructive vs constructive)
+
+For items the model calls **conflict**, it also states on the second line `TYPE: DESTRUCTIVE` or `TYPE: CONSTRUCTIVE`. The test is: *what happens if the conflict is left unresolved?*
+
+- **destructive** — concrete damage: system failure, legal or financial exposure, safety risk, broken commitments or trust, wasted work
+- **constructive** — a productive tension: working through it yields better understanding, a refined theory, or a better decision, and it harms no one
+
+**Metrics** (reported in a separate section; LW-F1 and the verdict metrics do not change):
+
+| Metric | Computed over | What it diagnoses |
+|---|---|---|
+| Type accuracy / macro-F1 | gold-labelled conflict items the model correctly detected | type judgement on its own, separated from detection skill |
+| Joint accuracy | all gold-labelled conflict items | end to end: right verdict **and** right type |
+| Type coverage | detected conflicts | whether the model and adapter actually emit a `TYPE:` line |
+
+Labels live in `label.conflict_polarity`; see [data/schema.md](data/schema.md) and [docs/annotation_guide.md](docs/annotation_guide.md) §3.5. The v1 labels are **drafts pending human review** (`polarity_status: "draft"`), so they're scored only with `--include-draft-polarity`. They also track domain closely (science and philosophy are constructive; law, software and content are mostly destructive), so compare type accuracy within a domain before reading much into it.
+
 ### Task 2: Explanation Quality
 
 For conflict and ambiguous predictions, the model's explanation is scored against the ground-truth `reasoning_chain` using **BERTScore F1** (distilbert-base-uncased). This measures whether the model traces the correct logical path using semantic similarity rather than token overlap, capturing paraphrasing and synonymy that surface metrics miss.
@@ -275,6 +295,7 @@ The built-in `system_prompt` (in `benchmark/adapters/base.py`) instructs models 
 1. **Derive implications**: for each passage, enumerate every statement that follows with 100% logical certainty.
 2. **Check for conflicts**: look for contradictions both between literal statements *and* between their derived implications.
 3. **Classify**: return exactly `CONFLICT`, `CONSISTENT`, or `AMBIGUOUS` on the first line.
+4. **Type the conflict**: for `CONFLICT`, add `TYPE: DESTRUCTIVE` or `TYPE: CONSTRUCTIVE` on the second line.
 
 This forces models to work in the *derived semantic space*, not just pattern-match surface text — which is precisely what L2–L5 items require.
 

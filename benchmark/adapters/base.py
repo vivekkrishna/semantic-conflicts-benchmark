@@ -25,6 +25,12 @@ from typing import Optional
 
 
 VALID_VERDICTS = {"conflict", "consistent", "ambiguous"}
+VALID_CONFLICT_TYPES = {"destructive", "constructive"}
+
+# "TYPE: DESTRUCTIVE", "**Type** — constructive", etc. Markdown emphasis is tolerated.
+_TYPE_LINE = re.compile(
+    r"^[\s*_#>-]*TYPE[\s*_]*[:\-—–][\s*_]*(DESTRUCTIVE|CONSTRUCTIVE)\b", re.I
+)
 
 
 def parse_verdict_response(raw: str) -> "AdapterResponse":
@@ -52,15 +58,35 @@ def parse_verdict_response(raw: str) -> "AdapterResponse":
                 verdict = v.lower()
                 break
 
+    # Conflict type: an explicit "TYPE: ..." line, else a type word on the
+    # verdict line itself (e.g. "CONFLICT — DESTRUCTIVE"). Type words elsewhere
+    # in the body are ignored, since explanations often use them descriptively.
+    conflict_type: Optional[str] = None
+    if verdict == "conflict":
+        for l in lines:
+            m = _TYPE_LINE.match(l)
+            if m:
+                conflict_type = m.group(1).lower()
+                break
+        else:
+            for t in ("DESTRUCTIVE", "CONSTRUCTIVE"):
+                if t in first_line:
+                    conflict_type = t.lower()
+                    break
+
     explanation: Optional[str] = None
     if verdict in ("conflict", "ambiguous"):
         body_lines = [
             l for l in lines
             if not re.match(r"^\s*(CONFLICT|CONSISTENT|AMBIGUOUS)\s*$", l, re.I)
+            and not _TYPE_LINE.match(l)
         ]
         explanation = "\n".join(body_lines).strip() or raw.strip()
 
-    return AdapterResponse(verdict=verdict, explanation=explanation, raw_response=raw)
+    return AdapterResponse(
+        verdict=verdict, explanation=explanation, raw_response=raw,
+        conflict_type=conflict_type,
+    )
 
 
 @dataclass
@@ -72,16 +98,24 @@ class AdapterResponse:
         explanation:  Required when verdict is "conflict" or "ambiguous".
                       Should explain which statements or derived implications conflict.
         raw_response: Full, unprocessed text from the model — stored for debugging.
+        conflict_type: "destructive" or "constructive" when verdict is "conflict";
+                       None otherwise or when the model gave no type.
     """
 
     verdict: str
     explanation: Optional[str] = None
     raw_response: str = ""
+    conflict_type: Optional[str] = None
 
     def __post_init__(self) -> None:
         if self.verdict not in VALID_VERDICTS:
             raise ValueError(
                 f"verdict must be one of {VALID_VERDICTS!r}, got {self.verdict!r}"
+            )
+        if self.conflict_type is not None and self.conflict_type not in VALID_CONFLICT_TYPES:
+            raise ValueError(
+                f"conflict_type must be one of {VALID_CONFLICT_TYPES!r} or None, "
+                f"got {self.conflict_type!r}"
             )
 
 
@@ -144,7 +178,16 @@ class ModelAdapter(ABC):
             "compatible with each other.\n"
             "  AMBIGUOUS  — a conflict may or may not exist depending on unstated "
             "context, scope, or definitions that are not resolvable from the text alone.\n\n"
+            "Step 4 — If CONFLICT, classify its type by asking what happens if "
+            "the conflict is left unresolved:\n"
+            "  DESTRUCTIVE  — it causes concrete damage: a system failure, legal or "
+            "financial exposure, a safety risk, broken commitments or trust, or wasted work.\n"
+            "  CONSTRUCTIVE — the tension is productive: working through it yields "
+            "better understanding, a refined theory, or a better decision, and its "
+            "existence harms no one.\n\n"
             "Begin your response with the verdict word on its own line. "
+            "If the verdict is CONFLICT, put the type on the second line as "
+            "'TYPE: DESTRUCTIVE' or 'TYPE: CONSTRUCTIVE'. "
             "If the verdict is CONFLICT or AMBIGUOUS, explain which specific "
             "statements or derived implications conflict and why."
         )

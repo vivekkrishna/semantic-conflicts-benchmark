@@ -45,7 +45,10 @@
           "span": "colonizes the gastric mucosa in approximately 50% of the world's population"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The clash between acid-theory teaching and the H. pylori evidence overturned the old model and produced a curative antibiotic treatment.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -92,7 +95,10 @@
           "span": "Electrical synapses (gap junctions) are widespread in the adult vertebrate central nervous system"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Evidence of electrical synapses refined the neuron doctrine and opened research into network synchronisation.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -151,7 +157,10 @@
           "span": "originated in a hot, dense state approximately 13.8 billion years ago"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Hubble's observations against the static model drove the shift to an expanding-universe cosmology.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -199,7 +208,10 @@
           "span": "speed of light in vacuum is constant at c = 299,792,458 m/s regardless of the motion of the source or observer"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The Michelson–Morley null result against aether theory was a key motivation for special relativity.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -255,7 +267,10 @@
           "span": "protein-level changes do not alter the nucleotide sequence of germline DNA"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Testing Lamarckian inheritance against molecular mechanism clarified the boundaries of heredity and later framed epigenetics research.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -303,7 +318,10 @@
           "span": "metals that burn gain mass — they oxidize — which phlogiston theory predicts incorrectly (if phlogiston were released, the residue should be lighter, not heavier, than the metal)"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Lavoisier's mass measurements against phlogiston theory founded modern combustion chemistry.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -356,7 +374,10 @@
           "span": "CMB temperature scales as T ∝ (1+z) with redshift z"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The CMB's temperature–redshift relation decided the steady-state versus Big Bang debate and advanced observational cosmology.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -413,7 +434,10 @@
           "span": "annual turnover rate of ~1.75% of dentate gyrus neurons"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Evidence of adult neurogenesis revised a fixed-neuron dogma and opened new avenues for brain-injury research.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -462,7 +486,10 @@
           "span": "for many substrate proteins, the native fold cannot be reached without chaperone assistance under physiological crowding conditions"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The chaperone findings refined Anfinsen's dogma into a fuller in vivo account of protein folding.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -524,7 +551,10 @@
           "span": "cholera as a waterborne bacterial disease"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Snow's data against miasma theory established waterborne transmission and modern epidemiology.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -582,7 +612,10 @@
           "span": "approximately 45% of cardiomyocytes present at age 75 were generated after birth"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Evidence of cardiomyocyte renewal overturned the post-mitotic heart model and launched cardiac regeneration research.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -640,7 +673,10 @@
           "span": "fertility rates decline as living standards rise, breaking the Malthusian coupling"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Agricultural and demographic data against Malthus refined population economics and the demographic transition model.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -703,7 +739,10 @@
           "span": "neutrino arrival time was consistent with c"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Scrutinising the apparent superluminal result exposed two instrumental faults and reconfirmed special relativity, improving experimental practice.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -762,7 +801,10 @@
           "span": "cannot be explained by any single identified systematic error in either measurement"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The Hubble tension is an open, productive anomaly driving new measurements and candidate extensions to ΛCDM.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -825,7 +867,10 @@
           "span": "Neutrino oscillation is only possible if neutrinos have nonzero mass, which requires physics beyond the Standard Model"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Neutrino oscillations against the massless-neutrino assumption extended the Standard Model and earned a Nobel Prize.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -881,7 +926,10 @@
           "span": "final state after complete evaporation is a thermal bath with maximal entropy, regardless of the initial state"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The information paradox has driven decades of productive work in quantum gravity, including holography and black-hole thermodynamics.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -949,7 +997,10 @@
           "span": "many cells with classic driver mutations never progress to cancer in the absence of specific tissue signals"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The SMT versus TOFT disagreement motivates research into the tumour microenvironment alongside genomic drivers.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -1009,7 +1060,10 @@
           "span": "preferred basis is selected by the environment, not by measurement"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Decoherence's challenge to the collapse postulate sharpened the measurement problem and advanced quantum foundations.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -1045,7 +1099,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1081,7 +1138,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1117,7 +1177,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1153,7 +1216,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1189,7 +1255,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1225,7 +1294,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1261,7 +1333,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1297,7 +1372,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1338,7 +1416,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The disagreement between EES advocates and critics is an active empirical and conceptual debate in evolutionary biology. Whether EES mechanisms require a 'conceptual revision' to evolutionary theory versus 'quantitative accommodation' within existing models cannot be determined from the passages alone — both positions are scientifically reasonable given current evidence, making the relationship ambiguous rather than a clear conflict."
+      "ambiguity_reason": "The disagreement between EES advocates and critics is an active empirical and conceptual debate in evolutionary biology. Whether EES mechanisms require a 'conceptual revision' to evolutionary theory versus 'quantitative accommodation' within existing models cannot be determined from the passages alone — both positions are scientifically reasonable given current evidence, making the relationship ambiguous rather than a clear conflict.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1379,7 +1460,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The 2023 clinical trial results show modest but significant clinical slowing, which is consistent with a weak form of the amyloid cascade hypothesis but inconsistent with its stronger form (clearance should halt progression). Whether this constitutes support, partial falsification, or delayed-treatment artifact is genuinely underdetermined by the available evidence."
+      "ambiguity_reason": "The 2023 clinical trial results show modest but significant clinical slowing, which is consistent with a weak form of the amyloid cascade hypothesis but inconsistent with its stronger form (clearance should halt progression). Whether this constitutes support, partial falsification, or delayed-treatment artifact is genuinely underdetermined by the available evidence.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1420,7 +1504,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The meta-analysis shows a small, heterogeneous probiotic effect on depression that neither clearly confirms the gut-brain axis hypothesis (effect is small and dysbiosis-stratification shows no enrichment) nor clearly refutes it (a small effect is still consistent with the mechanism). The relationship between the two passages is genuinely underdetermined."
+      "ambiguity_reason": "The meta-analysis shows a small, heterogeneous probiotic effect on depression that neither clearly confirms the gut-brain axis hypothesis (effect is small and dysbiosis-stratification shows no enrichment) nor clearly refutes it (a small effect is still consistent with the mechanism). The relationship between the two passages is genuinely underdetermined.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1461,7 +1548,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Dark matter and MOND are competing frameworks with partially overlapping evidence domains. MOND explains galactic rotation curves that dark matter also explains; dark matter explains the Bullet Cluster that MOND struggles with; neither framework is falsified across all domains simultaneously. The relationship is ambiguous: they conflict in claimed mechanism but not necessarily in all predictions, and which framework is empirically superior depends on the observational context."
+      "ambiguity_reason": "Dark matter and MOND are competing frameworks with partially overlapping evidence domains. MOND explains galactic rotation curves that dark matter also explains; dark matter explains the Bullet Cluster that MOND struggles with; neither framework is falsified across all domains simultaneously. The relationship is ambiguous: they conflict in claimed mechanism but not necessarily in all predictions, and which framework is empirically superior depends on the observational context.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",

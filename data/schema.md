@@ -52,7 +52,10 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
     { "passage_id": "A", "span": "exact or near-verbatim span from passage A" },
     { "passage_id": "B", "span": "exact or near-verbatim span from passage B" }
   ],
-  "ambiguity_reason": null
+  "ambiguity_reason": null,
+  "conflict_polarity": "destructive",
+  "polarity_rationale": "One sentence on what happens if the conflict is left unresolved.",
+  "polarity_status": "draft"
 }
 ```
 
@@ -65,7 +68,10 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
   "reasoning_chain": null,
   "explanation": null,
   "conflicting_spans": null,
-  "ambiguity_reason": null
+  "ambiguity_reason": null,
+  "conflict_polarity": null,
+  "polarity_rationale": null,
+  "polarity_status": null
 }
 ```
 
@@ -82,7 +88,10 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
   ],
   "explanation": null,
   "conflicting_spans": null,
-  "ambiguity_reason": "Plain-language explanation of why the relationship is underdetermined."
+  "ambiguity_reason": "Plain-language explanation of why the relationship is underdetermined.",
+  "conflict_polarity": null,
+  "polarity_rationale": null,
+  "polarity_status": null
 }
 ```
 
@@ -110,6 +119,15 @@ Every item in `data/<domain>/v1.json` is an element of a JSON array. Each file c
 - Each entry is a string. Conflict chains end with `"CONFLICT — ..."`. Ambiguous chains end with `"AMBIGUOUS — ..."`.
 - Every step must follow from the previous with **100% logical certainty** — no probabilistic leaps.
 - Words like "may", "might", "arguably", or "likely" are **not permitted** in conflict item chains — only in ambiguous item chains where the underdetermination is the point.
+
+### `conflict_polarity`, `polarity_rationale`, `polarity_status`
+- Conflict items only; all three are `null` for consistent and ambiguous items.
+- `conflict_polarity` is `"destructive"` or `"constructive"`, decided by one test: **what happens if the conflict is left unresolved?**
+  - `destructive` — it causes concrete damage: a system failure, legal or financial exposure, a safety risk, broken commitments or trust, or wasted work.
+  - `constructive` — the tension is productive: working through it yields better understanding, a refined theory, or a better decision, and its existence harms no one.
+- `polarity_rationale` is one sentence naming the consequence that decided the label.
+- `polarity_status` is `"draft"` (unreviewed) or `"reviewed"` (human-verified). The evaluator scores only `reviewed` labels unless run with `--include-draft-polarity`.
+- See `docs/annotation_guide.md` §3.5 for decision rules and worked examples.
 
 ### `category`
 | Value | Meaning |

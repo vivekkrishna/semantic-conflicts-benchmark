@@ -1,7 +1,9 @@
 """Task 1: Verdict Classification.
 
-Ask the model to classify each item as CONFLICT, CONSISTENT, or AMBIGUOUS.
-Scoring: accuracy, macro-F1, per-class F1, binary conflict F1.
+Ask the model to classify each item as CONFLICT, CONSISTENT, or AMBIGUOUS,
+and for CONFLICT items whether the conflict is DESTRUCTIVE or CONSTRUCTIVE.
+Scoring: accuracy, macro-F1, per-class F1, binary conflict F1; conflict-type
+accuracy / macro-F1 (see metrics.compute_polarity_metrics).
 """
 
 from typing import Any
@@ -18,6 +20,12 @@ TASK_INSTRUCTION = (
     "  CONFLICT   — the passages or their logical implications are incompatible.\n"
     "  CONSISTENT — the passages and all their implications are fully compatible.\n"
     "  AMBIGUOUS  — a conflict may or may not exist depending on unstated context.\n\n"
+    "If your verdict is CONFLICT, state its type on the second line — ask what "
+    "happens if the conflict is left unresolved:\n"
+    "  TYPE: DESTRUCTIVE  — it causes concrete damage (system failure, legal or "
+    "financial exposure, safety risk, broken commitments or trust, wasted work).\n"
+    "  TYPE: CONSTRUCTIVE — the tension is productive (it yields better understanding, "
+    "a refined theory, or a better decision) and harms no one.\n\n"
     "If your verdict is CONFLICT or AMBIGUOUS, explain which specific statements "
     "or derived implications conflict and why.\n\n"
 )

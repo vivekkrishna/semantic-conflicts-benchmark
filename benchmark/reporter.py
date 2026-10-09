@@ -117,6 +117,9 @@ def write_markdown(results: EvaluationResults, path: str) -> None:
                           tablefmt="github"))
     lines.append("")
 
+    # Conflict polarity (destructive vs constructive)
+    lines.extend(_polarity_markdown(results))
+
     # Failure breakdown (R-4.5)
     breakdown = _compute_failure_breakdown(results.per_item, results.total_items)
     nonzero = {k: v for k, v in breakdown.items() if v["count"] > 0}
@@ -287,6 +290,14 @@ def print_console(results: EvaluationResults) -> None:
     ]
     print(tabulate(overall_rows, headers=["Metric", "Score"], tablefmt="simple"))
 
+    pol = o.get("polarity") or {}
+    if pol.get("n_labelled"):
+        print("\nConflict type (destructive vs constructive):")
+        print(tabulate(_polarity_rows(pol), headers=["Metric", "Score"], tablefmt="simple"))
+    elif pol.get("n_excluded_draft"):
+        print(f"\nConflict type: not scored — {pol['n_excluded_draft']} draft labels "
+              f"excluded (use --include-draft-polarity).")
+
     if results.by_level:
         print("\nBy difficulty level:")
         level_rows = _level_table_rows(results.by_level)
@@ -305,6 +316,54 @@ def print_console(results: EvaluationResults) -> None:
 # ---------------------------------------------------------------------------
 # Shared helpers
 # ---------------------------------------------------------------------------
+
+def _fmt(v: Any) -> str:
+    return "—" if v is None else f"{v:.4f}"
+
+
+def _polarity_rows(pol: dict[str, Any]) -> list[list]:
+    pc = pol.get("per_class_f1") or {}
+    return [
+        ["Type accuracy (on detected conflicts)", _fmt(pol.get("polarity_accuracy"))],
+        ["Type macro-F1 (on detected conflicts)", _fmt(pol.get("polarity_macro_f1"))],
+        ["— Destructive F1",                       _fmt(pc.get("destructive"))],
+        ["— Constructive F1",                      _fmt(pc.get("constructive"))],
+        ["Joint accuracy (verdict + type)",        _fmt(pol.get("joint_accuracy"))],
+        ["Type coverage",                          _fmt(pol.get("type_coverage"))],
+        ["N labelled / detected / typed",
+         f"{pol.get('n_labelled', 0)} / {pol.get('n_detected', 0)} / {pol.get('n_typed', 0)}"],
+    ]
+
+
+def _polarity_markdown(results: EvaluationResults) -> list[str]:
+    pol = results.overall.get("polarity") or {}
+    lines = ["## Conflict Type (Destructive vs Constructive)\n"]
+    if not pol.get("n_labelled"):
+        n_draft = pol.get("n_excluded_draft", 0)
+        lines.append(
+            f"_Not scored: no reviewed polarity labels. {n_draft} draft labels were "
+            f"excluded — rerun with `--include-draft-polarity` to score them._\n"
+            if n_draft else "_Not scored: no items carry a polarity label._\n"
+        )
+        return lines
+    if pol.get("n_excluded_draft"):
+        lines.append(f"_{pol['n_excluded_draft']} draft labels excluded._\n")
+    lines.append(tabulate(_polarity_rows(pol), headers=["Metric", "Score"], tablefmt="github"))
+    lines.append("")
+
+    rows = []
+    for domain, m in sorted(results.by_domain.items()):
+        dp = m.get("polarity") or {}
+        if dp.get("n_labelled"):
+            rows.append([domain, _fmt(dp.get("polarity_accuracy")),
+                         _fmt(dp.get("joint_accuracy")), dp["n_labelled"]])
+    if rows:
+        lines.append("### By domain\n")
+        lines.append(tabulate(rows, headers=["Domain", "Type acc.", "Joint acc.", "N"],
+                              tablefmt="github"))
+        lines.append("")
+    return lines
+
 
 def _level_table_rows(by_level: dict[int, dict[str, Any]]) -> list[list]:
     rows = []

@@ -37,7 +37,10 @@
           "span": "killing that person is the morally correct action"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The deontology versus utilitarianism clash is a generative dialectic that structures normative ethics and sharpens both theories.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -84,7 +87,10 @@
           "span": "only legitimate source of political authority is the consent of the governed"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "The philosopher-king versus consent-of-the-governed debate drives centuries of inquiry into political legitimacy.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -131,7 +137,10 @@
           "span": "Man is born free...humans are naturally good"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Opposed accounts of the state of nature motivate competing social-contract theories and clarify their assumptions.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -179,7 +188,10 @@
           "span": "Existence is primary; consciousness is not"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Primacy of consciousness versus primacy of existence is a productive foundational debate in epistemology.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -227,7 +239,10 @@
           "span": "universally and necessarily binding on all rational beings"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Moral perspectivism versus the categorical imperative frames the metaethical realism debate.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -275,7 +290,10 @@
           "span": "From the fact that reason is man's means of survival, it follows that rational self-interest is the objective moral standard"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Rand's attempted is-ought derivation against Hume's guillotine sharpens the debate over ethical naturalism.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -324,7 +342,10 @@
           "span": "no final state...only the eternal cycle"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Teleological versus cyclical history is a generative contrast in the philosophy of history.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -373,7 +394,10 @@
           "span": "cannot be sacrificed for the collective or for any abstract principle"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Universalisability versus rational egoism forces each theory to clarify the source of moral authority.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -422,7 +446,10 @@
           "span": "pure reason alone, prior to any experience"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Materialist versus a priori accounts of knowledge structure an enduring productive epistemological debate.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -472,7 +499,10 @@
           "span": "Moral values are human constructions...each person must become the author of their own values"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Objective versus constructed values is a central, generative question in metaethics.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -522,7 +552,10 @@
           "span": "justice requires that one to bear the cost"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Dignity versus aggregate welfare drives refinement of both Kantian and consequentialist theories.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -572,7 +605,10 @@
           "span": "full actualisation of the specific capacities and functions that constitute human nature"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Existentialist denial of human nature against Aristotelian teleology sharpens debates on what grounds flourishing.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -623,7 +659,10 @@
           "span": "pure category of the understanding...experience itself would be impossible"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Kant's account of causality was explicitly developed as a response to Hume's challenge — the paradigm of productive philosophical conflict.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -674,7 +713,10 @@
           "span": "maximise the prospects of the least advantaged"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Lockean entitlement versus Rawlsian justice structures the modern distributive-justice debate.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -725,7 +767,10 @@
           "span": "Every organism strives above all to preserve its own existence"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Nietzsche's will to power was developed in explicit dialogue with Schopenhauer's will to live, refining both accounts of motivation.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -777,7 +822,10 @@
           "span": "Being cannot be fully captured in propositional representation"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Wittgenstein versus Heidegger on the limits of language is a productive contrast between analytic and continental thought.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -829,7 +877,10 @@
           "span": "If non-existence were possible, it would be preferable to existence"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Optimism versus pessimism about existence drives inquiry into theodicy and the problem of evil.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -881,7 +932,10 @@
           "span": "Knowledge begins from sensory particulars"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Aristotle's critique of separate Forms is the founding productive disagreement of Western metaphysics.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -917,7 +971,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -953,7 +1010,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -989,7 +1049,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1025,7 +1088,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1061,7 +1127,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1097,7 +1166,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1133,7 +1205,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1169,7 +1244,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1209,7 +1287,10 @@
       ],
       "explanation": "Rand and Nietzsche both valorise a form of striving and creation. Whether they conflict depends on whether 'self-overcoming' subsumes productive achievement or competes with it — the passages do not specify.",
       "conflicting_spans": null,
-      "ambiguity_reason": "'Productive achievement' and 'self-overcoming' may refer to the same activity under different descriptions, or may be genuinely distinct — the texts do not resolve this."
+      "ambiguity_reason": "'Productive achievement' and 'self-overcoming' may refer to the same activity under different descriptions, or may be genuinely distinct — the texts do not resolve this.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1249,7 +1330,10 @@
       ],
       "explanation": "Rawls and Bentham propose different distributive principles that often yield different prescriptions, but may coincide under specific conditions. The conflict is probable but not logically necessary from the texts alone.",
       "conflicting_spans": null,
-      "ambiguity_reason": "Whether maximising aggregate welfare conflicts with maximising the worst-off's position depends on empirical assumptions about distribution and marginal utility not stated in the passages."
+      "ambiguity_reason": "Whether maximising aggregate welfare conflicts with maximising the worst-off's position depends on empirical assumptions about distribution and marginal utility not stated in the passages.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1290,7 +1374,10 @@
       ],
       "explanation": "On the surface these conflict — Aristotle denies algorithms, Kant provides one. But they may be describing different levels of moral reasoning (a universal constraint vs. the wisdom of application), in which case they are compatible. The passages do not resolve which scope each author intends.",
       "conflicting_spans": null,
-      "ambiguity_reason": "Conflict depends on whether Kant claims his procedure is a complete and sufficient guide to action (conflicting with Aristotle) or a necessary constraint that still requires practical wisdom in application (compatible)."
+      "ambiguity_reason": "Conflict depends on whether Kant claims his procedure is a complete and sufficient guide to action (conflicting with Aristotle) or a necessary constraint that still requires practical wisdom in application (compatible).",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1330,7 +1417,10 @@
       ],
       "explanation": "Whether 'live according to nature' (Stoic) and 'overcome nature' (Nietzsche) conflict depends entirely on whether they use 'nature' in the same sense. The passages do not specify, making the relationship genuinely ambiguous.",
       "conflicting_spans": null,
-      "ambiguity_reason": "The word 'nature' may refer to cosmic rational order (Stoic) or biological/common human nature (Nietzsche). If they use it in different senses, the passages are consistent; if the same, they conflict."
+      "ambiguity_reason": "The word 'nature' may refer to cosmic rational order (Stoic) or biological/common human nature (Nietzsche). If they use it in different senses, the passages are consistent; if the same, they conflict.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",

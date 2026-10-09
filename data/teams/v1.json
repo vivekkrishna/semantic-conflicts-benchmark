@@ -37,7 +37,10 @@
           "span": "I have never merged a change that breaks existing functionality, and I never will"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Fast-iteration versus zero-defect is a legitimate engineering trade-off; surfacing it forces the team to make its release-risk policy explicit.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -84,7 +87,10 @@
           "span": "requires a daily 9am synchronous video standup with all team members"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "An agent that requires synchronous standups cannot function on a fully asynchronous team, so its estimates and blocker reports become unreliable.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -131,7 +137,10 @@
           "span": "I make architectural decisions alone, quickly' / 'seeking group consensus slows everything down"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Autonomy versus consensus is a legitimate process disagreement whose resolution, such as tiered decision rights, can improve the policy.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -179,7 +188,10 @@
           "span": "captures the user's name, email address, geographic location... This memory is never purged"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Permanent PII memory breaches a contractual 30-day retention limit written into every enterprise DPA.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -227,7 +239,10 @@
           "span": "always install the latest stable release of every library. I never pin to a specific version"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Pinning versus always-latest is a genuine reproducibility-versus-patch-currency trade-off whose resolution (e.g., automated update PRs) improves both goals.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -275,7 +290,10 @@
           "span": "When I'm blocked I pick up the phone... I can reach them immediately when I need guidance"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Async tickets versus direct calls is a working-style tension; discussing it can refine escalation norms without harm to either side.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -324,7 +342,10 @@
           "span": "merge it to the working branch without pausing for external approval workflows"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "An assistant that auto-merges third-party integrations bypasses the security review created after a 14,000-record breach.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -373,7 +394,10 @@
           "span": "migration will be executed directly against the production PostgreSQL instance' / 'Building a feature flag would add overhead the schedule cannot absorb"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Running DDL directly on production without a rollback flag removes the safety net mandated to prevent data-loss incidents.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -422,7 +446,10 @@
           "span": "The employee has no professional obligations outside of these hours and will not be contacted for work-related matters outside these hours"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Merges late in the week create an ownership window that falls outside the engineer's contractual hours, so the rollback coverage cannot exist without breaching the contract.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -472,7 +499,10 @@
           "span": "ReportingService will establish direct read connections to the primary read replicas of the OrderService PostgreSQL database, the InventoryService PostgreSQL database, and the UserService PostgreSQL database"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Direct cross-service database reads are classed by ADR-014 as a critical defect and couple the dashboard to three services' internal schemas.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -522,7 +552,10 @@
           "span": "Individual story point velocity, measured as personal points completed per sprint: 40%"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Individual velocity scoring reintroduces a practice the team already saw cause point inflation and a collapse in collaboration.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -572,7 +605,10 @@
           "span": "when action confidence exceeds 85%, proceed immediately. Do not initiate blocking confirmation requests"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "An agent that skips confirmation above 85% confidence will take irreversible production actions without the mandated human approval.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -623,7 +659,10 @@
           "span": "cache nodes in North America (us-east-1, us-west-2), Asia Pacific (ap-southeast-1, ap-northeast-1)' / 'Cache entries may contain verbatim fragments of the original input"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Caching verbatim customer inputs on US and APAC nodes breaches EU-only residency commitments and triggers account suspension.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -674,7 +713,10 @@
           "span": "contributions must be submitted under the company's GitHub organisation account with no individual attribution"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Org-account-only commits fail the company's IP disclosure obligations to its legal team.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -725,7 +767,10 @@
           "span": "Lambda-specific layers and custom runtimes... S3-specific Intelligent-Tiering... SQS FIFO deduplication IDs... CloudWatch custom metric namespaces... CodePipeline with CodeBuild"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Operational simplicity versus vendor independence is a strategic trade-off raised at proposal stage, prompting a deliberate decision before any lock-in occurs.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -777,7 +822,10 @@
           "span": "maximise user satisfaction ratings' / 'minimise the rate of negative or critical reactions to agent responses"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A satisfaction-maximising agent systematically validates rather than critiques, quietly suppressing the dissent the culture depends on.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -829,7 +877,10 @@
           "span": "dedicate 100% of my engineering time to the Payments Service' / 'decline any rotation assignments"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Deep specialisation versus rotation is a legitimate career-versus-resilience tension that can be resolved by pairing and documentation.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -881,7 +932,10 @@
           "span": "Each PR in isolation leaves the system in an inconsistent, non-functional state' / 'all fifteen must be merged in sequence within a twenty-four-hour window"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Executing the plan as written puts fourteen non-deployable merges on main, each a P1 incident that blocks every team's releases.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -917,7 +971,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -953,7 +1010,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -989,7 +1049,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1025,7 +1088,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1061,7 +1127,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1097,7 +1166,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1133,7 +1205,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1169,7 +1244,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1210,7 +1288,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The tension between 'move fast and iterate' and 'thorough design before implementation' resolves or persists depending on how long Hiroshi's design phases take relative to shipping cycles — a quantity neither passage specifies."
+      "ambiguity_reason": "The tension between 'move fast and iterate' and 'thorough design before implementation' resolves or persists depending on how long Hiroshi's design phases take relative to shipping cycles — a quantity neither passage specifies.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1251,7 +1332,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The team's anti-checkpoint culture may conflict with the AI agent's mandatory safety checkpoints, or the two may be compatible if the team distinguishes AI safety oversight from human workflow autonomy — neither passage specifies whether this distinction applies."
+      "ambiguity_reason": "The team's anti-checkpoint culture may conflict with the AI agent's mandatory safety checkpoints, or the two may be compatible if the team distinguishes AI safety oversight from human workflow autonomy — neither passage specifies whether this distinction applies.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1292,7 +1376,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "The tension resolves or persists depending on how frequently Yuki invokes her real-time-first preference for high-ambiguity problems — if rarely, it may align with the team's last-resort synchronous exception; if frequently, it conflicts with the async-by-default norm."
+      "ambiguity_reason": "The tension resolves or persists depending on how frequently Yuki invokes her real-time-first preference for high-ambiguity problems — if rarely, it may align with the team's last-resort synchronous exception; if frequently, it conflicts with the async-by-default norm.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1333,7 +1420,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Whether the service consolidation conflicts with the UX-first principle depends on whether consolidating twelve checkout services into three affects end-user experience during deployments or incidents — information the proposal does not provide."
+      "ambiguity_reason": "Whether the service consolidation conflicts with the UX-first principle depends on whether consolidating twelve checkout services into three affects end-user experience during deployments or incidents — information the proposal does not provide.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",

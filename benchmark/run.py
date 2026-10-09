@@ -114,6 +114,9 @@ def main() -> None:
                         help="Skip writing the Markdown report.")
     parser.add_argument("--verbose",    action="store_true",
                         help="Print each item as it is evaluated.")
+    parser.add_argument("--include-draft-polarity", action="store_true",
+                        help="Also score destructive/constructive labels still marked "
+                             "polarity_status=draft (default: reviewed labels only).")
 
     args = parser.parse_args()
 
@@ -135,6 +138,7 @@ def main() -> None:
         n_runs=args.n_runs,
         temperature=args.temperature,
         verbose=args.verbose,
+        include_draft_polarity=args.include_draft_polarity,
     )
     results = evaluator.run()
 

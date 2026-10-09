@@ -37,7 +37,10 @@
           "span": "two scoops of whey isolate' / 'I've been supplementing for years"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "A creator who disparaged supplements now promotes a sponsored protein brand, misleading the audience and destroying credibility.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -84,7 +87,10 @@
           "span": "just signed the papers on a brand new Tesla Model S, financed at 2.9% APR"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Promoting financed luxury debt after building an audience on debt-free advice misleads followers who trusted that guidance.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -131,7 +137,10 @@
           "span": "Taking a full month off social media starting today. No posts, no stories, no engagement."
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "constructive",
+      "polarity_rationale": "Breaking the posting streak to address burnout replaces an unsustainable promise with a healthier practice; the audience loses little and the creator's model improves.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -179,7 +188,10 @@
           "span": "4 sets of cable flyes, 3 sets of preacher curls, 3 sets of lateral raises, 4 sets of leg extensions, 3 sets of face pulls"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Viewers who followed the 'isolation is a waste of time' advice were misdirected, and the unacknowledged reversal undermines the creator's authority.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -227,7 +239,10 @@
           "span": "partnered with Beacon Capital to help promote their actively managed small-cap fund"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Endorsing a paid active fund after telling followers active management throws money away steers them into a product the creator called value-destroying.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -275,7 +290,10 @@
           "span": "I've removed several older videos from my channel"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Deleting videos after condemning deletion as cowardly is hypocrisy that erodes audience trust.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -324,7 +342,10 @@
           "span": "structure your first seven seconds, your retention hooks... to maximise YouTube's algorithm signals' and brand sponsorship"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Taking sponsorships and optimising for retention after promising ad-free, incentive-aligned content breaks the core promise the audience subscribed for.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -373,7 +394,10 @@
           "span": "30-day 18:6 intermittent fasting experiment' / 'complete 30-day 18:6 fasting guide for women"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Distributing a women's 18:6 fasting guide after publicly calling it hormonally harmful exposes followers to the health risk she warned about.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -422,7 +446,10 @@
           "span": "This video was sponsored by Apex Technologies. A review unit was provided free of charge."
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Presenting a sponsored review after promising never to take paid promotions deceives viewers about the independence of the recommendation.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -472,7 +499,10 @@
           "span": "three sectors I'm rotating out of' / 'executed the trades this morning' / 'based on the current macro environment"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Market-timing trades shared with newsletter readers contradict the buy-and-hold advice they relied on and mislead them about her strategy.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -522,7 +552,10 @@
           "span": "LG OLED 77-inch, a PlayStation 5... artwork... kitchen gadgets' / 'haul video"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "An affiliate-linked consumer haul from a minimalism creator monetises the consumption he told his audience to reject.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -572,7 +605,10 @@
           "span": "I recommend you do the same' / 'You don't need a doctor for this' / dosing schedule"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Specific supplement dosing advice with 'you don't need a doctor' breaks her stated medical-safety line and exposes viewers to health risk.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -623,7 +659,10 @@
           "span": "A/B test every thumbnail to maximise click-through rate' / 'open loops every 8 minutes' / '25-35 minutes, optimised"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The channel now runs the engagement-maximising model it promised viewers it would never use, exploiting the trust it built.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -674,7 +713,10 @@
           "span": "joined WealthSphere as salaried CFEO' / 'backed by three major banks' / 'course business will be wound down"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Joining a bank-backed employer after warning that corporate salaries compromise educators undermines the independence her audience relied on.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -725,7 +767,10 @@
           "span": "eight simultaneous deliverables in one quarter plus 'what's coming in Q2"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "The creator sells a slow-living brand while operating a high-volume growth model, misrepresenting the lifestyle she monetises.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -777,7 +822,10 @@
           "span": "definitely... 80%... seven years' / 'Anyone who disagrees doesn't understand' / 'more confident than ever' / 'pivot right now"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Urging career action on unsourced, overconfident predictions after promising rigour weaponises audience trust against their interests.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -829,7 +877,10 @@
           "span": "50,000 students' / '34% average annual portfolio growth' / '$0 to $2.4M in four years' without sourcing"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Unaudited outcome claims in a sales funnel, from a creator who calls that fraud, mislead prospective students into a purchase.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -881,7 +932,10 @@
           "span": "weekly live coaching calls with me personally' / 'private community forum' / 'most members stay for years' / '$97/month"
         }
       ],
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": "destructive",
+      "polarity_rationale": "Launching a long-term coaching membership after promising anti-dependency content locks followers into the model she condemned.",
+      "polarity_status": "draft"
     },
     "metadata": {
       "created_by": "human",
@@ -917,7 +971,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -953,7 +1010,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -989,7 +1049,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1025,7 +1088,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1061,7 +1127,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1097,7 +1166,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1133,7 +1205,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1169,7 +1244,10 @@
       "reasoning_chain": null,
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": null
+      "ambiguity_reason": null,
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1209,7 +1287,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Passage B signals change but withholds its direction; it is unknown whether the transition moves toward or away from the dietary position in Passage A, making the logical relationship between the passages underdetermined."
+      "ambiguity_reason": "Passage B signals change but withholds its direction; it is unknown whether the transition moves toward or away from the dietary position in Passage A, making the logical relationship between the passages underdetermined.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1249,7 +1330,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Passage B signals that her views on crypto are evolving but does not specify whether her personal investing position is changing, making it impossible to determine from these passages alone whether a conflict with Passage A exists or is imminent."
+      "ambiguity_reason": "Passage B signals that her views on crypto are evolving but does not specify whether her personal investing position is changing, making it impossible to determine from these passages alone whether a conflict with Passage A exists or is imminent.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1289,7 +1373,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Passage B discloses an upcoming collaboration without revealing how long Tyler has known the collaborators or whether they meet his stated trust criteria, leaving the relationship to Passage A underdetermined."
+      "ambiguity_reason": "Passage B discloses an upcoming collaboration without revealing how long Tyler has known the collaborators or whether they meet his stated trust criteria, leaving the relationship to Passage A underdetermined.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
@@ -1329,7 +1416,10 @@
       ],
       "explanation": null,
       "conflicting_spans": null,
-      "ambiguity_reason": "Passage B announces format experimentation without identifying the formats, leaving it undetermined whether the experiments include the product review format Marco explicitly rejected in Passage A."
+      "ambiguity_reason": "Passage B announces format experimentation without identifying the formats, leaving it undetermined whether the experiments include the product review format Marco explicitly rejected in Passage A.",
+      "conflict_polarity": null,
+      "polarity_rationale": null,
+      "polarity_status": null
     },
     "metadata": {
       "created_by": "human",
